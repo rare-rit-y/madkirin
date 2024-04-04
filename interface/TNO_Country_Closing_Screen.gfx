@@ -13,6 +13,22 @@ spriteTypes = {
 		name = "GFX_coalition_pol_party_bg"
 		textureFile = "gfx/interface/coalition_pol_party_bg.png"
 	}
+	spriteType = {
+		name = "GFX_ideology_madkirin_dem"
+		texturefile = "gfx/interface/ideologies/harmonic_theocracy.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_madkirin_com"
+		texturefile = "gfx/interface/ideologies/primitive_communism.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_madkirin_fas"
+		textureFile = "gfx/interface/ideologies/celestial_cult.dds"
+	}
+	spriteType = {
+		name = "GFX_ideology_madkirin_non"
+		texturefile = "gfx/interface/ideologies/theocracy_subideology.dds"
+	}
 
 	###########################
 	# // Main GUI Elements // #

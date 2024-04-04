@@ -1,0 +1,110 @@
+add_namespace = madkirin
+add_namespace = cocdebug
+#made by _unicornia. (github: rare-rit-y)
+country_event = { 
+	id = cocdebug.999 #hidden event for debuggo
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cocdebug.999"}
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		TNO_Country_Closing_Screen_Show = yes
+	}
+}
+country_event = { 
+	id = cocdebug.1 #debug event for coal
+	title = cocdebug.1.t
+	desc = cocdebug.1.d
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cocdebug.1"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = cocdebug.1.a
+		set_temp_variable = { coalition_partner_var = token:communism }
+		add_to_coalition = yes
+	}
+	option = {
+		name = cocdebug.1.b
+		set_temp_variable = { coalition_partner_var = token:fascism }
+		add_to_coalition = yes
+	}
+	option = {
+		name = cocdebug.1.c
+		set_temp_variable = { coalition_partner_var = token:neutrality }
+		add_to_coalition = yes
+	}
+	option = {
+		name = cocdebug.1.d
+		set_temp_variable = { coalition_partner_var = token:democratic }
+		add_to_coalition = yes
+	}
+}
+country_event = { 
+	id = cocdebug.2 #hidden event for debuggo
+	immediate = {log = "[GetDateText]: [Root.GetName]: event cocdebug.2"}
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		remove_country_leader_role = {
+			character = "KIR_kindling_flash"
+			ideology = primitive_communism
+		}
+		add_country_leader_role = {
+			character = "KIR_kindling_flash"
+			promote_leader = yes
+			country_leader = {
+				desc = "COC_kindling_flash_desc"
+				ideology = madkirin_com
+				expire = "1965.1.1.1"
+				traits = { KIR_peasant_preacher }
+			}
+		}
+		remove_country_leader_role = {
+			character = "KIR_dayspring_rose"
+			ideology = harmonic_theocracy
+		}
+		add_country_leader_role = {
+			character = "KIR_dayspring_rose"
+			promote_leader = yes
+			country_leader = {
+				desc = "COC_dayspring_rose_desc"
+				ideology = madkirin_dem
+				expire = "1965.1.1.1"
+				traits = { KIR_tempered_flame }
+			}
+		}
+		set_temp_variable = { coalition_partner_var = token:democratic }
+		add_to_coalition = yes
+	}
+}
+
+country_event = { 
+	id = madkirin.1 #박지원, 호질
+	title = madkirin.1.t
+	desc = madkirin.1.d
+	immediate = {log = "[GetDateText]: [Root.GetName]: event madkirin.1"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = madkirin.1.c
+		hidden_effect = {
+			retire_ideology_leader = fascism
+			add_country_leader_role = {
+				character = KIR_fiery_azalea
+				promote_leader = yes
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = madkirin_fas
+					traits = { }
+				}
+			}
+		}
+		set_temp_variable = { coalition_partner_var = token:fascism }
+		add_to_coalition = yes
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+	}
+}

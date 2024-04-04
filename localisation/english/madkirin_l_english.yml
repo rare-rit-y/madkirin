@@ -1,0 +1,12 @@
+﻿l_english:
+ 
+ #tt
+ has_coalition_with: "Is in coalition with the §H[?coalition_partner_to_check.GetTokenLocalizedKey]§!"
+ has_coalition_with_target: "Is in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
+ has_coalition_with_target_NOT: "Is not in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
+ add_to_coalition: "The §Y[?coalition_partner_var.GetTokenLocalizedKey]§! party will join the coalition."
+
+ #madk events
+ madkirin.1.t: "The Speech"
+ madkirin.1.d: "The sun was high in the sky, and those rogues of the NAKP, the Way of Fire mystics, or mere bandits, were assembled in detention to listen to her lectures and be edified into true children of Concord.\n\n\"-Taking what is not one's own is called Theft (盜), and taking Life (生) and damaging Property (物) is called Robbery (賊).\"\n\n\"You, who roam day and night with sleeves rolled up and eyes glaring, shamelessly plunder, and the worst of you call money 'brother' and murder your own families to become generals, have no right to discuss ethics or morality. Moreover, you steal food from locusts, clothes from silkworms, block bees and take their honey, and the cruelest of you pickle ant larvae to offer to the Concord, what could be more brutal than you?\"\n\nThis time her gaze fell on the Way of Fire mystics.\n\n\"You talk of Principle (理) and Nature (性), and frequently mention the Concord, but if we see it as the Celestial Call (召命), creatures and kirin are all part of the myriad of things. If we speak of the Benevolence (仁) with which heaven and earth bring forth all things, sapients, locusts, silkworms, bees, ants, and kirin are all nurtured by the earth and should not harm each other. Looking at the distinction between good and evil, openly plundering the homes of bees and ants would surely make one the greatest thief between heaven and earth? And plundering the very foundation of locusts and silkworms, would that not make one the Arch-enemy (大賊) against Benevolent Morality (仁義) ?\"\n\nThen the rogues on the spot fell to their knees."
+ madkirin.1.c: "She can control those rogues, for now."

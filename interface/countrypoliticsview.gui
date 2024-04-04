@@ -65,7 +65,7 @@ guiTypes = {
 			
 			containerWindowType = {
 				name = "coalition_pol_party_bg_anchor" #KR: added to anchor the coalition backgrounds behind the normal UI - see coalition_indicator in scripted GUIs
-				position = { x = 316 y = 184 }
+				position = { x = 315 y = 184 }
 				size = { width = 100% height = 100% }
 			}
 			
