@@ -1,0 +1,36 @@
+guiTypes = {
+	containerWindowType = {
+		name = "coalition_pol_party_bg"
+		position = { x = 0 y = 0 }
+		size = { width = 216 height = 180 }
+		clipping = no
+
+		iconType = {
+			name = "coalition_pol_party_bg_dem"
+			position = { x = 5 y = 5 }
+			spriteType = "GFX_coalition_pol_party_bg"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "coalition_pol_party_bg_com"
+			position = { x = 5 y = 21 }
+			spriteType = "GFX_coalition_pol_party_bg"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "coalition_pol_party_bg_fas"
+			position = { x = 5 y = 37 }
+			spriteType = "GFX_coalition_pol_party_bg"
+			alwaystransparent = yes
+		}
+
+		iconType = {
+			name = "coalition_pol_party_bg_non"
+			position = { x = 5 y = 53 }
+			spriteType = "GFX_coalition_pol_party_bg"
+			alwaystransparent = yes
+		}
+	}
+}

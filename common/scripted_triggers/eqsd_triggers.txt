@@ -1,0 +1,41 @@
+#	Example:
+#
+#	example_trigger = {
+	#		tag = GER
+	#		is_ai = no
+	#	}
+#
+#
+#	In a script file:
+#
+#	trigger = {
+	#		exampel_trigger = yes
+	#	}
+#
+
+
+is_in_coalition_with_dem = {
+	set_temp_variable = { coalition_target = token:democratic }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_com = {
+	set_temp_variable = { coalition_target = token:communism }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_fas = {
+	set_temp_variable = { coalition_target = token:fascism }
+	has_coalition_with_target = yes
+}
+
+is_in_coalition_with_non = {
+	set_temp_variable = { coalition_target = token:neutrality }
+	has_coalition_with_target = yes
+}
+has_coalition_with_target = {
+	custom_trigger_tooltip = {
+		tooltip = has_coalition_with_target
+		has_variable = is_in_coalition_with_@var:coalition_target
+	}
+}
