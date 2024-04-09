@@ -12,5 +12,5 @@ tags={
 dependencies={
 	"Equestria at War"
 }
-name="The Second Kirian Warring State"
+name="EaW - Beyond The Auspicious Clouds"
 supported_version="Bolivar v1.14.4.44c7"

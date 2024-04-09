@@ -1,9 +1,10 @@
 add_namespace = madkirin
-add_namespace = cocdebug
+add_namespace = bacdebug
+add_namespace = baccocc
 #made by _unicornia. (github: rare-rit-y)
 country_event = { 
-	id = cocdebug.999 #hidden event for debuggo
-	immediate = {log = "[GetDateText]: [Root.GetName]: event cocdebug.999"}
+	id = bacdebug.999 #hidden event for debuggo
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bacdebug.999"}
 	hidden = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -12,36 +13,36 @@ country_event = {
 	}
 }
 country_event = { 
-	id = cocdebug.1 #debug event for coal
-	title = cocdebug.1.t
-	desc = cocdebug.1.d
-	immediate = {log = "[GetDateText]: [Root.GetName]: event cocdebug.1"}
+	id = bacdebug.1 #debug event for coal
+	title = bacdebug.1.t
+	desc = bacdebug.1.d
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bacdebug.1"}
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = cocdebug.1.a
+		name = bacdebug.1.a
 		set_temp_variable = { coalition_partner_var = token:communism }
 		add_to_coalition = yes
 	}
 	option = {
-		name = cocdebug.1.b
+		name = bacdebug.1.b
 		set_temp_variable = { coalition_partner_var = token:fascism }
 		add_to_coalition = yes
 	}
 	option = {
-		name = cocdebug.1.c
+		name = bacdebug.1.c
 		set_temp_variable = { coalition_partner_var = token:neutrality }
 		add_to_coalition = yes
 	}
 	option = {
-		name = cocdebug.1.d
+		name = bacdebug.1.d
 		set_temp_variable = { coalition_partner_var = token:democratic }
 		add_to_coalition = yes
 	}
 }
 country_event = { 
-	id = cocdebug.2 #hidden event for debuggo
-	immediate = {log = "[GetDateText]: [Root.GetName]: event cocdebug.2"}
+	id = bacdebug.2 #hidden event for debuggo
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bacdebug.2"}
 	hidden = yes
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -78,9 +79,19 @@ country_event = {
 		add_to_coalition = yes
 	}
 }
+country_event = { 
+	id = bacdebug.3 #hidden event for debuggo
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bacdebug.3"}
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		load_focus_tree = BAC_COC_com_tree
+	}
+}
 
 country_event = { 
-	id = madkirin.1 #박지원, 호질
+	id = madkirin.1 #박지원, 호질(虎叱)
 	title = madkirin.1.t
 	desc = madkirin.1.d
 	immediate = {log = "[GetDateText]: [Root.GetName]: event madkirin.1"}
@@ -91,7 +102,7 @@ country_event = {
 		hidden_effect = {
 			retire_ideology_leader = fascism
 			add_country_leader_role = {
-				character = KIR_fiery_azalea
+				character = KIR_fiery_azalea #placeholder
 				promote_leader = yes
 				country_leader = {
 					expire = "1965.1.1"

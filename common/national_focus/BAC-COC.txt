@@ -1,0 +1,263 @@
+focus_tree = {
+	id = BAC_COC_com_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			has_country_leader = {
+				character = COC_common_senate
+				ruling_only = yes
+			}
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 2000 y = 20 }
+
+	shared_focus = BAC_COC_c1
+	shared_focus = BAC_COC_c2
+	shared_focus = BAC_COC_c3
+	shared_focus = BAC_COC_h1
+	shared_focus = BAC_COC_h2
+	shared_focus = BAC_COC_h3
+	shared_focus = BAC_COC_t1
+	shared_focus = BAC_COC_t2
+	shared_focus = BAC_COC_t3
+}
+
+shared_focus = {
+	id = BAC_COC_t1
+	icon = GFX_goal_placeholder_vertical
+	cost = 1.4
+	ai_will_do = { factor = 80 }
+	x = 10
+	y = 0
+	allow_branch = {
+		check_variable = { coc_t_foci_completed = 0 }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_t1"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		
+		add_to_variable = { coc_t_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+shared_focus = {
+	id = BAC_COC_h1
+	icon = GFX_goal_placeholder
+	cost = 1.4
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = -3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_h_foci_completed = 0 }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h2"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { coc_h_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+shared_focus = {
+	id = BAC_COC_c1
+	icon = GFX_goal_placeholder_inverted
+	cost = 1.4
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_c_foci_completed = 0 }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c1"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { coc_c_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+shared_focus = {
+	id = BAC_COC_t2
+	icon = GFX_goal_placeholder_vertical
+	cost = 1.4
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 0
+	y = 0
+	allow_branch = {
+		check_variable = { coc_t_foci_completed = 1 }
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = COC_please_take_previous_foci
+			check_variable = { coc_start_foci_completed > 2 }
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_t2"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { coc_t_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+shared_focus = {
+	id = BAC_COC_h2
+	icon = GFX_goal_placeholder_vertical
+	cost = 1.4
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = -3
+	y = 3
+	allow_branch = {
+		check_variable = { COC_h_foci_completed = 1 }
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = COC_please_take_previous_foci
+			check_variable = { coc_start_foci_completed > 2 }
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h2"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { COC_h_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+shared_focus = {
+	id = BAC_COC_c2
+	icon = GFX_goal_placeholder_vertical
+	cost = 1.4
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 3
+	y = 3
+	allow_branch = {
+		check_variable = { COC_c_foci_completed = 1 }
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = COC_please_take_previous_foci
+			check_variable = { coc_start_foci_completed > 2 }
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c2"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { COC_c_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+shared_focus = {
+	id = BAC_COC_t3
+	icon = GFX_goal_placeholder_vertical
+	cost = 1.4
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 0
+	y = 0
+	allow_branch = {
+		check_variable = { coc_t_foci_completed = 2 }
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = COC_please_take_previous_foci
+			check_variable = { coc_start_foci_completed > 5 }
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_t3"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+shared_focus = {
+	id = BAC_COC_h3
+	icon = GFX_goal_placeholder_vertical
+	cost = 1.4
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = -3
+	y = 3
+	allow_branch = {
+		check_variable = { COC_h_foci_completed = 2 }
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = COC_please_take_previous_foci
+			check_variable = { coc_start_foci_completed > 5 }
+		}
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h3"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+shared_focus = {
+	id = BAC_COC_c3
+	icon = GFX_goal_placeholder_vertical
+	cost = 1.4
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 3
+	y = 3
+	allow_branch = {
+		check_variable = { COC_c_foci_completed = 2 }
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = COC_please_take_previous_foci
+			check_variable = { coc_start_foci_completed > 5 }
+		}
+	}
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c3"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
+shared_focus = {
+	id = BAC_COC_true_commonalty
+	icon = GFX_goal_placeholder_vertical
+	cost = 1.4
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 0
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 9 }
+	}
+	prerequisite = {
+		focus = BAC_COC_t3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_true_commonalty"
+		add_to_variable = { coc_start_foci_completed = 1 }
+	}
+	search_filters = { FOCUS_FILTER_POLITICAL }
+	
+}
