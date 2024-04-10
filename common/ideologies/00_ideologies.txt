@@ -44,7 +44,7 @@ ideologies = {
 			liberation_front = {
 				can_be_randomly_selected = no
 			}
-			madkirin_dem = {
+			BAC_COC_dem = {
 				can_be_randomly_selected = no
 				color = { 211 174 54 }
 			}
@@ -144,7 +144,7 @@ ideologies = {
 			technosocialism = {
 				can_be_randomly_selected = no
 			}
-			madkirin_com = {
+			BAC_COC_com = {
 				can_be_randomly_selected = no
 				color = { 211 174 54 }
 			}

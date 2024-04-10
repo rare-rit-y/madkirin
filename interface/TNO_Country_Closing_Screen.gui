@@ -1,7 +1,7 @@
 guiTypes = {
 
 	containerWindowType = {
-		name = "TNO_Country_Closing_Screen"
+		name = "TNO_BAC_Country_Closing_Screen"
 		position = { x = -471 y = -221 }
 		size = { width = 927 height = 470 }
 		orientation = center
@@ -13,7 +13,7 @@ guiTypes = {
 			quadtexturesprite = "GFX_tiled_window_transparent_transparent"
 		}
 		containerWindowType = {
-			name = "TNO_Country_Closing_Screen_Left"
+			name = "TNO_BAC_Country_Closing_Screen_Left"
 			position = { x = 0 y = 0 }
 			size = { width = 467 height = 100%% }
 			background = {
@@ -24,7 +24,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "title"
 				position = { x = 0 y = 40 }
-				text = "TNO_CountryClosing_left_title"
+				text = "TNO_BAC_CountryClosing_left_title"
 				font = "hoi_30header"
 				maxwidth = 467
 				format = center
@@ -50,7 +50,7 @@ guiTypes = {
 			}
 		}
 		containerWindowType = {
-			name = "TNO_Country_Closing_Screen_Right"
+			name = "TNO_BAC_Country_Closing_Screen_Right"
 			position = { x = 461 y = 0 }
 			size = { width = 467 height = 100%% }
 			background = {
@@ -63,24 +63,24 @@ guiTypes = {
 				position = { x = 18 y = 24 }
 				quadtexturesprite = "GFX_CountryClosing_select_btn"
 				buttonFont = "hoi_24header"
-				buttonText = "TNO_CountryClosing_select_btn_epilogue_text"
-				pdx_tooltip = "TNO_CountryClosing_select_btn_epilogue_tt"
+				buttonText = "TNO_BAC_CountryClosing_select_btn_epilogue_text"
+				pdx_tooltip = "TNO_BAC_CountryClosing_select_btn_epilogue_tt"
 			}
 			buttonType = {
 				name = "select_btn_credits"
 				position = { x = 187 y = 24 }
 				quadtexturesprite = "GFX_CountryClosing_select_btn"
 				buttonFont = "hoi_24header"
-				buttonText = "TNO_CountryClosing_select_btn_credits_text"
-				pdx_tooltip = "TNO_CountryClosing_select_btn_credits_tt"
+				buttonText = "TNO_BAC_CountryClosing_select_btn_credits_text"
+				pdx_tooltip = "TNO_BAC_CountryClosing_select_btn_credits_tt"
 			}
 			buttonType = {
 				name = "close_btn"
 				position = { x = 356 y = 24 }
 				spriteType = "GFX_CountryClosing_close_btn"
 				buttonFont = "hoi_24header"
-				buttonText = "TNO_CountryClosing_close_btn_text"
-				pdx_tooltip = "TNO_CountryClosing_close_btn_tt"
+				buttonText = "TNO_BAC_CountryClosing_close_btn_text"
+				pdx_tooltip = "TNO_BAC_CountryClosing_close_btn_tt"
 			}
 			iconType = {
 				name = "divider"
@@ -91,7 +91,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "epilogue"
 				position = { x = 18 y = 90 }
-				text = "[Get_TNO_CountryClosing_epilogue]"
+				text = "[Get_TNO_BAC_CountryClosing_epilogue]"
 				font = "hoi_18mbs"
 				maxwidth = 430
 			}
@@ -105,7 +105,7 @@ guiTypes = {
 			instantTextBoxType = {
 				name = "credits"
 				position = { x = 80 y = 90 }
-				text = "[Get_TNO_CountryClosing_credits]"
+				text = "[Get_TNO_BAC_CountryClosing_credits]"
 				font = "AnimatedMapText"
 				maxwidth = 355
 				maxheight = 348
@@ -116,14 +116,14 @@ guiTypes = {
 
 
 	containerWindowType = {
-		name = "TNO_Country_Closing_Screen_Credits_Pages_Enry"
+		name = "TNO_BAC_Country_Closing_Screen_Credits_Pages_Enry"
 		buttonType = {
 			name = "page_btn"
 			position = { x = 0 y = 0 }
 			spriteType = "GFX_CountryClosing_page_btn"
 			buttonFont = "hoi_18mbs"
-			buttonText = "[Get_TNO_CountryClosing_page_btn_text]"
-			pdx_tooltip = "TNO_CountryClosing_page_btn_tt"
+			buttonText = "[Get_TNO_BAC_CountryClosing_page_btn_text]"
+			pdx_tooltip = "TNO_BAC_CountryClosing_page_btn_tt"
 		}
 	}
 

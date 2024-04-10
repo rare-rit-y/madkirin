@@ -74,7 +74,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				has_country_leader_ideology = harmonic_theocracy
-				has_country_leader_ideology = madkirin_dem
+				has_country_leader_ideology = BAC_COC_dem
 			}
 		}
 		localization_key = harmonic_theocracy
@@ -164,7 +164,7 @@ defined_text = {
 		trigger = {
 			OR = {
 				has_country_leader_ideology = primitive_communism
-				has_country_leader_ideology = madkirin_com
+				has_country_leader_ideology = BAC_COC_com
 			}
 		}
 		localization_key = primitive_communism

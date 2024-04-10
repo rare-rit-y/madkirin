@@ -14,11 +14,11 @@ spriteTypes = {
 		textureFile = "gfx/interface/coalition_pol_party_bg.png"
 	}
 	spriteType = {
-		name = "GFX_ideology_madkirin_dem"
+		name = "GFX_ideology_BAC_COC_dem"
 		texturefile = "gfx/interface/ideologies/harmonic_theocracy.dds"
 	}
 	spriteType = {
-		name = "GFX_ideology_madkirin_com"
+		name = "GFX_ideology_BAC_COC_com"
 		texturefile = "gfx/interface/ideologies/primitive_communism.dds"
 	}
 	spriteType = {
@@ -68,11 +68,6 @@ spriteTypes = {
 	###############
 	spriteType = {
 		name = "GFX_TNO_CountryClosing_picture_generic"
-		texturefile = "gfx/interface/country_closing_screen/picture/generic.png"
-	}
-	
-	spriteType = {
-		name = "GFX_diarchy_CountryClosing_epilogue_EQS_twi"
-		texturefile = "gfx/interface/country_closing_screen/picture/twi.png"
+		texturefile = "gfx/interface/country_closing_screen/picture/BACgeneric.png"
 	}
 }

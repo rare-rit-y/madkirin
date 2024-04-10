@@ -1,17 +1,17 @@
 scripted_gui = {
-	TNO_Country_Closing_Screen = {
+	TNO_BAC_Country_Closing_Screen = {
 		context_type = player_context
-		window_name = "TNO_Country_Closing_Screen"
+		window_name = "TNO_BAC_Country_Closing_Screen"
 		dirty = CountryClosing_dirty
 		visible = {
-			has_country_flag = TNO_Country_Closing_Screen_Visible
+			has_country_flag = TNO_BAC_Country_Closing_Screen_Visible
 		}
 		dynamic_lists = {
 			credits_pages = {
 				array = CountryClosing_array_credits_pages
 				index = i
 				change_scope = no
-				entry_container = TNO_Country_Closing_Screen_Credits_Pages_Enry
+				entry_container = TNO_BAC_Country_Closing_Screen_Credits_Pages_Enry
 			}
 		}
 		triggers = {
@@ -22,13 +22,13 @@ scripted_gui = {
 			select_btn_epilogue_click = {
 				set_variable = { CountryClosing_array_buttons^0 = 2 }
 				set_variable = { CountryClosing_array_buttons^1 = 1 }
-				TNO_Country_Closing_Screen_CreditsPages_Hide = yes
+				TNO_BAC_Country_Closing_Screen_CreditsPages_Hide = yes
 				add_to_variable = { CountryClosing_dirty = 1 }
 			}
 			select_btn_credits_click = {
 				set_variable = { CountryClosing_array_buttons^0 = 1 }
 				set_variable = { CountryClosing_array_buttons^1 = 2 }
-				TNO_Country_Closing_Screen_CreditsPages_Show = yes
+				TNO_BAC_Country_Closing_Screen_CreditsPages_Show = yes
 				add_to_variable = { CountryClosing_dirty = 1 }
 			}
 			page_btn_click = {
@@ -41,18 +41,18 @@ scripted_gui = {
 				add_to_variable = { CountryClosing_dirty = 1 }
 			}
 			close_btn_click = {
-				clr_country_flag = TNO_Country_Closing_Screen_Visible
+				clr_country_flag = TNO_BAC_Country_Closing_Screen_Visible
 				clear_array = CountryClosing_array_buttons
-				TNO_Country_Closing_Screen_CreditsPages_Hide = yes
+				TNO_BAC_Country_Closing_Screen_CreditsPages_Hide = yes
 				clear_variable = CountryClosing_dirty
-				set_country_flag = TNO_ArcadeMode_enable
+				set_country_flag = TNO_BAC_ArcadeMode_enable
 			}
 		}
 		properties = {
 			select_btn_epilogue = { frame = CountryClosing_array_buttons^0 }
 			select_btn_credits = { frame = CountryClosing_array_buttons^1 }
 			page_btn = { frame = CountryClosing_array_credits_pages^i }
-			picture = { image = "[Get_TNO_CountryClosing_picture]" }
+			picture = { image = "[Get_TNO_BAC_CountryClosing_picture]" }
 		}
 	}
 	coalition_indicator = { #this from KR file, not here

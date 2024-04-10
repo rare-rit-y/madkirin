@@ -1,34 +1,147 @@
 ﻿l_english:
  
-#tt
+#tt & misc
  has_coalition_with: "Is in coalition with the §H[?coalition_partner_to_check.GetTokenLocalizedKey]§!"
  has_coalition_with_target: "Is in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
  has_coalition_with_target_NOT: "Is not in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
  add_to_coalition: "The §Y[?coalition_partner_var.GetTokenLocalizedKey]§! party will join the coalition."
  COC_please_take_previous_foci: "Has completed every foci from previous phase"
  BAC_COC_com_tree: "Commonalty of Kiria Focus Tree"
+ BAC_COC_commonalty_war_enacted: "Has passed a war initiative"
+ BAC_COC_commonalty_war_days_tt: " Current days are: [?BAC_COC_commonalty_war_enacted_flag:days|Y0]"
+ 
+ BAC_commonalty_faction: "Commonalty Mutual Assistance Bloc"
+ 
+ BAC_commonalty: "Commonalty of Zebrica"
+ BAC_commonalty_DEF: "the Free and Democratic Commonalty of Zebrica"
+ BAC_commonalty_ADJ: "Commonalty" #
+
+ COC_commonalty_NA: 
+
 #madk events
  madkirin.1.t: "The Lecture"
- madkirin.1.d: "\"-Taking what is not one's own is called Theft (盜), and taking Life (生) and damaging Property (物) is called Robbery (賊).\"\n\nThe sun was high in the sky, and those rogues of the NAKP, the Way of Fire mystics, or mere bandits, were assembled in detention to listen to her lectures and be edified into true children of Concord.\n\n\"You, who roam day and night with sleeves rolled up and eyes glaring, shamelessly plunder, and the worst of you call money 'brother' and murder your own families to become generals, have no right to discuss ethics or morality. Moreover, you steal foods from locusts, clothes from silkworms, block bees and take their honey, and the cruelest of you pickle ant larvae by the name of Concord, what could be more brutal than you?\"\n\nThis time her gaze fell on the Way of Fire mystics.\n\n\"You talk of Principle (理) and Nature (性), and frequently mention the Concord, but if we see it as the Celestial Call (召命), creatures and kirin are all part of the myriad of things. If we speak of the Benevolence (仁) with which Concord and creatures bring forth all things, equines, locusts, silkworms, bees, ants, and kirin are all nurtured by the earth and should not harm each other. Looking at the distinction between Good and Evil (善惡), openly plundering the homes of bees and ants would surely make one the Great Theft (巨盜) between Concord and creatures? And plundering the very foundation of locusts and silkworms, would that not make one the Arch-enemy (大賊) against Benevolent Morality (仁義) ?\"\n\nThen the rogues on the spot fell to their knees."
- madkirin.1.c: "Her lecture is even more 'heretic'."
+ madkirin.1.d: "\"-Taking what is not one's own is called Theft (盜), and taking Life (生) and damaging Property (物) is called Robbery (賊).\"\n\nThe sun was high in the sky, and those rogues of the NAKP, the Way of Fire mystics, or mere bandits, were assembled in detention to listen to her lectures and be edified into true children of Concord.\n\n\"You, who roam day and night with sleeves rolled up and eyes glaring, shamelessly plunder, and the worst of you call money 'brother' and murder your own families to become generals, have no right to discuss ethics or morality. Moreover, you steal foods from locusts, clothes from silkworms, block bees and take their honey, and the cruelest of you pickle ant larvae by the name of Concord, what could be more brutal than you?\"\n\nThis time her gaze fell on the Way of Fire mystics.\n\n\"You talk of Principle (理) and Nature (性), and frequently mention the Concord, but if we see it as the Celestial Call (召命), creatures and kirin are all part of the myriad of things. If we speak of the Benevolence (仁) with which Concord and creatures bring forth all things - equines, locusts, silkworms, bees, ants, and kirin are all nurtured by Concord and the earth; thus should not harm each other. Looking at the distinction between Good and Evil (善惡), openly plundering the homes of bees and ants would surely make one the Great Theft (巨盜) between Concord and creatures? And plundering the very foundation of locusts and silkworms, would that not make one the Arch-enemy (大賊) against Benevolent Morality (仁義) ?\"\n\nThen the rogues on the spot fell to their knees." #박지원, 호질(虎叱)
+ madkirin.1.c: "Her lecture is even more heretic."
 
 
 #foci
+
  BAC_COC_t1: "Favor Trinitarianist"
  BAC_COC_t1_desc: "TODO"
  BAC_COC_h1: "Favor Harmonist"
  BAC_COC_h1_desc: "TODO"
  BAC_COC_c1: "Favor Communalist"
  BAC_COC_c1_desc: "TODO"
- BAC_COC_t2: "Empower Trinitarianist"
+ BAC_COC_t2: "2 Trinitarianist"
  BAC_COC_t2_desc: "TODO"
+ BAC_COC_h2: "2 Harmonist"
+ BAC_COC_h2_desc: "TODO"
+ BAC_COC_c2: "2 Communalist"
+ BAC_COC_c2_desc: "TODO"
+ BAC_COC_t3: "3 Trinitarianist"
+ BAC_COC_t3_desc: "TODO"
+ BAC_COC_h3: "3 Harmonist"
+ BAC_COC_h3_desc: "TODO"
+ BAC_COC_c3: "3 Communalist"
+ BAC_COC_c3_desc: "TODO"
 
-#decisions
+ BAC_COC_pol_top: "2 Trinitarianist"
+ BAC_COC_pol_top_desc: "TODO"
+ BAC_COC_pol_h1: "Favor Harmonist"
+ BAC_COC_pol_h1_desc: "TODO"
+ BAC_COC_pol_t1: "Favor Trinitarianist"
+ BAC_COC_pol_t1_desc: "TODO"
+ BAC_COC_pol_c1: "Favor Communalist"
+ BAC_COC_pol_c1_desc: "TODO"
+ BAC_COC_pol_h2: "2 Harmonist"
+ BAC_COC_pol_h2_desc: "TODO"
+ BAC_COC_pol_c2: "2 Communalist"
+ BAC_COC_pol_c2_desc: "TODO"
+ BAC_COC_pol_t3: "3 Trinitarianist"
+ BAC_COC_pol_t3_desc: "TODO"
+
+ BAC_COC_eco_top: "2 Trinitarianist"
+ BAC_COC_eco_top_desc: "TODO"
+ BAC_COC_eco_h1: "Favor Harmonist"
+ BAC_COC_eco_h1_desc: "TODO"
+ BAC_COC_eco_c1: "Favor Communalist"
+ BAC_COC_eco_c1_desc: "TODO"
+ BAC_COC_eco_h2: "2 Harmonist"
+ BAC_COC_eco_h2_desc: "TODO"
+ BAC_COC_eco_t2: "2 Trinitarianist"
+ BAC_COC_eco_t2_desc: "TODO"
+ BAC_COC_eco_c2: "2 Communalist"
+ BAC_COC_eco_c2_desc: "TODO"
+ BAC_COC_eco_h3: "3 Harmonist"
+ BAC_COC_eco_h3_desc: "TODO"
+ BAC_COC_eco_t3h: "Favor Trinitarianist"
+ BAC_COC_eco_t3h_desc: "TODO"
+ BAC_COC_eco_t3c: "3 Trinitarianist"
+ BAC_COC_eco_t3c_desc: "TODO"
+ BAC_COC_eco_c3: "3 Communalist"
+ BAC_COC_eco_c3_desc: "TODO"
+ BAC_COC_eco_h4: "4 Harmonist"
+ BAC_COC_eco_h4_desc: "TODO"
+ BAC_COC_eco_t4h: "Favor Trinitarianist"
+ BAC_COC_eco_t4h_desc: "TODO"
+ BAC_COC_eco_t4c: "4 Trinitarianist"
+ BAC_COC_eco_t4c_desc: "TODO"
+ BAC_COC_eco_c4: "4 Communalist"
+ BAC_COC_eco_c4_desc: "TODO"
+
+ BAC_COC_mil_top: "2 Trinitarianist"
+ BAC_COC_mil_top_desc: "TODO"
+ BAC_COC_mil_h1: "Favor Harmonist"
+ BAC_COC_mil_h1_desc: "TODO"
+ BAC_COC_mil_c1: "Favor Communalist"
+ BAC_COC_mil_c1_desc: "TODO"
+ BAC_COC_mil_h2: "2 Harmonist"
+ BAC_COC_mil_h2_desc: "TODO"
+ BAC_COC_mil_t2: "2 Trinitarianist"
+ BAC_COC_mil_t2_desc: "TODO"
+ BAC_COC_mil_c2: "2 Communalist"
+ BAC_COC_mil_c2_desc: "TODO"
+ BAC_COC_mil_h3: "3 Harmonist"
+ BAC_COC_mil_h3_desc: "TODO"
+ BAC_COC_mil_t3h: "Favor Trinitarianist"
+ BAC_COC_mil_t3h_desc: "TODO"
+ BAC_COC_mil_t3c: "3 Trinitarianist"
+ BAC_COC_mil_t3c_desc: "TODO"
+ BAC_COC_mil_c3: "3 Communalist"
+ BAC_COC_mil_c3_desc: "TODO"
+ BAC_COC_mil_h4: "4 Harmonist"
+ BAC_COC_mil_h4_desc: "TODO"
+ BAC_COC_mil_t4h: "Favor Trinitarianist"
+ BAC_COC_mil_t4h_desc: "TODO"
+ BAC_COC_mil_t4c: "4 Trinitarianist"
+ BAC_COC_mil_t4c_desc: "TODO"
+ BAC_COC_mil_c4: "4 Communalist"
+ BAC_COC_mil_c4_desc: "TODO"
+ 
+#decisions 
  bactodotodo: "마호가니 블레이즈와 브라이트 번은 이퀘스트리아에서 태어나 자랐으며 마호가니의 경우 우정 학교 졸업자이기도 합니다. 그의 연줄을 이용하면 이 황폐해진 나라에 이퀘스트리아의 자본을 대어 숨통을 트이게 할 수 있을지도 모릅니다." #이퀘스트리아가 존재하면 정치력이 많이 드는 대신 강력한 효과의 개발딸 가능한 컨셉
 
  #조화주의파: 확장주의, 괴뢰국 착취, 전차 + 공군 + 해군
- #삼위일체파: 기린 코어, 안정도, 종족 기술 + 지원 장비
+ #삼위일체파: 기린 코어, 비핵심 버프, 안정도, 종족 기술 + 지원 장비
  #자치주의파: 주마다 건설 슬롯(퍼센트 말고 개수), 정치력 이득, 안정도 패널티, 육군
 
  #중점 갈래 (경제, 군사, 정치외교): 각 파벌마다 단계별 선택지를 주고 각 단계의 미선택 선택지는 180일 이후에 선택 가능하게 하기
  #
+
+
+ 
+#ending
+  TNO_BAC_CountryClosing_left_title: "And then the end came in an era\nForevermore..."
+  TNO_BAC_CountryClosing_select_btn_epilogue_text: "Epilogue"
+  TNO_BAC_CountryClosing_select_btn_epilogue_tt: "§WNow that it's over, what should be said?§!"
+  TNO_BAC_CountryClosing_select_btn_credits_text: "Credit"
+  TNO_BAC_CountryClosing_select_btn_credits_tt: "§WSincerely thank you for playing this submod, and hope you had a great time!§!"
+  TNO_BAC_CountryClosing_close_btn_text: "End?..."
+  TNO_BAC_CountryClosing_close_btn_tt: "§WMaybe so."
+  TNO_BAC_CountryClosing_page_btn_tt: "§WPage [Get_TNO_BAC_CountryClosing_page_btn_text]§!"
+  TNO_BAC_CountryClosing_epilogue_generic: "Thanks for your engagement in all the content with this submod!"
+  BAC_CountryClosing_epilogue_KIR_commonalty: "A new order sets as flames and explosions halt - brave new future lies ahead since the darkness has passed. After all those years of the Silence, the Gallop Onward, and the harsh ordeal of the Second Cacophony - The Commonalty has won the new century for Kiria and Eastern Zebrica...\n\nWhat role will the Commonalty play in this stage been said brave new world? Will their ideals and revolution remain untainted until the very end? Will they face all the glories and trials that lie ahead and bring their ideals to the world?\n\nThe wild ride of Commonalty will continue in the Commonalty expansion update 2.0 - Sincerely thanks for playing this path and submod!"
+  BAC_CountryClosing_epilogue_KIR_generic: "$TNO_BAC_CountryClosing_epilogue_generic$"
+  TNO_BAC_CountryClosing_credits_0: "§YProduction support§!\n\nHead Dev.\n§P_unicornia.§!"
+  TNO_BAC_CountryClosing_credits_1: "§YSpecial Thanks§!\n\n£eaw_text  Equestria at War Team for realization of this marvelous world, THE LAST EMPIRE and UKKRHEE(its head dev.) for giving permission to use his assets, Kaiserreich, Eight Years' War of Resistance, and The New Order. The Last honor goes to the Diarchy Expanded, an EaW submod inspired me to start modding." 
+  TNO_BAC_CountryClosing_credits_2: "TEST"
