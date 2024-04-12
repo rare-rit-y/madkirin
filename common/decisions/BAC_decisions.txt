@@ -1,0 +1,59 @@
+#made by _unicornia. (github: rare-rit-y)
+
+#political_actions = {
+    # EQS_ff_establish_Audit_Office = {
+    #     icon = GFX_decision_modern_city
+    #     visible = { has_country_flag = EQS_Audit_began }
+    #     available = { 
+    #         has_completed_focus = eqs_admin_reforms
+    #         NOT = { has_country_flag = EQS_HIP_elements_sent }
+    #     }
+    #     cost = 5
+    #     ai_will_do = { factor = 100 }
+    #     modifier = {
+	# 		political_power_cost = 0.05
+	# 	}
+    #     fire_only_once = yes
+    #     days_remove = 49
+    #     complete_effect = {
+	# 		log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_establish_Audit_Office"
+    #         EQS_applejack = {
+    #             unit_leader_event = {
+    #                 id = EQS_advisor.510
+    #                 days = 2
+    #             }
+    #         }
+	# 	}
+    #     remove_effect = {
+    #         set_country_flag = EQS_Audit_established
+    #         custom_effect_tooltip = EQS_ff_establish_Audit_Office_tt
+    #     }
+    # }
+#}
+# military_training_category = {
+#     EQS_meme_generals = {
+# 		icon = generic_prepare_civil_war
+
+# 		allowed = {
+# 			original_tag = EQS
+# 		}
+
+# 		fire_only_once = yes
+
+
+# 		cost = 0
+
+# 		complete_effect = {
+# 			log = "[GetDateText]: [Root.GetName]: Decision EQS_meme_generals"
+# 			set_country_flag = EQS_meme_generals_acquired
+#             effect_tooltip = { add_corps_commander_role = { character = EQS_anonfilly } }
+# 	        custom_effect_tooltip = anonfilly_stats_tp
+#             custom_effect_tooltip = chungus_stats_tp
+#             custom_effect_tooltip = ugandan_stats_tp
+# 		}
+
+# 		ai_will_do = {
+# 			base = 0
+# 		}
+# 	}
+# }

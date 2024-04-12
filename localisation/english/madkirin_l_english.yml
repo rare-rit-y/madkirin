@@ -5,9 +5,9 @@
  has_coalition_with_target: "Is in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
  has_coalition_with_target_NOT: "Is not in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
  add_to_coalition: "The §Y[?coalition_partner_var.GetTokenLocalizedKey]§! party will join the coalition."
- COC_please_take_previous_foci: "Has completed every foci from previous phase"
+ #COC_please_take_previous_foci: "Has completed every foci from previous phase"
  BAC_COC_com_tree: "Commonalty of Kiria Focus Tree"
- BAC_COC_commonalty_war_enacted: "Has passed a war initiative"
+ BAC_COC_commonalty_war_enacted: "Has passed a §RWar Initiative§!"
  BAC_COC_commonalty_war_days_tt: " Current days are: [?BAC_COC_commonalty_war_enacted_flag:days|Y0]"
  
  BAC_commonalty_faction: "Commonalty Mutual Assistance Bloc"
@@ -16,28 +16,35 @@
  BAC_commonalty_DEF: "the Free and Democratic Commonalty of Zebrica"
  BAC_commonalty_ADJ: "Commonalty" #
 
- COC_commonalty_NA: 
-
-#madk events
- madkirin.1.t: "The Lecture"
- madkirin.1.d: "\"-Taking what is not one's own is called Theft (盜), and taking Life (生) and damaging Property (物) is called Robbery (賊).\"\n\nThe sun was high in the sky, and those rogues of the NAKP, the Way of Fire mystics, or mere bandits, were assembled in detention to listen to her lectures and be edified into true children of Concord.\n\n\"You, who roam day and night with sleeves rolled up and eyes glaring, shamelessly plunder, and the worst of you call money 'brother' and murder your own families to become generals, have no right to discuss ethics or morality. Moreover, you steal foods from locusts, clothes from silkworms, block bees and take their honey, and the cruelest of you pickle ant larvae by the name of Concord, what could be more brutal than you?\"\n\nThis time her gaze fell on the Way of Fire mystics.\n\n\"You talk of Principle (理) and Nature (性), and frequently mention the Concord, but if we see it as the Celestial Call (召命), creatures and kirin are all part of the myriad of things. If we speak of the Benevolence (仁) with which Concord and creatures bring forth all things - equines, locusts, silkworms, bees, ants, and kirin are all nurtured by Concord and the earth; thus should not harm each other. Looking at the distinction between Good and Evil (善惡), openly plundering the homes of bees and ants would surely make one the Great Theft (巨盜) between Concord and creatures? And plundering the very foundation of locusts and silkworms, would that not make one the Arch-enemy (大賊) against Benevolent Morality (仁義) ?\"\n\nThen the rogues on the spot fell to their knees." #박지원, 호질(虎叱)
- madkirin.1.c: "Her lecture is even more heretic."
+ 
+  BAC_commonalty_bop: "Two Factions of the Commonalty"
+  commonalty_harmonic_control: "§FCommunion of Trinity§! - §7Harmonists§!"
+  commonalty_harmonic_control_desc: "TODO"
+  commonalty_communal_control: "§RWorker-Peasant Union§! - §RCommunalists§!"
+  commonalty_communal_control_desc: "TODO"
+  commonalty_balanced: "§OCommonalty§! - §gNeutral§!"
+  commonalty_harmonic_control_strong: "§OCommonalty§! - §7Harmony§! Dominance"
+  commonalty_harmonic_control_mid: "§OCommonalty§! - Major §7Harmony§! Bias"
+  commonalty_harmonic_control_weak: "§OCommonalty§! - Slight §7Harmony§! Bias"
+  commonalty_communal_control_strong: "§OCommonalty§! - §RCommunal§! Dominance"
+  commonalty_communal_control_mid: "§OCommonalty§! - Major §RCommunal§! Bias"
+  commonalty_communal_control_low: "§OCommonalty§! - Slight §RCommunal§! Bias"
 
 
 #foci
-
- BAC_COC_t1: "Favor Trinitarianist"
- BAC_COC_t1_desc: "TODO"
- BAC_COC_h1: "Favor Harmonist"
- BAC_COC_h1_desc: "TODO"
- BAC_COC_c1: "Favor Communalist"
- BAC_COC_c1_desc: "TODO"
- BAC_COC_t2: "2 Trinitarianist"
- BAC_COC_t2_desc: "TODO"
- BAC_COC_h2: "2 Harmonist"
- BAC_COC_h2_desc: "TODO"
- BAC_COC_c2: "2 Communalist"
- BAC_COC_c2_desc: "TODO"
+ #commonalty
+ BAC_COC_t1: "Prepare The Foundation"
+ BAC_COC_t1_desc: "Now that we have decided to skip the intermediate bridge like the Kingdom of Concord and immediately establish the Commonalty, we must act without any delay. The Committee for Preparation of the Foundation will be the starting point, and its composition must be unbiased if it is to truly realize the spirit that drew kirin to the uprising: "All creatures should be equal before Concord."" #콩코드 왕국이라는 중간 다리를 건너뛰고 Commonalty의 즉각적인 건국을 결정했으니만큼 지체없이 행동에 나서야 합니다. Committee For Preparation of The Foundation은 그 시작점이 될 것이고, 봉기에 키린들을 끌어모을 수 있게 해주었던 정신인 '콩코드 아래 만민의 평등'을 진정으로 실현하려면 그 구성에서부터 편향이 있어서는 안 됩니다.
+ BAC_COC_h1: "Honour Our Friends"
+ BAC_COC_h1_desc: "Our victory was ultimately due to the blood-soaked efforts and sincere friendship of our comrades-in-arms. It is of the utmost importance that their blood not be shed in vain, especially those ponies who believe in Princess Celestia and her teachings of true harmony, from the far far away. And... a few other creatures who believe in... some ideas." #우리가 이 국난에서 무적처럼 보였던 적을 이겨낼 수 있었던 것은 삼위일체 신자들의 말처럼 상서로운 존재의 보우하심 덕분일 수도 있겠지만 결국 함께 싸운 전우들의 피로 젖은 노력과 진실한 우정 덕분입니다. 그들의 피가 헛되지 않도록 하는 것이 가장 중요합니다. 특히 이역만리에서 온, 셀레스티아 공주님과 그분의 가르침인 조화를 믿는 포니들과... 그리고... 약간... 다른 사상...을 믿는 생물들도 말입니다.
+ BAC_COC_c1: "The Voice Must Be Heard"
+ BAC_COC_c1_desc: "Although we became victorious, there are countless kirin families who have been forced to give up their daily food for the desperate fight. Very now, their voices must be heard, because there is no kirin left who doesn't know how desperation and fury on the brink can manifest itself, in these darkest days after the Silence of Kiria." #절박한 싸움에 쓰일 군량을 위해 그 날의 식량을 양보해야만 했던 키린 가정은 수도 없이 많습니다. 이번에야말로 그들의 목소리가 반드시 들려야만 합니다. 벼랑 끝에 몰린 절망이 키리아에서 어떻게 표출되기 마련인지 모르는 키린이 이제는 아마 없을테니까요.
+ BAC_COC_t2: "Commonalty Constitutional Senate"
+ BAC_COC_t2_desc: "" #만민의 평등을 보장하는 것은 중요하지만 우리가 폭압적인 강철의 물결에 힘없이 스러져가지 않게 되기 위해서는 현대 세계에 발맞추어 걸어가는 것이 필수적입니다. 바로 직전까지 치렀던 그 모든 국난을 통해 피로써 얻은 교훈이겠지요. 현대국가의 기반은 법적 안정성이고 그것을 보장하기 위한 첫걸음은 바로 헌법입니다. 물론 이 과정에서 민의가 무시되어서는 안 됩니다.
+ BAC_COC_h2: "Adopt Equestrian System"
+ BAC_COC_h2_desc: "" #이퀘스트리아는 불멸의 군주가 다스리는 알리콘정 국가이지만 실상은 대단히 분권화되어 있습니다. 이 사실을 강조하면서 그 제도를 적극적으로 받아들이며 심지어 헌법에까지 명시할 수 있도록 추진해보는 것은 정말 좋은 생각입니다. 아무렴 누구도 반대하지 않을 안건이니까요. 우리가 이퀘스트리아를 따르는 것에는 그만한 이유가 있습니다.
+ BAC_COC_c2: "Our Cause Must Be Informed" 
+ BAC_COC_c2_desc: "" #Realm에는 아직도 우리가 승리했다는 사실을 모르는 시골 키린들이 많습니다. 그 사실을 알리는 것은 물론이고 우리가 그들을 대변해줄 수 있다는 사실 또한 알려야 합니다. 그리고 저들의 목소리가 더욱 대변될 수 있도록 해야 합니다. 그게 바로 우리가 이 고된 일들을 하는 이유입니다.
  BAC_COC_t3: "3 Trinitarianist"
  BAC_COC_t3_desc: "TODO"
  BAC_COC_h3: "3 Harmonist"
@@ -64,8 +71,8 @@
  BAC_COC_eco_top_desc: "TODO"
  BAC_COC_eco_h1: "Favor Harmonist"
  BAC_COC_eco_h1_desc: "TODO"
- BAC_COC_eco_c1: "Favor Communalist"
- BAC_COC_eco_c1_desc: "TODO"
+ BAC_COC_eco_c1: "Initiate Land Reform" #gives timed idea i think
+ BAC_COC_eco_c1_desc: "" #자치주의자들은 현대화니 뭐니 하는 이야기에 그다지 관심이 없습니다. 중요한 것은 이 Realm에 사는 키린들이 배곯지 않도록 하는 것 말고는 없으니까요. 경자유전의 원칙에 따라 각 농가가 스스로를 부양할 수 있을만큼의 토지를 분배하게 될 수만 있다면 더 이상 굶주리는 농민이 없게 될 것입니다.
  BAC_COC_eco_h2: "2 Harmonist"
  BAC_COC_eco_h2_desc: "TODO"
  BAC_COC_eco_t2: "2 Trinitarianist"
@@ -88,6 +95,9 @@
  BAC_COC_eco_t4c_desc: "TODO"
  BAC_COC_eco_c4: "4 Communalist"
  BAC_COC_eco_c4_desc: "TODO"
+ 
+ BAC_COC_edu: "Education Committee"
+ BAC_COC_edu_desc: "" #문자의 난해함으로 인해 키린 문맹률은 다른 국가들에 비해서도 월등히 높은 편입니다. 민회의 총의에 따라 교육위원회는 이러한 문맹 문제에 주력할 것을 하명받았으나 여전히 일의 진행이 지지부진하다고 합니다. 어떤 문제가 벌어지고 있는지 알아낼 필요가 있습니다.
 
  BAC_COC_mil_top: "2 Trinitarianist"
  BAC_COC_mil_top_desc: "TODO"
@@ -117,16 +127,58 @@
  BAC_COC_mil_t4c_desc: "TODO"
  BAC_COC_mil_c4: "4 Communalist"
  BAC_COC_mil_c4_desc: "TODO"
- 
+
+
+# events
+ #commonalty
+  baccocc.1.t: "Committee For Preparation of The Foundation"
+  baccocc.1.d: "Auspicious Clouds 서녘 너머로 해가 뉘엿뉘엿 넘어가고 있었고, 콩코드의 아이들이 임시 본부로 사용하던 집무실에서 Dayspring Rose는 오늘 하루종일 씨름했던 서류들을 책상에 내동댕이치듯 내려놓았다." #TODO: 데이스프링의 건준 구성과정
+  baccocc.1.a: ""I have never thought this would be easy, after all.""
+
+
+  baccocc.11.t: "Which Law Should We Use?"
+  baccocc_11d_intro: ""
+  baccocc.11.d_1: "$baccocc_11d_intro$\n\n" #우리가 건국준비위원회를 구성함에 있어 최대한 많은 노력을 기울여왔지만 여전히 부족한 점이 많습니다. 가장 시급한 사안은 바로 헌법입니다. 키리아의 근대화 과정에서 국제라고도 번역된 적이 있을만큼 헌법은 법치국가를 지향함에 있어 가장 근본이 되는 것이라고 할 수 있습니다. 물론 우리가 원시 상태에서 큰 변화 없이 산다면 법과 질서는 임시방편식으로도 충분할 것이며 일부 자치주의자들 중에서는 심지어 그러한 사회를 건설해야 한다는 주장을 내세우는 이들도 있으나, 이 모든 국란을 겪은 키린들 대부분은 난색을 표하고는 합니다. 결국 자신의 발굽과 뿔, 비늘만으로 스스로를 지키는 것에는 한계가 있으며 규모의 경제와 첨단 기술로 대표되는 현대성의 무자비한 물결 앞에서 한 줌 핏물이 될 뻔했던 전쟁을 겪은 것이 바로 얼마 전이었으니 말입니다. 일정 이상의 인구를 규율하기 위해서는 결국 법적 안정성으로 정의되는 질서가 가장 좋은 수단이며, 이는 동시에 현대화에 발맞추어 키린들을 지킬 힘을 얻게 해줄 첫걸음이 되는 것입니다.\n\n문제는 우리가 어떤 법제를 적용하느냐 하는 것입니다. Premier Autumn Blaze가 이끌던 Realm of Kiria의 Great Gallop Onward 시절 Plenum에서 반포되었던 헌법을 기반으로 할 것인지, 조화주의자들이 주장하는 대로 이퀘스트리아의 법제를 이식할 것인지가 관건입니다. 한편 그리폰이나 리버랜드 헌법은 Fickle Current의 NAKP를 연상케 하기 때문에 선호되지 않는 제안입니다. Realm of Kiria는 여전히 키린들, 특히 전장에서 떨어진 곳의 키린들 마음 속에 있으니만큼 그 시절의 오래가지 못했던 헌법을 준용하는 것은 우리의 정통성에도 도움이 될 것입니다. 한편 조화주의자들의 선호에 따라 이퀘스트리아 법을 준용하는 것은 세계에서 가장 널리 쓰이는 법제와의 호환성은 물론이고 참조하기 좋은 판례 및 사례들도 많기 때문에 더욱 경제적이라고 할 수도 있을 것입니다. 아니면 옛 Rising Fire 운동으로부터 전해내려와 삼위일체 신앙에서도 중요시하는 대원칙을 기반으로 새로 시작하는 것도 방법입니다: All creatures should be equal before Concord.
+  baccocc.11.d_2: "$baccocc_11d_intro$\n\n문제는 우리가 어떤 법제를 적용하느냐 하는 것입니다. 조화주의자들이 주장하는 대로 이퀘스트리아의 법제를 이식할 것인지가 화두입니다. 한편 그리폰이나 리버랜드 헌법은 Fickle Current의 NAKP를 연상케 하기 때문에 선호되지 않는 제안입니다. 조화주의자들의 선호에 따라 이퀘스트리아 법을 준용하는 것은 세계에서 가장 널리 쓰이는 법제와의 호환성은 물론이고 참조하기 좋은 사례들이 많기 때문에 더욱 경제적이라고 할 수도 있을 것입니다. 아니면 옛 Rising Fire 운동으로부터 전해내려와 삼위일체 신앙에서도 중요시하는 대원칙을 기반으로 새로 시작하는 것도 방법입니다. All creatures should be equal before Concord." # KIR_focus_8f
+  baccocc.11.a: "" #이미 만들어진 헌법이 있다면 그걸 쓰는 게 맞다.
+  baccocc.11.b: "" #이퀘스트리아 헌법을 이식하는 것이 최선의 방법이다.
+  baccocc.11.c: "All creatures should be equal before Concord. That's where we start." #kirin.20.c
+
+  baccocc.12.t: "The Trial of NAKP"
+  baccocc.12.d: "" #NAKP의 패배와 함께 주요 구성원과 부역자들은 대부분 포로로 잡혔습니다. 물론 그 과정에서 '불운'하게도 목숨을 잃고 만 키린들도 있었지요. 어쨌든 곧 민회가 될 지도부에서는 포로의 즉결처형을 금지하고 '공정한' 재판, 물론 비공식적인 경로로는 '통쾌한' 재판을 열 것을 약속했습니다.\n\n헌법이 제정되고 하위법들이 제정됨에 따라 NAKP의 형사재판도 치러지게 되었습니다. 물론 이 형사재판은 형사소송법에 규정된 절차에 따라 치러져야 마땅하겠으나, 사안의 특수성으로 인해 현행법뿐만 아니라 Way of Fire 율법과 그리포니아 대륙법에 의해서도 심리하게 되었습니다. #TODO: 카이롭테라 전범재판 긴빠이치기
+  baccocc.12.a: "Good riddance, after all."
+
+  baccocc.13.t: "Matter of Educational Model"
+  baccocc.13.d: "" #교육위원회가 구성된 회의장으로 향하는 Kindling Flash의 발걸음은 무거웠다. 그의 머릿속에는 교육위원회 회의록에 적힌 내용이 둥둥 떠다니고 있었다. 그저 키린들에게 어떻게 글을 잘 가르칠 것인지에 대해서만 고민하면 되는 문제가 아니겠는가, 라는 생각은 마치 백 살 먹은 Way of Fire의 Mystic처럼 너무 고루한 생각이었던 것이었다. 회의장 입구에 도착한 그는 심호흡을 하고 염력을 이용해 문을 열었다.\n\n\"-uck 네가 NAKP와 다른 게 뭐야?\"\n\n장내는 이미 아수라장이었는데 키린들은 이미 몸싸움을 벌이고 있었다. #TODO - unfinished event : I'm not good at make conversation
+  baccocc.13.a: ""
+
+  baccocc.6.t: "Matter of Regional Autonomy"
+  baccocc.6.d: "" #지방 자치 문제는 예상대로 간단하게 처리되었습니다. 물론 혁명의 네 영웅들 사이에 이미 합의가 이루어졌던 것도 있지만, 결정적인 것은 키린들에게 있어 이 안건에 대해 반대할 이유가 전혀 없었다는 것입니다. 자치주의자들의 경우에는 말할 것도 없고, 조화주의자들 또한 그들이 선망하는 이퀘스트리아의 분권적 모형과 유사한 형태를 도입하는 것만으로 충분히 만족하는 모양새라 Mahogany Blaze가 나설 필요도 없었습니다.\n\n종교계에서도, 주요 교파인 키린 삼위일체의 주요 교리가 콩코드 아래 모든 키린의 평등이었으므로 Dayspring Rose의 교리를 잘 받아들인 신자들이라면 반발할 이유가 전혀 없었습니다. 그간 중앙집권을 정당화하는 신학으로 유지되었던 Way of Fire는 키리아의 침묵에 있어 크나큰 과실이 있는 것으로 간주되고 있었으므로 그들의 의견에 신경쓰는 키린은 지금 같은 때에 거의 없다고 봐도 무방합니다. 물론 그들 대부분은 봉기 직후 대부분 '처형'되었거나 NAKP 부역자로 간주되고 있는 형국이긴 합니다.\n\n또한 이런 분권적인 토대를 가장 싫어할만한 이들은 애초에 NAKP에 적극적으로 부역하였던 자들이라 지금은 포로가 되어 조만간 치러질 재판을 기다리고 있었죠.
+  baccocc.6.a: "" #일사천리로 해결되는 일이 있기는 하다는 게 다행이야.
+
+ #madkirin
+  madkirin.1.t: "The Lecture"
+  madkirin.1.d: "\"-Taking what is not one's own is called Theft (盜), and taking Life (生) and damaging Property (物) is called Robbery (賊).\"\n\nThe sun was high in the sky, and those rogues of the NAKP, the Way of Fire mystics, or mere bandits, were assembled in detention to listen to her lectures and be edified into true children of Concord.\n\n\"You, who roam day and night with sleeves rolled up and eyes glaring, shamelessly plunder, and the worst of you call money 'brother' and murder your own families to become generals, have no right to discuss ethics or morality. Moreover, you steal foods from locusts, clothes from silkworms, block bees and take their honey, and the cruelest of you pickle ant larvae by the name of Concord, what could be more brutal than you?\"\n\nThis time her gaze fell on the Way of Fire mystics.\n\n\"You talk of Principle (理) and Nature (性), and frequently mention the Concord, but if we see it as the Celestial Call (召命), creatures and kirin are all part of the myriad of things. If we speak of the Benevolence (仁) with which Concord and creatures bring forth all things - equines, locusts, silkworms, bees, ants, and kirin are all nurtured by Concord and the earth; thus should not harm each other. Looking at the distinction between Good and Evil (善惡), openly plundering the homes of bees and ants would surely make one the Great Theft (巨盜) between Concord and creatures? And plundering the very foundation of locusts and silkworms, would that not make one the Arch-enemy (大賊) against Benevolent Morality (仁義) ?\"\n\nThen the rogues on the spot fell to their knees." #박지원, 호질(虎叱)
+  madkirin.1.c: "Her lecture is even more heretic."
+
 #decisions 
- bactodotodo: "마호가니 블레이즈와 브라이트 번은 이퀘스트리아에서 태어나 자랐으며 마호가니의 경우 우정 학교 졸업자이기도 합니다. 그의 연줄을 이용하면 이 황폐해진 나라에 이퀘스트리아의 자본을 대어 숨통을 트이게 할 수 있을지도 모릅니다." #이퀘스트리아가 존재하면 정치력이 많이 드는 대신 강력한 효과의 개발딸 가능한 컨셉
+ bactodotodo: "" #마호가니 블레이즈와 브라이트 번은 이퀘스트리아에서 태어나 자랐으며 마호가니의 경우 우정 학교 졸업자이기도 합니다. 그의 연줄을 이용하면 이 황폐해진 나라에 이퀘스트리아의 자본을 대어 숨통을 트이게 할 수 있을지도 모릅니다. #이퀘스트리아가 존재하면 정치력이 많이 드는 대신 강력한 효과의 개발딸 가능한 컨셉
+
+ # 키리아 내전 - 07년 8월
+ # 콩코드 봉기 - 08년 12월 12일 ( kirin_council.303 )
+ # 콩코드 통일 - 09년 3월 15일
 
  #조화주의파: 확장주의, 괴뢰국 착취, 전차 + 공군 + 해군
- #삼위일체파: 기린 코어, 비핵심 버프, 안정도, 종족 기술 + 지원 장비
- #자치주의파: 주마다 건설 슬롯(퍼센트 말고 개수), 정치력 이득, 안정도 패널티, 육군
+ #삼위일체파: 키린 코어, 비핵심 버프, 안정도, 종족 기술 + 지원 장비
+ #자치주의파: 인구, 주마다 건설 슬롯(퍼센트 말고 개수), 정치력 이득, 안정도 패널티, 육군
 
- #중점 갈래 (경제, 군사, 정치외교): 각 파벌마다 단계별 선택지를 주고 각 단계의 미선택 선택지는 180일 이후에 선택 가능하게 하기
- #
+ #중점 갈래 (경제, 군사, 정치): 각 파벌마다 단계별 선택지를 주고 각 단계의 미선택 선택지는 180일 이후에 선택 가능하게 하기
+ 
+ # 초기안: 조화-자치 힘의 균형을 넣은 다음 삼위일체 영향력은 별도 변수로 관리 (요구 툴팁에 현재 값 표시)
+ # 대안: 독일 제국, 윙바르디, 아퀼레이아의 디시전 긴빠이 
+
+ #외교 - 정복하고 나서 군사 훈련 등 중점으로 테크 획득. 아마 평화 루트일 때는 보너스를 더 주는 방향으로? 주변 4개국을 다 처먹고 나면 엔딩 (열강 놀이는 다음 업데이트 때)
+
 
 
  
@@ -140,8 +192,8 @@
   TNO_BAC_CountryClosing_close_btn_tt: "§WMaybe so."
   TNO_BAC_CountryClosing_page_btn_tt: "§WPage [Get_TNO_BAC_CountryClosing_page_btn_text]§!"
   TNO_BAC_CountryClosing_epilogue_generic: "Thanks for your engagement in all the content with this submod!"
-  BAC_CountryClosing_epilogue_KIR_commonalty: "A new order sets as flames and explosions halt - brave new future lies ahead since the darkness has passed. After all those years of the Silence, the Gallop Onward, and the harsh ordeal of the Second Cacophony - The Commonalty has won the new century for Kiria and Eastern Zebrica...\n\nWhat role will the Commonalty play in this stage been said brave new world? Will their ideals and revolution remain untainted until the very end? Will they face all the glories and trials that lie ahead and bring their ideals to the world?\n\nThe wild ride of Commonalty will continue in the Commonalty expansion update 2.0 - Sincerely thanks for playing this path and submod!"
+  BAC_CountryClosing_epilogue_KIR_commonalty: "A new order sets as flames and explosions halt - brave new future lies ahead since the darkness has passed. After all those years of the Silence, the Gallop Onward, and the harsh ordeal of the Second Cacophony, The Commonalty has won the new century for Kiria and Eastern Zebrica...\n\nWhat role will the Commonalty play in this stage been said brave new world? Will their ideals and revolution remain untainted until the very end? Will they face all the glories and trials that lie ahead and bring their ideals to the world?\n\nThe wild ride of Commonalty will continue in the Commonalty expansion update 2.0 - Sincerely thanks for playing this path and submod!"
   BAC_CountryClosing_epilogue_KIR_generic: "$TNO_BAC_CountryClosing_epilogue_generic$"
-  TNO_BAC_CountryClosing_credits_0: "§YProduction support§!\n\nHead Dev.\n§P_unicornia.§!"
+  TNO_BAC_CountryClosing_credits_0: "§YProduction support§!\n\nSole Dev.\n§P_unicornia.§!"
   TNO_BAC_CountryClosing_credits_1: "§YSpecial Thanks§!\n\n£eaw_text  Equestria at War Team for realization of this marvelous world, THE LAST EMPIRE and UKKRHEE(its head dev.) for giving permission to use his assets, Kaiserreich, Eight Years' War of Resistance, and The New Order. The Last honor goes to the Diarchy Expanded, an EaW submod inspired me to start modding." 
   TNO_BAC_CountryClosing_credits_2: "TEST"

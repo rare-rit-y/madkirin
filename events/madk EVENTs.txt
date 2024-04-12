@@ -91,7 +91,29 @@ country_event = {
 	}
 }
 
-country_event = { 
+
+
+
+
+country_event = { # baccocc.1 - Committee For Preparation of The Foundation
+	id = baccocc.1 
+	title = baccocc.1.t
+	desc = baccocc.1.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.1"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.1.a #"I have never thought this would be easy, after all."
+		
+		set_power_balance = {
+			id = BAC_commonalty_bop
+		}
+	}
+}
+
+
+
+country_event = { # madkirin.1 - The Lecture
 	id = madkirin.1 
 	title = madkirin.1.t
 	desc = madkirin.1.d #박지원, 호질(虎叱)
@@ -99,11 +121,11 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = madkirin.1.c
+		name = madkirin.1.c #Her lecture is even more heretic.
 		hidden_effect = {
 			retire_ideology_leader = fascism
 			add_country_leader_role = {
-				character = KIR_fiery_azalea #placeholder
+				character = KIR_fiery_azalea #placeholder, need to make a new OC
 				promote_leader = yes
 				country_leader = {
 					expire = "1965.1.1"

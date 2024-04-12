@@ -1,0 +1,1419 @@
+focus_tree = {
+	id = BAC_COC_com_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 50
+			has_country_leader = {
+				character = COC_common_senate
+				ruling_only = yes
+			}
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 2000 y = 20 }
+
+	shared_focus = BAC_COC_c1
+	shared_focus = BAC_COC_c2
+	shared_focus = BAC_COC_c3
+	shared_focus = BAC_COC_h1
+	shared_focus = BAC_COC_h2
+	shared_focus = BAC_COC_h3
+	shared_focus = BAC_COC_t1
+	shared_focus = BAC_COC_t2
+	shared_focus = BAC_COC_t3
+	shared_focus = BAC_COC_pol_top
+	shared_focus = BAC_COC_sekrit_war_committee
+}
+
+shared_focus = { #BAC_COC_t1 - Prepare The Foundation
+	id = BAC_COC_t1 #건국 준비
+	icon = GFX_goal_KIR_fire
+	cost = 1.5
+	ai_will_do = { factor = 80 }
+	x = 12
+	y = 0
+	allow_branch = {
+		check_variable = { coc_start_foci_completed < 3 }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_t1"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		country_event = {
+			id = baccocc.1
+			days = 1
+		}
+		#add_to_variable = { coc_t_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	
+}
+shared_focus = { #BAC_COC_h1 - Honour Our Friends
+	id = BAC_COC_h1 
+	icon = GFX_goal_solar_maternal_guidance #GFX_griffking_utopia #
+	cost = 1.5
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = -3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed < 3 }
+		has_completed_focus = BAC_COC_t1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h2"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		add_political_power = 33
+		add_power_balance_value = {
+			id = BAC_commonalty_bop
+			value = -0.33
+			tooltip_side = commonalty_harmonic_control
+		}
+		#add_to_variable = { coc_h_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	
+}
+shared_focus = { #BAC_COC_c1 - The Voice Must Be Spoken
+	id = BAC_COC_c1
+	icon = GFX_goal_KIR_flaming_yin_yang #GFX_goal_autonomism
+	cost = 1.5
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed < 3 }
+		has_completed_focus = BAC_COC_t1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c1"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		add_stability = 0.033
+		add_power_balance_value = {
+			id = BAC_commonalty_bop
+			value = 0.1
+			tooltip_side = commonalty_communal_control
+		}
+		#add_to_variable = { coc_c_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	
+}
+shared_focus = { #BAC_COC_t2 - Commonalty Constitutional Senate
+	id = BAC_COC_t2 #제헌만민회
+	icon = GFX_goal_KIR_verdigris_rotunda
+	cost = 1.5
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 0
+	y = 0
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 3 }
+	}
+	# available = {
+	# 	custom_trigger_tooltip = {
+	# 		tooltip = COC_please_take_previous_foci
+	# 		check_variable = { coc_start_foci_completed > 2 }
+	# 	}
+	# }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_t2"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		#add_to_variable = { coc_t_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	
+}
+shared_focus = {
+	id = BAC_COC_h2
+	icon = GFX_goal_solar_harmony_in_order
+	cost = 1.5
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = -3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 3 }
+	}
+	# available = {
+	# 	custom_trigger_tooltip = {
+	# 		tooltip = COC_please_take_previous_foci
+	# 		check_variable = { coc_start_foci_completed > 2 }
+	# 	}
+	# }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h2"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		#add_to_variable = { coc_h_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	
+}
+shared_focus = {
+	id = BAC_COC_c2
+	icon = GFX_goal_KIR_kirin_leaping #GFX_goal_KIR_speech #GFX_goal_KIR_microphone #
+	cost = 1.5
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 3 }
+	}
+	# available = {
+	# 	custom_trigger_tooltip = {
+	# 		tooltip = COC_please_take_previous_foci
+	# 		check_variable = { coc_start_foci_completed > 2 }
+	# 	}
+	# }
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c2"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		#add_to_variable = { COC_c_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	
+}
+shared_focus = {
+	id = BAC_COC_t3
+	icon = GFX_goal_KIR_constitution_unique
+	cost = 1.5
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 0
+	y = 0
+	allow_branch = {
+		check_variable = { coc_start_foci_completed > 6 }
+		check_variable = { coc_start_foci_completed < 10 }
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = COC_please_take_previous_foci
+			check_variable = { coc_start_foci_completed > 5 }
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_t3"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	
+}
+shared_focus = {
+	id = BAC_COC_h3
+	icon = GFX_goal_UESR_TNO_elections
+	cost = 1.5
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = -3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed > 6 }
+		check_variable = { coc_start_foci_completed < 10 }
+	}
+	# available = {
+	# 	custom_trigger_tooltip = {
+	# 		tooltip = COC_please_take_previous_foci
+	# 		check_variable = { coc_start_foci_completed > 5 }
+	# 	}
+	# }
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h3"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	
+}
+shared_focus = {
+	id = BAC_COC_c3
+	icon = GFX_goal_HEL_anar_election
+	cost = 1.5
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed > 6 }
+		check_variable = { coc_start_foci_completed < 10 }
+	}
+	# available = {
+	# 	custom_trigger_tooltip = {
+	# 		tooltip = COC_please_take_previous_foci
+	# 		check_variable = { coc_start_foci_completed > 5 }
+	# 	}
+	# }
+	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c3"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	
+}
+shared_focus = {
+	id = BAC_COC_true_commonalty
+	icon = GFX_goal_KIR_tristar
+	cost = 1.5
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 0
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed > 8 }
+		NOT = { has_completed_focus = BAC_COC_pol_top }
+	}
+	prerequisite = {
+		focus = BAC_COC_t3
+		focus = BAC_COC_t3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_true_commonalty"
+		add_to_variable = { coc_start_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
+	}
+	
+	
+}
+
+shared_focus = {
+	id = BAC_COC_pol_top
+	icon = GFX_goal_KIR_COC_trinity
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 0
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_true_commonalty
+		focus = BAC_COC_true_commonalty
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_top"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_pol_t1
+	icon = GFX_goal_KIR_cooperation
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_top
+	x = 0
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_top
+		focus = BAC_COC_pol_top
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_t1"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_pol_h1
+	icon = GFX_goal_request_equestrian_aid
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_top
+	x = -2
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_top
+		focus = BAC_COC_pol_top
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h1"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_pol_c1
+	icon = GFX_goal_KIR_chrysanthemum
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_top
+	x = 2
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_top
+		focus = BAC_COC_pol_top
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_c1"
+	}
+	
+}
+
+
+shared_focus = {
+	id = BAC_COC_pol_t3 #commonalty new order
+	icon = GFX_goal_UESR_TNO_post_scarcity
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_top
+	x = 0
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_h2
+		focus = BAC_COC_pol_c2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_t2"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_pol_h2
+	icon = GFX_goal_KIR_table
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_top
+	x = -1
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_t1
+		focus = BAC_COC_pol_h1
+		focus = BAC_COC_pol_c1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h2"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_pol_c2
+	icon = GFX_goal_KIR_unity
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_top
+	x = 1
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_t1
+		focus = BAC_COC_pol_h1
+		focus = BAC_COC_pol_c1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_c2"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_eco_top
+	icon = GFX_goal_KIR_kiria_1007
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = -6
+	y = 3
+	
+	prerequisite = {
+		focus = BAC_COC_true_commonalty
+		focus = BAC_COC_true_commonalty
+	}
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_top"
+	}
+	
+	
+}
+
+
+shared_focus = {
+	id = BAC_COC_eco_h1
+	icon = GFX_goal_eqs_military_cooperation
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = -1
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_top
+		focus = BAC_COC_eco_top
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h1"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_eco_c1
+	icon = GFX_goal_KIR_crumble #
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = 1
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_top
+		focus = BAC_COC_eco_top
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c1"
+	}
+	
+}
+
+
+shared_focus = {
+	id = BAC_COC_eco_t2
+	icon = GFX_goal_KIR_construction
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = 0
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_h1
+		focus = BAC_COC_eco_c1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_t2"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_eco_h2
+	icon = GFX_goal_PLB_eqs_ties
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = -2
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_h1
+		focus = BAC_COC_eco_c1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h2"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_eco_c2
+	icon = GFX_goal_KIR_bread
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = 2
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_h1
+		focus = BAC_COC_eco_c1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c2"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_eco_t3h
+	icon = GFX_goal_KIR_barrels
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = -1
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_t2
+		focus = BAC_COC_eco_h2
+		focus = BAC_COC_eco_c2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_t3h"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_eco_t3c
+	icon = GFX_goal_KIR_resources
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = 1
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_t2
+		focus = BAC_COC_eco_h2
+		focus = BAC_COC_eco_c2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_t3c"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_eco_c3
+	icon = GFX_goal_HEL_anar_peasant
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = 3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_t2
+		focus = BAC_COC_eco_h2
+		focus = BAC_COC_eco_c2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c3"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_eco_h3
+	icon = GFX_goal_UESR_TNO_sun_moon
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = -3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_t2
+		focus = BAC_COC_eco_h2
+		focus = BAC_COC_eco_c2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h3"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_eco_h4
+	icon = GFX_goal_generic_equestria #GFX_goal_KIR_gunboat
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = -4
+	y = 4
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_t3h
+		focus = BAC_COC_eco_t3c
+		focus = BAC_COC_eco_h3
+		focus = BAC_COC_eco_c3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h4"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_eco_t4h
+	icon = GFX_goal_KIR_docks
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = -2
+	y = 4
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_t3h
+		focus = BAC_COC_eco_t3c
+		focus = BAC_COC_eco_h3
+		focus = BAC_COC_eco_c3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_t4h"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_eco_t4t
+	icon = GFX_goal_KIR_electricity
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = 0
+	y = 4
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_t3h
+		focus = BAC_COC_eco_t3c
+		focus = BAC_COC_eco_h3
+		focus = BAC_COC_eco_c3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_t4t"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_eco_t4c
+	icon = GFX_goal_KIR_communism
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = 2
+	y = 4
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_t3h
+		focus = BAC_COC_eco_t3c
+		focus = BAC_COC_eco_h3
+		focus = BAC_COC_eco_c3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_t4c"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_eco_c4
+	icon = GFX_goal_zebra_agriculture
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_eco_top
+	x = 4
+	y = 4
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_eco_t3h
+		focus = BAC_COC_eco_t3c
+		focus = BAC_COC_eco_h3
+		focus = BAC_COC_eco_c3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c4"
+	}
+	
+}
+
+
+shared_focus = {
+	id = BAC_COC_mil_top
+	icon = GFX_goal_KIR_ranks
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 6
+	y = 3
+	prerequisite = {
+		focus = BAC_COC_true_commonalty
+		focus = BAC_COC_true_commonalty
+	}
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_top"
+	}
+	
+	
+}
+
+shared_focus = {
+	id = BAC_COC_mil_h1
+	icon = GFX_goal_cry_eqs_hat
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = -1
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_top
+		focus = BAC_COC_mil_top
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h1"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_mil_c1
+	icon = GFX_goal_HEL_anar_bomb
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = 1
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_top
+		focus = BAC_COC_mil_top
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c1"
+	}
+	
+}
+
+
+shared_focus = {
+	id = BAC_COC_mil_t2
+	icon = GFX_goal_KIR_kirins_rampant
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = 0
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_h1
+		focus = BAC_COC_mil_c1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_t2"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_mil_h2
+	icon = GFX_goal_KIR_cannon_helmet
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = -2
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_h1
+		focus = BAC_COC_mil_c1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h2"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_mil_c2
+	icon = GFX_goal_HEL_anar_trollage
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = 2
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_h1
+		focus = BAC_COC_mil_c1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c2"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_mil_h3
+	icon = GFX_goal_KIR_flyby
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = -3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_t2
+		focus = BAC_COC_mil_h2
+		focus = BAC_COC_mil_c2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h3"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_mil_t3h
+	icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = -1
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_t2
+		focus = BAC_COC_mil_h2
+		focus = BAC_COC_mil_c2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_t3h"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_mil_t3c
+	icon = GFX_goal_KIR_KIC_military
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = 1
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_t2
+		focus = BAC_COC_mil_h2
+		focus = BAC_COC_mil_c2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_t3c"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_mil_c3
+	icon = GFX_goal_HEL_anar_cannon
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = 3
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_t2
+		focus = BAC_COC_mil_h2
+		focus = BAC_COC_mil_c2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c3"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_mil_h4
+	icon = GFX_goal_Equestrian_Royal_Navy_1 #GFX_goal_KIR_gunboat
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = -4
+	y = 4
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_t3h
+		focus = BAC_COC_mil_t3c
+		focus = BAC_COC_mil_h3
+		focus = BAC_COC_mil_c3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h4"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_mil_t4h
+	icon = GFX_goal_KIR_flotilla
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = -2
+	y = 4
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_t3h
+		focus = BAC_COC_mil_t3c
+		focus = BAC_COC_mil_h3
+		focus = BAC_COC_mil_c3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_t4h"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_mil_t4t
+	icon = GFX_goal_KIR_sergeant
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = 0
+	y = 4
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_t3h
+		focus = BAC_COC_mil_t3c
+		focus = BAC_COC_mil_h3
+		focus = BAC_COC_mil_c3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_t4t"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_mil_t4c
+	icon = GFX_goal_KIR_KIC_battle_flag
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = 2
+	y = 4
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_t3h
+		focus = BAC_COC_mil_t3c
+		focus = BAC_COC_mil_h3
+		focus = BAC_COC_mil_c3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_t4c"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_mil_c4
+	icon = GFX_goal_KIR_deaths_head
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_top
+	x = 4
+	y = 4
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_t3h
+		focus = BAC_COC_mil_t3c
+		focus = BAC_COC_mil_h3
+		focus = BAC_COC_mil_c3
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c4"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_sekrit_war_committee
+	icon = GFX_goal_Equestrian_Royal_Army_1
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_t1
+	x = 0
+	y = 7
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_sekrit_war_committee"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_war_kirin #우월주의 아닌 기린 국가들한테는 이벤트로 괴뢰화하기
+	icon = GFX_goal_chn_kirin
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_sekrit_war_committee
+	x = 4
+	y = 2
+	prerequisite = {
+		focus = BAC_COC_sekrit_war_committee
+		focus = BAC_COC_sekrit_war_committee
+	}
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+
+	available = {
+		OR = {
+			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted }
+			has_country_flag = {
+				flag = BAC_COC_commonalty_war_enacted
+				days > 90
+			}
+			custom_trigger_tooltip = {
+				tooltip = BAC_COC_commonalty_war_days_tt
+				has_country_flag = {
+					flag = BAC_COC_commonalty_war_enacted
+					days > 90
+				}
+			}
+		}
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_kirin"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_war_barbarian #롬/탈론스발을 죽이고 나면 동제브리카 얼룩말들 복속시키는 이벤트 체인 만들기 (세력 초대 - 거절 시 침공 / 아무것도 안 하기)
+	icon = GFX_goal_KIR_kaiser #GFX_goal_GRF_troubles_begin
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_sekrit_war_committee
+	x = -4
+	y = 2
+	prerequisite = {
+		focus = BAC_COC_sekrit_war_committee
+		focus = BAC_COC_sekrit_war_committee
+	}
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+	available = {
+		OR = {
+			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted }
+			has_country_flag = {
+				flag = BAC_COC_commonalty_war_enacted
+				days > 90
+			}
+			custom_trigger_tooltip = {
+				tooltip = BAC_COC_commonalty_war_days_tt
+				has_country_flag = {
+					flag = BAC_COC_commonalty_war_enacted
+					days > 90
+				}
+			}
+		}
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_barbarian"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_war_deer
+	icon = GFX_goal_chn_kill_the_deer
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_sekrit_war_committee
+	x = -11
+	y = 1
+	prerequisite = {
+		focus = BAC_COC_sekrit_war_committee
+		focus = BAC_COC_sekrit_war_committee
+	}
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+
+	available = {
+		OR = {
+			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted }
+			has_country_flag = {
+				flag = BAC_COC_commonalty_war_enacted
+				days > 90
+			}
+			custom_trigger_tooltip = {
+				tooltip = BAC_COC_commonalty_war_days_tt
+				has_country_flag = {
+					flag = BAC_COC_commonalty_war_enacted
+					days > 90
+				}
+			}
+		}
+		has_global_flag = HIN_wars_over
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_deer"
+	}
+}
+shared_focus = {
+	id = BAC_COC_war_taungpau #우월주의 아닌 기린 국가들한테는 이벤트로 괴뢰화하기
+	icon = GFX_goal_KIR_pagoda
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_sekrit_war_committee
+	x = 11
+	y = 1
+	prerequisite = {
+		focus = BAC_COC_sekrit_war_committee
+		focus = BAC_COC_sekrit_war_committee
+	}
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+
+	available = {
+		OR = {
+			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted }
+			has_country_flag = {
+				flag = BAC_COC_commonalty_war_enacted
+				days > 90
+			}
+			custom_trigger_tooltip = {
+				tooltip = BAC_COC_commonalty_war_days_tt
+				has_country_flag = {
+					flag = BAC_COC_commonalty_war_enacted
+					days > 90
+				}
+			}
+		}
+	}	
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_taungpau"
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_core_zaikiria
+	icon = GFX_goal_KIR_foals_breath
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_war_kirin
+	x = 1
+	y = 1
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+	prerequisite = {
+		focus = BAC_COC_war_kirin
+		focus = BAC_COC_war_kirin
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_core_zaikiria"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_puppet_zaikiria
+	icon = GFX_goal_KIR_KXN_banner
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_war_kirin
+	x = -1
+	y = 1
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+	prerequisite = {
+		focus = BAC_COC_war_kirin
+		focus = BAC_COC_war_kirin
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_puppet_zaikiria"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_core_taungpau
+	icon = GFX_goal_KIR_creature_friend
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_war_taungpau
+	x = 1
+	y = 1
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+	prerequisite = {
+		focus = BAC_COC_war_taungpau
+		focus = BAC_COC_war_taungpau
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_core_taungpau"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_puppet_taungpau
+	icon = GFX_goal_WNG_COM_const
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_war_taungpau
+	x = -1
+	y = 1
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+	prerequisite = {
+		focus = BAC_COC_war_taungpau
+		focus = BAC_COC_war_taungpau
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_puppet_taungpau"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_annex_barbarian
+	icon = GFX_goal_KIR_zebra #GFX_goal_UESR_TNO_justice #GFX_goal_AF24_through_the_clearings
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_war_barbarian
+	x = 1
+	y = 1
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+	prerequisite = {
+		focus = BAC_COC_war_barbarian
+		focus = BAC_COC_war_barbarian
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_annex_barbarian"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_puppet_barbarian
+	icon = GFX_PAP_roman_senate
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_war_barbarian
+	x = -1
+	y = 1
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+	prerequisite = {
+		focus = BAC_COC_war_barbarian
+		focus = BAC_COC_war_barbarian
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_puppet_barbarian"
+	}
+	
+}
+shared_focus = {
+	id = BAC_COC_annex_deer
+	icon = GFX_goal_KIR_deer
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_war_deer
+	x = 1
+	y = 1
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+	prerequisite = {
+		focus = BAC_COC_war_deer
+		focus = BAC_COC_war_deer
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_annex_deer"
+	}
+	
+}
+
+shared_focus = {
+	id = BAC_COC_puppet_deer
+	icon = GFX_goal_CTL_A_deerm
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_war_deer
+	x = -1
+	y = 1
+	allow_branch = {
+		has_country_flag = COC_war_committee
+	}
+	prerequisite = {
+		focus = BAC_COC_war_deer
+		focus = BAC_COC_war_deer
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_puppet_deer"
+	}
+	
+}

@@ -12,5 +12,5 @@ tags={
 dependencies={
 	"Equestria at War"
 }
-name="EaW - Beyond The Auspicious Clouds"
-supported_version="Bolivar v1.14.4.44c7"
+name="[EaW] Beyond The Auspicious Clouds"
+supported_version="1.14.*"
