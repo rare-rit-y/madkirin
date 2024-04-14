@@ -75,9 +75,53 @@ country_event = {
 				traits = { KIR_tempered_flame }
 			}
 		}
+		every_possible_country = {
+			limit = {
+				has_character = KIC_ember_glow
+			}
+			KIC_ember_glow = {
+				set_nationality = PREV.PREV
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = KIR_coral_river
+			}
+			KIR_coral_river = {
+				set_nationality = PREV.PREV
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = KIR_firethorn
+			}
+			KIR_firethorn = {
+				remove_unit_leader_trait = old_guard
+				add_unit_leader_trait = organisational_leader
+				# set_portraits = { #this would be in her event for national defense commission
+				# 	army = {
+				# 		large = "GFX_portrait_KIR_firethorn_new_uniform"
+				# 	}
+				# }
+				set_nationality = PREV.PREV
+			}
+		}
+		every_possible_country = {
+			limit = {
+				has_character = KIR_high_command_4 #Golden Lumen
+			}
+			KIR_high_command_4 = {
+				set_nationality = PREV.PREV
+			}
+		}
+		KIR = {
+			KIR_ochre_glint = {
+				set_nationality = PREV.PREV
+			}
+		}
 		set_temp_variable = { coalition_partner_var = token:democratic }
 		add_to_coalition = yes
-	}
+	} #KIR_high_command_1 (River Song) should be added when you complete the navy building focus
 }
 country_event = { 
 	id = bacdebug.3 #hidden event for debuggo
@@ -86,7 +130,7 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		load_focus_tree = BAC_COC_com_tree
+		load_focus_tree = BAC_COC_tree
 		set_country_flag = COC_war_committee
 	}
 }
@@ -95,7 +139,7 @@ country_event = {
 
 
 
-country_event = { # baccocc.1 - Committee For Preparation of The Foundation
+country_event = { # baccocc.1 - To Prepare The Foundation
 	id = baccocc.1 
 	title = baccocc.1.t
 	desc = baccocc.1.d 
@@ -104,15 +148,71 @@ country_event = { # baccocc.1 - Committee For Preparation of The Foundation
 	fire_only_once = yes
 	option = {
 		name = baccocc.1.a #"I have never thought this would be easy, after all."
-		
-		set_power_balance = {
-			id = BAC_commonalty_bop
+		add_political_power = -3
+		add_stability = -0.0333
+		add_war_support = -0.0333
+		hidden_effect = {
+			KIC_ember_glow = {
+				unit_leader_event = {
+					id = baccocc.2
+					days = 1
+					random_hours = 23
+				}
+			}
 		}
 	}
 }
 
+unit_leader_event = { # baccocc.2 - A Militarykirin in the Committee #위원회의 군마
+	id = baccocc.2 
+	title = baccocc.2.t
+	desc = baccocc.2.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.2"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.2.a #I cannot continue like this. #계속 이러고 있을 수는 없겠어.
+		
+		KIR_coral_river = {
+			unit_leader_event = {
+				id = baccocc.3
+				days = 1
+				random_hours = 23
+			}
+		}
+	}
+}
 
+unit_leader_event = { # baccocc.3 - The Private Meeting # 회동
+	id = baccocc.3 
+	title = baccocc.3.t
+	desc = baccocc.3.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.3"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.3.a  #And? Firethorn's brows furrowed. # \"그래서?\" 파이어쏜의 눈살이 찌푸려졌다. 
+		
+		country_event = {
+			id = baccocc.4
+			days = 1
+			random_hours = 23
+		}
+	}
+}
 
+country_event = { # baccocc.4 - To Achieve The Foundation #건국을 이루기 위하여
+	id = baccocc.4 
+	title = baccocc.4.t
+	desc = baccocc.4.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.4"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.4.a # And so, the night deepened for the two of them alone. #그렇게 둘만의 밤은 깊어져만 갔다.
+		
+	}
+}
 country_event = { # madkirin.1 - The Lecture
 	id = madkirin.1 
 	title = madkirin.1.t
