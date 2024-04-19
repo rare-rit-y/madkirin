@@ -4,20 +4,17 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 50
-			has_country_leader = {
-				character = COC_common_senate
-				ruling_only = yes
-			}
+			has_country_flag = KIC_children_of_concord_flag
 		}
 	}
 	default = no
 
-	continuous_focus_position = { x = 2000 y = 20 }
-	shared_focus = COC_pretender
-	shared_focus = COC_kindling
-	shared_focus = COC_dayspring
+	continuous_focus_position = { x = 3000 y = 20 }
+	shared_focus = BAC_COC_pretender
+	shared_focus = BAC_COC_kindling
+	shared_focus = BAC_COC_dayspring
 
-	shared_focus = BAC_COC_c1
+	shared_focus = BAC_COC_c1 #BAC Commonalty focuses
 	shared_focus = BAC_COC_c2
 	shared_focus = BAC_COC_c3
 	shared_focus = BAC_COC_h1
@@ -28,14 +25,929 @@ focus_tree = {
 	shared_focus = BAC_COC_m3
 	shared_focus = BAC_COC_pol_head
 	shared_focus = BAC_COC_sekrit_war_committee
+	initial_show_position = {
+		x = 15
+		y = 0
+	}
 }
 
+shared_focus = {
+	id = BAC_COC_kindling
+	icon = GFX_goal_KIR_communism
+	x = 11
+	y = 0
+
+	cost = 1.5
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling"
+		country_event = { id = kirin_council.305 hours = 1 }
+		add_political_power = 150
+		subtract_from_variable = { COC_9_var = 0.05 }
+		custom_effect_tooltip = KIR_line_break
+		effect_tooltip = {
+			swap_ideas = { add_idea = COC_peasant_army_dummy1 remove_idea = COC_peasant_army_dummy }
+		}
+		custom_effect_tooltip = COC_kindling_tt
+		hidden_effect = {
+			division_template = {
+				name = "Red Guards"
+				division_names_group = KIR_BANNER
+				template_counter = 0
+				regiments = {
+					kirin_vanguards = { x = 0 y = 0 }
+					kirin_vanguards = { x = 0 y = 1 }
+					kirin_vanguards = { x = 1 y = 0 }
+					kirin_vanguards = { x = 1 y = 1 }
+					kirin_vanguards = { x = 2 y = 0 }
+					kirin_vanguards = { x = 2 y = 1 }
+					artillery_brigade = { x = 3 y = 0 }
+					artillery_brigade = { x = 3 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"No. 800 Red Guards Division\" division_template = \"Red Guards\" start_equipment_factor = 0.9 start_experience_factor = 0.3" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"No. 500 Red Guards Division\" division_template = \"Red Guards\" start_equipment_factor = 0.9 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"No. 200 Red Guards Division\" division_template = \"Red Guards\" start_equipment_factor = 0.9 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_kindling_1a
+	icon = GFX_goal_KIR_KIC_battle_flag
+	relative_position_id = BAC_COC_kindling
+	x = -1
+	y = 1
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_kindling
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_1a"
+		custom_effect_tooltip = COC_kindling_add1_tt
+		add_to_variable = { COC_power_struggle_KF_var = 1 }
+		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
+		1067 = {
+			remove_core_of = KIS
+			add_core_of = ROOT
+			start_resistance = yes
+			custom_effect_tooltip = KIR_line_break
+			add_resistance_target = {
+				id = 1067
+				amount = 50
+				occupier = KIS
+				#occupied = ROOT
+				days = 365
+				tooltip = COC_uprising_tt
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_kindling_2
+	icon = GFX_goal_KIR_pointing
+	relative_position_id = BAC_COC_kindling
+	x = 0
+	y = 2
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_kindling_1a
+		focus = BAC_COC_pretender_1a
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_2"
+		custom_effect_tooltip = COC_kindling_2_tt
+		effect_tooltip = {
+			add_dynamic_modifier = { modifier = COC_provincal_peoples_militia scope = COC }
+		}
+		set_country_flag = COC_provincal_peoples_militia_flag
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_kindling_X
+	icon = GFX_goal_KIR_unity
+	relative_position_id = BAC_COC_kindling_2
+	x = -1
+	y = 1
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_kindling_2
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_X"
+		custom_effect_tooltip = COC_kindling_add1_tt
+		add_to_variable = { COC_power_struggle_KF_var = 1 }
+		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
+		country_event = { id = kirin_council.315 hours = 1 }
+		every_state = {
+			limit = {
+				OR = {
+					region = 31
+					state = 926
+				}
+			}
+			add_core_of = COC
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_kindling_3
+	icon = GFX_goal_KIR_rearing
+	relative_position_id = BAC_COC_kindling
+	x = 0
+	y = 4
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_kindling_X
+		focus = BAC_COC_pretender_2a
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_3"
+		country_event = { id = kirin_council.316 hours = 1 }
+		effect_tooltip = {
+			swap_ideas = { add_idea = COC_peasant_army_dummy2 remove_idea = COC_peasant_army_dummy }
+		}
+		hidden_effect = {
+			add_to_variable = { COC_26_var = 0.1 }
+		}
+		add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 }
+		add_equipment_to_stockpile = { type = support_equipment amount = 1000 }
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_kindling_4a
+	icon = GFX_goal_KIR_partisan
+	relative_position_id = BAC_COC_kindling_3
+	x = -1
+	y = 1
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_kindling_3
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_4a"
+		country_event = { id = kirin_council.318 hours = 1 }
+		custom_effect_tooltip = COC_kindling_4a_tt
+		set_country_flag = COC_guerilla_strike_flag
+		set_variable = { GuerillaOrgDmgVar = 90 }
+		set_variable = { GuerillaStrDmgVar = 150 }
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_kindling_4b
+	icon = GFX_goal_KIR_angery
+	relative_position_id = BAC_COC_kindling_3
+	x = 2
+	y = 1
+
+	cost = 7.2
+
+	prerequisite = {
+		focus = BAC_COC_kindling_3
+	}
+
+	mutually_exclusive = {
+		focus = BAC_COC_dayspring_4a
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_4b"
+		country_event = { id = kirin_council.313 hours = 1 }
+		custom_effect_tooltip = COC_kindling_add1_tt
+		add_to_variable = { COC_power_struggle_KF_var = 1 }
+		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
+		subtract_from_variable = { COC_18_var = 0.05 }
+		custom_effect_tooltip = KIR_line_break
+		effect_tooltip = {
+			swap_ideas = { add_idea = COC_peasant_army_dummy3 remove_idea = COC_peasant_army_dummy }
+		}
+		random_controlled_state = {
+			prioritize = { 1069 1076 1073 1077 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_controlled_state = {
+			prioritize = { 1069 1076 1073 1077 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_controlled_state = {
+			prioritize = { 1069 1076 1073 1077 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_pretender
+	icon = GFX_goal_KIR_kirin_head_unique
+	x = 15
+	y = 0
+
+	cost = 1.5
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus BAC_COC_pretender"
+		country_event = { id = kirin_council.306 hours = 1 }
+		add_command_power = 50
+		add_to_variable = { COC_11_var = 0.05 }
+		custom_effect_tooltip = KIR_line_break
+		effect_tooltip = {
+			swap_ideas = { add_idea = COC_desperate_revolt_dummy2 remove_idea = COC_desperate_revolt_dummy }
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_pretender_1a
+	icon = GFX_goal_KIR_tristar
+	relative_position_id = BAC_COC_pretender
+	x = -2
+	y = 1
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_pretender
+		focus = BAC_COC_kindling
+	}
+
+	mutually_exclusive = {
+		focus = BAC_COC_pretender_1b
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus BAC_COC_pretender_1a"
+		custom_effect_tooltip = COC_kindling_add1_tt
+		add_to_variable = { COC_power_struggle_KF_var = 1 }
+		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
+		country_event = { id = kirin_council.307 hours = 1 }
+		add_to_variable = { COC_22_var = 0.1 }
+		add_to_variable = { COC_23_var = 20 }
+		custom_effect_tooltip = KIR_line_break
+		effect_tooltip = {
+			swap_ideas = { add_idea = COC_pretender_mahogany_blaze_dummy1 remove_idea = COC_pretender_mahogany_blaze_dummy }
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_pretender_X
+	icon = GFX_goal_KIR_militiamare
+	relative_position_id = BAC_COC_pretender_1a
+	x = 1
+	y = 1
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_pretender_1a
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus BAC_COC_pretender_X"
+		custom_effect_tooltip = COC_kindling_add1_tt
+		add_to_variable = { COC_power_struggle_KF_var = 1 }
+		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
+		custom_effect_tooltip = COC_pretender_X_tt
+		hidden_effect = {
+			division_template = {
+				name = "Workers' Militia"
+				division_names_group = KIR_BANNER
+				template_counter = 69
+				regiments = {
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 0 y = 2 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 1 y = 2 }
+					militia = { x = 2 y = 0 }
+					artillery_brigade = { x = 3 y = 0 }
+					artillery_brigade = { x = 3 y = 1 }
+				}
+				support = {
+				}
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"First Workers' Guard Division 'Destiny'\" division_template = \"Workers' Militia\" start_equipment_factor = 0.99 start_experience_factor = 0.3" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Second Workers' Guard Division 'Justice'\" division_template = \"Workers' Militia\" start_equipment_factor = 0.96 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Third Workers' Guard Division 'Freedom'\" division_template = \"Workers' Militia\" start_equipment_factor = 0.93 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Fourth Workers' Guard Division 'Democracy'\" division_template = \"Workers' Militia\" start_equipment_factor = 0.90 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Fifth Workers' Guard Division 'Dignity'\" division_template = \"Workers' Militia\" start_equipment_factor = 0.87 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			set_division_template_lock = {
+				division_template = "Peasant Militia"
+				is_locked = no
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_pretender_1b
+	icon = GFX_goal_KIR_onwards
+	relative_position_id = BAC_COC_pretender
+	x = 2
+	y = 1
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_pretender
+		focus = BAC_COC_dayspring
+	}
+
+	mutually_exclusive = {
+		focus = BAC_COC_pretender_1a
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus BAC_COC_pretender_1b"
+		custom_effect_tooltip = COC_dayspring_add1_tt
+		add_to_variable = { COC_power_struggle_DR_var = 1 }
+		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
+		country_event = { id = kirin_council.308 hours = 1 }
+		add_to_variable = { COC_24_var = 0.2 }
+		add_to_variable = { COC_25_var = 0.1 }
+		custom_effect_tooltip = KIR_line_break
+		effect_tooltip = {
+			swap_ideas = { add_idea = COC_pretender_mahogany_blaze_dummy2 remove_idea = COC_pretender_mahogany_blaze_dummy }
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_pretender_Y
+	icon = GFX_goal_KIR_soldier_sitting
+	relative_position_id = BAC_COC_pretender_1b
+	x = -1
+	y = 1
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_pretender_1b
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus BAC_COC_pretender_Y"
+		custom_effect_tooltip = COC_dayspring_add1_tt
+		add_to_variable = { COC_power_struggle_DR_var = 1 }
+		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
+		custom_effect_tooltip = COC_pretender_Y_tt
+		hidden_effect = {
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"First Peasants' Army Division 'Vermilion Dreams'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.99 start_experience_factor = 0.3" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Second Peasants' Army Division 'Cerulean Skies'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.96 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Third Peasants' Army Division 'Verdant Fields'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.93 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Fourth Peasants' Army Division 'Cerise Meadows'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.90 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Fifth Peasants' Army Division 'Azure Waves'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.88 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Sixth Peasants' Army Division 'Indigo Nights'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.87 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Seventh Peasants' Army Division 'Turquoise Hills'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.88 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Eighth Peasants' Army Division 'Periwinkle Shores'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.87 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			random_owned_controlled_state = {
+				create_unit = { division = "name = \"Ninth Peasants' Army Division 'Auburn Waters'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.88 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
+			}
+			set_division_template_lock = {
+				division_template = "Peasant Militia"
+				is_locked = no
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_pretender_2a
+	icon = GFX_goal_KIR_speech
+	relative_position_id = BAC_COC_pretender
+	x = -2
+	y = 3
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_pretender_X
+		focus = BAC_COC_kindling_2
+	}
+
+	mutually_exclusive = {
+		focus = BAC_COC_pretender_2b
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus BAC_COC_pretender_2a"
+		custom_effect_tooltip = COC_kindling_add1_tt
+		add_to_variable = { COC_power_struggle_KF_var = 1 }
+		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
+		country_event = { id = kirin_council.309 hours = 1 }
+		add_relation_modifier = {
+			target = KIS
+			modifier = COC_urban_agitation
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_pretender_2b
+	icon = GFX_goal_KIR_kiria_unique
+	relative_position_id = BAC_COC_pretender
+	x = 2
+	y = 3
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_pretender_Y
+		focus = BAC_COC_dayspring_2
+	}
+
+	mutually_exclusive = {
+		focus = BAC_COC_pretender_2a
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: focus BAC_COC_pretender_2b"
+		custom_effect_tooltip = COC_dayspring_add1_tt
+		add_to_variable = { COC_power_struggle_DR_var = 1 }
+		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
+		country_event = { id = kirin_council.310 hours = 1 }
+		add_relation_modifier = {
+			target = KIS
+			modifier = COC_devout_conviction
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_dayspring
+	icon = GFX_goal_KIR_COC_trinity
+	x = 19
+	y = 0
+
+	cost = 1.5
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_dayspring"
+		country_event = { id = kirin_council.304 hours = 1 }
+		add_manpower = 30000
+		add_to_variable = { COC_14_var = 0.05 }
+		custom_effect_tooltip = KIR_line_break
+		effect_tooltip = {
+			swap_ideas = { add_idea = COC_desperate_revolt_dummy1 remove_idea = COC_desperate_revolt_dummy }
+		}
+		custom_effect_tooltip = COC_dayspring_tt
+		hidden_effect = {
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Peasant Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.95"
+					owner = PREV
+					count = 6
+				}
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_dayspring_1a
+	icon = GFX_goal_KIR_swords_crossed
+	relative_position_id = BAC_COC_dayspring
+	x = 1
+	y = 1
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_dayspring
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_dayspring_1a"
+		custom_effect_tooltip = COC_dayspring_add1_tt
+		add_to_variable = { COC_power_struggle_DR_var = 1 }
+		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
+		1073 = {
+			remove_core_of = KIS
+			add_core_of = ROOT
+			start_resistance = yes
+			custom_effect_tooltip = KIR_line_break
+			add_resistance_target = {
+				id = 1073
+				amount = 50
+				occupier = KIS
+				#occupied = ROOT
+				days = 365
+				tooltip = COC_uprising_tt
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_dayspring_2
+	icon = GFX_goal_KIR_guerilla
+	relative_position_id = BAC_COC_dayspring
+	x = 0
+	y = 2
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_pretender_1b
+		focus = BAC_COC_dayspring_1a
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_dayspring_2"
+		country_event = { id = kirin_council.311 hours = 1 }
+		custom_effect_tooltip = KIR_line_break
+		custom_effect_tooltip = COC_dayspring_2_tt
+		effect_tooltip = {
+			add_dynamic_modifier = { modifier = COC_trinitarian_militia scope = KIS }
+		}
+		set_country_flag = COC_trinitarian_militia_flag
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_dayspring_X
+	icon = GFX_goal_KIR_chainbreaker
+	relative_position_id = BAC_COC_dayspring_2
+	x = 1
+	y = 1
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_dayspring_2
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_dayspring_X"
+		custom_effect_tooltip = COC_dayspring_add1_tt
+		add_to_variable = { COC_power_struggle_DR_var = 1 }
+		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
+		country_event = { id = kirin_council.314 hours = 1 }
+		custom_effect_tooltip = COC_dayspring_X_tt
+		set_country_flag = COC_dayspring_X_flag
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_dayspring_3
+	icon = GFX_goal_KIR_nirik
+	relative_position_id = BAC_COC_dayspring
+	x = 0
+	y = 4
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_dayspring_X
+		focus = BAC_COC_pretender_2b
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_dayspring_3"
+		country_event = { id = kirin_council.317 hours = 1 }
+		add_manpower = 25000
+		add_to_variable = { COC_17_var = 0.05 }
+		custom_effect_tooltip = KIR_line_break
+		effect_tooltip = {
+			swap_ideas = { add_idea = COC_desperate_revolt_dummy3 remove_idea = COC_desperate_revolt_dummy }
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_dayspring_4a
+	icon = GFX_goal_KIR_cub
+	relative_position_id = BAC_COC_dayspring_3
+	x = -2
+	y = 1
+
+	cost = 7.2
+
+	prerequisite = {
+		focus = BAC_COC_dayspring_3
+	}
+
+	mutually_exclusive = {
+		focus = BAC_COC_kindling_4b
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_dayspring_4a"
+		country_event = { id = kirin_council.312 hours = 1 }
+		custom_effect_tooltip = COC_dayspring_add1_tt
+		add_to_variable = { COC_power_struggle_DR_var = 1 }
+		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
+		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
+		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
+		add_to_variable = { COC_16_var = 0.05 }
+		custom_effect_tooltip = KIR_line_break
+		effect_tooltip = {
+			swap_ideas = { add_idea = COC_desperate_revolt_dummy4 remove_idea = COC_desperate_revolt_dummy }
+		}
+		random_controlled_state = {
+			prioritize = { 1069 1076 1073 1077 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_controlled_state = {
+			prioritize = { 1069 1076 1073 1077 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_controlled_state = {
+			prioritize = { 1069 1076 1073 1077 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_dayspring_4b
+	icon = GFX_goal_KIR_praise
+	relative_position_id = BAC_COC_dayspring_3
+	x = 1
+	y = 1
+
+	cost = 2.9
+
+	prerequisite = {
+		focus = BAC_COC_dayspring_3
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_dayspring_4b"
+		army_experience = 75
+		add_command_power = 75
+		custom_effect_tooltip = super_combat_abilities_tt
+	}
+}
+
+shared_focus = {
+	id = BAC_COC_finale
+	icon = GFX_goal_KIR_kiria_1007
+	relative_position_id = BAC_COC_pretender
+	x = 0
+	y = 6
+
+	cost = 4.8 #fixed from 2.9
+
+	prerequisite = {
+		focus = BAC_COC_dayspring_4a
+		focus = BAC_COC_kindling_4b
+	}
+
+	available = {
+		KIR_controls_all_kiria_proper = yes
+		KIS = {
+			NOT = {
+				has_war_with = COC
+			}
+			OR = {
+				exists = no
+				is_subject_of = ROOT
+				has_capitulated = yes
+			}
+		}
+	}
+
+	ai_will_do = {
+		factor = 50
+	}
+
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_finale"
+		add_political_power = 100
+		add_research_slot = 1
+		KIR = { add_to_ROOT_potential_cores = yes }
+		KIS = { add_to_ROOT_potential_cores = yes }
+		custom_effect_tooltip = KIR_line_break
+		if = {
+			limit = {
+				set_temp_variable = { COC_power_struggle_DR_var_finale_temp = COC_power_struggle_DR_var }
+				add_to_temp_variable = { COC_power_struggle_DR_var_finale_temp = 1 }
+				check_variable = { COC_power_struggle_KF_var > COC_power_struggle_DR_var_finale_temp }
+			}
+			every_country = {
+				limit = {
+					is_kiria_country = yes
+				}
+				news_event = { id = kirin_council.326 hours = 6 }
+			}
+		}
+		else_if = {
+			limit = {
+				set_temp_variable = { COC_power_struggle_KF_var_finale_temp = COC_power_struggle_KF_var }
+				add_to_temp_variable = { COC_power_struggle_KF_var_finale_temp = 1 }
+				check_variable = { COC_power_struggle_DR_var > COC_power_struggle_KF_var_finale_temp }
+			}
+			every_country = {
+				limit = {
+					is_kiria_country = yes
+				}
+				news_event = { id = kirin_council.327 hours = 6 }
+			}
+		}
+		else = {
+			news_event = { id = kirin_council.321 hours = 3 }
+		}
+	}
+}
 shared_focus = { #BAC_COC_m1 - Prepare The Foundation
 	id = BAC_COC_m1 #건국 준비
 	icon = GFX_goal_KIR_fire
-	cost = 1.5
+	cost = 4.8
 	ai_will_do = { factor = 80 }
-	relative_position_id = COC_finale
+	relative_position_id = BAC_COC_finale
 	x = 0
 	y = 3
 	allow_branch = {
@@ -73,10 +985,12 @@ shared_focus = { #BAC_COC_h1 - Honour Our Friends
 		add_power_balance_value = {
 			id = BAC_commonalty_bop
 			value = -0.333
-			tooltip_side = commonalty_harmonic_control
 		}
 		#add_to_variable = { coc_h_foci_completed = 1 }
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { check_variable = { coc_start_foci_completed = 3 } }
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 	
 	
@@ -96,14 +1010,16 @@ shared_focus = { #BAC_COC_c1 - The Voice Must Be Spoken
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c1"
 		add_to_variable = { coc_start_foci_completed = 1 }
-		add_stability = 0.0333
+		add_stability = 0.033
 		add_power_balance_value = {
 			id = BAC_commonalty_bop
 			value = 0.333
-			tooltip_side = commonalty_communal_control
 		}
 		#add_to_variable = { coc_c_foci_completed = 1 }
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { check_variable = { coc_start_foci_completed = 3 } }
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 	
 	
@@ -117,7 +1033,8 @@ shared_focus = { #BAC_COC_m2 - Commonalty Constitutional Senate
 	x = 0
 	y = 0
 	allow_branch = {
-		check_variable = { coc_start_foci_completed = 3 }
+		check_variable = { coc_start_foci_completed > 2 }
+		check_variable = { coc_start_foci_completed < 6 }
 	}
 	# available = {
 	# 	custom_trigger_tooltip = {
@@ -129,7 +1046,10 @@ shared_focus = { #BAC_COC_m2 - Commonalty Constitutional Senate
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_m2"
 		add_to_variable = { coc_start_foci_completed = 1 }
 		#add_to_variable = { coc_t_foci_completed = 1 }
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { check_variable = { coc_start_foci_completed = 6 } }
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 	
 	
@@ -143,7 +1063,8 @@ shared_focus = {
 	x = -3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed = 3 }
+		check_variable = { coc_start_foci_completed > 2 }
+		check_variable = { coc_start_foci_completed < 6 }
 	}
 	# available = {
 	# 	custom_trigger_tooltip = {
@@ -155,7 +1076,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h2"
 		add_to_variable = { coc_start_foci_completed = 1 }
 		#add_to_variable = { coc_h_foci_completed = 1 }
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { check_variable = { coc_start_foci_completed = 6 } }
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 	
 	
@@ -169,7 +1093,8 @@ shared_focus = {
 	x = 3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed = 3 }
+		check_variable = { coc_start_foci_completed > 2 }
+		check_variable = { coc_start_foci_completed < 6 }
 	}
 	# available = {
 	# 	custom_trigger_tooltip = {
@@ -181,7 +1106,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c2"
 		add_to_variable = { coc_start_foci_completed = 1 }
 		#add_to_variable = { COC_c_foci_completed = 1 }
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { check_variable = { coc_start_foci_completed = 6 } }
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 	
 	
@@ -195,19 +1123,21 @@ shared_focus = {
 	x = 0
 	y = 0
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 6 }
-		check_variable = { coc_start_foci_completed < 10 }
+		check_variable = { coc_start_foci_completed > 5 }
 	}
 	available = {
-		custom_trigger_tooltip = {
-			tooltip = COC_please_take_previous_foci
-			check_variable = { coc_start_foci_completed > 5 }
-		}
+		# custom_trigger_tooltip = {
+		# 	tooltip = COC_please_take_previous_foci
+		# 	check_variable = { coc_start_foci_completed > 5 }
+		# }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_m3"
 		add_to_variable = { coc_start_foci_completed = 1 }
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { check_variable = { coc_start_foci_completed = 9 } }
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 	
 	
@@ -221,7 +1151,7 @@ shared_focus = {
 	x = -3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 6 }
+		check_variable = { coc_start_foci_completed > 5 }
 		check_variable = { coc_start_foci_completed < 10 }
 	}
 	# available = {
@@ -234,7 +1164,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h3"
 		add_to_variable = { coc_start_foci_completed = 1 }
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { check_variable = { coc_start_foci_completed = 9 } }
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 	
 	
@@ -248,7 +1181,7 @@ shared_focus = {
 	x = 3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 6 }
+		check_variable = { coc_start_foci_completed > 5 }
 		check_variable = { coc_start_foci_completed < 10 }
 	}
 	# available = {
@@ -261,7 +1194,10 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c3"
 		add_to_variable = { coc_start_foci_completed = 1 }
-		mark_focus_tree_layout_dirty = yes
+		if = {
+			limit = { check_variable = { coc_start_foci_completed = 9 } }
+			mark_focus_tree_layout_dirty = yes
+		}
 	}
 	
 	
@@ -276,7 +1212,6 @@ shared_focus = {
 	y = 2
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 8 }
-		NOT = { has_completed_focus = BAC_COC_pol_head }
 	}
 	prerequisite = {
 		focus = BAC_COC_m3
@@ -291,9 +1226,9 @@ shared_focus = {
 	
 }
 
-shared_focus = {
+shared_focus = { #교육위원회 
 	id = BAC_COC_pol_head
-	icon = GFX_goal_KIR_COC_trinity
+	icon = GFX_goal_KIR_teaching
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_m1
@@ -304,133 +1239,187 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = BAC_COC_true_commonalty
-		focus = BAC_COC_true_commonalty
+		focus = BAC_COC_m1
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_head"
+		country_event = { id = baccocc.13 hours = 12 } #Matter of Educational Model
+		decrease_illiteracy = yes
 	}
 	
 }
 
-shared_focus = {
-	id = BAC_COC_pol_m1
-	icon = GFX_goal_KIR_cooperation
-	cost = 4.8
-	ai_will_do = { factor = 80 }
-	relative_position_id = BAC_COC_pol_head
-	x = 0
-	y = 1
-	allow_branch = {
-		check_variable = { coc_start_foci_completed = 10 }
-	}
-	prerequisite = {
-		focus = BAC_COC_pol_head
-		focus = BAC_COC_pol_head
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_m1"
-	}
-	
-}
-
-shared_focus = {
+shared_focus = { #불의 길 개종 강요 (데이스프링: 이건 좀 너무 가는 거 아닌가요)
 	id = BAC_COC_pol_h1
-	icon = GFX_goal_request_equestrian_aid
-	cost = 4.8
-	ai_will_do = { factor = 80 }
-	relative_position_id = BAC_COC_pol_head
-	x = -2
-	y = 1
-	allow_branch = {
-		check_variable = { coc_start_foci_completed = 10 }
-	}
-	prerequisite = {
-		focus = BAC_COC_pol_head
-		focus = BAC_COC_pol_head
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h1"
-	}
-	
-}
-shared_focus = {
-	id = BAC_COC_pol_c1
-	icon = GFX_goal_KIR_chrysanthemum
-	cost = 4.8
-	ai_will_do = { factor = 80 }
-	relative_position_id = BAC_COC_pol_head
-	x = 2
-	y = 1
-	allow_branch = {
-		check_variable = { coc_start_foci_completed = 10 }
-	}
-	prerequisite = {
-		focus = BAC_COC_pol_head
-		focus = BAC_COC_pol_head
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_c1"
-	}
-	
-}
-
-
-shared_focus = {
-	id = BAC_COC_pol_m3 #commonalty new order
-	icon = GFX_goal_UESR_TNO_post_scarcity
-	cost = 4.8
-	ai_will_do = { factor = 80 }
-	relative_position_id = BAC_COC_pol_head
-	x = 0
-	y = 3
-	allow_branch = {
-		check_variable = { coc_start_foci_completed = 10 }
-	}
-	prerequisite = {
-		focus = BAC_COC_pol_h2
-		focus = BAC_COC_pol_c2
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_m2"
-	}
-	
-}
-
-shared_focus = {
-	id = BAC_COC_pol_h2
-	icon = GFX_goal_KIR_table
+	icon = GFX_goal_solar_inquisition
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
 	x = -1
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_head
+	}
+	mutually_exclusive = {
+		focus = BAC_COC_pol_c1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h1"
+		#정치력 주는 대신 안정도,순응도 깎는 타임드 아이디어
+		add_political_power = 33
+		save_current_manpower = yes
+		every_owned_state = {
+			add_manpower = -333
+		}
+		restore_previous_manpower = yes
+		add_stability = -0.033
+	}
+	
+}
+shared_focus = { #불의 길 공존 (투표에 맡기게 하기)
+	id = BAC_COC_pol_c1
+	icon = GFX_goal_KIR_matriarch #GFX_goal_KIR_cooperation  #GFX_goal_KIR_chrysanthemum
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_head
+	x = 1
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_head
+	}
+	mutually_exclusive = {
+		focus = BAC_COC_pol_h1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_c1"
+		#정치력 깍는 대신 안정도 버프
+		add_political_power = -33
+		add_stability = 0.033
+	}
+	
+}
+
+
+shared_focus = { #중공업 육성
+	id = BAC_COC_modern_heavyindustry
+	icon = GFX_goal_KIR_flyby
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_head
+	x = -4
+	y = 0
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_true_commonalty
+		focus = BAC_COC_m1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_modern_heavyindustry"
+	}
+	
+}
+shared_focus = { #자연과학
+	id = BAC_COC_modern_science
+	icon = GFX_goal_KIR_gunboat
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_head
+	x = -2
+	y = 0
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_true_commonalty
+		focus = BAC_COC_m1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_modern_science"
+	}
+	
+}
+shared_focus = { #응용과학
+	id = BAC_COC_applied_science
+	icon = GFX_goal_KIR_gunboat
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_head
+	x = -3
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_modern_science
+	}
+	prerequisite = {
+		focus = BAC_COC_modern_heavyindustry
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_applied_science"
+	}
+	
+}
+
+shared_focus = { #
+	id = BAC_COC_pol_h2
+	icon = GFX_goal_solar_care_for_weak #mommy
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_head
+	x = -2
 	y = 2
 	allow_branch = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
 	prerequisite = {
-		focus = BAC_COC_pol_m1
 		focus = BAC_COC_pol_h1
-		focus = BAC_COC_pol_c1
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h2"
 	}
 	
 }
-shared_focus = {
-	id = BAC_COC_pol_c2
-	icon = GFX_goal_KIR_unity
+shared_focus = { #키리아 코어
+	id = BAC_COC_pol_m2
+	icon = GFX_goal_KIR_table
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = 1
+	x = 0
 	y = 2
 	allow_branch = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
 	prerequisite = {
-		focus = BAC_COC_pol_m1
 		focus = BAC_COC_pol_h1
+		focus = BAC_COC_pol_c1
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_m2"
+	}
+	
+}
+shared_focus = { #진정한 지방자치제도의 정착
+	id = BAC_COC_pol_c2
+	icon = GFX_goal_KIR_unity
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_head
+	x = 2
+	y = 2
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
 		focus = BAC_COC_pol_c1
 	}
 	completion_reward = {
@@ -439,30 +1428,80 @@ shared_focus = {
 	
 }
 
+
 shared_focus = {
-	id = BAC_COC_edu_head
-	icon = GFX_goal_KIR_kiria_1007
+	id = BAC_COC_pol_h3 #commonalty new order
+	icon = GFX_goal_solar_harmony_in_order
 	cost = 4.8
 	ai_will_do = { factor = 80 }
-	relative_position_id = BAC_COC_m1
-	x = -4
+	relative_position_id = BAC_COC_pol_head
+	x = -1
 	y = 3
-	
-	prerequisite = {
-		focus = BAC_COC_true_commonalty
-		focus = BAC_COC_true_commonalty
-	}
 	allow_branch = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
+	prerequisite = {
+		focus = BAC_COC_pol_h2
+		focus = BAC_COC_pol_c2
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_m2
+	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_edu_head"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h3"
 	}
 	
+}
+shared_focus = {
+	id = BAC_COC_pol_c3 #commonalty new order
+	icon = GFX_goal_KIR_embrace
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_head
+	x = 1
+	y = 3
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_h2
+		focus = BAC_COC_pol_c2
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_m2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_c3"
+	}
 	
 }
 
-shared_focus = {
+shared_focus = { #키리아 코어
+	id = BAC_COC_pol_m4
+	icon = GFX_goal_UESR_TNO_post_scarcity
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_pol_head
+	x = 0
+	y = 5
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_h3
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_c3
+	}
+	prerequisite = {
+		focus = BAC_COC_pol_m2
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_m2"
+	}
+	
+}
+shared_focus = { #킨들링 플래시의 산업 오케스트라
 	id = BAC_COC_eco_head
 	icon = GFX_goal_KIR_kiria_1007
 	cost = 4.8
@@ -473,7 +1512,7 @@ shared_focus = {
 	
 	prerequisite = {
 		focus = BAC_COC_true_commonalty
-		focus = BAC_COC_true_commonalty
+		focus = BAC_COC_m1
 	}
 	allow_branch = {
 		check_variable = { coc_start_foci_completed = 10 }
@@ -486,7 +1525,7 @@ shared_focus = {
 }
 
 
-shared_focus = {
+shared_focus = { 
 	id = BAC_COC_eco_h1
 	icon = GFX_goal_eqs_military_cooperation
 	cost = 4.8
@@ -506,7 +1545,7 @@ shared_focus = {
 	}
 	
 }
-shared_focus = {
+shared_focus = { #Initiate Land Reform 토지개혁 개시
 	id = BAC_COC_eco_c1
 	icon = GFX_goal_KIR_crumble #
 	cost = 4.8
@@ -568,7 +1607,7 @@ shared_focus = {
 	}
 	
 }
-shared_focus = {
+shared_focus = { #QKdzz
 	id = BAC_COC_eco_c2
 	icon = GFX_goal_KIR_bread
 	cost = 4.8
@@ -721,7 +1760,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = BAC_COC_eco_m4t
+	id = BAC_COC_eco_m4m
 	icon = GFX_goal_KIR_electricity
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -738,7 +1777,7 @@ shared_focus = {
 		focus = BAC_COC_eco_c3
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4t"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4m"
 	}
 	
 }
@@ -765,7 +1804,7 @@ shared_focus = {
 	
 }
 
-shared_focus = {
+shared_focus = { #shdzz
 	id = BAC_COC_eco_c4
 	icon = GFX_goal_zebra_agriculture
 	cost = 4.8
@@ -788,30 +1827,7 @@ shared_focus = {
 	
 }
 
-shared_focus = {
-	id = BAC_COC_lab_head
-	icon = GFX_goal_KIR_kiria_1007
-	cost = 4.8
-	ai_will_do = { factor = 80 }
-	relative_position_id = BAC_COC_m1
-	x = 4
-	y = 3
-	
-	prerequisite = {
-		focus = BAC_COC_true_commonalty
-		focus = BAC_COC_true_commonalty
-	}
-	allow_branch = {
-		check_variable = { coc_start_foci_completed = 10 }
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_lab_head"
-	}
-	
-	
-}
-
-shared_focus = {
+shared_focus = { #군사위원회
 	id = BAC_COC_mil_head
 	icon = GFX_goal_KIR_ranks
 	cost = 4.8
@@ -821,7 +1837,7 @@ shared_focus = {
 	y = 3
 	prerequisite = {
 		focus = BAC_COC_true_commonalty
-		focus = BAC_COC_true_commonalty
+		focus = BAC_COC_m1
 	}
 	allow_branch = {
 		check_variable = { coc_start_foci_completed = 10 }
@@ -835,7 +1851,7 @@ shared_focus = {
 
 shared_focus = {
 	id = BAC_COC_mil_h1
-	icon = GFX_goal_cry_eqs_hat
+	icon = GFX_goal_KIR_kirins_rampant #GFX_goal_cry_eqs_hat
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -845,7 +1861,6 @@ shared_focus = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
 	prerequisite = {
-		focus = BAC_COC_mil_head
 		focus = BAC_COC_mil_head
 	}
 	completion_reward = {
@@ -865,7 +1880,6 @@ shared_focus = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
 	prerequisite = {
-		focus = BAC_COC_mil_head
 		focus = BAC_COC_mil_head
 	}
 	completion_reward = {
@@ -895,7 +1909,7 @@ shared_focus = {
 	}
 	
 }
-shared_focus = {
+shared_focus = { #화력
 	id = BAC_COC_mil_h2
 	icon = GFX_goal_KIR_cannon_helmet
 	cost = 4.8
@@ -908,7 +1922,6 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_h1
-		focus = BAC_COC_mil_c1
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h2"
@@ -927,7 +1940,6 @@ shared_focus = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
 	prerequisite = {
-		focus = BAC_COC_mil_h1
 		focus = BAC_COC_mil_c1
 	}
 	completion_reward = {
@@ -936,9 +1948,77 @@ shared_focus = {
 	
 }
 
-shared_focus = {
-	id = BAC_COC_mil_h3
+shared_focus = { #비행부대 창설
+	id = BAC_COC_mil_air
 	icon = GFX_goal_KIR_flyby
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_head
+	x = -2
+	y = 0
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_true_commonalty
+		focus = BAC_COC_m1
+	}
+	available = {
+		has_completed_focus = BAC_COC_mil_head
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_air"
+	}
+	
+}
+shared_focus = { #해군 건군
+	id = BAC_COC_mil_navy
+	icon = GFX_goal_KIR_gunboat
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_head
+	x = -4
+	y = 0
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_true_commonalty
+		focus = BAC_COC_m1
+	}
+	available = {
+		has_completed_focus = BAC_COC_mil_head
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_navy"
+	}
+	
+}
+shared_focus = { #해군항공대
+	id = BAC_COC_mil_navalair
+	icon = GFX_goal_KIR_gunboat
+	cost = 4.8
+	ai_will_do = { factor = 80 }
+	relative_position_id = BAC_COC_mil_head
+	x = -3
+	y = 1
+	allow_branch = {
+		check_variable = { coc_start_foci_completed = 10 }
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_navy
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_air
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_navalair"
+	}
+	
+}
+shared_focus = { #
+	id = BAC_COC_mil_h3
+	icon = GFX_goal_cry_eqs_hat
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -948,9 +2028,11 @@ shared_focus = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
 	prerequisite = {
-		focus = BAC_COC_mil_m2
 		focus = BAC_COC_mil_h2
-		focus = BAC_COC_mil_c2
+	}
+	prerequisite = {
+		focus = BAC_COC_mil_navalair
+		focus = BAC_COC_mil_navalair
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h3"
@@ -958,9 +2040,9 @@ shared_focus = {
 	
 }
 
-shared_focus = {
+shared_focus = { #중공업 육성
 	id = BAC_COC_mil_m3h
-	icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+	icon = GFX_goal_KIR_factory
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -1002,7 +2084,7 @@ shared_focus = {
 	
 }
 
-shared_focus = {
+shared_focus = { #대포를 빵 쐈습니다
 	id = BAC_COC_mil_c3
 	icon = GFX_goal_HEL_anar_cannon
 	cost = 4.8
@@ -1014,8 +2096,6 @@ shared_focus = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
 	prerequisite = {
-		focus = BAC_COC_mil_m2
-		focus = BAC_COC_mil_h2
 		focus = BAC_COC_mil_c2
 	}
 	completion_reward = {
@@ -1025,7 +2105,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = BAC_COC_mil_h4
-	icon = GFX_goal_Equestrian_Royal_Navy_1 #GFX_goal_KIR_gunboat
+	icon = GFX_goal_Equestrian_Royal_Navy_1 #
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -1035,10 +2115,7 @@ shared_focus = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
 	prerequisite = {
-		focus = BAC_COC_mil_m3h
-		focus = BAC_COC_mil_m3c
 		focus = BAC_COC_mil_h3
-		focus = BAC_COC_mil_c3
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h4"
@@ -1047,7 +2124,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = BAC_COC_mil_m4h
-	icon = GFX_goal_KIR_flotilla
+	icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -1058,9 +2135,7 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_m3h
-		focus = BAC_COC_mil_m3c
 		focus = BAC_COC_mil_h3
-		focus = BAC_COC_mil_c3
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m4h"
@@ -1069,7 +2144,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = BAC_COC_mil_m4t
+	id = BAC_COC_mil_m4m
 	icon = GFX_goal_KIR_sergeant
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -1082,11 +2157,9 @@ shared_focus = {
 	prerequisite = {
 		focus = BAC_COC_mil_m3h
 		focus = BAC_COC_mil_m3c
-		focus = BAC_COC_mil_h3
-		focus = BAC_COC_mil_c3
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m4t"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m4m"
 	}
 	
 }
@@ -1103,9 +2176,7 @@ shared_focus = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
 	prerequisite = {
-		focus = BAC_COC_mil_m3h
 		focus = BAC_COC_mil_m3c
-		focus = BAC_COC_mil_h3
 		focus = BAC_COC_mil_c3
 	}
 	completion_reward = {
@@ -1114,7 +2185,7 @@ shared_focus = {
 	
 }
 
-shared_focus = {
+shared_focus = { #결사항전
 	id = BAC_COC_mil_c4
 	icon = GFX_goal_KIR_deaths_head
 	cost = 4.8
@@ -1126,9 +2197,6 @@ shared_focus = {
 		check_variable = { coc_start_foci_completed = 10 }
 	}
 	prerequisite = {
-		focus = BAC_COC_mil_m3h
-		focus = BAC_COC_mil_m3c
-		focus = BAC_COC_mil_h3
 		focus = BAC_COC_mil_c3
 	}
 	completion_reward = {
@@ -1144,7 +2212,8 @@ shared_focus = {
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_m1
 	x = 0
-	y = 8
+	y = 10
+
 	allow_branch = {
 		has_country_flag = COC_war_committee
 	}
@@ -1234,7 +2303,7 @@ shared_focus = {
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_sekrit_war_committee
-	x = -11
+	x = -13
 	y = 1
 	prerequisite = {
 		focus = BAC_COC_sekrit_war_committee
@@ -1271,7 +2340,7 @@ shared_focus = {
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_sekrit_war_committee
-	x = 11
+	x = 13
 	y = 1
 	prerequisite = {
 		focus = BAC_COC_sekrit_war_committee
@@ -1465,919 +2534,4 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_puppet_deer"
 	}
 	
-}
-
-
-
-
-shared_focus = {
-	id = COC_kindling
-	icon = GFX_goal_KIR_communism
-	x = 11
-	y = 0
-
-	cost = 1.5
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling"
-		country_event = { id = kirin_council.305 hours = 1 }
-		add_political_power = 150
-		subtract_from_variable = { COC_9_var = 0.05 }
-		custom_effect_tooltip = KIR_line_break
-		effect_tooltip = {
-			swap_ideas = { add_idea = COC_peasant_army_dummy1 remove_idea = COC_peasant_army_dummy }
-		}
-		custom_effect_tooltip = COC_kindling_tt
-		hidden_effect = {
-			division_template = {
-				name = "Red Guards"
-				division_names_group = KIR_BANNER
-				template_counter = 0
-				regiments = {
-					kirin_vanguards = { x = 0 y = 0 }
-					kirin_vanguards = { x = 0 y = 1 }
-					kirin_vanguards = { x = 1 y = 0 }
-					kirin_vanguards = { x = 1 y = 1 }
-					kirin_vanguards = { x = 2 y = 0 }
-					kirin_vanguards = { x = 2 y = 1 }
-					artillery_brigade = { x = 3 y = 0 }
-					artillery_brigade = { x = 3 y = 1 }
-				}
-				support = {
-					engineer = { x = 0 y = 0 }
-				}
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"No. 800 Red Guards Division\" division_template = \"Red Guards\" start_equipment_factor = 0.9 start_experience_factor = 0.3" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"No. 500 Red Guards Division\" division_template = \"Red Guards\" start_equipment_factor = 0.9 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"No. 200 Red Guards Division\" division_template = \"Red Guards\" start_equipment_factor = 0.9 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_kindling_1a
-	icon = GFX_goal_KIR_KIC_battle_flag
-	relative_position_id = COC_kindling
-	x = -1
-	y = 1
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_kindling
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_1a"
-		custom_effect_tooltip = COC_kindling_add1_tt
-		add_to_variable = { COC_power_struggle_KF_var = 1 }
-		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
-		1067 = {
-			remove_core_of = KIS
-			add_core_of = ROOT
-			start_resistance = yes
-			custom_effect_tooltip = KIR_line_break
-			add_resistance_target = {
-				id = 1067
-				amount = 50
-				occupier = KIS
-				#occupied = ROOT
-				days = 365
-				tooltip = COC_uprising_tt
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_kindling_2
-	icon = GFX_goal_KIR_pointing
-	relative_position_id = COC_kindling
-	x = 0
-	y = 2
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_kindling_1a
-		focus = COC_pretender_1a
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_2"
-		custom_effect_tooltip = COC_kindling_2_tt
-		effect_tooltip = {
-			add_dynamic_modifier = { modifier = COC_provincal_peoples_militia scope = COC }
-		}
-		set_country_flag = COC_provincal_peoples_militia_flag
-	}
-}
-
-shared_focus = {
-	id = COC_kindling_X
-	icon = GFX_goal_KIR_unity
-	relative_position_id = COC_kindling_2
-	x = -1
-	y = 1
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_kindling_2
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_X"
-		custom_effect_tooltip = COC_kindling_add1_tt
-		add_to_variable = { COC_power_struggle_KF_var = 1 }
-		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
-		country_event = { id = kirin_council.315 hours = 1 }
-		every_state = {
-			limit = {
-				OR = {
-					region = 31
-					state = 926
-				}
-			}
-			add_core_of = COC
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_kindling_3
-	icon = GFX_goal_KIR_rearing
-	relative_position_id = COC_kindling
-	x = 0
-	y = 4
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_kindling_X
-		focus = COC_pretender_2a
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_3"
-		country_event = { id = kirin_council.316 hours = 1 }
-		effect_tooltip = {
-			swap_ideas = { add_idea = COC_peasant_army_dummy2 remove_idea = COC_peasant_army_dummy }
-		}
-		hidden_effect = {
-			add_to_variable = { COC_26_var = 0.1 }
-		}
-		add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 }
-		add_equipment_to_stockpile = { type = support_equipment amount = 1000 }
-	}
-}
-
-shared_focus = {
-	id = COC_kindling_4a
-	icon = GFX_goal_KIR_partisan
-	relative_position_id = COC_kindling_3
-	x = -1
-	y = 1
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_kindling_3
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_4a"
-		country_event = { id = kirin_council.318 hours = 1 }
-		custom_effect_tooltip = COC_kindling_4a_tt
-		set_country_flag = COC_guerilla_strike_flag
-		set_variable = { GuerillaOrgDmgVar = 90 }
-		set_variable = { GuerillaStrDmgVar = 150 }
-	}
-}
-
-shared_focus = {
-	id = COC_kindling_4b
-	icon = GFX_goal_KIR_angery
-	relative_position_id = COC_kindling_3
-	x = 2
-	y = 1
-
-	cost = 7.2
-
-	prerequisite = {
-		focus = COC_kindling_3
-	}
-
-	mutually_exclusive = {
-		focus = COC_dayspring_4a
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_kindling_4b"
-		country_event = { id = kirin_council.313 hours = 1 }
-		custom_effect_tooltip = COC_kindling_add1_tt
-		add_to_variable = { COC_power_struggle_KF_var = 1 }
-		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
-		subtract_from_variable = { COC_18_var = 0.05 }
-		custom_effect_tooltip = KIR_line_break
-		effect_tooltip = {
-			swap_ideas = { add_idea = COC_peasant_army_dummy3 remove_idea = COC_peasant_army_dummy }
-		}
-		random_controlled_state = {
-			prioritize = { 1069 1076 1073 1077 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_controlled_state = {
-			prioritize = { 1069 1076 1073 1077 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_controlled_state = {
-			prioritize = { 1069 1076 1073 1077 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_pretender
-	icon = GFX_goal_KIR_kirin_head_unique
-	x = 15
-	y = 0
-
-	cost = 1.5
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_pretender"
-		country_event = { id = kirin_council.306 hours = 1 }
-		add_command_power = 50
-		add_to_variable = { COC_11_var = 0.05 }
-		custom_effect_tooltip = KIR_line_break
-		effect_tooltip = {
-			swap_ideas = { add_idea = COC_desperate_revolt_dummy2 remove_idea = COC_desperate_revolt_dummy }
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_pretender_1a
-	icon = GFX_goal_KIR_tristar
-	relative_position_id = COC_pretender
-	x = -2
-	y = 1
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_pretender
-		focus = COC_kindling
-	}
-
-	mutually_exclusive = {
-		focus = COC_pretender_1b
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_pretender_1a"
-		custom_effect_tooltip = COC_kindling_add1_tt
-		add_to_variable = { COC_power_struggle_KF_var = 1 }
-		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
-		country_event = { id = kirin_council.307 hours = 1 }
-		add_to_variable = { COC_22_var = 0.1 }
-		add_to_variable = { COC_23_var = 20 }
-		custom_effect_tooltip = KIR_line_break
-		effect_tooltip = {
-			swap_ideas = { add_idea = COC_pretender_mahogany_blaze_dummy1 remove_idea = COC_pretender_mahogany_blaze_dummy }
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_pretender_X
-	icon = GFX_goal_KIR_militiamare
-	relative_position_id = COC_pretender_1a
-	x = 1
-	y = 1
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_pretender_1a
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_pretender_X"
-		custom_effect_tooltip = COC_kindling_add1_tt
-		add_to_variable = { COC_power_struggle_KF_var = 1 }
-		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
-		custom_effect_tooltip = COC_pretender_X_tt
-		hidden_effect = {
-			division_template = {
-				name = "Workers' Militia"
-				division_names_group = KIR_BANNER
-				template_counter = 69
-				regiments = {
-					militia = { x = 0 y = 0 }
-					militia = { x = 0 y = 1 }
-					militia = { x = 0 y = 2 }
-					militia = { x = 1 y = 0 }
-					militia = { x = 1 y = 1 }
-					militia = { x = 1 y = 2 }
-					militia = { x = 2 y = 0 }
-					artillery_brigade = { x = 3 y = 0 }
-					artillery_brigade = { x = 3 y = 1 }
-				}
-				support = {
-				}
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"First Workers' Guard Division 'Destiny'\" division_template = \"Workers' Militia\" start_equipment_factor = 0.99 start_experience_factor = 0.3" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Second Workers' Guard Division 'Justice'\" division_template = \"Workers' Militia\" start_equipment_factor = 0.96 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Third Workers' Guard Division 'Freedom'\" division_template = \"Workers' Militia\" start_equipment_factor = 0.93 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Fourth Workers' Guard Division 'Democracy'\" division_template = \"Workers' Militia\" start_equipment_factor = 0.90 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Fifth Workers' Guard Division 'Dignity'\" division_template = \"Workers' Militia\" start_equipment_factor = 0.87 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			set_division_template_lock = {
-				division_template = "Peasant Militia"
-				is_locked = no
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_pretender_1b
-	icon = GFX_goal_KIR_onwards
-	relative_position_id = COC_pretender
-	x = 2
-	y = 1
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_pretender
-		focus = COC_dayspring
-	}
-
-	mutually_exclusive = {
-		focus = COC_pretender_1a
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_pretender_1b"
-		custom_effect_tooltip = COC_dayspring_add1_tt
-		add_to_variable = { COC_power_struggle_DR_var = 1 }
-		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
-		country_event = { id = kirin_council.308 hours = 1 }
-		add_to_variable = { COC_24_var = 0.2 }
-		add_to_variable = { COC_25_var = 0.1 }
-		custom_effect_tooltip = KIR_line_break
-		effect_tooltip = {
-			swap_ideas = { add_idea = COC_pretender_mahogany_blaze_dummy2 remove_idea = COC_pretender_mahogany_blaze_dummy }
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_pretender_Y
-	icon = GFX_goal_KIR_soldier_sitting
-	relative_position_id = COC_pretender_1b
-	x = -1
-	y = 1
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_pretender_1b
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_pretender_Y"
-		custom_effect_tooltip = COC_dayspring_add1_tt
-		add_to_variable = { COC_power_struggle_DR_var = 1 }
-		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
-		custom_effect_tooltip = COC_pretender_Y_tt
-		hidden_effect = {
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"First Peasants' Army Division 'Vermilion Dreams'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.99 start_experience_factor = 0.3" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Second Peasants' Army Division 'Cerulean Skies'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.96 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Third Peasants' Army Division 'Verdant Fields'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.93 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Fourth Peasants' Army Division 'Cerise Meadows'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.90 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Fifth Peasants' Army Division 'Azure Waves'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.88 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Sixth Peasants' Army Division 'Indigo Nights'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.87 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Seventh Peasants' Army Division 'Turquoise Hills'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.88 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Eighth Peasants' Army Division 'Periwinkle Shores'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.87 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			random_owned_controlled_state = {
-				create_unit = { division = "name = \"Ninth Peasants' Army Division 'Auburn Waters'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.88 start_experience_factor = 0.25" owner = PREV allow_spawning_on_enemy_provs = no }
-			}
-			set_division_template_lock = {
-				division_template = "Peasant Militia"
-				is_locked = no
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_pretender_2a
-	icon = GFX_goal_KIR_speech
-	relative_position_id = COC_pretender
-	x = -2
-	y = 3
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_pretender_X
-		focus = COC_kindling_2
-	}
-
-	mutually_exclusive = {
-		focus = COC_pretender_2b
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_pretender_2a"
-		custom_effect_tooltip = COC_kindling_add1_tt
-		add_to_variable = { COC_power_struggle_KF_var = 1 }
-		add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
-		country_event = { id = kirin_council.309 hours = 1 }
-		add_relation_modifier = {
-			target = KIS
-			modifier = COC_urban_agitation
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_pretender_2b
-	icon = GFX_goal_KIR_kiria_unique
-	relative_position_id = COC_pretender
-	x = 2
-	y = 3
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_pretender_Y
-		focus = COC_dayspring_2
-	}
-
-	mutually_exclusive = {
-		focus = COC_pretender_2a
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_pretender_2b"
-		custom_effect_tooltip = COC_dayspring_add1_tt
-		add_to_variable = { COC_power_struggle_DR_var = 1 }
-		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
-		country_event = { id = kirin_council.310 hours = 1 }
-		add_relation_modifier = {
-			target = KIS
-			modifier = COC_devout_conviction
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_dayspring
-	icon = GFX_goal_KIR_COC_trinity
-	x = 19
-	y = 0
-
-	cost = 1.5
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_dayspring"
-		country_event = { id = kirin_council.304 hours = 1 }
-		add_manpower = 30000
-		add_to_variable = { COC_14_var = 0.05 }
-		custom_effect_tooltip = KIR_line_break
-		effect_tooltip = {
-			swap_ideas = { add_idea = COC_desperate_revolt_dummy1 remove_idea = COC_desperate_revolt_dummy }
-		}
-		custom_effect_tooltip = COC_dayspring_tt
-		hidden_effect = {
-			capital_scope = {
-				create_unit = {
-					division = "division_template = \"Peasant Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.95"
-					owner = PREV
-					count = 6
-				}
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_dayspring_1a
-	icon = GFX_goal_KIR_swords_crossed
-	relative_position_id = COC_dayspring
-	x = 1
-	y = 1
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_dayspring
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_dayspring_1a"
-		custom_effect_tooltip = COC_dayspring_add1_tt
-		add_to_variable = { COC_power_struggle_DR_var = 1 }
-		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
-		1073 = {
-			remove_core_of = KIS
-			add_core_of = ROOT
-			start_resistance = yes
-			custom_effect_tooltip = KIR_line_break
-			add_resistance_target = {
-				id = 1073
-				amount = 50
-				occupier = KIS
-				#occupied = ROOT
-				days = 365
-				tooltip = COC_uprising_tt
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_dayspring_2
-	icon = GFX_goal_KIR_guerilla
-	relative_position_id = COC_dayspring
-	x = 0
-	y = 2
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_pretender_1b
-		focus = COC_dayspring_1a
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_dayspring_2"
-		country_event = { id = kirin_council.311 hours = 1 }
-		custom_effect_tooltip = KIR_line_break
-		custom_effect_tooltip = COC_dayspring_2_tt
-		effect_tooltip = {
-			add_dynamic_modifier = { modifier = COC_trinitarian_militia scope = KIS }
-		}
-		set_country_flag = COC_trinitarian_militia_flag
-	}
-}
-
-shared_focus = {
-	id = COC_dayspring_X
-	icon = GFX_goal_KIR_chainbreaker
-	relative_position_id = COC_dayspring_2
-	x = 1
-	y = 1
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_dayspring_2
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_dayspring_X"
-		custom_effect_tooltip = COC_dayspring_add1_tt
-		add_to_variable = { COC_power_struggle_DR_var = 1 }
-		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
-		country_event = { id = kirin_council.314 hours = 1 }
-		custom_effect_tooltip = COC_dayspring_X_tt
-		set_country_flag = COC_dayspring_X_flag
-	}
-}
-
-shared_focus = {
-	id = COC_dayspring_3
-	icon = GFX_goal_KIR_nirik
-	relative_position_id = COC_dayspring
-	x = 0
-	y = 4
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_dayspring_X
-		focus = COC_pretender_2b
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_dayspring_3"
-		country_event = { id = kirin_council.317 hours = 1 }
-		add_manpower = 25000
-		add_to_variable = { COC_17_var = 0.05 }
-		custom_effect_tooltip = KIR_line_break
-		effect_tooltip = {
-			swap_ideas = { add_idea = COC_desperate_revolt_dummy3 remove_idea = COC_desperate_revolt_dummy }
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_dayspring_4a
-	icon = GFX_goal_KIR_cub
-	relative_position_id = COC_dayspring_3
-	x = -2
-	y = 1
-
-	cost = 7.2
-
-	prerequisite = {
-		focus = COC_dayspring_3
-	}
-
-	mutually_exclusive = {
-		focus = COC_kindling_4b
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_dayspring_4a"
-		country_event = { id = kirin_council.312 hours = 1 }
-		custom_effect_tooltip = COC_dayspring_add1_tt
-		add_to_variable = { COC_power_struggle_DR_var = 1 }
-		add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
-		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
-		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
-		add_to_variable = { COC_16_var = 0.05 }
-		custom_effect_tooltip = KIR_line_break
-		effect_tooltip = {
-			swap_ideas = { add_idea = COC_desperate_revolt_dummy4 remove_idea = COC_desperate_revolt_dummy }
-		}
-		random_controlled_state = {
-			prioritize = { 1069 1076 1073 1077 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_controlled_state = {
-			prioritize = { 1069 1076 1073 1077 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_controlled_state = {
-			prioritize = { 1069 1076 1073 1077 }
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-}
-
-shared_focus = {
-	id = COC_dayspring_4b
-	icon = GFX_goal_KIR_praise
-	relative_position_id = COC_dayspring_3
-	x = 1
-	y = 1
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_dayspring_3
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_dayspring_4b"
-		army_experience = 75
-		add_command_power = 75
-		custom_effect_tooltip = super_combat_abilities_tt
-	}
-}
-
-shared_focus = {
-	id = COC_finale
-	icon = GFX_goal_KIR_kiria_1007
-	relative_position_id = COC_pretender
-	x = 0
-	y = 6
-
-	cost = 2.9
-
-	prerequisite = {
-		focus = COC_dayspring_4a
-		focus = COC_kindling_4b
-	}
-
-	available = {
-		KIR_controls_all_kiria_proper = yes
-		KIS = {
-			NOT = {
-				has_war_with = COC
-			}
-			OR = {
-				exists = no
-				is_subject_of = ROOT
-				has_capitulated = yes
-			}
-		}
-	}
-
-	ai_will_do = {
-		factor = 50
-	}
-
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus COC_finale"
-		add_political_power = 100
-		add_research_slot = 1
-		KIR = { add_to_ROOT_potential_cores = yes }
-		KIS = { add_to_ROOT_potential_cores = yes }
-		custom_effect_tooltip = KIR_line_break
-		if = {
-			limit = {
-				set_temp_variable = { COC_power_struggle_DR_var_finale_temp = COC_power_struggle_DR_var }
-				add_to_temp_variable = { COC_power_struggle_DR_var_finale_temp = 1 }
-				check_variable = { COC_power_struggle_KF_var > COC_power_struggle_DR_var_finale_temp }
-			}
-			every_country = {
-				limit = {
-					is_kiria_country = yes
-				}
-				news_event = { id = kirin_council.326 hours = 6 }
-			}
-		}
-		else_if = {
-			limit = {
-				set_temp_variable = { COC_power_struggle_KF_var_finale_temp = COC_power_struggle_KF_var }
-				add_to_temp_variable = { COC_power_struggle_KF_var_finale_temp = 1 }
-				check_variable = { COC_power_struggle_DR_var > COC_power_struggle_KF_var_finale_temp }
-			}
-			every_country = {
-				limit = {
-					is_kiria_country = yes
-				}
-				news_event = { id = kirin_council.327 hours = 6 }
-			}
-		}
-		else = {
-			news_event = { id = kirin_council.321 hours = 3 }
-		}
-	}
 }

@@ -9,6 +9,7 @@
  #BAC_COC_com_tree: "Commonalty of Kiria Focus Tree"
  BAC_COC_commonalty_war_enacted: "Has passed a §RWar Initiative§!"
  BAC_COC_commonalty_war_days_tt: " Current days are: [?BAC_COC_commonalty_war_enacted_flag:days|Y0]"
+ #BAC_education_tp: "Gradually removes the §YModest Illiteracy§! national spirit.\n"
  
  BAC_commonalty_faction: "Commonalty Mutual Assistance Bloc"
  
@@ -30,6 +31,61 @@
   commonalty_communal_control_mid: "§OCommonalty§! - Major §RCommunal§! Bias"
   commonalty_communal_control_low: "§OCommonalty§! - Slight §RCommunal§! Bias"
 
+#forked foci
+  BAC_COC_tree: "$COC_tree$"
+  BAC_COC_pretender: "$COC_pretender$"
+  BAC_COC_pretender_desc: "$COC_pretender_desc$"
+  BAC_COC_pretender_1a: "$COC_pretender_1a$" ##does this make sense -- 'A Man of the People'
+  BAC_COC_pretender_1a_desc: "$COC_pretender_1a_desc$"
+  BAC_COC_pretender_X: "$COC_pretender_X$"
+  BAC_COC_pretender_X_desc: "$COC_pretender_X_desc$"
+
+  BAC_COC_pretender_1b: "$COC_pretender_1b$"
+  BAC_COC_pretender_1b_desc: "$COC_pretender_1b_desc$"
+  BAC_COC_pretender_Y: "$COC_pretender_Y$"
+  BAC_COC_pretender_Y_desc: "$COC_pretender_Y_desc$"
+
+  BAC_COC_pretender_2a: "$COC_pretender_2a$"
+  BAC_COC_pretender_2a_desc: "$COC_pretender_2a_desc$"
+  BAC_COC_pretender_2b: "$COC_pretender_2b$"
+  BAC_COC_pretender_2b_desc: "$COC_pretender_2b_desc$"
+  BAC_COC_kindling: "$COC_kindling$"
+  BAC_COC_kindling_desc: "$COC_kindling_desc$"
+
+  BAC_COC_kindling_1a: "$COC_kindling_1a$"
+  BAC_COC_kindling_1a_desc: "$COC_kindling_1a_desc$"
+  BAC_COC_kindling_2: "$COC_kindling_2$"
+  BAC_COC_kindling_2_desc: "$COC_kindling_2_desc$"
+
+  BAC_COC_dayspring: "$COC_dayspring$"
+  BAC_COC_dayspring_desc: "$COC_dayspring_desc$"
+
+  BAC_COC_dayspring_1a: "$COC_dayspring_1a$"
+  BAC_COC_dayspring_1a_desc: "$COC_dayspring_1a_desc$"
+  BAC_COC_dayspring_2: "$COC_dayspring_2$"
+  BAC_COC_dayspring_2_desc: "$COC_dayspring_2_desc$"
+  BAC_COC_dayspring_2_tt: "$COC_dayspring_2_tt$"
+  BAC_COC_kindling_X: "$COC_kindling_X$" ##Coring, assemblies
+  BAC_COC_kindling_X_desc: "$COC_kindling_X_desc$"
+  BAC_COC_dayspring_X: "$COC_dayspring_X$" ##Compliance, reduce resistance, empower downtrodden
+  BAC_COC_dayspring_X_desc: "$COC_dayspring_X_desc$"
+  BAC_COC_dayspring_3: "$COC_dayspring_3$"
+  BAC_COC_dayspring_3_desc: "$COC_dayspring_3_desc$"
+  BAC_COC_kindling_3: "$COC_kindling_3$"
+  BAC_COC_kindling_3_desc: "$COC_kindling_3_desc$"
+
+  BAC_COC_dayspring_4a: "$COC_dayspring_4a$" ##celestia event
+  BAC_COC_dayspring_4a_desc: "$COC_dayspring_4a_desc$"
+  BAC_COC_dayspring_4b: "$COC_dayspring_4b$"
+  BAC_COC_dayspring_4b_desc: "$COC_dayspring_4b_desc$"
+  BAC_COC_kindling_4a: "$COC_kindling_4a$"
+  BAC_COC_kindling_4a_desc: "$COC_kindling_4a_desc$"
+
+
+  BAC_COC_kindling_4b: "$COC_kindling_4b$" ##bridge event
+  BAC_COC_kindling_4b_desc: "$COC_kindling_4b_desc$"
+  BAC_COC_finale: "$COC_finale$"
+  BAC_COC_finale_desc: "$COC_finale_desc$"
 
 #foci
  #commonalty
@@ -45,114 +101,129 @@
  BAC_COC_h2_desc: "" #이퀘스트리아는 불멸의 군주가 다스리는 알리콘정 국가이지만 실상은 대단히 분권화되어 있습니다. 이 사실을 강조하면서 그 제도를 적극적으로 받아들이며 심지어 헌법에까지 명시할 수 있도록 추진해보는 것은 정말 좋은 생각입니다. 아무렴 누구도 반대하지 않을 안건이니까요. 우리가 이퀘스트리아를 따르는 것에는 그만한 이유가 있습니다.
  BAC_COC_c2: "Our Cause Must Be Informed" 
  BAC_COC_c2_desc: "" #Realm에는 아직도 우리가 승리했다는 사실을 모르는 시골 키린들이 많습니다. 그 사실을 알리는 것은 물론이고 우리가 그들을 대변해줄 수 있다는 사실 또한 알려야 합니다. 그리고 저들의 목소리가 더욱 대변될 수 있도록 해야 합니다. 그게 바로 우리가 이 고된 일들을 하는 이유입니다.
- BAC_COC_m3: "3 Trinitarianist"
+ BAC_COC_m3: "Todo"
  BAC_COC_m3_desc: "TODO"
- BAC_COC_h3: "3 Harmonist"
+ BAC_COC_h3: "Harmonist"
  BAC_COC_h3_desc: "TODO"
- BAC_COC_c3: "3 Communalist"
+ BAC_COC_c3: "Communalist"
  BAC_COC_c3_desc: "TODO"
+ 
+ BAC_COC_true_commonalty: "The Declaration!"
+ BAC_COC_true_commonalty_desc: "The Declaration!"
 
- BAC_COC_pol_head: "2 Trinitarianist"
- BAC_COC_pol_head_desc: "TODO"
- BAC_COC_pol_h1: "Favor Harmonist"
- BAC_COC_pol_h1_desc: "TODO"
- BAC_COC_pol_m1: "Favor Trinitarianist"
- BAC_COC_pol_m1_desc: "TODO"
- BAC_COC_pol_c1: "Favor Communalist"
- BAC_COC_pol_c1_desc: "TODO"
- BAC_COC_pol_h2: "2 Harmonist"
+ BAC_COC_pol_head: "Committee for Commonal Education" #만민교육위원회
+ BAC_COC_pol_head_desc: "Due to the complexity inherent in Kirin letters, the literacy rate is significantly higher compared to modern nations. The Committee for Commonal Education has been ordered to focus on this illiteracy issue according to the consensus of the Commonal Senate, yet progress is reportedly slow. The highly esteemed Dayspring Rose will be appointed as a special chief commissioner to find out what problems are." #키린 문자 특유의 난해함으로 인해 키린 문맹률은 현대 국가들에 비해 월등히 높은 편입니다. 민회의 총의에 따라 만민교육위원회는 이러한 문맹 문제에 주력할 것을 하명받았으나 여전히 일의 진행이 지지부진하다고 합니다. 명망 높은 Dayspring Rose를 특별위원장으로 위촉해 어떤 문제가 벌어지고 있는지 알아내도록 할 필요가 있습니다.
+ BAC_COC_pol_h1: "Purge The Way of Fire"
+ BAC_COC_pol_h1_desc: "The Way of Fire bears the responsibility for not having been of any assistance as Kiria transformed into a horrific battlefield. Who was it that forced the Silence in the first place? No matter how secluded or harmless those who worship this monstrosity may be, it's unacceptable to have such a flawed values. These values eat away at their innocent hearts until they turn into monsters like those." #The Way of Fire는 키리아가 참혹한 전쟁터로 변모하는 과정에서 아무런 도움이 되지 않았다는 책임이 있습니다. 애초에 침묵을 강요한 것이 누구였던가요? 이 흉물을 숭배하는 자들이 아무리 벽지에 쳐박혀 있고, 아무리 무해하다 하더라도, The Way와 같이 그들의 마음 속에 파고들어 괴물이 될 때까지 그 순수한 마음을 좀먹는 잘못된 가치관이 심어져 있어서는 안 됩니다.
+ BAC_COC_pol_c1: "Allow The Way of Fire"
+ BAC_COC_pol_c1_desc: "Despite the numerous misdeeds committed by the hideous monster known as The Way of Fire, there still remains a glimmer of light in the hearts of the innocent folks and (perhaps even more innocent) devout priestesses. Although they torn our Realm apart and reduced it to tatters, should we do the same to the hearts of these faithful?" #The Way of Fire라는 추악한 괴물이 저질렀던 실정은 적지 않지만, 그럼에도 시골의 순박한 주민들과 (어쩌면 그들보다 더 순박할) 독실한 사제들의 마음 속에는 여전히 한 줄기 빛으로 남아 있습니다. The Way가 우리의 Realm을 찢어발기고 누더기로 만들었지만, 우리가 그 신실한 이들의 마음 속까지 그렇게 만들어야 할까요?
+ BAC_COC_pol_h2: "Harmonist"
  BAC_COC_pol_h2_desc: "TODO"
- BAC_COC_pol_c2: "2 Communalist"
+ BAC_COC_pol_c2: "" #진정한 지방자치제도의 정착
  BAC_COC_pol_c2_desc: "TODO"
- BAC_COC_pol_m3: "3 Trinitarianist"
- BAC_COC_pol_m3_desc: "TODO"
+ #BAC_COC_pol_m3: "Todo"
+ #BAC_COC_pol_m3_desc: "TODO"
 
- BAC_COC_eco_head: "2 Trinitarianist"
+ BAC_COC_eco_head: "Todo"
  BAC_COC_eco_head_desc: "TODO"
  BAC_COC_eco_h1: "Favor Harmonist"
  BAC_COC_eco_h1_desc: "TODO"
  BAC_COC_eco_c1: "Initiate Land Reform" #gives timed idea i think
  BAC_COC_eco_c1_desc: "" #Communalists들은 현대화니 뭐니 하는 이야기에 그다지 관심이 없습니다. 중요한 것은 이 Realm에 사는 키린들이 배곯지 않도록 하는 것 말고는 없으니까요. 경자유전의 원칙에 따라 각 농가가 스스로를 부양할 수 있을만큼의 토지를 분배하게 될 수만 있다면 더 이상 굶주리는 농민이 없게 될 것입니다.
- BAC_COC_eco_h2: "2 Harmonist"
+ BAC_COC_eco_h2: "Harmonist"
  BAC_COC_eco_h2_desc: "TODO"
- BAC_COC_eco_m2: "2 Trinitarianist"
+ BAC_COC_eco_m2: "Todo"
  BAC_COC_eco_m2_desc: "TODO"
- BAC_COC_eco_c2: "2 Communalist"
+ BAC_COC_eco_c2: "Communalist"
  BAC_COC_eco_c2_desc: "TODO"
- BAC_COC_eco_h3: "3 Harmonist"
+ BAC_COC_eco_h3: "Harmonist"
  BAC_COC_eco_h3_desc: "TODO"
- BAC_COC_eco_m3h: "Favor Trinitarianist"
+ BAC_COC_eco_m3h: "Favor Todo"
  BAC_COC_eco_m3h_desc: "TODO"
- BAC_COC_eco_m3c: "3 Trinitarianist"
+ BAC_COC_eco_m3c: "Todo"
  BAC_COC_eco_m3c_desc: "TODO"
- BAC_COC_eco_c3: "3 Communalist"
+ BAC_COC_eco_c3: "Communalist"
  BAC_COC_eco_c3_desc: "TODO"
- BAC_COC_eco_h4: "4 Harmonist"
+ BAC_COC_eco_h4: "Harmonist"
  BAC_COC_eco_h4_desc: "TODO"
- BAC_COC_eco_m4h: "Favor Trinitarianist"
+ BAC_COC_eco_m4h: "Favor Todo"
  BAC_COC_eco_m4h_desc: "TODO"
- BAC_COC_eco_m4c: "4 Trinitarianist"
+ BAC_COC_eco_m4c: "Todo"
  BAC_COC_eco_m4c_desc: "TODO"
- BAC_COC_eco_c4: "4 Communalist"
+ BAC_COC_eco_c4: "Communalist"
  BAC_COC_eco_c4_desc: "TODO"
  
- BAC_COC_edu: "Education Committee"
- BAC_COC_edu_desc: "" #문자의 난해함으로 인해 키린 문맹률은 다른 국가들에 비해서도 월등히 높은 편입니다. 민회의 총의에 따라 교육위원회는 이러한 문맹 문제에 주력할 것을 하명받았으나 여전히 일의 진행이 지지부진하다고 합니다. 어떤 문제가 벌어지고 있는지 알아낼 필요가 있습니다.
+ BAC_COC_modern_heavyindustry: "TODO"
+ BAC_COC_modern_heavyindustry_desc: "TODO"
+ BAC_COC_modern_science: "TODO"
+ BAC_COC_modern_science_desc: "TODO"
+ BAC_COC_applied_science: "TODO"
+ BAC_COC_applied_science_desc: "TODO"
 
- BAC_COC_mil_head: "2 Trinitarianist"
+ BAC_COC_mil_head: "Committee for Military Affairs" #군무위원회
  BAC_COC_mil_head_desc: "TODO"
  BAC_COC_mil_h1: "Favor Harmonist"
  BAC_COC_mil_h1_desc: "TODO"
  BAC_COC_mil_c1: "Favor Communalist"
  BAC_COC_mil_c1_desc: "TODO"
- BAC_COC_mil_h2: "2 Harmonist"
+ BAC_COC_mil_h2: "Harmonist"
  BAC_COC_mil_h2_desc: "TODO"
- BAC_COC_mil_m2: "2 Trinitarianist"
+ BAC_COC_mil_m2: "Todo"
  BAC_COC_mil_m2_desc: "TODO"
- BAC_COC_mil_c2: "2 Communalist"
+ BAC_COC_mil_c2: "Communalist"
  BAC_COC_mil_c2_desc: "TODO"
- BAC_COC_mil_h3: "3 Harmonist"
+ BAC_COC_mil_h3: "Harmonist"
  BAC_COC_mil_h3_desc: "TODO"
- BAC_COC_mil_m3h: "Favor Trinitarianist"
+ BAC_COC_mil_m3h: "Favor Todo"
  BAC_COC_mil_m3h_desc: "TODO"
- BAC_COC_mil_m3c: "3 Trinitarianist"
+ BAC_COC_mil_m3c: "Todo"
  BAC_COC_mil_m3c_desc: "TODO"
- BAC_COC_mil_c3: "3 Communalist"
+ BAC_COC_mil_c3: "Communalist"
  BAC_COC_mil_c3_desc: "TODO"
- BAC_COC_mil_h4: "4 Harmonist"
+ BAC_COC_mil_h4: "Harmonist"
  BAC_COC_mil_h4_desc: "TODO"
- BAC_COC_mil_m4h: "Favor Trinitarianist"
+ BAC_COC_mil_m4h: "Favor Todo"
  BAC_COC_mil_m4h_desc: "TODO"
- BAC_COC_mil_m4c: "4 Trinitarianist"
+ BAC_COC_mil_m4c: "Todo"
  BAC_COC_mil_m4c_desc: "TODO"
- BAC_COC_mil_c4: "4 Communalist"
+ BAC_COC_mil_c4: "Communalist"
  BAC_COC_mil_c4_desc: "TODO"
+ BAC_COC_mil_navy: "TODO"
+ BAC_COC_mil_navy_desc: "TODO"
+ BAC_COC_mil_air: "TODO"
+ BAC_COC_mil_air_desc: "TODO"
+ BAC_COC_mil_navalair: "TODO"
+ BAC_COC_mil_navalair_desc: "TODO"
 
+ BAC_COC_pol_m4: "Todo"
+ BAC_COC_pol_m4_desc: "TODO"
 
 # events
  #commonalty
   baccocc.1.t: "To Prepare The Foundation" #건국을 준비하기 위하여
-  baccocc.1.d: "The soon-to-be Commonalty, the Children of Concord, was initially a loose alliance between the Communion of Her Radiant Trinity led by Dayspring Rose and the All-Kiria Union of Workers and Peasants led by Kindling Flash. Even at the onset of the uprising, this bond was solidified by a mutual animosity against the existential threat posed by the National Association of Kirin Patriots. However, now that a complete victory over the NAKP has been achieved, this bond has become as insubstantial as a mirage.\n\nWhile there is a certain closeness between Kindling Flash and Dayspring Rose, centered around the Vermilion Pretender, the stallion Mahogany Blaze, the realities of politics demand attention to their respective supporters. The CPF has invited as many kirins as possible to ensure no one is left behind in the wake of Concord, resulting in a multitude of voices. However, the two most dominant voices are those represented by the Communion and the Union.\n\nUnfortunately, the current situation within the CPF is one of deadlock, with members of the two factions in opposition, making consensus on key issues unattainable. Both sides are aware that pushing through decisions on the principle of majority rule, without it being an institutionally guaranteed decision-making mechanism, lacks a basis for enforcement and is unlikely to lead to proper progress. The possibility of Nirik transformation also cannot be ignored.\n\nFrom the start, the CPF has been mired in a stalemate." # 이제 곧 Commonalty가 될 Children of Concord는 시작부터 Dayspring Rose가 이끄는 Communion of Her Radiant Trinity와 Kindling Flash가 이끄는 All-Kiria Union of Workers and Peasants 사이의 느슨한 결합으로 이루어져 있었습니다. 봉기가 시작될 무렵에만 해도 이 결속은 National Association of Kirin Patriots에 의한 생존의 위협에 맞서는 적개심으로 단단해져 있었으나, 이제 NAKP를 상대로 완전한 승리를 거둔 지금 이 결속은 신기루라는 표현이 적당하다고 할 수 있을 정도로 희미해져 있었습니다.\n\n물론 Kindling Flash와 Dayspring Rose 둘 사이는 Vermilion Pretender였던 숫말 Mahogany Blaze를 중심으로 친밀하다고 할 수 있는 편이지만, 현실정치의 영역에서는 그들이 거느리고 있는 지지자들을 신경쓰지 않을 수 없습니다. CPF에서는 콩코드 뒤에 소외받는 이들이 없도록 하기 위해 가능한 모든 키린들을 초빙했으니만큼 다양한 목소리들이 병존하고 있지만, Communion과 Union으로 대표되는 두 목소리가 가장 큽니다.\n\n불운하게도 현재 CPF에서 두 파벌의 위원들이 대립하고 있기 때문에 주요 쟁점이 되는 사안들에 대한 합의는 전혀 이루어지지 않고 있습니다. 다수결의 원칙으로 밀어붙인다 해도 그것이 제도적으로 보장된 의사결정 장치가 아닌 이상 그 결정에 불복한다 하더라도 강제할 명분이 없고, 일이 제대로 진행될 리도 없다는 것은 양 측 모두 알고 있습니다. 그리고 Nirik 변신도 고려하지 않을 수 없습니다.\n\nCPF는 시작과 동시에 교착 상태에 빠진 것입니다.
+  baccocc.1.d: "The soon-to-be Commonalty, the Children of Concord, was initially a loose alliance between the Communion of Her Radiant Trinity led by Dayspring Rose and the All-Kiria Union of Workers and Peasants led by Kindling Flash. Even at the onset of the uprising, this bond was solidified by a mutual animosity against the existential threat posed by the National Association of Kirin Patriots. However, now that a complete victory over the NAKP has been achieved, this bond has become as insubstantial as a mirage.\n\nWhile there is a certain closeness between Kindling Flash and Dayspring Rose, centered around the Vermilion Pretender - Mahogany Blaze, the realities of politics demand attention to their respective supporters. The CPF has invited as many kirin as possible to ensure no one is left behind Concord, resulting in a multitude of voices. However, the two most dominant voices are those represented by the Communion and the Union.\n\nUnfortunately, the current situation within the CPF is in deadlock, with members of the two factions in opposition, making consensus on key issues unattainable. Both sides are aware that pushing through decisions on the principle of majority rule, without it being an institutionally guaranteed decision-making mechanism, lacks a basis for enforcement and is unlikely to lead to proper progress. The possibility of Nirik transformation also cannot be ignored.\n\nFrom the start, the CPF has been mired in a stalemate." # 이제 곧 Commonalty가 될 Children of Concord는 시작부터 Dayspring Rose가 이끄는 Communion of Her Radiant Trinity와 Kindling Flash가 이끄는 All-Kiria Union of Workers and Peasants 사이의 느슨한 결합으로 이루어져 있었습니다. 봉기가 시작될 무렵에만 해도 이 결속은 National Association of Kirin Patriots에 의한 생존의 위협에 맞서는 적개심으로 단단해져 있었으나, 이제 NAKP를 상대로 완전한 승리를 거둔 지금 이 결속은 신기루라는 표현이 적당하다고 할 수 있을 정도로 희미해져 있었습니다.\n\n물론 Kindling Flash와 Dayspring Rose 둘 사이는 Vermilion Pretender였던 숫말 Mahogany Blaze를 중심으로 친밀하다고 할 수 있는 편이지만, 현실정치의 영역에서는 그들이 거느리고 있는 지지자들을 신경쓰지 않을 수 없습니다. CPF에서는 콩코드 뒤에 소외받는 이들이 없도록 하기 위해 가능한 모든 키린들을 초빙했으니만큼 다양한 목소리들이 병존하고 있지만, Communion과 Union으로 대표되는 두 목소리가 가장 큽니다.\n\n불운하게도 현재 CPF에서 두 파벌의 위원들이 대립하고 있기 때문에 주요 쟁점이 되는 사안들에 대한 합의는 전혀 이루어지지 않고 있습니다. 다수결의 원칙으로 밀어붙인다 해도 그것이 제도적으로 보장된 의사결정 장치가 아닌 이상 그 결정에 불복한다 하더라도 강제할 명분이 없고, 일이 제대로 진행될 리도 없다는 것은 양 측 모두 알고 있습니다. 그리고 Nirik 변신도 고려하지 않을 수 없습니다.\n\nCPF는 시작과 동시에 교착 상태에 빠진 것입니다.
   baccocc.1.a: "It have never been thought that would be easy, after all."
 
-  baccocc.2.t: "A Militarykirin in the Committee" #위원회의 군마
-  baccocc.2.d: "Once loyal to Rising Fire, Ember Glow now found herself idly seated in a corner of a meeting room within a building temporarily serving as the headquarters for the Commonalty's Committee For Preparation of The Foundation. The grueling war with NAKP had finally come to an end, and though she wished to bask in the peace that followed, it was at the earnest request of the CPF that she found herself here. Having fought alongside the causes of Kindling Flash and Dayspring Rose, she had no intention of sounding a dissenting note. Instead, she merely planned to witness the unfolding of this new chapter in history with her own eyes...\n\n\"General Ember Glow, might I solicit your esteemed opinion on a matter that has proven exceedingly contentious and remains deadlocked?\" a kirin inquired. Though she had faced such queries more than a dozen times that day alone, preferring not to take sides between Kindling and Dayspring, she steadfastly refused all answers. Most attendees, heavily influenced by the obstinate bannerkirin like Firethorn, did the same.\n\n\"Well, as a militarykirin, I prefer not to lean towards any side. Perhaps it would be better for you to directly persuade those who oppose you?\"\n\nYet, despite the ongoing stalemates, no consensus could be reached on the contentious issues at hoof. As days passed, marked by meaningless attendances at dawn and equally meaningless leavings at dusk, Ember Glow's thoughts began to shift." #한때 Rising Fire에 충성했던 Ember Glow는 이제 Commonalty의 Committee For Preparation of The Foundation에서 임시 청사로 사용 중인 건물의 회의실 한켠에 멍하니 앉아있었다. NAKP와의 처절했던 전쟁도 결국 끝이 났으니 그녀는 평화를 즐기려 했지만, 위원회의 간곡한 요청에 따라 그녀는 이곳에 앉아있게 되었던 것이다. 물론 그녀는 Kindling Flash나 Dayspring Rose의 대의에 동조하여 싸웠던 것이니만큼 그들이 하는 일에 따로 변죽을 울릴 요량은 없었고, 그저 이 새로 쓰이는 역사의 현장을 두 눈으로 담기만 할 생각이었으나...\n\n\"Ember Glow 장군님, 혹시 고견을 여쭈어도 되겠습니까, 합의가 도통 나질 않는 대단히 팽팽한 사안인지라...\" 한 키린이 물었다. 이런 식의 질문을 오늘만 해도 열 번은 넘게 받았지만 Kindling과 Dayspring 사이 한 쪽 편만을 들고 싶지 않았던 그녀는 모든 답변을 단호히 거부했다. Firethorn처럼 완고한 bannerkirin의 영향을 짙게 받은 참석자들은 대부분 그리했다.\n\n\"글쎄요, Bannerkirin으로서 나는 한 쪽에 치우치고 싶지 않습니다. 오히려 반대하는 쪽을 그쪽이 직접 설복시키시는 것이 더 낫지 않겠습니까?\"\n\n하지만 결국 팽팽한 대립이 일어나고 있는 사안들에 대해서는 합의를 도출할 수 없었고, 해 뜰 무렵 무의미하게 등청하여 해 질 무렵 무의미하게 퇴청하는 나날이 반복되던 차, Ember Glow의 생각도 어느 순간 바뀌게 되었다.
-  baccocc.2.a: ""I cannot continue like this."" #"계속 이러고 있을 수는 없겠어."
+  baccocc.2.t: "A Militarymare in the Committee" #위원회의 군마
+  baccocc.2.d: "Once loyal to Rising Fire, Ember Glow now found herself idly seated in a corner of a meeting room within a building temporarily serving for Commonalty, as the headquarter for CPF. The grueling war with NAKP had finally come to an end, and though she wished to bask in the peace that followed, it was at the earnest request of the CPF that she found herself here. Having fought alongside the causes of Kindling Flash and Dayspring Rose, she had no intention of sounding a dissenting note. Instead, she merely planned to witness the unfolding of this new chapter in history with her own eyes...\n\n\"General Ember Glow, might I solicit your esteemed opinion on a matter that has proven exceedingly contentious and remains deadlocked?\" a kirin inquired. Though she had faced such queries more than a dozen times that day alone, preferring not to take sides between Kindling and Dayspring, she steadfastly refused all answers. Most attendees, heavily influenced by the obstinate bannerkirin like Firethorn, did the same.\n\n\"Well, as a militarymare, I prefer not to lean towards any side. Perhaps it would be better for you to directly persuade those who oppose you?\"\n\nYet, despite the ongoing stalemates, no consensus could be reached on the contentious issues at hoof. As days passed, marked by meaningless attendances at dawn and equally meaningless leavings at dusk, Ember Glow's thoughts began to shift."
+  baccocc.2.a: ""I cannot continue like this."" 
 
   baccocc.3.t: "The Private Meeting" # 회동
-  baccocc.3.d: "While pondering what to have for dinner this evening, Coral River barely remembered that she had been invited by Ember Glow and was now hurriedly making her way to her residence. The sun had already set beyond the western lands. Arriving with heavy breaths, Coral River noticed that there was another guest present.\n\n\"Late, aren't you, Coral. Such a flustered sight.\"\n\"Firethorn! I didn't expect to see you here. To think she called another mare besides me at this hour...\" Coral retorted. \"Hmph.\" Ember Glow snorted. \"Had you been on time, it would have been less late.\"\n\nAs soon as Coral took her seat, the dinner commenced. After that, while Coral was savoring the aroma of the tea in front of her, Firethorn opened the conversation again. So, Ember Glow, what's the main point? You didn't call us here just for a meal during these times, did you?\" \"Of course not,\" Ember replied.\n\n"In my suspicion, the CPF seems to be losing its direction. The pro-Equestria faction and the Trinitarians both in the Communion are so intoxicated with their beliefs that they've become blind, and the communalist of the Union are too narrow-sighted. Not to mention the Marksists, a few but dazzled by their own ideology."" # 오늘 저녁으로 무엇을 먹을지 고민하던 Coral River는 Ember Glow의 초대가 있었다는 사실을 간신히 기억해내고 뒤늦게 그녀의 주거지로 달려가고 있었다. 이미 해는 서역 너머로 뉘엿뉘엿 넘어가고 있던 때였다. 가쁜 숨을 몰아쉬며 도착한 Coral River는 그곳에 자신 말고도 선객이 있었다는 사실을 알아차렸다.\n\n\"늦구나, Coral. 그렇게 허둥대는 꼴이라니.\"\n\"Firethorn! 여기서 뵙게 될 줄은 몰랐는데요. 이 밤에 나 말고 다른 암말을 부르다니...\" Coral이 대꾸했다. \"흥.\" Ember Glow는 코웃음쳤다. \"네가 제 시간에 왔다면 덜 늦어졌겠지.\"\n\nCoral이 자리에 앉음과 동시에 식사가 진행되었다. 식사가 끝나고 Coral이 자기 앞에 놓인 차향을 음미하는 동안, Firethorn은 다시 말문을 열었다. \"그래서, Ember Glow, 본론이 무엇이냐? 이 시국에 그저 식사나 하자고 부른 것은 아닐 테지?\" \"물론 아닙니다.\" Ember가 답했다.\n\n\"제가 보기에 CPF는 방향을 잃고 있는 것 같습니다. Communion의 친-이퀘스트리아 파와 삼위일체주의자들은 자신들의 신념에 지나치게 도취된 나머지 눈이 멀었고, Union의 자치주의자들은 시야가 지나치게 좁아요. 눈이 번들거리는 마르크스주의자들은 말할 것도 없죠.\"
-  baccocc.3.a: ""And?" Firethorn's brows furrowed." # \"그래서?\" Firethorn의 눈살이 찌푸려졌다. 
+  baccocc.3.d: "While pondering what to have for dinner this evening, Coral River barely remembered that she had been invited by Ember Glow and was now hurriedly making the way to her residence. The sun had already set beyond the western clouds. Arriving with heavy breaths, Coral River noticed that there was another guest present.\n\n\"Late, aren't you, Coral. Such a flustered sight.\"\n\"Firethorn! I didn't expect to see you here. To think she called another mare besides me at this hour...\" Coral retorted. \"Hmph.\" Ember Glow snorted. \"Had you been on time, it would have been less late.\"\n\nAs soon as Coral took her seat, the dinner commenced. After that, while Coral was savoring the aroma of the tea in front of her, Firethorn opened the conversation again. "So, Ember Glow, what's the main point? You didn't call us here just for a meal during these times, did you?\" \"Of course not,\" Ember replied.\n\n"In my suspicion, the CPF seems to be losing its direction. The pro-Equestria faction and the Trinitarians both in the Communion are so intoxicated with their beliefs that they've become blind, and the communalist of the Union are too narrow-sighted. Not to mention the Marksists, a few but dazzled by their own ideology."" 
+  baccocc.3.a: ""And?" Firethorn's brows furrowed." 
 
   baccocc.4.t: "To Achieve The Foundation" #건국을 이루기 위하여
-  baccocc.4.d: "Ember continued, "That's why we need to step in, at least before the Communion and the Union irreversibly split apart. We need to prioritize with a broad perspective and offer a compromise that both sides can accept. If we can't set this country right, it will fall to foreign invasion once again."\n\nFirethorn, whose expression had already hardened, stood up. "I will not partake in such a play. I am a bannerkirin. My duty is to protect the kirins so they can enjoy democracy, not to make myself mingling with them."\n\n"Please, Firethorn. Your help would be invaluable. I'm not asking to become a warlord. To become a mediator." Ember's tone almost pleaded, but Firethorn did not heed and left the place.\n\n"..."\n\nEmber sighed. "What about you, Coral?"\n\nAfter rolling her eyes, Coral pondered for a moment before answering, "Seems like you have a point. At least in that we need a goal. So, what exactly are you planning to do?"\n\nA flush of excitement appeared on Ember's face. "Listen, I have some ideas. First, we need to appease both sides..."" #Ember가 말을 이었다. "그래서 우리가 나서야 한다는 겁니다. 적어도 Communion과 Union이 돌이킬 수 없이 갈라지기 전까지는요. 넓은 시야로 우선순위를 정하고, 양 쪽 모두 받아들일 수 있을만한 타협점을 제시해줘야 합니다. 이 나라를 바로세우지 못하면 또다시 외적의 침입에 무너지고 말 테니까요."\n\n표정이 이미 딱딱하게 굳어버린 Firethorn은 자리에서 일어섰다. "나는 그 놀음에 끼지 않을 거다. 나는 a bannerkirin이다. 내 임무는 키린들이 민주주의를 누릴 수 있도록 보호하는 것이지, 그들과 뒤섞이는 게 아니야."\n\n"제발요, Firethorn. 당신이 도와주신다면 큰 힘이 될 겁니다. 군벌이 되자고 하는 게 아닙니다. 중재자가 되자고 하는 거죠." Ember의 어조는 거의 애원하듯이 변했지만 Firethorn은 들은 체도 하지 않고 자리를 떠나버렸다.\n\n"..."\n\nEmber는 한숨을 쉬었다. "넌 어때, Coral?"\n\n눈알을 굴리던 Coral은 잠시 생각하더니 답했다. "네 말에 일리가 있는 것 같아. 적어도 목표가 있어야 한다는 점에서는. 그래서 구체적으로 어떻게 할 건데?"\n\nEmber의 표정에 화색이 띠었다. "들어봐, 내가 생각해둔 내용이 있으니까. 먼저 양 쪽을 달래주고..."
-  baccocc.4.a: "And so, the night deepened for the two of them alone." #그렇게 둘만의 밤은 깊어져만 갔다.
+  baccocc.4.d: "Ember continued, "That's why we need to step in, at least before the Communion and the Union irreversibly split apart. We need to prioritize with a broad perspective and offer a compromise that both sides can accept. If we can't set this country right, it will fall to foreign invasion once again."\n\nFirethorn, whose expression had already hardened, stood up. "I will not partake in such a play. I am a bannerkirin. My duty is to protect the kirin so they can enjoy democracy, not to make myself mingling with them."\n\n"Please, Firethorn. Your help would be invaluable. I'm not asking to become a warlord. To become a mediator." Ember's tone almost pleaded, but Firethorn did not heed and left the place.\n\n"..."\n\nEmber sighed. "What about you, Coral?"\n\nAfter rolling her eyes, Coral pondered for a moment before answering, "Seems like you have a point. At least in that we need a goal. So, what exactly are you planning to do?"\n\nA flush of excitement appeared on Ember's face. "You know, I have some ideas. First of all we need to actively appease both sides...""
+  baccocc.4.a: "And so the night deepened for the two of them alone." #그렇게 둘만의 밤은 깊어져만 갔다.
 
-
+  baccocc.6.t: "Matter of Regional Autonomy"
+  baccocc.6.d: "" #지방 자치 문제는 예상대로 간단하게 처리되었습니다. 물론 혁명의 영웅들 사이에 이미 합의가 이루어졌던 것도 있지만, 결정적인 것은 키린들에게 있어 이 안건에 대해 반대할 이유가 전혀 없었다는 것입니다. Communalists의 경우에는 말할 것도 없고, 조화주의자들 또한 그들이 선망하는 이퀘스트리아의 분권적 모형과 유사한 형태를 도입하는 것만으로 충분히 만족하는 모양새라 Mahogany Blaze가 나설 필요도 없었습니다.\n\n종교계에서도, 주요 교파인 키린 삼위일체의 주요 교리가 콩코드 아래 모든 키린의 평등이었으므로 Dayspring Rose의 교리를 잘 받아들인 신자들이라면 반발할 이유가 전혀 없었습니다. 그간 중앙집권을 정당화하는 신학으로 유지되었던 Way of Fire는 키리아의 침묵에 있어 크나큰 과실이 있는 것으로 간주되고 있었으므로 그들의 의견에 신경쓰는 키린은 지금 같은 때에 거의 없다고 봐도 무방합니다. 물론 그들 대부분은 봉기 직후 대부분 '처형'되었거나 NAKP 부역자로 간주되고 있는 형국이긴 합니다.\n\n또한 이런 분권적인 토대를 가장 싫어할만한 이들은 애초에 NAKP에 적극적으로 부역하였던 자들이라 지금은 포로가 되어 조만간 치러질 재판을 기다리고 있었죠.
+  baccocc.6.a: "" #일사천리로 해결되는 일이 있기는 하다는 게 다행이야.
 
 
   baccocc.11.t: "Which Law Should We Use?"
   baccocc_11d_intro: ""
-  baccocc.11.d_1: "$baccocc_11d_intro$\n\n" #우리가 건국준비위원회를 구성함에 있어 최대한 많은 노력을 기울여왔지만 여전히 부족한 점이 많습니다. 가장 시급한 사안은 바로 헌법입니다. 키리아의 근대화 과정에서 국제라고도 번역된 적이 있을만큼 헌법은 법치국가를 지향함에 있어 가장 근본이 되는 것이라고 할 수 있습니다. 물론 우리가 원시 상태에서 큰 변화 없이 산다면 법과 질서는 임시방편식으로도 충분할 것이며 일부 Communalists 중에서는 심지어 그러한 사회를 건설해야 한다는 주장을 내세우는 이들도 있으나, 이 모든 국란을 겪은 키린들 대부분은 난색을 표하고는 합니다. 결국 자신의 발굽과 뿔, 비늘만으로 스스로를 지키는 것에는 한계가 있으며 규모의 경제와 첨단 기술로 대표되는 현대성의 무자비한 물결 앞에서 한 줌 핏물이 될 뻔했던 전쟁을 겪은 것이 바로 얼마 전이었으니 말입니다. 일정 이상의 인구를 규율하기 위해서는 결국 법적 안정성으로 정의되는 질서가 가장 좋은 수단이며, 이는 동시에 현대화에 발맞추어 키린들을 지킬 힘을 얻게 해줄 첫걸음이 되는 것입니다.\n\n문제는 우리가 어떤 법제를 적용하느냐 하는 것입니다. Premier Autumn Blaze가 이끌던 Realm of Kiria의 Great Gallop Onward 시절 Plenum에서 반포되었던 헌법을 기반으로 할 것인지, 조화주의자들이 주장하는 대로 이퀘스트리아의 법제를 이식할 것인지가 관건입니다. 한편 그리폰이나 리버랜드 헌법은 Fickle Current의 NAKP를 연상케 하기 때문에 선호되지 않는 제안입니다. Realm of Kiria는 여전히 키린들, 특히 전장에서 떨어진 곳의 키린들 마음 속에 있으니만큼 그 시절의 오래가지 못했던 헌법을 준용하는 것은 우리의 정통성에도 도움이 될 것입니다. 한편 조화주의자들의 선호에 따라 이퀘스트리아 법을 준용하는 것은 세계에서 가장 널리 쓰이는 법제와의 호환성은 물론이고 참조하기 좋은 판례 및 사례들도 많기 때문에 더욱 경제적이라고 할 수도 있을 것입니다. 아니면 옛 Rising Fire 운동으로부터 전해내려와 삼위일체 신앙에서도 중요시하는 대원칙을 기반으로 새로 시작하는 것도 방법입니다: All creatures should be equal before Concord.
+  baccocc.11.d_1: "$baccocc_11d_intro$\n\n" #우리가 건국준비위원회를 구성함에 있어 최대한 많은 노력을 기울여왔지만 여전히 부족한 점이 많습니다. 가장 시급한 사안은 바로 헌법입니다. 키리아의 근대화 과정에서 국제라고도 번역된 적이 있을만큼 헌법은 법치국가를 지향함에 있어 가장 근본이 되는 것이라고 할 수 있습니다. 물론 우리가 원시 상태에서 큰 변화 없이 산다면 법과 질서는 임시방편식으로도 충분할 것이며 일부 Communalists 중에서는 심지어 그러한 사회를 건설해야 한다는 주장을 내세우는 이들도 있으나, 이 모든 국란을 겪은 키린들 대부분은 난색을 표하고는 합니다. 결국 자신의 발굽과 뿔, 비늘만으로 스스로를 지키는 것에는 한계가 있으며 규모의 경제와 첨단 기술로 대표되는 현대성의 무자비한 물결 앞에서 한 줌 핏물이 될 뻔했던 전쟁을 겪은 것이 바로 얼마 전이었으니 말입니다. 일정 이상의 인구를 규율하기 위해서는 어찌되었건 법적 안정성으로 정의되는 질서가 가장 좋은 수단이며, 이는 동시에 현대화에 발맞추어 키린들을 지킬 힘을 얻게 해줄 첫걸음이 되는 것입니다.\n\n문제는 우리가 어떤 법제를 적용하느냐 하는 것입니다. Premier Autumn Blaze가 이끌던 Realm of Kiria의 Great Gallop Onward 시절 Plenum에서 반포되었던 헌법을 기반으로 할 것인지, 조화주의자들이 주장하는 대로 이퀘스트리아의 법제를 이식할 것인지가 관건입니다. 한편 그리폰이나 리버랜드 헌법은 Fickle Current의 NAKP를 연상케 하기 때문에 선호되지 않는 제안입니다. Realm of Kiria는 여전히 키린들, 특히 전장에서 떨어진 곳의 키린들 마음 속에 있으니만큼 그 시절의 오래가지 못했던 헌법을 준용하는 것은 우리의 정통성에도 도움이 될 것입니다. 한편 조화주의자들의 선호에 따라 이퀘스트리아 법을 준용하는 것은 세계에서 가장 널리 쓰이는 법제와의 호환성은 물론이고 참조하기 좋은 판례 및 사례들도 많기 때문에 더욱 경제적이라고 할 수도 있을 것입니다. 아니면 옛 Rising Fire 운동으로부터 전해내려와 삼위일체 신앙에서도 중요시하는 대원칙을 기반으로 새로 시작하는 것도 방법입니다: All creatures should be equal before Concord.
   baccocc.11.d_2: "$baccocc_11d_intro$\n\n문제는 우리가 어떤 법제를 적용하느냐 하는 것입니다. 조화주의자들이 주장하는 대로 이퀘스트리아의 법제를 이식할 것인지가 화두입니다. 한편 그리폰이나 리버랜드 헌법은 Fickle Current의 NAKP를 연상케 하기 때문에 선호되지 않는 제안입니다. 조화주의자들의 선호에 따라 이퀘스트리아 법을 준용하는 것은 세계에서 가장 널리 쓰이는 법제와의 호환성은 물론이고 참조하기 좋은 사례들이 많기 때문에 더욱 경제적이라고 할 수도 있을 것입니다. 아니면 옛 Rising Fire 운동으로부터 전해내려와 삼위일체 신앙에서도 중요시하는 대원칙을 기반으로 새로 시작하는 것도 방법입니다. All creatures should be equal before Concord." # KIR_focus_8f
   baccocc.11.a: "" #이미 만들어진 헌법이 있다면 그걸 쓰는 게 맞다.
   baccocc.11.b: "" #이퀘스트리아 헌법을 이식하는 것이 최선의 방법이다.
@@ -166,9 +237,6 @@
   baccocc.13.d: "" #교육위원회가 구성된 회의장으로 향하는 Kindling Flash의 발걸음은 무거웠다. 그의 머릿속에는 교육위원회 회의록에 적힌 내용이 둥둥 떠다니고 있었다. 그저 키린들에게 어떻게 글을 잘 가르칠 것인지에 대해서만 고민하면 되는 문제가 아니겠는가, 라는 생각은 마치 백 살 먹은 Way of Fire의 Mystic처럼 너무 고루한 생각이었던 것이었다. 회의장 입구에 도착한 그는 심호흡을 하고 염력을 이용해 문을 열었다.\n\n\"-uck 네가 NAKP와 다른 게 뭐야?\"\n\n장내는 이미 아수라장이었는데 키린들은 이미 몸싸움을 벌이고 있었다. #TODO - unfinished event : I'm not good at make conversation
   baccocc.13.a: ""
 
-  baccocc.6.t: "Matter of Regional Autonomy"
-  baccocc.6.d: "" #지방 자치 문제는 예상대로 간단하게 처리되었습니다. 물론 혁명의 네 영웅들 사이에 이미 합의가 이루어졌던 것도 있지만, 결정적인 것은 키린들에게 있어 이 안건에 대해 반대할 이유가 전혀 없었다는 것입니다. Communalists의 경우에는 말할 것도 없고, 조화주의자들 또한 그들이 선망하는 이퀘스트리아의 분권적 모형과 유사한 형태를 도입하는 것만으로 충분히 만족하는 모양새라 Mahogany Blaze가 나설 필요도 없었습니다.\n\n종교계에서도, 주요 교파인 키린 삼위일체의 주요 교리가 콩코드 아래 모든 키린의 평등이었으므로 Dayspring Rose의 교리를 잘 받아들인 신자들이라면 반발할 이유가 전혀 없었습니다. 그간 중앙집권을 정당화하는 신학으로 유지되었던 Way of Fire는 키리아의 침묵에 있어 크나큰 과실이 있는 것으로 간주되고 있었으므로 그들의 의견에 신경쓰는 키린은 지금 같은 때에 거의 없다고 봐도 무방합니다. 물론 그들 대부분은 봉기 직후 대부분 '처형'되었거나 NAKP 부역자로 간주되고 있는 형국이긴 합니다.\n\n또한 이런 분권적인 토대를 가장 싫어할만한 이들은 애초에 NAKP에 적극적으로 부역하였던 자들이라 지금은 포로가 되어 조만간 치러질 재판을 기다리고 있었죠.
-  baccocc.6.a: "" #일사천리로 해결되는 일이 있기는 하다는 게 다행이야.
 
  #madkirin
   madkirin.1.t: "The Lecture"
@@ -177,13 +245,14 @@
 
 #decisions 
  bactodotodo: "" #마호가니 블레이즈와 브라이트 번은 이퀘스트리아에서 태어나 자랐으며 마호가니의 경우 우정 학교 졸업자이기도 합니다. 그의 연줄을 이용하면 이 황폐해진 나라에 이퀘스트리아의 자본을 대어 숨통을 트이게 할 수 있을지도 모릅니다. #이퀘스트리아가 존재하면 정치력이 많이 드는 대신 강력한 효과의 개발딸 가능한 컨셉
+ #이퀘가 망하면 조화파에 패널티를 줘야 할지 고민 중.
 
  # 키리아 내전 - 07년 8월
  # 콩코드 봉기 - 08년 12월 12일 ( kirin_council.303 )
  # 콩코드 통일 - 09년 3월 15일
 
- #조화주의파: 확장주의, 괴뢰국 착취, 전차 + 공군 + 해군
- #삼위일체파: 키린 코어, 비핵심 버프, 안정도, 종족 기술 + 지원 장비
+ #조화주의파: 괴뢰국 착취, 전차 + 공군 + 해군
+ #중도파: 선제타격, 키린 코어, 비핵심 버프, 안정도, 종족 기술 + 지원 장비
  #자치주의파: 인구, 주마다 건설 슬롯(퍼센트 말고 개수), 정치력 이득, 안정도 패널티, 육군
 
  #중점 갈래 (경제, 군사, 정치): 각 파벌마다 단계별 선택지를 주고 각 단계의 미선택 선택지는 180일 이후에 선택 가능하게 하기
@@ -206,8 +275,8 @@
   TNO_BAC_CountryClosing_close_btn_tt: "§WMaybe so."
   TNO_BAC_CountryClosing_page_btn_tt: "§WPage [Get_TNO_BAC_CountryClosing_page_btn_text]§!"
   TNO_BAC_CountryClosing_epilogue_generic: "Thanks for your engagement in all the content with this submod!"
-  BAC_CountryClosing_epilogue_KIR_commonalty: "A new order sets as flames and explosions halt - brave new future lies ahead since the darkness has passed. After all those years of the Silence, the Gallop Onward, and the harsh ordeal of the Second Cacophony, The Commonalty has won the new century for Kiria and Eastern Zebrica...\n\nWhat role will the Commonalty play in this stage been said brave new world? Will their ideals and revolution remain untainted until the very end? Will they face all the glories and trials that lie ahead and bring their ideals to the world?\n\nThe wild ride of Commonalty will continue in the Commonalty expansion update 2.0 - Sincerely thanks for playing this path and submod!"
+  BAC_CountryClosing_epilogue_KIR_commonalty: "A new order sets as flames and explosions halt - brave new future lies ahead since the darkness has passed. After all those years of the Silence, the Gallop Onward, and the harsh ordeal of the Second Cacophony, The Commonalty has won the new century for Kiria and Eastern Zebrica...\n\nWhat role will the Commonalty play in this stage been said brave new world? Will their ideals and revolution remain untainted until the very end? Will they face all the glories and trials that lie ahead and bring their ideals to the world?\n\nThe wild ride of the Commonalty will continue in the Commonalty expansion update 2.0 - Sincerely thanks for playing this path and submod!"
   BAC_CountryClosing_epilogue_KIR_generic: "$TNO_BAC_CountryClosing_epilogue_generic$"
   TNO_BAC_CountryClosing_credits_0: "§YProduction support§!\n\nSole Dev.\n§P_unicornia.§!"
-  TNO_BAC_CountryClosing_credits_1: "§YSpecial Thanks§!\n\n£eaw_text  Equestria at War Team for realization of this marvelous world, THE LAST EMPIRE and UKKRHEE(its head dev.) for giving permission to use his assets, Kaiserreich, Eight Years' War of Resistance, and The New Order. The Last honor goes to the Diarchy Expanded, an EaW submod inspired me to start modding." 
+  TNO_BAC_CountryClosing_credits_1: "§YSpecial Thanks§!\n\n£eaw_text  Equestria at War Team for realization of this marvelous world, THE LAST EMPIRE and UKKRHEE(its head dev.) for giving permission to use his assets, Kaiserreich, Eight Years' War of Resistance, and The New Order." 
   TNO_BAC_CountryClosing_credits_2: "TEST"

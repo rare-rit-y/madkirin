@@ -146,11 +146,12 @@ country_event = { # baccocc.1 - To Prepare The Foundation
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.1"}
 	is_triggered_only = yes
 	fire_only_once = yes
+	picture = GFX_event_KIR_stamp_B
 	option = {
 		name = baccocc.1.a #"I have never thought this would be easy, after all."
 		add_political_power = -3
-		add_stability = -0.0333
-		add_war_support = -0.0333
+		add_stability = -0.033
+		add_war_support = -0.033
 		hidden_effect = {
 			KIC_ember_glow = {
 				unit_leader_event = {
@@ -167,6 +168,7 @@ unit_leader_event = { # baccocc.2 - A Militarykirin in the Committee #위원회�
 	id = baccocc.2 
 	title = baccocc.2.t
 	desc = baccocc.2.d 
+	picture = GFX_event_KIR_stamp_B
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.2"}
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -195,8 +197,8 @@ unit_leader_event = { # baccocc.3 - The Private Meeting # 회동
 		
 		country_event = {
 			id = baccocc.4
-			days = 1
-			random_hours = 23
+			hours = 1
+			random_hours = 2
 		}
 	}
 }
@@ -208,8 +210,68 @@ country_event = { # baccocc.4 - To Achieve The Foundation #건국을 이루기 �
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.4"}
 	is_triggered_only = yes
 	fire_only_once = yes
+	picture = GFX_event_KIR_festival
 	option = {
 		name = baccocc.4.a # And so, the night deepened for the two of them alone. #그렇게 둘만의 밤은 깊어져만 갔다.
+	}
+}
+country_event = { # 
+	id = baccocc.5 
+	title = baccocc.5.t
+	desc = baccocc.5.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.5"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.5.a # 
+	}
+}
+country_event = { # baccocc.6 - Matter of Regional Autonomy
+	id = baccocc.6 
+	title = baccocc.6.t
+	desc = baccocc.6.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.6"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.6.a # 일사천리로 해결되는 일이 있기는 하다는 게 다행이야.
+		
+	}
+}
+
+country_event = { # baccocc.11 - Which Law Should We Use?
+	id = baccocc.11 
+	title = baccocc.11.t
+	desc = baccocc.11.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.11"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.11.a # All creatures should be equal before Concord. That's where we start. #kirin.20.c
+		
+	}
+}
+country_event = { # baccocc.12 - The Trial of NAKP
+	id = baccocc.12 
+	title = baccocc.12.t
+	desc = baccocc.12.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.12"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.12.a # Good riddance, after all.
+		
+	}
+}
+country_event = { # baccocc.13 - Matter of Educational Model
+	id = baccocc.13 
+	title = baccocc.13.t
+	desc = baccocc.13.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.13"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.13.a # And so, the night deepened for the two of them alone. #그렇게 둘만의 밤은 깊어져만 갔다.
 		
 	}
 }
@@ -229,7 +291,7 @@ country_event = { # madkirin.1 - The Lecture
 				promote_leader = yes
 				country_leader = {
 					expire = "1965.1.1"
-					ideology = madkirin_fas
+					ideology = falangism
 					traits = { }
 				}
 			}

@@ -1,70 +1,31 @@
-BAC_commonalty_bop = {
+BAC_commonalty_bop = { #Two Factions of the Commonalty
 	initial_value = 0
-	left_side = commonalty_harmonic_control
-	right_side = commonalty_communal_control
-	decision_category = EQS_bop_category
+	left_side = commonalty_communal_control
+	right_side = commonalty_harmonic_control
+	decision_category = commonalty_bop_category
 
 	range = {
 		id = commonalty_balanced
 		min = -0.1
 		max = 0.1
 		modifier = {
-			stability_factor = 0.02
-			war_support_factor = 0.02
+			stability_factor = 0.033
+			political_power_factor = 0.03
+			war_support_factor = 0.099
 		}
 	}
 	
-	side = {
-		id = commonalty_harmonic_control
-		icon = GFX_goal_celestia_raising_the_sun
-		range = {
-			id = commonalty_harmonic_control_strong
-			min = -1
-			max = -0.7
-			modifier = {
-				stability_factor = 0.20
-				political_power_factor = 0.20	
-			}
-			on_activate = {
-			}
-		}
-		
-		range = {
-			id = commonalty_harmonic_control_mid
-			min = -0.7
-			max = -0.4
-			modifier = {
-				stability_factor = 0.10
-				political_power_factor = 0.10
-			}
-			on_activate = {
-			}
-		}
-		
-		range = {
-			id = commonalty_harmonic_control_weak
-			min = -0.4
-			max = -0.1
-			modifier = {
-				stability_factor = 0.05
-				political_power_factor = 0.05
-			}
-			on_activate = {
-			}
-		}
-	}
-
-	side = {
+	side = { #left: §RWorker-Peasant Union§! - §RCommunalists§!
 		id = commonalty_communal_control
 		icon = GFX_goal_night_supporters
         range = {
 			id = commonalty_communal_control_strong
-			min = 0.7
-			max = 1
+			min = -1
+			max = -0.7
 			modifier = {
-			war_support_factor = 0.15
-			offensive_war_stability_factor = 0.15
-			stability_factor = -0.15
+				political_power_factor = -0.09
+				defensive_war_stability_factor = 0.333
+				stability_factor = 0.333
 			}
 			on_activate = {
 			}
@@ -72,12 +33,12 @@ BAC_commonalty_bop = {
 
 		range = {
 			id = commonalty_communal_control_mid
-			min = 0.4
-			max = 0.7
+			min = -0.7
+			max = -0.4
 			modifier = {
-			war_support_factor = 0.10
-			offensive_war_stability_factor = 0.10
-			stability_factor = -0.10
+				political_power_factor = -0.03
+				defensive_war_stability_factor = 0.099
+				stability_factor = 0.099
 			}
 			on_activate = {
 			}
@@ -85,12 +46,52 @@ BAC_commonalty_bop = {
 
 		range = {
 			id = commonalty_communal_control_low
+			min = -0.4
+			max = -0.1
+			modifier = {
+				defensive_war_stability_factor = 0.033
+				stability_factor = 0.033
+				war_support_factor = 0.033
+			}
+			on_activate = {
+			}
+		}
+	}
+
+	side = { # right: §FCommunion of Trinity§! - §7Harmonists§!
+		id = commonalty_harmonic_control
+		icon = GFX_goal_celestia_raising_the_sun
+		range = {
+			id = commonalty_harmonic_control_strong
+			min = 0.7
+			max = 1
+			modifier = {
+				political_power_factor = 0.33
+				stability_factor = -0.099
+			}
+			on_activate = {
+			}
+		}
+		
+		range = {
+			id = commonalty_harmonic_control_mid
+			min = 0.4
+			max = 0.7
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = -0.033
+			}
+			on_activate = {
+			}
+		}
+		
+		range = {
+			id = commonalty_harmonic_control_weak
 			min = 0.1
 			max = 0.4
 			modifier = {
-			war_support_factor = 0.05
-			offensive_war_stability_factor = 0.05
-			stability_factor = -0.05
+				political_power_factor = 0.05
+				war_support_factor = 0.033
 			}
 			on_activate = {
 			}
