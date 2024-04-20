@@ -38,9 +38,9 @@ COC_Champion_add_WarHero_trait = {
 				}
 			}
 			else_if = { 
-				limit = { is_character_slot = high_command }
+				limit = { is_character_slot = high_chiand }
 				add_trait = {
-					slot = high_command
+					slot = high_chiand
 					trait = war_hero_general
 				}
 			}
@@ -73,9 +73,9 @@ COC_Champion_add_WarHero_trait = {
 				is_advisor = yes
 			}
 			if = {
-				limit = { is_character_slot = high_command } #order is important.
+				limit = { is_character_slot = high_chiand } #order is important.
 				add_trait = {
-					slot = high_command
+					slot = high_chiand
 					trait = grand_admiral
 				}
 			}
@@ -112,9 +112,9 @@ COC_Champion_add_WarHero_trait = {
 				}
 			}
 			else_if = { 
-				limit = { is_character_slot = high_command }
+				limit = { is_character_slot = high_chiand }
 				add_trait = {
-					slot = high_command
+					slot = high_chiand
 					trait = war_hero_grunt
 				}
 			}
@@ -142,6 +142,153 @@ COC_Champion_add_WarHero_trait = {
 		else = { add_political_power = 5 }
 	}
 }
+#Strengthening WPU
+bac_COT_small_effect = {
+	#set_temp_variable = { bac_size_var = bac_size_small_var }
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = BAC_commonalty_bop
+			value = 0.03
+			tooltip_side = commonalty_harmonic_control
+		}
+	}
+	#bac_add_COT_effect = yes
+}
+bac_COT_medium_effect = {
+	#set_temp_variable = { bac_size_var = bac_size_medium_var }
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = BAC_commonalty_bop
+			value = 0.09
+			tooltip_side = commonalty_harmonic_control
+		}
+	}
+	#bac_add_COT_effect = yes
+}
+bac_COT_large_effect = {
+	#set_temp_variable = { bac_size_var = bac_size_large_var }
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = BAC_commonalty_bop
+			value = 0.21
+			tooltip_side = commonalty_harmonic_control
+		}
+	}
+	#bac_add_COT_effect = yes
+}
+bac_COT_mega_effect = {
+	#set_temp_variable = { bac_size_var = bac_size_mega_var }
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = BAC_commonalty_bop
+			value = 0.33
+			tooltip_side = commonalty_harmonic_control
+		}
+	}
+	#bac_add_COT_effect = yes
+}
+#bac_COT_giga_effect = {
+#	#set_temp_variable = { bac_size_var = bac_size_giga_var }
+#	if = {
+#		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+#		add_power_balance_value = {
+#			id = BAC_commonalty_bop
+#			value = 0.50
+#			tooltip_side = commonalty_harmonic_control
+#		}
+#	}
+#	#bac_add_COT_effect = yes
+#}
+#Strengthening PAC
+# bac_add_WPU_effect = {
+# 	if = {
+# 		limit = { bac_Song_victory_trigger = no }
+# 		add_popularity = {
+# 			ideology = social_democrat
+# 			popularity = var:bac_size_var
+# 		}
+# 	}
+# 	else = {
+# 		add_popularity = {
+# 			ideology = radical_socialist
+# 			popularity = var:bac_size_var
+# 		}
+# 	}
+# }
+bac_WPU_small_effect = {
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = BAC_commonalty_bop
+			value = -0.03
+			tooltip_side = commonalty_communal_control
+		}
+	}
+	#set_temp_variable = { bac_size_var = bac_size_small_var }
+	#bac_add_WPU_effect = yes
+}
+bac_WPU_medium_effect = {
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = BAC_commonalty_bop
+			value = -0.09
+			tooltip_side = commonalty_communal_control
+		}
+	}
+	#set_temp_variable = { bac_size_var = bac_size_medium_var }
+	#bac_add_WPU_effect = yes
+}
+bac_WPU_large_effect = {
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = BAC_commonalty_bop
+			value = -0.21
+			tooltip_side = commonalty_communal_control
+		}
+	}
+	#set_temp_variable = { bac_size_var = bac_size_large_var }
+	#bac_add_WPU_effect = yes
+}
+bac_WPU_mega_effect = {
+	if = {
+		limit = { has_any_power_balance = yes }
+		#Sucks but atm add power balance doesn't accept variables
+		add_power_balance_value = {
+			id = BAC_commonalty_bop
+			value = -0.33
+			tooltip_side = commonalty_communal_control
+		}
+	}
+	#set_temp_variable = { bac_size_var = bac_size_mega_var }
+	#bac_add_WPU_effect = yes
+}
+#bac_WPU_giga_effect = {
+#	if = {
+#		limit = { has_any_power_balance = yes }
+#		#Sucks but atm add power balance doesn't accept variables
+#		add_power_balance_value = {
+#			id = BAC_commonalty_bop
+#			value = -0.50
+#			tooltip_side = commonalty_communal_control
+#		}
+#	}
+#	#set_temp_variable = { bac_size_var = bac_size_giga_var }
+#	#bac_add_WPU_effect = yes
+#}
 
 TNO_BAC_Country_Closing_Screen_Show = {
 	set_country_flag = TNO_BAC_Country_Closing_Screen_Visible

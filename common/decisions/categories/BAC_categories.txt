@@ -1,14 +1,14 @@
 
 commonalty_bop_category = {
-	icon = GFX_decision_category_harmony_cat
+	icon = GFX_decision_category_KIR_VAKA_icon
 	
 	allowed = {
-		tag = COC
+		original_tag = KIC
 	}
 	
 	priority = 90
 	
-	visible = { tag = COC
-		
+	visible = { 
+		has_any_power_balance = yes
 	}
 }

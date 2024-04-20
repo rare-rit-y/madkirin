@@ -57,3 +57,44 @@
 # 		}
 # 	}
 # }
+commonalty_bop_category = {
+    comm_WPU_1 = {
+        icon = GFX_decision_category_viirats
+		allowed = { original_tag = KIC } 
+		cost = 33
+        visible = {
+        }
+        available = {
+        }
+        days_remove = 3
+		modifier = {
+            power_balance_daily = 0.03
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision comm_WPU_1"
+            bac_WPU_small_effect = yes
+		}
+        remove_effect = {
+        }
+    }
+    comm_COT_1 = {
+        icon = GFX_decision_candle
+		allowed = { original_tag = KIC } 
+		cost = 33
+        visible = {
+        }
+        available = {
+        }
+        days_remove = 3
+		modifier = {
+            power_balance_daily = 0.03
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision comm_COT_1"
+            bac_COT_small_effect = yes
+		}
+        remove_effect = {
+        }
+    }
+
+}

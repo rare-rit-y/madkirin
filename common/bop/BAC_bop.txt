@@ -9,23 +9,25 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 		min = -0.1
 		max = 0.1
 		modifier = {
-			stability_factor = 0.033
-			political_power_factor = 0.03
-			war_support_factor = 0.099
+			political_power_factor = 0.07
+			command_power_gain = 0.07
+			research_speed_factor = 0.07
 		}
 	}
 	
 	side = { #left: §RWorker-Peasant Union§! - §RCommunalists§!
 		id = commonalty_communal_control
-		icon = GFX_goal_night_supporters
+		icon = GFX_goal_KIR_companion
         range = {
 			id = commonalty_communal_control_strong
 			min = -1
 			max = -0.7
 			modifier = {
 				political_power_factor = -0.09
+				stability_factor = -0.333
 				defensive_war_stability_factor = 0.333
-				stability_factor = 0.333
+				army_core_defence_factor = 0.33
+				army_core_attack_factor = 0.33
 			}
 			on_activate = {
 			}
@@ -37,8 +39,10 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			max = -0.4
 			modifier = {
 				political_power_factor = -0.03
+				stability_factor = -0.099
 				defensive_war_stability_factor = 0.099
-				stability_factor = 0.099
+				army_core_defence_factor = 0.09
+				army_core_attack_factor = 0.09
 			}
 			on_activate = {
 			}
@@ -49,9 +53,10 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			min = -0.4
 			max = -0.1
 			modifier = {
+				stability_factor = -0.033
 				defensive_war_stability_factor = 0.033
-				stability_factor = 0.033
-				war_support_factor = 0.033
+				army_core_defence_factor = 0.03
+				army_core_attack_factor = 0.03
 			}
 			on_activate = {
 			}
@@ -60,14 +65,15 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 
 	side = { # right: §FCommunion of Trinity§! - §7Harmonists§!
 		id = commonalty_harmonic_control
-		icon = GFX_goal_celestia_raising_the_sun
+		icon = GFX_goal_KIR_COC_trinity
 		range = {
 			id = commonalty_harmonic_control_strong
 			min = 0.7
 			max = 1
 			modifier = {
-				political_power_factor = 0.33
-				stability_factor = -0.099
+				war_support_factor = 0.099
+				stability_factor = 0.099
+				research_speed_factor = -0.09
 			}
 			on_activate = {
 			}
@@ -78,8 +84,9 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			min = 0.4
 			max = 0.7
 			modifier = {
-				political_power_factor = 0.15
-				stability_factor = -0.033
+				war_support_factor = 0.033
+				stability_factor = 0.033
+				research_speed_factor = -0.03
 			}
 			on_activate = {
 			}
@@ -90,7 +97,6 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			min = 0.1
 			max = 0.4
 			modifier = {
-				political_power_factor = 0.05
 				war_support_factor = 0.033
 			}
 			on_activate = {
