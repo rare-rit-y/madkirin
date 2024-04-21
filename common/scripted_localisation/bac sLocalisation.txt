@@ -5,56 +5,69 @@
 #############                       #############
 #################################################
 
-	defined_text = { # Country
-		name = GetDecisionCostArmyXP40PP100
-		text = {
-			trigger = {
-				NOT = {
-					has_army_experience < 40
-					has_political_power < 100
-				}
-			}
-			localization_key = decision_cost_army_xp_40_pp_100
-		}
-		text = {
-			localization_key = decision_cost_army_xp_40_pp_100_blocked
-		}
-	}
+	# defined_text = { # Country
+	# 	name = GetDecisionCostArmyXP40PP100
+	# 	text = {
+	# 		trigger = {
+	# 			NOT = {
+	# 				has_army_experience < 40
+	# 				has_political_power < 100
+	# 			}
+	# 		}
+	# 		localization_key = decision_cost_army_xp_40_pp_100
+	# 	}
+	# 	text = {
+	# 		localization_key = decision_cost_army_xp_40_pp_100_blocked
+	# 	}
+	# }
 
-	defined_text = { # Country
-		name = GetDecisionCostArmyXP30PP50
-		text = {
-			trigger = {
-				NOT = {
-					has_army_experience < 30
-					has_political_power < 50
-				}
-			}
-			localization_key = decision_cost_army_xp_30_pp_50
-		}
-		text = {
-			localization_key = decision_cost_army_xp_30_pp_50_blocked
-		}
-	}
+	# defined_text = { # Country
+	# 	name = GetDecisionCostArmyXP30PP50
+	# 	text = {
+	# 		trigger = {
+	# 			NOT = {
+	# 				has_army_experience < 30
+	# 				has_political_power < 50
+	# 			}
+	# 		}
+	# 		localization_key = decision_cost_army_xp_30_pp_50
+	# 	}
+	# 	text = {
+	# 		localization_key = decision_cost_army_xp_30_pp_50_blocked
+	# 	}
+	# }
 
+	# defined_text = { # Country
+	# 	name = GetDecisionCostArmyXP25PP50
+	# 	text = {
+	# 		trigger = {
+	# 			NOT = {
+	# 				has_army_experience < 25
+	# 				has_political_power < 50
+	# 			}
+	# 		}
+	# 		localization_key = decision_cost_army_xp_25_pp_50
+	# 	}
+	# 	text = {
+	# 		localization_key = decision_cost_army_xp_25_pp_50_blocked
+	# 	}
+	# }
 	defined_text = { # Country
-		name = GetDecisionCostArmyXP25PP50
+		name = GetReplaceRisingSunTEC
 		text = {
 			trigger = {
-				NOT = {
-					has_army_experience < 25
-					has_political_power < 50
-				}
+				has_global_flag = KIR_CoC_Uprising_Flag
 			}
-			localization_key = decision_cost_army_xp_25_pp_50
+			localization_key = bac_RSTEC
 		}
 		text = {
-			localization_key = decision_cost_army_xp_25_pp_50_blocked
+			localization_key = bac_CIT
 		}
 	}
+	
 
 #################
-# /// Index /// #
+# /// Index /// # TNO ending screen
 #################
 	# / Definers
 	# 	Get_TNO_BAC_CountryClosing_picture

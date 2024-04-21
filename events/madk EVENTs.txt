@@ -39,6 +39,11 @@ country_event = {
 		set_temp_variable = { coalition_partner_var = token:democratic }
 		add_to_coalition = yes
 	}
+	option = {
+		name = bacdebug.1.e
+		set_temp_variable = { coalition_partner_var = token:democratic }
+		end_coalition = yes
+	}
 }
 country_event = { 
 	id = bacdebug.2 #hidden event for debuggo
@@ -121,10 +126,10 @@ country_event = {
 		}
 		set_temp_variable = { coalition_partner_var = token:democratic }
 		add_to_coalition = yes
-	} #KIR_high_command_1 (River Song) should be added when you complete the navy building focus
+	} #KIC_navy_chief_1 / KIR_navy_chief_1 () should be added when you complete the navy building focus
 }
-country_event = { 
-	id = bacdebug.3 #hidden event for debuggo
+country_event = {  #hidden event for debuggo
+	id = bacdebug.3
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bacdebug.3"}
 	hidden = yes
 	is_triggered_only = yes
@@ -147,12 +152,44 @@ country_event = { # baccocc.1 - To Prepare The Foundation
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_event_KIR_street
-	option = {
-		name = baccocc.1.a #"I have never thought this would be easy, after all."
+	option = { #"I have never thought this would be easy, after all."
+		name = baccocc.1.a
 		add_political_power = -3
 		add_stability = -0.033
 		add_war_support = -0.033
+		set_power_balance = {
+			id = BAC_commonalty_bop
+		}
+		set_country_flag = your_focus_fucked_up
 		hidden_effect = {
+			remove_country_leader_role = {
+				character = "KIR_kindling_flash"
+				ideology = BAC_COC_com
+			}
+			add_country_leader_role = {
+				character = "KIR_kindling_flash"
+				promote_leader = yes
+				country_leader = {
+					desc = "COC_kindling_flash_desc"
+					ideology = primitive_communism
+					expire = "1965.1.1.1"
+					traits = { KIR_peasant_preacher }
+				}
+			}
+			remove_country_leader_role = {
+				character = "KIR_dayspring_rose"
+				ideology = BAC_COC_dem
+			}
+			add_country_leader_role = {
+				character = "KIR_dayspring_rose"
+				promote_leader = yes
+				country_leader = {
+					desc = "COC_dayspring_rose_desc"
+					ideology = harmonic_theocracy
+					expire = "1965.1.1.1"
+					traits = { KIR_tempered_flame }
+				}
+			}
 			KIC_ember_glow = {
 				unit_leader_event = {
 					id = baccocc.2
@@ -172,8 +209,8 @@ unit_leader_event = { # baccocc.2 - A Militarykirin in the Committee #위원회�
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.2"}
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
-		name = baccocc.2.a #I cannot continue like this. #계속 이러고 있을 수는 없겠어.
+	option = { #I cannot continue like this. #계속 이러고 있을 수는 없겠어.
+		name = baccocc.2.a
 		
 		KIR_coral_river = {
 			unit_leader_event = {
@@ -192,8 +229,8 @@ unit_leader_event = { # baccocc.3 - The Private Meeting # 회동
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.3"}
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
-		name = baccocc.3.a  #And? Firethorn's brows furrowed. # 그래서? 파이어쏜의 눈살이 찌푸려졌다. 
+	option = {  #And? Firethorn's brows furrowed. # 그래서? 파이어쏜의 눈살이 찌푸려졌다. 
+		name = baccocc.3.a
 		
 		country_event = {
 			id = baccocc.4
@@ -211,15 +248,18 @@ country_event = { # baccocc.4 - To Achieve The Foundation #건국을 이루기 �
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_event_KIR_festival
-	option = {
-		name = baccocc.4.a # And so, the night deepened for the two of them alone. #그렇게 둘만의 밤은 깊어져만 갔다.
+	option = { # And so, the night deepened for the two of them alone. #그렇게 둘만의 밤은 깊어져만 갔다.
+		name = baccocc.4.a
+		complete_national_focus = BAC_COC_m1
+		add_to_variable = { coc_start_foci_completed = 1 }
+		mark_focus_tree_layout_dirty = yes
 	}
 }
-country_event = { # 
+unit_leader_event = { # 파이어쏜
 	id = baccocc.5 
 	title = baccocc.5.t
 	desc = baccocc.5.d 
-	picture = GFX_event_KIR_stamp_B #placeholder
+	picture = GFX_event_KIR_eaves
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.5"}
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -235,22 +275,45 @@ country_event = { # baccocc.6 - Matter of Regional Autonomy
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.6"}
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
-		name = baccocc.6.a # 일사천리로 해결되는 일이 있기는 하다는 게 다행이야.
+	option = { # 일사천리로 해결되는 일이 있기는 하다는 게 다행이야.
+		name = baccocc.6.a
 		
 	}
 }
 
-country_event = { # baccocc.11 - Which Law Should We Use?
-	id = baccocc.11 
-	title = baccocc.11.t
-	desc = baccocc.11.d 
-	picture = GFX_event_KIR_festival
-	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.11"}
+unit_leader_event = { # baccocc.7 - Matter of Educational Model
+	id = baccocc.7 
+	title = baccocc.7.t
+	desc = baccocc.7.d 
+	picture = GFX_event_KIR_village
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.7"}
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		name = baccocc.11.a # All creatures should be equal before Concord. That's where we start. #kirin.20.c
+		name = baccocc.7.a # communion
+		bac_COT_small_effect = yes
+		custom_effect_tooltip = baccocc_event_7a_tt
+	}
+	option = {
+		name = baccocc.7.b # free
+		bac_WPU_small_effect = yes
+		custom_effect_tooltip = baccocc_event_7b_tt
+	}
+}
+country_event = { # baccocc.8 - Which Law Should We Use?
+	id = baccocc.8 
+	title = baccocc.8.t
+	desc = baccocc.8.d 
+	picture = GFX_event_KIR_festival
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.8"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { #이퀘스트리아 헌법을 이식하는 것이 최선의 방법이다. # 
+		name = baccocc.8.a
+		
+	}
+	option = { # All creatures should be equal before Concord. That's where we start. #kirin.20.c
+		name = baccocc.8.b
 		
 	}
 }
@@ -262,25 +325,12 @@ country_event = { # baccocc.12 - The Trial of NAKP
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.12"}
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {
-		name = baccocc.12.a # Good riddance, after all.
+	option = { # Good riddance, after all.
+		name = baccocc.12.a
 		
 	}
 }
-country_event = { # baccocc.13 - Matter of Educational Model
-	id = baccocc.13 
-	title = baccocc.13.t
-	desc = baccocc.13.d 
-	picture = GFX_event_KIR_village
-	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.13"}
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = baccocc.13.a # 
-		
-	}
-}
-country_event = { #are you with me
+country_event = { #146 are you with me
 	id = baccocc.146
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.146"}
 	title = baccocc.146.t
@@ -293,7 +343,7 @@ country_event = { #are you with me
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 50
+				factor = 33
 				has_opinion = { target = FROM value > 33 }
 				FROM = { has_war = no }
 			}
@@ -305,7 +355,7 @@ country_event = { #are you with me
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 50
+				factor = 33
 				has_opinion = { target = FROM value < 33 }
 			}
 		}
@@ -316,21 +366,37 @@ country_event = { #are you with me
 		ai_chance = {
 			factor = 1
 			modifier = {
-				factor = 50
+				add = 33
 				has_opinion = { target = FROM value > 100 }
 			}
 			modifier = {
-				factor = 50
+				add = 33
 				FROM = { 
 					has_war = no 
 					has_army_manpower = {
-						size > 933333
+						size > 3333333
 					}
 				}
 			}
 			modifier = {
 				factor = 1.25
 				FROM = { has_tech = tech_kirin_astrology }
+			}
+			modifier = {
+				has_war = yes
+				OR = {
+					surrender_progress > 0.1
+					enemies_strength_ratio > 0.6
+				}
+				add = 33
+			}
+			modifier = {
+				has_war = yes
+				OR = {
+					surrender_progress > 0.3
+					enemies_strength_ratio > 1
+				}
+				add = 333
 			}
 		}
 	}
@@ -342,12 +408,16 @@ country_event = { #ject
 	desc = baccocc.147.d
 	picture = GFX_event_KIR_stamp_B
 	is_triggered_only = yes
-	option = {
+	option = { #oke
 		name = baccocc.147.a
 	}
-	option = {
+	option = { #kill
 		name = baccocc.147.b
-		trigger = { has_war_support > 0.7 }
+		add_war_support = -0.1
+		create_wargoal = {
+			type = annex_everything
+			target = FROM
+		}
 	}
 }
 country_event = { #yes
@@ -392,7 +462,7 @@ country_event = { #yes
 		}
 	}
 }
-country_event = { #yesmaar
+country_event = { #149 yesmaar
 	id = baccocc.149
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.149"}
 	title = baccocc.149.t
@@ -437,6 +507,55 @@ country_event = { #yesmaar
 		}
 	}
 }
+news_event = {
+	id = baccocc.326
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.326"}
+	title = baccocc.326.t
+	desc = baccocc.326.d
+	picture = GFX_news_event_palace_supreme_harmony
+
+	major = no
+	is_triggered_only = yes
+
+	option = {
+		name = baccocc.326.a
+		if = {
+			limit = {
+				has_country_flag = KIC_children_of_concord_flag
+			}
+			# add_ideas = proper_science_base
+			# add_ideas = no_lack_of_scientists
+			# add_ideas = modern_society
+			custom_effect_tooltip = KIR_line_break
+			every_possible_country = {
+				limit = {
+					has_character = COC_common_senate
+				}
+				COC_common_senate = {
+					set_nationality = PREV.PREV
+				}
+			}
+			add_country_leader_role = {
+				character = "COC_common_senate"
+				promote_leader = yes
+				country_leader = {
+					desc = "COC_common_senate_desc"
+					ideology = democratic_socialism
+					expire = "1965.1.1.1"
+					traits = { KIR_direct_democracy }
+				}
+			}
+			set_cosmetic_tag = COC_commonalty
+			custom_effect_tooltip = COC_kindling_add1_tt
+			add_to_variable = { COC_power_struggle_KF_var = 1 }
+			add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
+			clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
+			clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
+		}
+	}
+}
+
+
 country_event = { # madkirin.1 - The Lecture
 	id = madkirin.1 
 	title = madkirin.1.t

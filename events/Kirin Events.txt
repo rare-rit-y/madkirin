@@ -22163,7 +22163,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			create_dynamic_country = {
+			create_dynamic_country = { #make kir_coc
 				original_tag = KIC
 				save_event_target_as = KIC_children_of_concord_target
 				set_country_flag = KIC_children_of_concord_flag
@@ -22340,7 +22340,7 @@ country_event = {
 					promote_leader = yes
 					country_leader = {
 						desc = "COC_kindling_flash_desc"
-						ideology = primitive_communism
+						ideology = BAC_COC_com
 						expire = "1965.1.1.1"
 						traits = { KIR_peasant_preacher }
 					}
@@ -22358,7 +22358,7 @@ country_event = {
 					promote_leader = yes
 					country_leader = {
 						desc = "COC_dayspring_rose_desc"
-						ideology = harmonic_theocracy
+						ideology = BAC_COC_dem  # added from BAC
 						expire = "1965.1.1.1"
 						traits = { KIR_tempered_flame }
 					}
@@ -22459,6 +22459,62 @@ country_event = {
 						set_nationality = PREV.PREV
 					}
 				}
+				every_possible_country = { # added from BAC
+					limit = {
+						has_character = KIC_ember_glow
+					}
+					KIC_ember_glow = {
+						set_nationality = PREV.PREV
+					}
+				}
+				every_possible_country = {
+					limit = {
+						has_character = KIR_coral_river
+					}
+					KIR_coral_river = {
+						set_nationality = PREV.PREV
+					}
+				}
+				every_possible_country = {
+					limit = {
+						has_character = KIR_firethorn
+					}
+					KIR_firethorn = {
+						remove_unit_leader_trait = old_guard
+						add_unit_leader_trait = organisational_leader
+						# set_portraits = { #this would be in her event for national defense commission
+						# 	army = {
+						# 		large = "GFX_portrait_KIR_firethorn_new_uniform"
+						# 	}
+						# }
+						set_nationality = PREV.PREV
+					}
+				}
+				every_possible_country = {
+					limit = {
+						has_character = KIR_high_command_4 #Golden Lumen
+					}
+					KIR_high_command_4 = {
+						set_nationality = PREV.PREV
+					}
+				}
+				KIR = {
+					KIR_ochre_glint = {
+						set_nationality = PREV.PREV
+					}
+				}
+				KIC = {
+					KIC_rising_sun_u = { # Rising Sun technical university
+						set_nationality = PREV.PREV
+					}
+				}
+				KIR = {
+					KIR_ochre_glint = {
+						set_nationality = PREV.PREV
+					}
+				}
+				set_temp_variable = { coalition_partner_var = token:democratic }
+				add_to_coalition = yes # added from BAC end
 				add_ideas = tot_economic_mobilisation
 				add_ideas = closed_economy
 				add_ideas = scraping_the_barrel
@@ -22597,7 +22653,7 @@ country_event = {
 					}
 					add_claim_by = PREV
 				}
-				load_focus_tree = COC_Focus_Tree
+				load_focus_tree = BAC_COC_tree
 				reserve_dynamic_country = yes
 				set_AI_strategies_on_every_possible_country_delayed = yes
 				country_event = { id = kirin_utility.43 days = 1 }
@@ -22792,6 +22848,22 @@ country_event = {
 		name = kirin_council.305.a
 		add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 }
 		add_equipment_to_stockpile = { type = artillery_equipment amount = 450 }
+		set_country_flag = KIC_small_arms_inventor_available #added by bac start
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = KIC_small_arms_inventor_organization
+			mio:KIC_small_arms_inventor_organization = {
+				add_mio_size = 1
+				add_mio_funds = 400
+			}
+		}
+		else = {
+			custom_effect_tooltip = available_designer_individual
+			show_ideas_tooltip = KIC_small_arms_inventor
+		} #added by bac end
 	}
 }
 
@@ -23272,8 +23344,11 @@ country_event = {
 			limit = {
 				is_kiria_country = yes
 			}
-			news_event = { id = kirin_council.326 hours = 36 }
+			#news_event = { id = kirin_council.326 hours = 36 }
 		}
+		set_country_flag = to_the_commonalty
+		custom_effect_tooltip = bac_kic324a_tt
+		custom_effect_tooltip = get_commonalty_tree_tt
 	}
 }
 
@@ -23343,10 +23418,10 @@ news_event = {
 				character = "COC_common_senate"
 				promote_leader = yes
 				country_leader = {
-					desc = "COC_common_senate_desc"
+					desc = "BAC_COC_common_senate_desc"
 					ideology = democratic_socialism
 					expire = "1965.1.1.1"
-					traits = { KIR_direct_democracy }
+					traits = { BAC_road_to_direct_democracy }
 				}
 			}
 			set_cosmetic_tag = COC_commonalty

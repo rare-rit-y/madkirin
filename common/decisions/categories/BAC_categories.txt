@@ -1,4 +1,13 @@
 
+bac_coc_debug_cat = {
+	allowed = {
+		original_tag = KIC
+	}
+
+	priority = {
+		base = 100
+	}
+}
 commonalty_bop_category = {
 	icon = GFX_decision_category_KIR_VAKA_icon
 	

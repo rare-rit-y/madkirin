@@ -139,7 +139,7 @@ COC_Champion_add_WarHero_trait = {
 				}
 			}
 		}
-		else = { add_political_power = 5 }
+		else = { add_stab = 5 }
 	}
 }
 #Strengthening WPU
@@ -150,7 +150,7 @@ bac_COT_small_effect = {
 		#Sucks but atm add power balance doesn't accept variables
 		add_power_balance_value = {
 			id = BAC_commonalty_bop
-			value = 0.03
+			value = 0.033
 			tooltip_side = commonalty_harmonic_control
 		}
 	}
@@ -163,7 +163,7 @@ bac_COT_medium_effect = {
 		#Sucks but atm add power balance doesn't accept variables
 		add_power_balance_value = {
 			id = BAC_commonalty_bop
-			value = 0.09
+			value = 0.099
 			tooltip_side = commonalty_harmonic_control
 		}
 	}
@@ -189,7 +189,7 @@ bac_COT_mega_effect = {
 		#Sucks but atm add power balance doesn't accept variables
 		add_power_balance_value = {
 			id = BAC_commonalty_bop
-			value = 0.33
+			value = 0.333
 			tooltip_side = commonalty_harmonic_control
 		}
 	}
@@ -230,7 +230,7 @@ bac_WPU_small_effect = {
 		#Sucks but atm add power balance doesn't accept variables
 		add_power_balance_value = {
 			id = BAC_commonalty_bop
-			value = -0.03
+			value = -0.033
 			tooltip_side = commonalty_communal_control
 		}
 	}
@@ -243,7 +243,7 @@ bac_WPU_medium_effect = {
 		#Sucks but atm add power balance doesn't accept variables
 		add_power_balance_value = {
 			id = BAC_commonalty_bop
-			value = -0.09
+			value = -0.099
 			tooltip_side = commonalty_communal_control
 		}
 	}
@@ -269,7 +269,7 @@ bac_WPU_mega_effect = {
 		#Sucks but atm add power balance doesn't accept variables
 		add_power_balance_value = {
 			id = BAC_commonalty_bop
-			value = -0.33
+			value = -0.333
 			tooltip_side = commonalty_communal_control
 		}
 	}
@@ -307,23 +307,153 @@ TNO_BAC_Country_Closing_Screen_CreditsPages_Hide = {
 	clear_array = CountryClosing_array_credits_pages
 }
 
+# default_party_popularity_stab_gain = {
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+# 			}
+# 		}
+# 		clear_variable = stab_ideology
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+# 				}
+# 				remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+# 			}
+# 			add_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+# 		}
+# 	}
+# }
+
+# map_party_popularity_stab_gain_to_ideology = {
+# 	if = {
+# 		limit = {
+# 			NOT = {
+# 				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+# 			}
+# 		}
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+# 				}
+# 				remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+# 			}
+# 			add_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+# 		}
+# 	}
+# 	set_temp_variable = { coalition_partner_var = stab_ideology }
+# 	remove_from_coalition = yes
+# }
+
+# disable_party_popularity_stab_gain = {
+# 	if = {
+# 		limit = {
+# 			OR = {
+# 				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+# 				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+# 			}
+# 		}
+# 		clear_variable = stab_ideology
+# 		hidden_effect = {
+# 			if = {
+# 				limit = {
+# 					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+# 				}
+# 				remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+# 			}
+# 			if = {
+# 				limit = {
+# 					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+# 				}
+# 				remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_ideology_mapped }
+# 			}
+# 		}
+# 	}
+# }
+
 add_to_coalition = {
+	# if = {
+	# 	limit = {
+	# 		NOT = {
+	# 			#check_variable = { stab_ideology = coalition_partner_var }
+	# 			is_in_array = { coalition_partners = coalition_partner_var }
+	# 		}
+	# 	}
+	# 	custom_effect_tooltip = add_to_coalition
+	# }
 	if = {
 		limit = {
 			NOT = {
-				check_variable = { political_power_ideology = coalition_partner_var }
+				#check_variable = { stab_ideology = coalition_partner_var }
 				is_in_array = { coalition_partners = coalition_partner_var }
+				#AND = {
+					has_government = var:coalition_partner_var
+					#has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier }
+				#}
 			}
 		}
-		custom_effect_tooltip = add_to_coalition
-		if = {
-			limit = {
-				NOT = {
-					has_government = var:coalition_partner_var
+		custom_effect_tooltip = add_to_coalition #added from if block above
+		set_variable = { is_in_coalition_with_@var:coalition_partner_var = 1 }
+		add_to_array = { coalition_partners = coalition_partner_var }
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+					}
 				}
+				add_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
 			}
-			set_variable = { is_in_coalition_with_@var:coalition_partner_var = 1 }
-			add_to_array = { coalition_partners = coalition_partner_var }
+		}
+		set_temp_variable = { get_temp_stab = party_popularity@var:coalition_partner_var }
+		multiply_temp_variable = { get_temp_stab = 0.15 }
+		add_to_variable = { coalition_stab_gain = get_temp_stab }
+	}
+}
+
+remove_from_coalition = {
+	if = {
+		limit = {
+			is_in_array = { coalition_partners = coalition_partner_var }
+		}
+		custom_effect_tooltip = remove_from_coalition
+		hidden_effect = {
+			clear_variable = is_in_coalition_with_@var:coalition_partner_var
+			if = {
+				limit = {
+					has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+					check_variable = { coalition_partners^num = 1 }
+				}
+				remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+				clear_variable = coalition_stab_gain
+				clear_array = coalition_partners
+			}
+			else = {
+				remove_from_array = { coalition_partners = coalition_partner_var }
+				subtract_from_variable = { coalition_stab_gain = party_popularity@var:coalition_partner_var }
+			}
 		}
 	}
 }
+
+end_coalition = {
+	hidden_effect = {
+		if = {
+			limit = {
+				has_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+			}
+			remove_dynamic_modifier = { modifier = party_popularity_dynamic_modifier_coalition }
+		}
+	}
+	clear_variable = coalition_stab_gain
+	clear_array = coalition_partners
+
+	clear_variable = is_in_coalition_with_@token:dem
+	clear_variable = is_in_coalition_with_@token:com
+	clear_variable = is_in_coalition_with_@token:fas
+	clear_variable = is_in_coalition_with_@token:non
+}
+

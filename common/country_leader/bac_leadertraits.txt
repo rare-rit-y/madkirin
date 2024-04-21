@@ -1,0 +1,39 @@
+﻿
+leader_traits = {
+
+	BAC_road_to_direct_democracy = {
+		random = no
+		
+		political_power_factor = -0.03
+		drift_defence_factor = -0.33
+		stability_factor = -0.03
+		war_support_factor = -0.03
+	}
+	BAC_direct_democracy = {
+		random = no
+		
+		army_core_defence_factor = 0.09
+		army_core_attack_factor = 0.09
+		drift_defence_factor = -0.03
+		stability_factor = 0.03
+		war_support_factor = 0.03
+	}
+	BAC_maestro = {
+		random = no
+		
+		political_power_factor = 0.05
+		production_speed_buildings_factor = 0.10
+		INDUSTRY_FREE_REPAIR_FACTOR = 0.05
+		PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.05
+		
+	}
+	BAC_prophet_of_the_common = {
+		random = no
+		
+		political_power_factor = 0.05
+		production_speed_buildings_factor = 0.10
+		INDUSTRY_FREE_REPAIR_FACTOR = 0.05
+		PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.05
+	}
+
+}
