@@ -22194,6 +22194,7 @@ country_event = {
 					}
 				}
 				restore_previous_manpower = yes
+				set_cosmetic_tag = KIR_CoC
 				declare_war_on = {
 					target = KIS
 					type = liberate_wargoal
@@ -22269,6 +22270,7 @@ country_event = {
 				set_province_controller = 13057
 				set_capital = {
 					state = 1069
+					remember_old_capital = no  #bac
 				}
 				set_politics = {
 					ruling_party = communism
@@ -22326,7 +22328,6 @@ country_event = {
 					long_name = KIR_children_of_concord_party_long
 					name = KIR_children_of_concord_party
 				}
-				set_cosmetic_tag = KIR_CoC
 				every_possible_country = {
 					limit = {
 						has_character = KIR_kindling_flash
@@ -22503,13 +22504,12 @@ country_event = {
 						set_nationality = PREV.PREV
 					}
 				}
-				KIC = {
-					KIC_rising_sun_u = { # Rising Sun technical university
-						set_nationality = PREV.PREV
+				every_possible_country = {
+					limit = {
+						has_character = KIC_rising_sun_u
 					}
-				}
-				KIR = {
-					KIR_ochre_glint = {
+					KIC_rising_sun_u = { # Rising Sun technical university
+						set_character_name = bac_CIT
 						set_nationality = PREV.PREV
 					}
 				}
@@ -23344,11 +23344,11 @@ country_event = {
 			limit = {
 				is_kiria_country = yes
 			}
-			#news_event = { id = kirin_council.326 hours = 36 }
+			#news_event = { id = kirin_council.326 hours = 36 } #bac
 		}
 		set_country_flag = to_the_commonalty
 		custom_effect_tooltip = bac_kic324a_tt
-		custom_effect_tooltip = get_commonalty_tree_tt
+		custom_effect_tooltip = get_commonalty_tree_tt #bac end
 	}
 }
 
@@ -23418,10 +23418,10 @@ news_event = {
 				character = "COC_common_senate"
 				promote_leader = yes
 				country_leader = {
-					desc = "BAC_COC_common_senate_desc"
+					desc = "BAC_COC_common_senate_desc" #bac
 					ideology = democratic_socialism
 					expire = "1965.1.1.1"
-					traits = { BAC_road_to_direct_democracy }
+					traits = { BAC_road_to_direct_democracy } #bac
 				}
 			}
 			set_cosmetic_tag = COC_commonalty

@@ -15,7 +15,7 @@ country_event = {
 country_event = { 
 	id = bacdebug.1 #debug event for coal
 	title = bacdebug.1.t
-	desc = bacdebug.1.d
+	desc = bacdebug.1.desc
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bacdebug.1"}
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -41,7 +41,6 @@ country_event = {
 	}
 	option = {
 		name = bacdebug.1.e
-		set_temp_variable = { coalition_partner_var = token:democratic }
 		end_coalition = yes
 	}
 }
@@ -437,7 +436,7 @@ country_event = { #yes
 						original_tag = FROM
 						AND = {
 							is_in_faction_with = FROM
-							NOT = { is_subject = yes }
+							is_subject = no
 						}
 					}
 				}
@@ -479,7 +478,7 @@ country_event = { #149 yesmaar
 						original_tag = FROM
 						AND = {
 							is_in_faction_with = FROM
-							NOT = { is_subject = yes }
+							is_subject = no
 						}
 					}
 				}

@@ -139,7 +139,7 @@ COC_Champion_add_WarHero_trait = {
 				}
 			}
 		}
-		else = { add_stab = 5 }
+		#else = { add_stab = 5 }
 	}
 }
 #Strengthening WPU
@@ -451,9 +451,9 @@ end_coalition = {
 	clear_variable = coalition_stab_gain
 	clear_array = coalition_partners
 
-	clear_variable = is_in_coalition_with_@token:dem
-	clear_variable = is_in_coalition_with_@token:com
-	clear_variable = is_in_coalition_with_@token:fas
-	clear_variable = is_in_coalition_with_@token:non
+	clear_variable = is_in_coalition_with_@token:democratic
+	clear_variable = is_in_coalition_with_@token:communism
+	clear_variable = is_in_coalition_with_@token:fascism
+	clear_variable = is_in_coalition_with_@token:neutrality
 }
 

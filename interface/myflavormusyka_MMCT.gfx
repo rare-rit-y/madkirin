@@ -1,0 +1,7 @@
+spriteTypes = {
+    spriteType = {
+      name = "GFX_radio_station_cover_myflavormusyka"
+      textureFile = "gfx/radio_station_cover_myflavormusyka.dds"
+      noOfFrames = 2
+    }
+}

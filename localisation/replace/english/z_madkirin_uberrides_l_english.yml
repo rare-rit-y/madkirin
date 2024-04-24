@@ -1,11 +1,5 @@
 ﻿l_english:
- #eaw loc file path: 394360/1826643372/localisation/english/ (you should replace these slash in certain purpose)
+ maintheme:0 "Leonhart§g\nfrom LOST ARK Official Soundtrack§!"  
 
-
-  KIC_rising_sun_u:0 "[GetReplaceRisingSunTEC]"
   #KIC_rising_sun_u_desc:0 ""
-  KIC_rising_sun_u_available:0 "Unlocked [GetReplaceRisingSunTEC]"
-  bac_RSTEC: "Rising Sun Technical University"
-  bac_CIT: "Commonal Institute of Technology"
-  
- EFFECT_ADD_POWER_BALANCE_VALUE:2 "The $POWER_BALANCE|Y$ moves:\n $TREND$$PERCENT|%1Y$ towards the side of $SIDE|Y$\n (result: $PREDICTED_VALUE|%1Y$ on the side of $PREDICTED_SIDE|Y$)\n\n"
+  KIC_rising_sun_u_available:0 "Unlocked [RSTEC_GETName]"

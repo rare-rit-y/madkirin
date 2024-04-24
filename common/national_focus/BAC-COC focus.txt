@@ -646,8 +646,18 @@ shared_focus = {
 		effect_tooltip = {
 			swap_ideas = { add_idea = COC_desperate_revolt_dummy1 remove_idea = COC_desperate_revolt_dummy }
 		}
+		custom_effect_tooltip = BAC_dayspring_stats_tp
 		custom_effect_tooltip = COC_dayspring_tt
 		hidden_effect = {
+		
+			KIR_dayspring_rose = {
+				remove_unit_leader_trait = KIR_Roaring_Fire_unit_leader_trait
+				add_corps_commander_role = { skill = 2 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
+				add_unit_leader_trait = kirin_race_trait
+				add_unit_leader_trait = trait_SOV_determined
+				add_unit_leader_trait = militias_officer
+				#add_unit_leader_trait = KIR_Roaring_Fire_unit_leader_trait
+			}
 			capital_scope = {
 				create_unit = {
 					division = "division_template = \"Peasant Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.95"

@@ -8,7 +8,7 @@ bac_coc_debug_cat = {
 		visible = {
 			is_debug = yes
             has_country_flag = KIC_children_of_concord_flag
-			check_variable = { { coc_start_foci_completed < 10 } }
+			check_variable = { coc_start_foci_completed < 10 }
 		}
 		complete_effect = {
 			set_variable = { coc_start_foci_completed = 10 }
@@ -24,7 +24,7 @@ bac_coc_debug_cat = {
 		visible = {
 			is_debug = yes
             has_country_flag = KIC_children_of_concord_flag
-			check_variable = { { coc_start_foci_completed > 3 } }
+			check_variable = { coc_start_foci_completed > 3 }
 		}
 		complete_effect = {
 			set_variable = { coc_start_foci_completed = 0 }
@@ -224,7 +224,7 @@ commonalty_bop_category = {
     }
     comm_COT_1 = {
         icon = GFX_decision_candle
-		allowed = { original_tag = KIC } 
+		allowed = { original_tag = KIC }
 		cost = 33
         visible = {
         }

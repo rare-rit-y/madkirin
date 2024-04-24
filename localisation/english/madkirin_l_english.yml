@@ -172,6 +172,14 @@
  BAC_COC_pol_m4_desc: "TODO"
 
 # events
+ #debuggo
+  bacdebug.1.t: "haiiiiiii"
+  bacdebug.1.desc: "which faction do you prefer to make coalition"
+  bacdebug.1.a: "gommi"
+  bacdebug.1.b: "nazi"
+  bacdebug.1.c: "bakuhu(sorry I mean shogunate)"
+  bacdebug.1.d: "har*onists"
+  bacdebug.1.e: "fuck off"
  #commonalty
   baccocc.1.t: "To Prepare The Foundation" #건국을 준비하기 위하여
   baccocc.1.d: "The soon-to-be Commonalty, the Children of Concord, was initially a loose alliance between the Communion of Her Radiant Trinity led by Dayspring Rose and the All-Kiria Union of Workers and Peasants led by Kindling Flash. Even at the onset of the uprising, this bond was solidified by a mutual animosity against the existential threat posed by the National Association of Kirin Patriots. However, now that a complete victory over the NAKP has been achieved, this bond has become as insubstantial as a mirage.\n\nWhile there is a certain closeness between Kindling Flash and Dayspring Rose, centered around the Vermilion Pretender - Mahogany Blaze, the realities of politics demand attention to their respective supporters. The CPF has invited as many kirin as possible to ensure no one is left behind Concord, resulting in a multitude of voices. However, the two most dominant voices are those represented by the Communion and the Union.\n\nUnfortunately, the current situation within the CPF is in deadlock, with members of the two factions in opposition, making consensus on key issues unattainable. Both sides are aware that pushing through decisions on the principle of majority rule, without it being an institutionally guaranteed decision-making mechanism, lacks a basis for enforcement and is unlikely to lead to proper progress. The possibility of Nirik transformation also cannot be ignored.\n\nFrom the start, the CPF has been mired in a stalemate." # 이제 곧 Commonalty가 될 Children of Concord는 시작부터 Dayspring Rose가 이끄는 Communion of Her Radiant Trinity와 Kindling Flash가 이끄는 All-Kiria Union of Workers and Peasants 사이의 느슨한 결합으로 이루어져 있었습니다. 봉기가 시작될 무렵에만 해도 이 결속은 National Association of Kirin Patriots에 의한 생존의 위협에 맞서는 적개심으로 단단해져 있었으나, 이제 NAKP를 상대로 완전한 승리를 거둔 지금 이 결속은 신기루라는 표현이 적당하다고 할 수 있을 정도로 희미해져 있었습니다.\n\n물론 Kindling Flash와 Dayspring Rose 둘 사이는 Vermilion Pretender였던 숫말 Mahogany Blaze를 중심으로 친밀하다고 할 수 있는 편이지만, 현실정치의 영역에서는 그들이 거느리고 있는 지지자들을 신경쓰지 않을 수 없습니다. CPF에서는 콩코드 뒤에 소외받는 이들이 없도록 하기 위해 가능한 모든 키린들을 초빙했으니만큼 다양한 목소리들이 병존하고 있지만, Communion과 Union으로 대표되는 두 목소리가 가장 큽니다.\n\n불운하게도 현재 CPF에서 두 파벌의 위원들이 대립하고 있기 때문에 주요 쟁점이 되는 사안들에 대한 합의는 전혀 이루어지지 않고 있습니다. 다수결의 원칙으로 밀어붙인다 해도 그것이 제도적으로 보장된 의사결정 장치가 아닌 이상 그 결정에 불복한다 하더라도 강제할 명분이 없고, 일이 제대로 진행될 리도 없다는 것은 양 측 모두 알고 있습니다. 그리고 Nirik 변신도 고려하지 않을 수 없습니다.\n\nCPF는 시작과 동시에 교착 상태에 빠진 것입니다.
@@ -259,28 +267,29 @@
  comm_WPU_rural: "Redistribution Program" #재분배 사업
  comm_WPU_rural_desc: "" #Commonal Senate가 더 작은 단위 지역들의 완전한 자유로부터 약간을 취하는 대신, 더 많은 혜택을 돌려줄 수 있다는 것을 강조할 수 있으려면 이를 직접 실천해야 합니다. 
  military_aid_to_civil: "Military Aid to Civil" #대민지원
- military_aid_to_civil: "" #군이 나라를 섬기는 것이지, 나라가 군을 섬기는 것이 아닙니다! 우리 병사들은 조금 피곤하더라도 자신들의 숙식이 누구에게서 나오는 것인지 알아야 합니다.
+ military_aid_to_civil_desc: "" #군이 나라를 섬기는 것이지, 나라가 군을 섬기는 것이 아닙니다! 우리 병사들은 조금 피곤하더라도 자신들의 숙식이 누구에게서 나오는 것인지 알아야 합니다.
  military_aid_to_resis: "Military Aid to Occupied Civil" #점령지 대민지원
- military_aid_to_resis: "" #점령지의 주민들은 자신들의 삶이 우리 정권 하에서 더 나아질 수 있다는 것을 배워야 합니다. 현지 병사들의 불만은 높아지겠지만 결국 이것이야말로 아군의 피를 덜 흘리게 하는 방법입니다.
+ military_aid_to_resis_desc: "" #점령지의 주민들은 자신들의 삶이 우리 정권 하에서 더 나아질 수 있다는 것을 배워야 합니다. 현지 병사들의 불만은 높아지겠지만 결국 이것이야말로 아군의 피를 덜 흘리게 하는 방법입니다.
 
 #tt
  party_popularity_dynamic_modifier: "Party Popularity"
  party_popularity_dynamic_modifier_ideology_mapped: "Party Popularity"
  party_popularity_dynamic_modifier_coalition: "Coalitions"
-
  has_coalition_with: "Is in coalition with the §H[?coalition_partner_to_check.GetTokenLocalizedKey]§!"
  has_coalition_with_target: "Is in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
  has_coalition_with_target_NOT: "Is not in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
  add_to_coalition: "The §Y[?coalition_partner_var.GetTokenLocalizedKey]§! party will join the coalition."
  remove_from_coalition: "The §Y[?coalition_partner_var.GetTokenLocalizedKey]s§! will leave the coalition."
+
+ BAC_dayspring_stats_tp: "§YDayspring Rose§! becomes a General.\n§gLevel§!: §Y2§!, (£trait_attack §Y1§!, £trait_defense §Y2§!, £trait_planning §Y2§!, £trait_logistics §Y2§!)\n§gTraits§!: §C$trait_SOV_determined$§!, §C$militias_officer$§!\n"
  #COC_please_take_previous_foci: "Has completed every foci from previous phase"
- BAC_COC_commonalty_war_enacted: "Has passed a §RWar Initiative§!"
- BAC_COC_commonalty_war_days_tt: " Current days are: [?BAC_COC_commonalty_war_enacted_flag:days|Y0]"
- #BAC_education_tp: "Gradually removes the §YModest Illiteracy§! national spirit.\n"
  bac_kic_event_324_tt: "§LThere will be no new king of Kiria; the people have instead heeded his wish and will create the Free and Democratic Commonalty of Kiria, ruled by the Common Senate of Kiria in his stead. It is up to the commonkirin making the Commonalty into a proper and effective country.§!\n\n"
  get_commonalty_tree_tt: "Unlocks the §YCommonalty of Kiria§! Focus Tree."
  #bac_are_you_serious_tt: "Nothing §tbad§! will happen, isn't it?"
  
+ 
+ BAC_COC_commonalty_war_enacted: "Has passed a §RWar Initiative§!"
+ BAC_COC_commonalty_war_days_tt: " Current days are: [?BAC_COC_commonalty_war_enacted_flag:days|Y0]"
  
 
 #traits
@@ -290,6 +299,8 @@
  BAC_prophet_of_the_common: "Prophet of the Common"
  
 #misc
+ bac_RSTEC: "Rising Sun Technical University"
+ bac_CIT: "Commonal Institute of Technology"
  BAC_COC_common_senate_desc: "" #갈 길은 멀고 할 일은 많습니다.
  BAC_commonalty_faction: "Commonal Mutual Assistance Bloc"
  BAC_commonalty: "Commonalty of Zebrica"
