@@ -39,31 +39,14 @@
 	defined_text = {
 		name = Get_TNO_BAC_CountryClosing_epilogue
 		text = {
-			trigger = { original_tag = KIR }
-			localization_key = "[Get_TNO_BAC_CountryClosing_epilogue_KIR]"
+			trigger = { has_country_flag = KIC_children_of_concord_flag }
+			localization_key = "BAC_CountryClosing_epilogue_KIR_commonalty"
 		}
 		text = {
 			localization_key = "TNO_BAC_CountryClosing_epilogue_generic"
 		}
 	}
-
-	defined_text = {
-		name = Get_TNO_BAC_CountryClosing_epilogue_KIR
-		text = {
-			trigger = {
-				has_country_leader = {
-					character = COC_common_senate
-					ruling_only = yes
-				}
-			}
-			localization_key = "BAC_CountryClosing_epilogue_KIR_commonalty"
-		}
-		text = {
-			localization_key = "BAC_CountryClosing_epilogue_KIR_generic"
-		}
-	}
-
-
+	
 	# / Main GUI Elements
 	defined_text = {
 		name = Get_TNO_BAC_CountryClosing_credits

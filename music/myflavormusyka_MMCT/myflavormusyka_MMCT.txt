@@ -30,16 +30,16 @@ music = {
 music = {
     song = "Amongst_the_Mighty"
     chance = {
-      base = 2
-      modifier = { factor = 2 is_major = yes }
-      modifier = { factor = 2 has_war_with_major = yes }
+      base = 1
+      modifier = { add = 2 is_major = yes }
+      modifier = { add = 2 has_war_with_major = yes }
     } 
 }
 
 music = {
   song = "Lauriel_Phase_2"
   chance = {
-    base = 2
+    base = 1
     modifier = { factor = 5 has_war_with_major = yes }
     modifier = { factor = 0 has_war = no } 
   }
