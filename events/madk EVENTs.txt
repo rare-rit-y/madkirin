@@ -110,14 +110,14 @@ country_event = {
 				set_nationality = PREV.PREV
 			}
 		}
-		every_possible_country = {
-			limit = {
-				has_character = KIR_high_command_4 #Golden Lumen
-			}
-			KIR_high_command_4 = {
-				set_nationality = PREV.PREV
-			}
-		}
+		# every_possible_country = {
+		# 	limit = {
+		# 		has_character = KIR_high_command_4 #Golden Lumen is fucking war criminal in kirin_republic.10
+		# 	}
+		# 	KIR_high_command_4 = {
+		# 		set_nationality = PREV.PREV
+		# 	}
+		# }
 		KIR = {
 			KIR_ochre_glint = {
 				set_nationality = PREV.PREV

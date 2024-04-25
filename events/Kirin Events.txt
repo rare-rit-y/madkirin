@@ -22351,6 +22351,10 @@ country_event = {
 						has_character = KIR_dayspring_rose
 					}
 					KIR_dayspring_rose = {
+						if = {
+							limit = { has_trait = KIR_Roaring_Fire_unit_leader_trait }
+							remove_unit_leader_trait = KIR_Roaring_Fire_unit_leader_trait
+						}
 						set_nationality = PREV.PREV
 					}
 				}
@@ -22488,14 +22492,6 @@ country_event = {
 						# 		large = "GFX_portrait_KIR_firethorn_new_uniform"
 						# 	}
 						# }
-						set_nationality = PREV.PREV
-					}
-				}
-				every_possible_country = {
-					limit = {
-						has_character = KIR_high_command_4 #Golden Lumen
-					}
-					KIR_high_command_4 = {
 						set_nationality = PREV.PREV
 					}
 				}

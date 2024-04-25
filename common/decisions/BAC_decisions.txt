@@ -213,7 +213,7 @@ commonalty_bop_category = {
         }
         days_remove = 3
 		modifier = {
-            power_balance_daily = 0.03
+            power_balance_weekly = -0.033
 		}
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision comm_WPU_1"
@@ -230,9 +230,9 @@ commonalty_bop_category = {
         }
         available = {
         }
-        days_remove = 3
+        days_remove = 33
 		modifier = {
-            power_balance_daily = 0.03
+            power_balance_weekly = 0.033
 		}
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision comm_COT_1"
@@ -241,5 +241,185 @@ commonalty_bop_category = {
         remove_effect = {
         }
     }
+}
+foreign_politics = {
 
+	BAC_COC_embassy = {
+		icon = SOV_place_hq
+		allowed = {
+			original_tag = KIC
+		}
+
+		ai_will_do = {
+			factor = 25
+			modifier = {
+				FROM = {
+					any_neighbor_state = {
+						owner = {
+							OR = {
+								tag = KIR
+								is_ally_with = KIR
+							}
+						}
+					}
+				}
+				add = 10
+			}
+		}
+
+		visible = {
+			ROOT = { has_country_flag = bac_diplo_expanded }
+			FROM = {
+				is_capital = yes
+				owner = {
+					has_full_control_of_state = PREV
+					NOT = {
+						has_war_with = ROOT
+						has_opinion_modifier = commonalty_embassy
+						has_idea = detached_country
+					}
+					#has_opinion = { target = KIR value > 0 }
+				}
+			}
+		}
+
+		state_target = yes # we can put an embassy anywhere
+		on_map_mode = map_only
+		target_array = ROOT.COC_EMBASSY_ARRAY
+		fire_only_once = yes
+
+		cost = 75
+		days_remove = 30
+
+		modifier = {
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BAC_COC_embassy target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BAC_COC_embassy target: [From.GetName]"
+			custom_effect_tooltip = BAC_COC_embassy_tt
+			hidden_effect = {
+				FROM.owner = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = commonalty_embassy
+					}
+					add_relation_modifier = {
+						target = ROOT
+						modifier = commonalty_embassy
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = commonalty_embassy
+						}
+						add_relation_modifier = {
+							target = PREV
+							modifier = commonalty_embassy
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = commonalty_embassy_trade
+						}
+					}
+				}
+			}
+		}
+		cancel_trigger = {
+			FROM.owner = {
+				has_war_with = ROOT
+			}
+		}
+	}
+	COC_join_faction_decision = {
+		icon = generic_protection
+		allowed = {
+			original_tag = KIC
+		}
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = commonalty_ending_flag
+			is_faction_leader = yes
+			is_subject = no
+		}
+
+		available = {
+			FROM = {
+				OR = {
+					has_opinion_modifier = commonalty_embassy
+					has_opinion = { target = ROOT value > 74 }
+				}
+				has_war = no
+				OR = {
+					AND = {
+						ROOT = { is_ai = no }
+						any_owned_state = {
+							is_controlled_by = FROM
+							is_coastal = yes
+						}
+					}
+					any_neighbor_country = {
+						OR = {
+							tag = ROOT
+							is_ally_with = ROOT
+						}
+					}
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				#capital_scope = { is_on_continent = africa }
+				OR = {
+					has_government = democratic
+					has_government = communism
+				}
+				is_subject = no
+				NOT = {
+					#original_tag = DEL
+					is_in_faction = yes
+					is_faction_leader = yes
+					is_in_faction_with = ROOT
+					has_idea = detached_country
+				}
+				OR = {
+					is_neighbor_of = ROOT
+					AND = {
+						ROOT = { is_ai = no }
+						OR = {
+							check_variable = { closest_distance_to@ROOT < 800 }
+							ROOT = {
+								any_allied_country = {
+									OR = {
+										check_variable = { closest_distance_to@FROM < 150 }
+										is_neighbor_of = FROM
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		cost = 75
+		days_re_enable = 180
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove COC_join_faction_decision"
+			FROM = {
+				country_event = baccocc.148
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision COC_join_faction_decision"
+		}
+	}
 }

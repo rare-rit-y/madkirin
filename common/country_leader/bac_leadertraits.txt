@@ -20,19 +20,17 @@ leader_traits = {
 	BAC_maestro = {
 		random = no
 		
-		political_power_factor = 0.05
-		production_speed_buildings_factor = 0.10
-		INDUSTRY_FREE_REPAIR_FACTOR = 0.05
-		PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.05
+		INDUSTRY_FREE_REPAIR_FACTOR = 0.03
+		PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.03
+		production_speed_buildings_factor = 0.03
+		production
 		
 	}
 	BAC_prophet_of_the_common = {
 		random = no
-		
-		political_power_factor = 0.05
-		production_speed_buildings_factor = 0.10
-		INDUSTRY_FREE_REPAIR_FACTOR = 0.05
-		PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.05
+		stability_factor = 0.09
+		political_power_factor = 0.09
+		research_speed_factor = 0.03
 	}
 
 }

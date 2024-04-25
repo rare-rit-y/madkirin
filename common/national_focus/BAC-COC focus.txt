@@ -30,9 +30,9 @@ focus_tree = {
 		y = 0
 		offset = {
 			x = 0
-			y = 10
+			y = 8
 			trigger = {
-				has_completed_focus = BAC_COC_true_commonalty
+				has_completed_focus = BAC_COC_finale
 			}
 		}
 	}
@@ -649,14 +649,15 @@ shared_focus = {
 		custom_effect_tooltip = BAC_dayspring_stats_tp
 		custom_effect_tooltip = COC_dayspring_tt
 		hidden_effect = {
-		
-			KIR_dayspring_rose = {
-				remove_unit_leader_trait = KIR_Roaring_Fire_unit_leader_trait
-				add_corps_commander_role = { skill = 2 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
-				add_unit_leader_trait = kirin_race_trait
-				add_unit_leader_trait = trait_SOV_determined
-				add_unit_leader_trait = militias_officer
-				#add_unit_leader_trait = KIR_Roaring_Fire_unit_leader_trait
+			KIR_dayspring_rose = { #added for BAC
+				if = {
+					limit = { is_army_leader = yes }
+					add_corps_commander_role = { skill = 2 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
+					add_unit_leader_trait = kirin_race_trait
+					add_unit_leader_trait = trait_SOV_determined
+					add_unit_leader_trait = militias_officer
+					#add_unit_leader_trait = KIR_Roaring_Fire_unit_leader_trait
+				}
 			}
 			capital_scope = {
 				create_unit = {
@@ -924,7 +925,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_finale"
 		add_political_power = 100
-		add_research_slot = 1
 		# KIR = { add_to_ROOT_potential_cores = yes }
 		# KIS = { add_to_ROOT_potential_cores = yes }
 		# custom_effect_tooltip = KIR_line_break
@@ -1288,7 +1288,13 @@ shared_focus = { #교육위원회
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_head"
-		KIR_dayspring_rose = { unit_leader_event = { id = baccocc.7 hours = 3 random_hours = 33 } } #Matter of Educational Model
+		KIR_dayspring_rose = {
+			unit_leader_event = { id = baccocc.7 hours = 3 random_hours = 33 } #Matter of Educational Model
+			add_trait = {
+				slot = political_advisor
+				trait = really_good_boss
+			}
+		}
 		decrease_illiteracy = yes
 	}
 	
@@ -1316,8 +1322,7 @@ shared_focus = { # Assertive Conversion # 적극적인 개종
 		#정치력 주는 대신 안정도,순응도 깎는 타임드 아이디어
 		add_political_power = 33
 		add_stability = -0.033
-		bac_WPU_small_effect = yes
-		decrease_illiteracy = yes
+		bac_COT_small_effect = yes
 	}
 }
 shared_focus = { #Allow The Way of Fire 불의 길 공존
@@ -1368,6 +1373,44 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_diplo"
+		# if = {
+		# 	limit = {
+		# 		HIP = {
+		# 			controls_state = 1165
+		# 			has_government = democratic
+		# 			NOT = {
+		# 				has_war_with = KIR
+		# 				has_opinion_modifier = KIR_incandescent_embassy
+		# 			}
+		# 		}
+		# 	}
+		# 	every_country = {
+		# 		limit = {
+		# 			OR = {
+		# 				tag = KIR
+		# 				tag = HIP
+		# 			}
+		# 		}
+		# 		country_event = { id = kirin.78 days = 3 }
+		# 		custom_effect_tooltip = KIR_line_break
+		# 	}
+		#}
+		custom_effect_tooltip = BAC_COC_diplo_tt
+		hidden_effect = {
+			for_each_scope_loop = {
+				array = global.states
+				if = {
+					limit = {
+						is_capital = yes
+					}
+					add_to_array = {
+						array = KIR.KIR_EMBASSY_ARRAY
+						value = THIS
+					}
+				}
+			}
+		}
+		set_country_flag = bac_diplo_expanded
 	}
 	
 }
@@ -1391,6 +1434,7 @@ shared_focus = { #자연과학
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_modern_science"
+		add_research_slot = 1
 		set_country_flag = KIC_rising_sun_u_available
 		custom_effect_tooltip = available_theorist
 		show_ideas_tooltip = KIC_rising_sun_u
@@ -1444,6 +1488,7 @@ shared_focus = { # Research and Development Complex #복합연구개발단지
 			show_ideas_tooltip = KIC_tank_designer_2
 		}
 		increase_science_base = yes
+		add_research_slot = 1
 	}
 }
 
@@ -1461,11 +1506,17 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 	prerequisite = {
 		focus = BAC_COC_pol_h1
 	}
+	available = {
+		power_balance_value = {
+			id = BAC_commonalty_bop
+			value > 0.099
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h2"
 		add_political_power = 33
 		add_stability = -0.033
-		bac_WPU_small_effect = yes
+		bac_COT_small_effect = yes
 		save_current_manpower = yes
 		every_owned_state = {
 			limit = { NOT = { is_core_of = ROOT } }
@@ -1511,6 +1562,12 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = BAC_COC_pol_c1
+	}
+	available = {
+		power_balance_value = {
+			id = BAC_commonalty_bop
+			value < -0.099
+		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_c2"
@@ -1636,24 +1693,17 @@ shared_focus = {
 	prerequisite = {
 		focus = BAC_COC_eco_head
 	}
-	available = { 
-		EQS = { has_opinion = { target = FROM value > 33 } }
-	}
-	bypass = {
-		OR = {
-			has_global_flag = equestrian_civil_war
-			EQS = {
-				OR = {
-					exists = no
-					is_subject = yes
-					has_capitulated = yes
-					has_civil_war = yes
-				}
-			}
-		}
-	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h1"
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.33
+			uses = 3
+			category = industry
+		}
+		custom_effect_tooltip = KIR_line_break
+		increase_society_development_gradual = yes
+		bac_COT_small_effect = yes
 	}
 	
 }
@@ -1673,6 +1723,15 @@ shared_focus = { #Initiate Land Reform 토지개혁 개시
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c1"
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.33
+			uses = 3
+			category = industry
+		}
+		custom_effect_tooltip = KIR_line_break
+		increase_society_development_gradual = yes
+		bac_WPU_small_effect = yes
 	}
 	
 }
@@ -1712,6 +1771,22 @@ shared_focus = {
 	prerequisite = {
 		focus = BAC_COC_eco_h1
 	}
+	available = { 
+		EQS = { has_opinion = { target = FROM value > 33 } has_war = no }
+	}
+	# bypass = {
+	# 	OR = {
+	# 		has_global_flag = equestrian_civil_war
+	# 		EQS = {
+	# 			OR = {
+	# 				exists = no
+	# 				is_subject = yes
+	# 				has_capitulated = yes
+	# 				has_civil_war = yes
+	# 			}
+	# 		}
+	# 	}
+	# }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h2"
 	}
@@ -1733,6 +1808,7 @@ shared_focus = { #QKdzz
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c2"
+		bac_WPU_medium_effect = yes
 	}
 	
 }
@@ -1754,6 +1830,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m3h"
+		add_research_slot = 1
+		bac_WPU_medium_effect = yes
 	}
 	
 }
@@ -1794,8 +1872,12 @@ shared_focus = {
 	prerequisite = {
 		focus = BAC_COC_eco_c2
 	}
+	available = { 
+		#EQS = { has_opinion = { target = FROM value > 33 } has_war = no }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c3"
+		bac_WPU_medium_effect = yes
 	}
 	
 }
@@ -1813,6 +1895,9 @@ shared_focus = {
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_h2
+	}
+	available = { 
+		EQS = { has_opinion = { target = FROM value > 33 } has_war = no }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h3"
@@ -1855,6 +1940,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4h"
+		bac_WPU_small_effect = yes
 	}
 	
 }
@@ -1874,8 +1960,17 @@ shared_focus = {
 		focus = BAC_COC_eco_m3h
 		focus = BAC_COC_eco_m3c
 	}
-	completion_reward = {
+	available = {
+		has_political_power > 100
+		has_war = no
+	}
+	completion_reward = { #maybe it would be some fancy gui mechanic? but not now
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4m"
+		add_political_power = -300
+		for_each_scope_loop = {
+			array = KIR.original_cores
+			increase_state_category = yes
+		}
 	}
 	
 }
@@ -1896,6 +1991,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4c"
+		bac_WPU_small_effect = yes
 	}
 	
 }
@@ -1916,6 +2012,7 @@ shared_focus = { #shdzz
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c4"
+		bac_WPU_large_effect = yes
 	}
 	
 }
