@@ -1261,6 +1261,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_true_commonalty"
 		add_to_variable = { coc_start_foci_completed = 1 }
+		news_event = { id = kirin_council.326 hours = 6 }
 		mark_focus_tree_layout_dirty = yes
 	}
 	
@@ -1292,9 +1293,10 @@ shared_focus = { #교육위원회
 			unit_leader_event = { id = baccocc.7 hours = 3 random_hours = 33 } #Matter of Educational Model
 			add_trait = {
 				slot = political_advisor
-				trait = really_good_boss
+				trait = BAC_prophet_of_the_common
 			}
 		}
+		effect_tooltip = { KIR_dayspring_rose = { add_trait = BAC_prophet_of_the_common } }
 		decrease_illiteracy = yes
 	}
 	
@@ -1356,11 +1358,11 @@ shared_focus = { #Allow The Way of Fire 불의 길 공존
 
 shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 	id = BAC_COC_diplo
-	icon = GFX_goal_sombra_factory
+	icon = GFX_goal_KIR_goal_government_icon
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = -4
+	x = -2
 	y = 0
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1404,7 +1406,7 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 						is_capital = yes
 					}
 					add_to_array = {
-						array = KIR.KIR_EMBASSY_ARRAY
+						array = COC.COC_EMBASSY_ARRAY
 						value = THIS
 					}
 				}
@@ -1420,7 +1422,7 @@ shared_focus = { #자연과학
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = -2
+	x = -4
 	y = 0
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1472,13 +1474,13 @@ shared_focus = { # Research and Development Complex #복합연구개발단지
 			show_mio_tooltip = KIC_tank_designer_1_organization
 			mio:KIC_tank_designer_1_organization = {
 				add_mio_size = 1
-				add_mio_funds = 400
+				add_mio_funds = 333
 			}
 			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = KIC_tank_designer_2_organization
 			mio:KIC_tank_designer_2_organization = {
 				add_mio_size = 1
-				add_mio_funds = 400
+				add_mio_funds = 333
 			}
 		}
 		else = {
@@ -1723,12 +1725,6 @@ shared_focus = { #Initiate Land Reform 토지개혁 개시
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c1"
-		add_tech_bonus = {
-			name = industrial_bonus
-			bonus = 0.33
-			uses = 3
-			category = industry
-		}
 		custom_effect_tooltip = KIR_line_break
 		increase_society_development_gradual = yes
 		bac_WPU_small_effect = yes
@@ -1967,6 +1963,7 @@ shared_focus = {
 	completion_reward = { #maybe it would be some fancy gui mechanic? but not now
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4m"
 		add_political_power = -300
+		custom_effect_tooltip = focus_eco_m4m_tt
 		for_each_scope_loop = {
 			array = KIR.original_cores
 			increase_state_category = yes
@@ -2183,13 +2180,13 @@ shared_focus = { #Flying Commonkirin #날으는 기린
 			show_mio_tooltip = KIR_DM_aerospace_engineering_organization
 			mio:KIR_DM_aerospace_engineering_organization = {
 				add_mio_size = 1
-				add_mio_funds = 600
+				add_mio_funds = 333
 			}
 			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = KIC_aerospace_engineer_organization
 			mio:KIC_aerospace_engineer_organization = {
 				add_mio_size = 1
-				add_mio_funds = 400
+				add_mio_funds = 333
 			}
 		}
 		else = {
@@ -2231,13 +2228,13 @@ shared_focus = { # Beyond The Riverine Navy 강상군을 넘어서 (해군 건�
 			show_mio_tooltip = KIR_DM_maritime_systems_organization
 			mio:KIR_DM_maritime_systems_organization = {
 				add_mio_size = 1
-				add_mio_funds = 600
+				add_mio_funds = 333
 			}
 			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = KIC_deer_comrade_organization
 			mio:KIC_deer_comrade_organization = {
 				add_mio_size = 1
-				add_mio_funds = 600
+				add_mio_funds = 333
 			}
 		}
 		else = {
@@ -2251,7 +2248,7 @@ shared_focus = { # Beyond The Riverine Navy 강상군을 넘어서 (해군 건�
 }
 shared_focus = { #해군항공대
 	id = BAC_COC_mil_navalair
-	icon = GFX_goal_KIR_gunboat
+	icon = GFX_goal_KIR_air
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head

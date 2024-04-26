@@ -1,11 +1,10 @@
-version="0.0.0.1"
+version="0.1 [BETA] - After Autumn Begonia Fell"
 tags={
 	"Alternative History"
 	"Gameplay"
 	"Map"
 	"Graphics"
 	"Events"
-	"Technologies"
 	"Utilities"
 	"National Focuses"
 }

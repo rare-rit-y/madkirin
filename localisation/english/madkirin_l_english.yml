@@ -126,6 +126,7 @@
  BAC_COC_eco_c4_desc: "TODO"
  BAC_COC_eco_m4m: "Electrify The Common" #만민에게 전력을
  BAC_COC_eco_m4m_desc: "A vast network of power lines shall connect the bustling metropolises to the farthest rural hamlet, the tendrils of modernity criss-crossing Kiria to weave a web of illumination and progress. The fervent spirit of innovation ignited by the Grand Gallop Onward, churned into being by the gears of industry, will leap and spark from pylon to towering pylon, breathing fire and vigor into the veins of the Commonalty." #KIR_focus_9g_desc
+ focus_eco_m4m_tt: "State Category of every original @KIR §OKirian§! core states will be upgraded for a single level."
  BAC_COC_diplo: "Expand Foreign Affairs" # 외교 업무 확장
  BAC_COC_diplo_desc: "Putting on a face may not be enough. The international community is cold. We need to blend in if we don't want to be swayed by what they decide behind closed doors." # 안면을 트는 것만으로는 부족할 수 있습니다. 국제사회는 냉혹합니다. 저들이 밀실에서 결정할 내용에 휘둘리지 않으려면 저들과 섞여야 합니다.
  BAC_COC_diplo_tt: "Unlocks §Y$BAC_COC_embassy$§! £decision_icon_small Decisions, which allows us to establish §CCommanlty Embassies§! in the capital cities of §Gfriendly countries§!."
@@ -192,7 +193,7 @@
   baccocc.2.a: ""I cannot continue like this."" 
 
   baccocc.3.t: "The Private Meeting" # 회동
-  baccocc.3.d: "While pondering what to have for dinner this evening, Coral River barely remembered that she had been invited by Ember Glow and was now hurriedly making the way to her residence. The sun had already set beyond the western clouds. Arriving with heavy breaths, Coral River noticed that there was another guest present.\n\n\"Late, aren't you, Coral. Such a flustered sight.\"\n\"Firethorn! I didn't expect to see you here. To think she called another mare besides me at this hour...\" Coral retorted. \"Hmph.\" Ember Glow snorted. \"Had you been on time, it would have been less late.\"\n\nAs soon as Coral took her seat, the dinner commenced. After that, while Coral was savoring the aroma of the tea in front of her, Firethorn opened the conversation again. "So, Ember Glow, what's the main point? You didn't call us here just for a meal during these times, did you?\" \"Of course not,\" Ember replied.\n\n"In my suspicion, the CPF seems to be losing its direction. The pro-Equestria faction and the Trinitarians both in the Communion are so intoxicated with their beliefs that they've become blind, and the communalist of the Union are too narrow-sighted. Not to mention the Marksists, a few but dazzled by their own ideology."" 
+  baccocc.3.d: "While pondering what to have for dinner this evening, Coral River barely remembered that she had been invited by Ember Glow and was now hurriedly making the way to her residence. The sun had already set beyond the western clouds. Arriving with heavy breaths, Coral River noticed that there was another guest present.\n\n\"Late, aren't you, Coral. Such a flustered sight.\"\n\"Firethorn! I didn't expect to see you here. To think she called another mare besides me at this hour...\" Coral retorted at Ember. \"Hmph.\" Ember Glow snorted. \"Had you been on time, it would have been less late.\"\n\nAs soon as Coral took her seat, the dinner commenced. After that, while Coral was savoring the aroma of the tea in front of her, Firethorn opened the conversation again. "So, Ember Glow, what's the main point? You didn't call us here just for a meal during these times, did you?\" \"Of course not,\" Ember replied.\n\n"In my suspicion, the CPF seems to be losing its direction. The pro-Equestria faction and the Trinitarians both in the Communion are so intoxicated with their beliefs that they've become blind, and the communalist of the Union are too narrow-sighted. Not to mention the Marksists, a few but dazzled by their own ideology."" 
   baccocc.3.a: ""And?" Firethorn's brows furrowed." 
 
   baccocc.4.t: "To Achieve The Foundation" #건국을 이루기 위하여
@@ -235,6 +236,8 @@
   baccocc.149.t: "[From.GetName] Bends Down Even More"
   baccocc.149.d: "[From.GetName] have not only accepted our offer, but have also indicated that they are willing to give up some of their sovereignty, albeit with some demands and suggestions that accompany the counter-offer. Seemingly their positive opinion us or their precarious situation, had an effect. Our additive delegation has already departed and is headed there to negotiate detailed terms." #[From.GetName]은 우리의 제안을 받아들이는 것으로 모자라 자신들의 주권을 일부 포기할 뜻도 있음을 밝혔습니다. 물론 역제안에 수반하는 약간의 요구 및 제안이 추가되기는 했지만 말입니다. 아마 우리에 대한 강한 호감이나 저들의 불안정한 상황이 영향을 미친 것 같습니다. 이미 우리 대표단이 출발하여 상세한 조건을 협상하기 위해 그곳으로 향했습니다.
   baccocc.149.a: "Uh... Why, yes. Good thing."
+
+  kirin.36.coc: "Kindling Flash watched with awe as the metal monster chugged into Vermilion. The newly-built Vermilion Grand Central Terminus was packed with kirin of all trots of life, jammed so close together that the regiment of bannerkirin brought on for security struggled to keep the crowd from pushing them onto the glistening steel tracks in the station. Nokirin wanted to miss the exciting event, and he couldn't deny that he found it all exciting as well. After all, there would only ever be one first train from Radiance to Vermilion, reestablishing the link between the Realm's capital and its traditional gateway along the coast. This moment, mundane as it normally otherwise would have been, meant something fantastic for so many kirin, and for the prosperity of the Realm itself.\n\nWhen the train finally rolled into the station, everykirin present let out a cheer and stomped their hooves for the engineers at the controls. As the engineers were escorted out of the engine and feted with garlands, food, and rice wine, Kindling Flash serenely smiled out over the crowd. "With the completion of the Vermilion-Radiance Line, our Commanalty is once again a part of the outside world," he announced, to much hooting and hollering. "This marvel is the first fruit of what I sincerely hope will be a bountiful harvest between our Commonalty. Hoof in hoof, I pray to Her Radiant Trinity in all of Her glory that our two nations will have many more partnerships of mutual friendship and cooperation such as this one."\n\nThen, to the surprise and awe of the crowd assembled, Kindling Flash stepped forward with his entourage and boarded the train as engineers get in the train engine. The train whistled as Kindling Flash waved out the window, and the crowd cheered."
 
  #madkirin
   madkirin.1.t: "The Lecture"
@@ -307,7 +310,7 @@
  BAC_road_to_direct_democracy: "Road to Direct Democracy"
  BAC_direct_democracy: "Direct Democracy"
  BAC_maestro: "Maestro of Industry"
- BAC_prophet_of_the_common: "Prophet of the Common"
+ BAC_prophet_of_the_common: "Prophet of Common"
  
 #misc
  bac_RSTEC: "Rising Sun Technical University"

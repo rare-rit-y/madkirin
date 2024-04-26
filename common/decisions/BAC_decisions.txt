@@ -279,13 +279,14 @@ foreign_politics = {
 						has_idea = detached_country
 					}
 					#has_opinion = { target = KIR value > 0 }
+					#TODO: should add fucking border or coast check
 				}
 			}
 		}
 
 		state_target = yes # we can put an embassy anywhere
 		on_map_mode = map_only
-		target_array = ROOT.COC_EMBASSY_ARRAY
+		target_array = COC.COC_EMBASSY_ARRAY
 		fire_only_once = yes
 
 		cost = 75

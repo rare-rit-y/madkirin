@@ -7,6 +7,7 @@ leader_traits = {
 		drift_defence_factor = -0.33
 		stability_factor = -0.03
 		war_support_factor = -0.03
+		stability_weekly = -0.0033
 	}
 	BAC_direct_democracy = {
 		random = no
@@ -23,13 +24,12 @@ leader_traits = {
 		INDUSTRY_FREE_REPAIR_FACTOR = 0.03
 		PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR = 0.03
 		production_speed_buildings_factor = 0.03
-		production
 		
 	}
 	BAC_prophet_of_the_common = {
 		random = no
-		stability_factor = 0.09
-		political_power_factor = 0.09
+		political_power_factor = 0.03
+		stability_weekly = 0.0033
 		research_speed_factor = 0.03
 	}
 
