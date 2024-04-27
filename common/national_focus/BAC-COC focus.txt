@@ -924,10 +924,20 @@ shared_focus = {
 
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_finale"
-		add_political_power = 100
+		add_political_power = 99
+		add_stability = 0.09
+		add_war_support = -0.333
 		# KIR = { add_to_ROOT_potential_cores = yes }
 		# KIS = { add_to_ROOT_potential_cores = yes }
 		# custom_effect_tooltip = KIR_line_break
+		swap_ideas = {
+			remove_idea = scraping_the_barrel
+			add_idea = volunteer_only
+		}
+		swap_ideas = {
+			remove_idea = tot_economic_mobilisation
+			add_idea = undisturbed_isolation
+		}
 		if = {
 			limit = {
 				set_temp_variable = { COC_power_struggle_DR_var_finale_temp = COC_power_struggle_DR_var }
@@ -1104,6 +1114,7 @@ shared_focus = { # Adopt Equestrian Autunomy System
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h2"
+		bac_COT_large_effect = yes
 		add_to_variable = { coc_start_foci_completed = 1 }
 		country_event = { id = baccocc.6 hours = 3 random_hours = 33 }
 		#add_to_variable = { coc_h_foci_completed = 1 }
@@ -1142,6 +1153,7 @@ shared_focus = { # Our Cause Must Be Informed
 			ideology = communism
 			popularity = 0.0333
 		}
+		bac_WPU_large_effect = yes
 		if = {
 			limit = { check_variable = { coc_start_foci_completed = 6 } }
 			mark_focus_tree_layout_dirty = yes
@@ -1204,6 +1216,9 @@ shared_focus = {
 	
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h3"
+		EAW_raise_trade_law = yes
+		bac_COT_medium_effect = yes
+
 		add_to_variable = { coc_start_foci_completed = 1 }
 		if = {
 			limit = { check_variable = { coc_start_foci_completed = 9 } }
@@ -1234,6 +1249,9 @@ shared_focus = { # Land Investigation Program
 	
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c3"
+		add_stability = -0.033
+		increase_society_development = yes
+		bac_WPU_medium_effect = yes
 		add_to_variable = { coc_start_foci_completed = 1 }
 		if = {
 			limit = { check_variable = { coc_start_foci_completed = 9 } }
@@ -1289,6 +1307,7 @@ shared_focus = { #교육위원회
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_head"
+		bac_COT_small_effect = yes
 		KIR_dayspring_rose = {
 			unit_leader_event = { id = baccocc.7 hours = 3 random_hours = 33 } #Matter of Educational Model
 			add_trait = {
@@ -1413,6 +1432,8 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 			}
 		}
 		set_country_flag = bac_diplo_expanded
+		#unlock_decision_tooltip = my_decision
+		custom_effect_tooltip = unlocks_bop_decision_tt
 	}
 	
 }
@@ -1525,6 +1546,8 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 			add_manpower = -333
 		}
 		restore_previous_manpower = yes
+		#unlock_decision_tooltip = my_decision
+		custom_effect_tooltip = unlocks_bop_decision_tt
 	}
 	
 }
@@ -1575,6 +1598,8 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_c2"
 		add_political_power = -33
 		decrease_illiteracy = yes
+		#unlock_decision_tooltip = my_decision
+		custom_effect_tooltip = unlocks_bop_decision_tt
 	}
 	
 }
@@ -1653,7 +1678,7 @@ shared_focus = { #Major Power of Eastern Zebrica
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_m4"
 	}
 }
-shared_focus = { #산업개발위원회 - 킨들링 플래시의 산업 오케스트라
+shared_focus = { #BAC_COC_eco_head 산업개발위원회 - 킨들링 플래시의 산업 오케스트라
 	id = BAC_COC_eco_head
     icon = {
         trigger = { has_completed_focus = BAC_COC_eco_head }
@@ -1675,13 +1700,23 @@ shared_focus = { #산업개발위원회 - 킨들링 플래시의 산업 오케�
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_head"
+		bac_WPU_small_effect = yes
+		KIR_kindling_flash = {
+			#unit_leader_event = { id = baccocc.17 hours = 3 random_hours = 33 } #
+			add_trait = {
+				slot = political_advisor
+				trait = BAC_maestro
+			}
+		}
+		unlock_decision_tooltip = bac_finish_railway
+
 	}
 	
 	
 }
 
 
-shared_focus = { 
+shared_focus = { #BAC_COC_eco_h1 #Equestrian Model of Development
 	id = BAC_COC_eco_h1 #Equestrian Model of Development
 	icon = GFX_goal_solar_legion_of_labour
 	cost = 4.8
@@ -1704,7 +1739,7 @@ shared_focus = {
 			category = industry
 		}
 		custom_effect_tooltip = KIR_line_break
-		increase_society_development_gradual = yes
+		increase_society_development = yes
 		bac_COT_small_effect = yes
 	}
 	
@@ -1726,7 +1761,7 @@ shared_focus = { #Initiate Land Reform 토지개혁 개시
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c1"
 		custom_effect_tooltip = KIR_line_break
-		increase_society_development_gradual = yes
+		increase_society_development = yes
 		bac_WPU_small_effect = yes
 	}
 	
@@ -1753,8 +1788,8 @@ shared_focus = {
 	}
 	
 }
-shared_focus = {
-	id = BAC_COC_eco_h2
+shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
+	id = BAC_COC_eco_h2 #Equestrian Ties
 	icon = GFX_goal_PLB_eqs_ties
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -1767,7 +1802,7 @@ shared_focus = {
 	prerequisite = {
 		focus = BAC_COC_eco_h1
 	}
-	available = { 
+	available = {
 		EQS = { has_opinion = { target = FROM value > 33 } has_war = no }
 	}
 	# bypass = {
@@ -1785,6 +1820,35 @@ shared_focus = {
 	# }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h2"
+		EAW_raise_trade_law = yes
+		increase_society_development = yes
+		custom_effect_tooltip = BAC_COC_eco_h2_tt
+		hidden_effect = {
+			EQS = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = commonalty_embassy
+				}
+				add_relation_modifier = {
+					target = ROOT
+					modifier = commonalty_embassy
+				}
+				ROOT = {
+					add_opinion_modifier = {
+						target = PREV
+						modifier = commonalty_embassy
+					}
+					add_relation_modifier = {
+						target = PREV
+						modifier = commonalty_embassy
+					}
+					add_opinion_modifier = {
+						target = PREV
+						modifier = commonalty_embassy_trade
+					}
+				}
+			}
+		}
 	}
 	
 }
@@ -1879,8 +1943,8 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = BAC_COC_eco_h3
-	icon = GFX_goal_UESR_TNO_sun_moon
+	id = BAC_COC_eco_h3 #The Lodge
+	icon = GFX_goal_ces_approach_baltimare #GFX_goal_UESR_TNO_sun_moon
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
@@ -1892,11 +1956,57 @@ shared_focus = {
 	prerequisite = {
 		focus = BAC_COC_eco_h2
 	}
-	available = { 
-		EQS = { has_opinion = { target = FROM value > 33 } has_war = no }
+	available = {
+		if = {
+			limit = { has_global_flag = equestrian_civil_war }
+			OR = {
+				CES = { exists = yes has_opinion = { target = FROM value > 33 } has_war = no }
+				EQS = { exists = yes has_opinion = { target = FROM value > 33 } has_war = no }
+			}
+		}
+		else = {
+			EQS = { exists = yes has_opinion = { target = FROM value > 33 } has_war = no }
+		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h3"
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.0333
+		}
+		bac_COT_medium_effect = yes
+		if = {
+			limit = { CES = { exists = yes } }
+			custom_effect_tooltip = BAC_COC_eco_h3_tt
+			hidden_effect = {
+				CES = {
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = commonalty_embassy
+					}
+					add_relation_modifier = {
+						target = ROOT
+						modifier = commonalty_embassy
+					}
+					ROOT = {
+						add_opinion_modifier = {
+							target = PREV
+							modifier = commonalty_embassy
+						}
+						add_relation_modifier = {
+							target = PREV
+							modifier = commonalty_embassy
+						}
+						add_opinion_modifier = {
+							target = PREV
+							modifier = commonalty_embassy_trade
+						}
+					}
+				}
+			}
+		}
+		#unlock_decision_tooltip = my_decision
+		custom_effect_tooltip = unlocks_bop_decision_tt
 	}
 	
 }
@@ -1914,12 +2024,18 @@ shared_focus = {
 	prerequisite = {
 		focus = BAC_COC_eco_h3
 	}
+	available = {
+		EQS = { has_opinion = { target = FROM value > 33 } has_war = no }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h4"
+		add_political_power = 333
+		bac_COT_large_effect = yes
+		#TODO make a good idea
 	}
 	
 }
-shared_focus = {
+shared_focus = { #BAC_COC_eco_m4h Plan Zebrica
 	id = BAC_COC_eco_m4h
 	icon = GFX_goal_KIR_docks
 	cost = 4.8
@@ -1936,7 +2052,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4h"
-		bac_WPU_small_effect = yes
+		bac_COT_small_effect = yes
+		#todo docks and maybe idea
 	}
 	
 }
@@ -1962,7 +2079,8 @@ shared_focus = {
 	}
 	completion_reward = { #maybe it would be some fancy gui mechanic? but not now
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4m"
-		add_political_power = -300
+		add_political_power = -333
+		#todo timed_idea
 		custom_effect_tooltip = focus_eco_m4m_tt
 		for_each_scope_loop = {
 			array = KIR.original_cores

@@ -23505,6 +23505,7 @@ news_event = {
 			add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
 			clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
 			clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
+			load_focus_tree = generic_zebra_focus #bac added
 		}
 	}
 }

@@ -100,26 +100,26 @@
  BAC_COC_eco_head_desc: "Riding the wave of modernisation is important, of course. But there's a danger in our impatience we'll repeat the mistakes or outright negligence, of our predecessors. Luckily, we have Kindling Flash. His ad hoc, yet artistic, control of production has brought out qualities in him that he probably didn't even realise he had, and of course, he's all about the people, which should allay the aforementioned concerns." # 현대화의 물결에 발맞춰서 따라가는 것은 물론 중요합니다. 하지만 조급한 마음에 지나치게 서둘렀다간 전임자들의 실수, 또는 명백한 과실을 답습하게 될 우려가 있지요. 다행히도 우리에겐 Kindling Flash가 있습니다. 일전에 그가 선보였던 임시방편식이지만 예술적이었던 생산 통제는 스스로도 몰랐을 그의 자질을 드러내게 되었는데, 물론 그는 인민을 중요시하기 때문에 앞서 언급한 우려도 불식시킬 수 있을 것입니다.
  BAC_COC_eco_h1: "Trinitarian Labor Collective"
  BAC_COC_eco_h1_desc: "Equestria is a fantastic land where different pony subspecies work together to do amazing things and solve problems. The qualities that Her Radiant Trinity has bestowed upon us - upon kirin, are nothing short! We've just been slow to realise. There is nothing that a group of sisters and brothers in faith can't accomplish." #이퀘스트리아는 서로 다른 포니 아종들이 서로 힘을 합쳐 놀라운 일들을 해내고 문제를 해결하는 환상적인 나라입니다. Her Radiant Trinity께서 우리 키린들에게 내려주신 자질은 결코 이에 못지 않습니다! 그저 우리가 이 사실을 뒤늦게나마 깨달았을 뿐입니다. 믿음의 형제자매들이 뭉치면 해내지 못할 일은 없습니다.
- BAC_COC_eco_h2: "Contact Equestrian Ties" #이퀘스트리아 연줄 접촉
+ BAC_COC_eco_h2: "Contact With Equestrian Ties" #이퀘스트리아 연줄 접촉
  BAC_COC_eco_h2_desc: "We have many creatures from Equestria. We should focus on them and continue our connection to Equestria. ...Also many from elsewhere as well, but isn't it obvious that few would question the fact that Equestria is the most powerful nation in the world? At the very least, Equestria is far more prosperous than most of the socialist nations." #우리에겐 이퀘스트리아에서 온 생물들도 많습니다. 이들을 중심으로 이퀘스트리아와의 연결을 이어나가야 합니다. 물론 다른 곳에서 온 생물들도 많기는 하지만, 이퀘스트리아가 세계 최강대국이라는 사실에 의문을 표할 이는 그리 없을 것이 명백하지 않습니까? 적어도 사회주의 국가들보다는 훨씬 번영한 나라입니다.
+ BAC_COC_eco_h3: "Reach Out To The Lodge"
+ BAC_COC_eco_h3_desc: "$comm_COT_CES_desc$" #
+ BAC_COC_eco_h4: "Equestria in Zebrica!"
+ BAC_COC_eco_h4_desc: "At last, in the name of Her Radiant Trinity, we have achieved the feats of modernisation and globalisation simultaneously! Kirin are free, our streets are filled with friendship and love, and the Commonalty has become the land of harmony! We have had much help from Equestria, but we could not have done it without the hard work of the Common. Now, as equal economic players, we will ensure that this monumental success is forever remembered by signing a free trade agreement with the Equestrian Economic Bloc." #마침내 우리가 Her Radiant Trinity의 이름으로 현대화와 세계화라는 위업을 동시에 이루었습니다! 키린들은 자유롭고, 거리에는 우정과 사랑이 넘쳐나며, Commonalty는 조화의 나라가 되었습니다! 이퀘스트리아의 도움도 많이 받긴 했지만, Common의 근면함이 아니었다면 이루지 못했을 것입니다. 이제 우리는 대등한 경제주체로서 이퀘스트리아 경제블록과의 자유무역협정 체결을 통해 이 기념비적인 성공이 영원히 상기되도록 할 것입니다.
  BAC_COC_eco_c1: "Initiate Land Reform" #gives timed idea i think
  BAC_COC_eco_c1_desc: "The Communalists don't really care about all this talk of modernisation, because the only thing that matters is making sure that the kirin in this Realm don't go hungry. If we can follow the principle of 'Land to the Tiller' and give each farmer just enough land to ensure optimal production for themselves, there will be no more starving kirin." #Communalists들은 현대화니 뭐니 하는 이야기에 그다지 관심이 없습니다. 중요한 것은 이 Realm에 사는 키린들이 배곯지 않도록 하는 것 말고는 없으니까요. 경자유전의 원칙에 따라 각 농가에 스스로 최적생산량을 보장할 수 있을만큼의 토지를 분배하게 될 수만 있다면 더 이상 굶주리는 키린이 없게 될 것입니다.
  BAC_COC_eco_m2: "Todo"
  BAC_COC_eco_m2_desc: "TODO"
  BAC_COC_eco_c2: "Communalist"
  BAC_COC_eco_c2_desc: "TODO"
- BAC_COC_eco_h3: "Harmonist"
- BAC_COC_eco_h3_desc: "TODO"
  BAC_COC_eco_m3h: "Favor Todo"
  BAC_COC_eco_m3h_desc: "TODO"
  BAC_COC_eco_m3c: "Todo"
  BAC_COC_eco_m3c_desc: "TODO"
  BAC_COC_eco_c3: "Communalist"
  BAC_COC_eco_c3_desc: "TODO"
- BAC_COC_eco_h4: "Harmonist"
- BAC_COC_eco_h4_desc: "TODO"
- BAC_COC_eco_m4h: "Favor Todo"
- BAC_COC_eco_m4h_desc: "TODO"
+ BAC_COC_eco_m4h: "Plan Zebrica"
+ BAC_COC_eco_m4h_desc: "Now that we have modernised the Commonalty, we need to further increase our naval power to ensure that our people's freedom is most assuredly protected at sea. Plan Zebrica will be the start." #이제 우리가 만민국의 현대화를 이룩하였으니, 해군력을 보다 증강시켜 우리 인민의 자유가 바다 위에서도 가장 확실하게 보호받을 수 있도록 해야 합니다. Plan Zebrica는 그 시작이 될 것입니다.
  BAC_COC_eco_m4c: "Todo"
  BAC_COC_eco_m4c_desc: "TODO"
  BAC_COC_eco_c4: "Communalist"
@@ -271,14 +271,24 @@
  comm_COT_civ_desc: "Mahogany Blaze and Bright Burn were born and raised in Equestria, and in Mahogany's case, he's also a School of Friendship graduate. With his connections, he may be able to drag Equestria's capital to breathe new life into this ravaged country." #Mahogany Blaze와 Bright Burn은 이퀘스트리아에서 태어나 자랐으며 Mahogany의 경우 우정 학교 졸업자이기도 합니다. 그의 연줄을 이용하면 이 황폐해진 나라에 이퀘스트리아의 자본을 대어 숨통을 트이게 할 수 있을지도 모릅니다. #이퀘스트리아가 평화 중이면 정치력이 많이 드는 대신 강력한 효과의 개발딸 가능한 컨셉
  comm_WPU_rural: "Redistribution Program" #재분배 사업
  comm_WPU_rural_desc: "To be able to emphasise that the Commonal Senate can give more back more in return of taking a little from the complete freedom of the smaller sub-regions, it needed to be done so." #Commonal Senate가 더 작은 단위 지역들의 완전한 자유로부터 약간을 취하는 대신, 더 많은 혜택을 돌려줄 수 있다는 것을 강조할 수 있으려면 이를 직접 실천해야 합니다. 
- #불의 길 잔당 추적 - 숙청 중점 완료 시 해금
- #문화 교류 사업
+ 
+ comm_COT_pursuit: "Pursuit The Way Remnant" #불의 길 잔당 추적 - 숙청 중점 완료 시 해금
+ comm_COT_pursuit_desc: "There are still Kirin everywhere who believe in so-called-divine Fire, a corrupted and false faith. It would be a great misfortune if they were not converted or eliminated. Let us cut off them before what we have done come back to haunt us." # 타락한 거짓 신앙인 신성한 불을 믿는 키린들은 아직도 도처에 널려 있습니다. 이들을 개종시키거나 제거하지 않으면 분명 큰 우환이 될 것입니다. 우리가 저지른 일들이 우리의 발목을 잡기 전에 그 아귀를 끊어버립시다.
+ comm_WPU_WOF: "Interchange With The Way" #불의 길 교류 사업 - 사원 교육 중점 완료 시 해금
+ comm_WPU_WOF_desc: "Our collaboration with temple schools is proving to be a success, and we could benefit from a little more Senate support. Focusing our educational programmes on things that will benefit the Common's real lives wouldn't only improve their quality of life, but also solidify their support for our regime." # 사원 학교와의 협업이 성공적이라는 것이 드러나고 있으니, Senate에서 조금 더 힘을 실어준다면 추가적인 효과를 누릴 수 있을 것입니다. Common의 실생활에 도움이 되는 것들 위주로 교육 프로그램을 진행한다면 그들의 삶의 질이 제고될뿐만 아니라 우리 정권에 대한 지지 또한 공고해질 것입니다.
+
+ comm_COT_CES: "Welcome Missionaries From The Lodge" #Lodge 선교사 환영 #The Lodge와 접촉 중점 완료 시 해금
+ comm_COT_CES_desc: "In order to seek a true understanding of Princess Celestia - a part of Her Radiant Trinity, the idea of inviting members of a group that claims to act like that Princess Celestia for a theological exchange was discussed. Of course, the toys they would bring with them would be a gift that our foals and fillies would love." # Her Radiant Trinity의 일면을 구성하는 Princess Celestia에 대한 진실된 이해를 모색하기 위하여, 바로 그 Princess Celestia처럼 행동해야 한다고 주장하는 단체의 구성원을 초빙하여 신학적 교류를 이루는 방안이 논의되었습니다. 물론 그들이 함께 들고 들어올 장난감들은 우리 망아지들이 아주 좋아할 선물이 될 것입니다.
+ comm_WPU_commiebro: "Seek Solidarity With International Socialists" # 국제사회주의자와의 연대 모색 #외교업무 확대 중점 완료 시 해금
+ comm_WPU_commiebro_desc: "We even got help from international socialists in our last struggle! But we need more help to modernise and industrialise the Commonalty. It's not an agenda that will please the Communalists, who aren't too keen on internationalism, but Anything we can do to save blood from kirin is necessary." #우리가 일전에 치른 항쟁에서 국제사회주의자들로부터도 도움을 받은 바 있습니다! 하지만 우리에게는 만민국의 현대화와 산업화를 이루기 위해 도움이 더 필요합니다. 국제주의에 그다지 관심이 없는 자치주의자들로서는 그다지 반길만한 안건은 아니겠지만, 키린들의 피를 아낄 방법이라면 무엇이든 동원해야 합니다.
 
  commonalty_embassy: "Commonalty Embassy"
  commonalty_embassy_trade: "Commonalty Embassy"
  BAC_COC_embassy: "Commonalty Embassy"
  BAC_COC_embassy_desc: ""
- BAC_COC_embassy_tt: "([FROM.OWNER.GetFlag]§Y[FROM.OWNER.GetName]§!):\n   Gains §YCommonalty Embassy§!, which grants:\n     - Opinion of §Y[ROOT.GetName]§! §G+50§!\n   When dealing with [ROOT.GetFlag]§Y[ROOT.GetName]§!:\n     - Target country trade cost: §G-20%§!\n     - License purchase cost: §G-5%§!\n     - License purchase acceptance: §G+20§!\n     - License production speed: §G+20%§!\n     - License production speed from technology difference: §G+20%§!\n\n([ROOT.GetFlag]§Y[ROOT.GetName]§!):\n   Gains §YThe [FROM.GetCapitalVictoryPointName] Embassy§!, which grants:\n     - Opinion of §Y[FROM.OWNER.GetName]§! §G+50§!\n     - Trade Influence with §Y[FROM.OWNER.GetName]§! §G+25§!\n   When dealing with [FROM.OWNER.GetFlag]§Y[FROM.OWNER.GetName]§!:\n     - Target country trade cost: §G-20%§!\n     - License purchase cost: §G-5%§!\n     - License purchase acceptance: §G+20§!\n     - License production speed: §G+20%§!\n     - License production speed from technology difference: §G+20%§!\n"
+ BAC_COC_embassy_tt: "([FROM.OWNER.GetFlag]§Y[FROM.OWNER.GetName]§!):\n   Gains §Y$commonalty_embassy$§!, which grants:\n     - Opinion of §Y[ROOT.GetName]§! §G+50§!\n   When dealing with [ROOT.GetFlag]§Y[ROOT.GetName]§!:\n     - Target country trade cost: §G-20%§!\n     - License purchase cost: §G-5%§!\n     - License purchase acceptance: §G+20§!\n     - License production speed: §G+20%§!\n     - License production speed from technology difference: §G+20%§!\n\n([ROOT.GetFlag]§Y[ROOT.GetName]§!):\n   Gains §YThe [FROM.GetCapitalVictoryPointName] Embassy§!, which grants:\n     - Opinion of §Y[FROM.OWNER.GetName]§! §G+50§!\n     - Trade Influence with §Y[FROM.OWNER.GetName]§! §G+25§!\n   When dealing with [FROM.OWNER.GetFlag]§Y[FROM.OWNER.GetName]§!:\n     - Target country trade cost: §G-20%§!\n     - License purchase cost: §G-5%§!\n     - License purchase acceptance: §G+20§!\n     - License production speed: §G+20%§!\n     - License production speed from technology difference: §G+20%§!\n"
+ BAC_COC_eco_h2_tt: "(@EQS §Y[EQS.GetName]§!):\n   Gains §Y$commonalty_embassy$§!, which grants:\n     - Opinion of §Y[ROOT.GetName]§! §G+50§!\n   When dealing with [ROOT.GetFlag]§Y[ROOT.GetName]§!:\n     - Target country trade cost: §G-20%§!\n     - License purchase cost: §G-5%§!\n     - License purchase acceptance: §G+20§!\n     - License production speed: §G+20%§!\n     - License production speed from technology difference: §G+20%§!\n\n([ROOT.GetFlag]§Y[ROOT.GetName]§!):\n   Gains §YThe [EQS.GetCapitalVictoryPointName] Embassy§!, which grants:\n     - Opinion of §Y[EQS.GetName]§! §G+50§!\n     - Trade Influence with §Y[EQS.GetName]§! §G+25§!\n   When dealing with @EQS §Y[EQS.GetName]§!:\n     - Target country trade cost: §G-20%§!\n     - License purchase cost: §G-5%§!\n     - License purchase acceptance: §G+20§!\n     - License production speed: §G+20%§!\n     - License production speed from technology difference: §G+20%§!\n"
+ BAC_COC_eco_h3_tt: "(@CES §Y[CES.GetName]§!):\n   Gains §Y$commonalty_embassy$§!, which grants:\n     - Opinion of §Y[ROOT.GetName]§! §G+50§!\n   When dealing with [ROOT.GetFlag]§Y[ROOT.GetName]§!:\n     - Target country trade cost: §G-20%§!\n     - License purchase cost: §G-5%§!\n     - License purchase acceptance: §G+20§!\n     - License production speed: §G+20%§!\n     - License production speed from technology difference: §G+20%§!\n\n([ROOT.GetFlag]§Y[ROOT.GetName]§!):\n   Gains §YThe [CES.GetCapitalVictoryPointName] Embassy§!, which grants:\n     - Opinion of §Y[CES.GetName]§! §G+50§!\n     - Trade Influence with §Y[CES.GetName]§! §G+25§!\n   When dealing with @CES §Y[CES.GetName]§!:\n     - Target country trade cost: §G-20%§!\n     - License purchase cost: §G-5%§!\n     - License purchase acceptance: §G+20§!\n     - License production speed: §G+20%§!\n     - License production speed from technology difference: §G+20%§!\n"
  #generic decisions
  military_aid_to_civil: "Military Aid to Civil" #대민지원
  military_aid_to_civil_desc: "The military serves the country, not the country serves the military! Our soldiers need to know who their food comes from, even if they get a little tired." #군이 나라를 섬기는 것이지, 나라가 군을 섬기는 것이 아닙니다! 우리 병사들은 조금 피곤하더라도 자신들의 숙식이 누구에게서 나오는 것인지 알아야 합니다.
@@ -286,9 +296,9 @@
  military_aid_to_resis_desc: "The populace in the occupied territories need to learn that their lives can be better under our regime. It will increase the discontent of our soldiers deployed there, but in the end, this is how less friendly blood is shed." #점령지의 주민들은 자신들의 삶이 우리 정권 하에서 더 나아질 수 있다는 것을 배워야 합니다. 현지 병사들의 불만은 높아지겠지만 결국 이것이야말로 아군의 피를 덜 흘리게 하는 방법입니다.
 
 #tt
- party_popularity_dynamic_modifier: "Party Popularity"
- party_popularity_dynamic_modifier_ideology_mapped: "Party Popularity"
- party_popularity_dynamic_modifier_coalition: "Coalitions"
+ #party_popularity_dynamic_modifier: "Party Popularity"
+ #party_popularity_dynamic_modifier_ideology_mapped: "Party Popularity"
+ party_popularity_dynamic_modifier_coalition: "Coalition(s)"
  has_coalition_with: "Is in coalition with the §H[?coalition_partner_to_check.GetTokenLocalizedKey]§!"
  has_coalition_with_target: "Is in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
  has_coalition_with_target_NOT: "Is not in coalition with the §H[?coalition_target.GetTokenLocalizedKey]s§!."
@@ -300,7 +310,8 @@
  bac_kic_event_324_tt: "§LThere will be no new king of Kiria; the people have instead heeded his wish and will create the Free and Democratic Commonalty of Kiria, ruled by the Common Senate of Kiria in his stead. It is up to the commonkirin making the Commonalty into a proper and effective country.§!\n\n"
  get_commonalty_tree_tt: "Unlocks the §YCommonalty of Kiria§! Focus Tree."
  #bac_are_you_serious_tt: "Nothing §tbad§! will happen, isn't it?"
- 
+ unlocks_bop_decision_tt: "This can be found in §YBalance of Power§! category."
+ unlocks_bop_multiple_decisions_tt: "These can be found in §YBalance of Power§! category."
  
  BAC_COC_commonalty_war_enacted: "Has passed a §RWar Initiative§!"
  BAC_COC_commonalty_war_days_tt: " Current days are: [?BAC_COC_commonalty_war_enacted_flag:days|Y0]"

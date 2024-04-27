@@ -276,7 +276,8 @@ country_event = { # baccocc.6 - Matter of Regional Autonomy
 	fire_only_once = yes
 	option = { # 일사천리로 해결되는 일이 있기는 하다는 게 다행이야.
 		name = baccocc.6.a
-		
+		add_political_power = 33
+		add_stability = 0.033
 	}
 }
 
