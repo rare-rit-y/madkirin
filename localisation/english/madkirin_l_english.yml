@@ -70,17 +70,18 @@
  BAC_COC_c2: "Our Cause Must Be Informed" 
  BAC_COC_c2_desc: "There are still so many kirin in the rural Realm who don't know that we've won, and we need to make sure they know that, but we also need to make sure they know that we can speak for them, and we need to make sure their voices are heard further. That's why we do these hard works." #Realm에는 아직도 우리가 승리했다는 사실을 모르는 시골 키린들이 많습니다. 그 사실을 알리는 것은 물론이고 우리가 그들을 대변해줄 수 있다는 사실 또한 알려야 합니다. 그리고 저들의 목소리가 더욱 대변될 수 있도록 해야 합니다. 그게 바로 우리가 이 고된 일들을 하는 이유입니다.
  BAC_COC_m3: "The Countdown!"
- BAC_COC_m3_desc: "TODO" # 이제 더 이상 건국을 미룰 수는 없습니다. 가장 시급한 일들이 무엇일지만 마지막으로 알아보고 나서 곧바로 Commonalty를 선포하도록 합시다.
+ BAC_COC_m3_desc: "We can't put off founding any longer, so let's take care of the most urgent things first, and then declare Commonalty." # 이제 더 이상 건국을 미룰 수는 없습니다. 가장 시급한 일들이 무엇일지만 마지막으로 알아보고 나서 곧바로 Commonalty를 선포하도록 합시다.
  BAC_COC_h3: "Committee for Foreign Affairs"
- BAC_COC_h3_desc: "td" # The Silence의 해악은 수도 없이 많지만, 이번에 해결해야 할 것은 바로 국제사회와의 관계 문제입니다. 정통성 있는 정부로 간주되던 Realm of Kiria의 후신, 즉 Empire of Kiria을 우리가 무너뜨린 상황이니 우리는 현재 심각한 외교적 위기에 처해 있다고 해도 과언이 아닙니다. 건국 선포식에 초청할 외국 귀빈들의 목록부터 시작할 것입니다.
- BAC_COC_c3: "Land Investigation Program" #토지조사사업
- BAC_COC_c3_desc: "TODO" # 전국에서 몰려온 농민들이 부르짖는 아우성 중 가장 큰 소리로 나오는 것은 NAKP에 의해 말소된 토지 소유권을 보장해달라는 것입니다. 가장 위험한 내용이기도 하군요. 물론 이 주장이 전부 사실이라면 그리 하지 않을 이유는 없겠죠. 먼저 시시비비를 가려야 합니다. 그래야 현지 사정에 맞게 토지개혁을 실시할 수 있습니다. 적어도 이에 대한 계획이라도 발표해야 합니다.
+ BAC_COC_h3_desc: "The harms of the Silence are so many, but this time it's our relations with the international society need to be addressed. We're in a serious diplomatic crisis now that we've overthrown the successor to the Realm - the Empire, considered a legitimate one. Let's start with the list of foreign dignitaries to be invited." # The Silence의 해악은 수도 없이 많지만, 이번에 해결해야 할 것은 바로 국제사회와의 관계 문제입니다. 정통성 있는 정부로 간주되던 Realm of Kiria의 후신, 즉 Empire of Kiria을 우리가 무너뜨린 상황이니 우리는 현재 심각한 외교적 위기에 처해 있다고 해도 과언이 아닙니다. 건국 선포식에 초청할 외국 귀빈들의 목록부터 시작할 것입니다.
+ BAC_COC_c3: "Land Investigation Programme" #토지조사사업
+ BAC_COC_c3_desc: "The loudest cry coming from all over the country is for to guarantee their lands that have been expunged by NAKP. It's also the most dangerous one. If all these allegations are true, surely there's no reason not to do so. First, we need to clear right and wrong. So that land reform can be implemented according to local conditions. At the very least, a plan should be announced." # 전국에서 몰려온 농민들이 부르짖는 아우성 중 가장 큰 소리로 나오는 것은 NAKP에 의해 말소된 토지 소유권을 보장해달라는 것입니다. 가장 위험한 내용이기도 하군요. 물론 이 주장이 전부 사실이라면 그리 하지 않을 이유는 없겠죠. 먼저 시시비비를 가려야 합니다. 그래야 현지 사정에 맞게 토지개혁을 실시할 수 있습니다. 적어도 이에 대한 계획이라도 발표해야 합니다.
  
  BAC_COC_true_commonalty: "The Declaration!"
- BAC_COC_true_commonalty_desc: "!" #드디어 이 날이 왔습니다! NAKP에 맞선 봉기 때부터 돌이켜보면 정말 멀고 힘든 길이었습니다. 아직 해야 할 일이 많고, 채워야 할 빈틈도 많으며, 해결되지 않은 분쟁도 많지만, 오늘만큼은 하나된 마음으로 건국을 축하합시다!
+ BAC_COC_true_commonalty_desc: "Finally, the day has come! It's been a long, hard road since the uprising against the NAKP. There is still much work to be done, many gaps to be filled, and many unresolved disputes, but for today, let's celebrate our nation as one - along with the motto of the Common Senate, which was voted-on at the final session of the CPF!" #드디어 이 날이 왔습니다! NAKP에 맞선 봉기 때부터 돌이켜보면 정말 멀고 힘든 길이었습니다. 아직 해야 할 일이 많고, 채워야 할 빈틈도 많으며, 해결되지 않은 분쟁도 많지만, 오늘만큼은 하나된 마음으로 건국을 축하합시다, CPF의 마지막 표결을 통해 결정된 Common Senate의 모토와 함께요!
+ BAC_COC_true_commonalty_tt: ""§YNever to §Olead§!, always to §Phelp§!.§!"\n\n"
 
  BAC_COC_pol_head: "Committee for Commonal Education" #만민교육위원회
- BAC_COC_pol_head_desc: "Due to the complexity inherent in Kirin letters, the literacy rate is significantly higher compared to modern nations. The Committee for Commonal Education has been ordered to focus on this illiteracy issue according to the consensus of the Commonal Senate, yet progress is reportedly slow. The highly esteemed §PDayspring Rose§! will be appointed as a special chief commissioner to find out what problems are." #키린 문자 특유의 난해함으로 인해 키린 문맹률은 현대 국가들에 비해 월등히 높은 편입니다. 민회의 총의에 따라 만민교육위원회는 이러한 문맹 문제에 주력할 것을 하명받았으나 여전히 일의 진행이 지지부진하다고 합니다. 명망 높은 Dayspring Rose를 특별위원장으로 위촉해 어떤 문제가 벌어지고 있는지 알아내도록 할 필요가 있습니다.
+ BAC_COC_pol_head_desc: "Due to the complexity inherent in Kirin letters, the literacy rate is significantly higher compared to advanced nations. The CCE has been ordered to focus on this illiteracy issue according to the consensus of the Commonal Senate, yet progress is reportedly slow. The highly esteemed §PDayspring Rose§! will be appointed as a special chief commissioner to find out what problems are." #키린 문자 특유의 난해함으로 인해 키린 문맹률은 선진국들에 비해 월등히 높은 편입니다. 민회의 총의에 따라 만민교육위원회는 이러한 문맹 문제에 주력할 것을 하명받았으나 여전히 일의 진행이 지지부진하다고 합니다. 명망 높은 Dayspring Rose를 특별위원장으로 위촉해 어떤 문제가 벌어지고 있는지 알아내도록 할 필요가 있습니다.
  BAC_COC_pol_h1: "Assertive Conversion"
  BAC_COC_pol_h1_desc: "The Way of Fire bears the responsibility for not having been of any assistance as Kiria transformed into a horrific battlefield. Who was it that forced the Silence in the first place? No matter how secluded or harmless those who worship this monstrosity may be, it's unacceptable to have such a flawed values. These values eat away at their innocent hearts until they turn into monsters like those." #The Way of Fire는 키리아가 참혹한 전쟁터로 변모하는 과정에서 아무런 도움이 되지 않았다는 책임이 있습니다. 애초에 침묵을 강요한 것이 누구였던가요? 이 흉물을 숭배하는 자들이 아무리 벽지에 쳐박혀 있고, 아무리 무해하다 하더라도, The Way와 같이 그들의 마음 속에 파고들어 괴물이 될 때까지 그 순수한 마음을 좀먹는 잘못된 가치관이 심어져 있어서는 안 됩니다.
  BAC_COC_pol_c1: "Allow The Way of Fire"
@@ -90,14 +91,14 @@
  BAC_COC_pol_c2: "Educate The Temple Schools" # 사원 학교 훈육
  BAC_COC_pol_c2_desc: "The most devout of The Way of Fire's clergy would spend their life's savings to build schools. The bloodsuckers in  Sorghum before the Uprising were all evil, but why burn this beautiful tradition and its legacy to the ground now? With a few tweaks to suit realities for nowadays, it would be so much better, and it might even appease the Communion." # The Way of Fire의 성직자들 중에서도 가장 독실한 이들은 일생의 가산을 털어 학교를 세우곤 했습니다. 봉기 이전에 Sorghum의 고혈을 빨던 자들은 모두 사악한 족속들이었지만, 이제 와서 이 아름다운 전통과 그 유산들을 불태워버릴 필요가 있을까요? 단지 오늘날의 실정에 맞게 약간의 보완만 가해진다면 훨씬 좋을 것이며 이를 토대로 Communion 쪽도 달랠 수 있을 것입니다.
  BAC_COC_pol_m2: "Justice For Common" #
- BAC_COC_pol_m2_desc: "There is a cause for all of this, and there are somekirin who are responsible. But they have been unwilling to bear the weight of that responsibility, and it's time to make amends. A trial for the crimes of the NAKP and its henchmen would be a good start." # 이 모든 참사에는 원인이 있으며 그에 책임이 있는 키린들도 있습니다. 하지만 그들은 그간 그 책임의 무게를 짊어지려 하지 않았지요. 이제 바로잡아야 할 때입니다. NAKP와 그 부역자들의 죄에 대한 재판은 좋은 시작이 될 것입니다.
+ BAC_COC_pol_m2_desc: "There is a cause for all of this, and there are somekirin who are responsible. But they have been unwilling to bear the weight of that responsibility, and it's time to make amends. A trial for the crimes of the NAKP and its henchmen would be a good start. Although it was concerned with the Committee on Judicial Affairs..." # 이 모든 참사에는 원인이 있으며 그에 책임이 있는 키린들도 있습니다. 하지만 그들은 그간 그 책임의 무게를 짊어지려 하지 않았지요. 이제 바로잡아야 할 때입니다. NAKP와 그 부역자들의 죄에 대한 재판은 좋은 시작이 될 것입니다. 비록 법무위원회의 소관이긴 하지만요...
  BAC_COC_pol_h3: "Serve The Common" # 만민을 위한 봉사
  BAC_COC_pol_h3_desc: "There will be times when we have doubts and scepticism about why we've come this far, especially when we're doing hard work in a foreign land. Reminding ourselves of our purpose will help us stay motivated." # 우리가 왜 여기까지 왔는지에 대해, 마음을 좀먹는 회의감과 의심이 들 때가 있습니다. 특히 타지에서 고된 일을 하다보면 더욱 그렇겠지요. 우리의 목적을 되새긴다면 더욱 의욕적으로 사역에 임할 수 있을 것입니다.
  BAC_COC_pol_c3: "Establish True Autunomy" # 진정한 지방자치제도의 정착 coring
  BAC_COC_pol_c3_desc: "Residents should be able to control their own destiny, except for matters that inevitably need to be dealt with by the Common Senate. Creating norms that allow for maximum freedom but are better suited to masking shenanigans will help between residents within a region, between regions, and between regions and the Senate." # 주민들은 스스로의 운명을 스스로 정할 수 있어야 합니다. 어쩔 수 없이 Common Senate에서 다루어야 할 사안을 제외하면요. 주민들의 자유를 최대한 보장하되 시시비비를 가리기에 더욱 적합한 규범을 만들면 지역 내 주민들 사이에서도, 지역 사이에서도, 지역과 Senate 사이에서도 도움이 될 것입니다.
  
  BAC_COC_eco_head: "Committee For Industry And Development" #산업개발위원회
- BAC_COC_eco_head_desc: "Riding the wave of modernisation is important, of course. But there's a danger in our impatience we'll repeat the mistakes or outright negligence, of our predecessors. Luckily, we have Kindling Flash. His ad hoc, yet artistic, control of production has brought out qualities in him that he probably didn't even realise he had, and of course, he's all about the people, which should allay the aforementioned concerns." # 현대화의 물결에 발맞춰서 따라가는 것은 물론 중요합니다. 하지만 조급한 마음에 지나치게 서둘렀다간 전임자들의 실수, 또는 명백한 과실을 답습하게 될 우려가 있지요. 다행히도 우리에겐 Kindling Flash가 있습니다. 일전에 그가 선보였던 임시방편식이지만 예술적이었던 생산 통제는 스스로도 몰랐을 그의 자질을 드러내게 되었는데, 물론 그는 인민을 중요시하기 때문에 앞서 언급한 우려도 불식시킬 수 있을 것입니다.
+ BAC_COC_eco_head_desc: "Riding the wave of modernisation is important. But there's a danger in our impatience we'll repeat the mistakes or outright faults, of our predecessors. Luckily, we have Kindling Flash. His ad hoc yet artistic control of production has brought out qualities in him. And of course, he's all about the people, which should allay these concerns." # 현대화의 물결에 발맞춰서 따라가는 것은 중요합니다. 하지만 조급한 마음에 지나치게 서둘렀다간 전임자들의 실수, 또는 명백한 과실을 답습하게 될 우려가 있지요. 다행히도 우리에겐 Kindling Flash가 있습니다. 일전에 그가 선보였던 임시방편식이지만 예술적이었던 생산 통제는 스스로도 몰랐을 그의 자질을 드러내게 되었는데, 물론 그는 인민을 중요시하기 때문에 앞서 언급한 우려도 불식시킬 수 있을 것입니다.
  BAC_COC_eco_h1: "Trinitarian Labor Collective"
  BAC_COC_eco_h1_desc: "Equestria is a fantastic land where different pony subspecies work together to do amazing things and solve problems. The qualities that Her Radiant Trinity has bestowed upon us - upon kirin, are nothing short! We've just been slow to realise. There is nothing that a group of sisters and brothers in faith can't accomplish." #이퀘스트리아는 서로 다른 포니 아종들이 서로 힘을 합쳐 놀라운 일들을 해내고 문제를 해결하는 환상적인 나라입니다. Her Radiant Trinity께서 우리 키린들에게 내려주신 자질은 결코 이에 못지 않습니다! 그저 우리가 이 사실을 뒤늦게나마 깨달았을 뿐입니다. 믿음의 형제자매들이 뭉치면 해내지 못할 일은 없습니다.
  BAC_COC_eco_h2: "Contact With Equestrian Ties" #이퀘스트리아 연줄 접촉
@@ -237,7 +238,8 @@
   baccocc.149.d: "[From.GetName] have not only accepted our offer, but have also indicated that they are willing to give up some of their sovereignty, albeit with some demands and suggestions that accompany the counter-offer. Seemingly their positive opinion us or their precarious situation, had an effect. Our additive delegation has already departed and is headed there to negotiate detailed terms." #[From.GetName]은 우리의 제안을 받아들이는 것으로 모자라 자신들의 주권을 일부 포기할 뜻도 있음을 밝혔습니다. 물론 역제안에 수반하는 약간의 요구 및 제안이 추가되기는 했지만 말입니다. 아마 우리에 대한 강한 호감이나 저들의 불안정한 상황이 영향을 미친 것 같습니다. 이미 우리 대표단이 출발하여 상세한 조건을 협상하기 위해 그곳으로 향했습니다.
   baccocc.149.a: "Uh... Why, yes. Good thing."
 
-  kirin.36.coc: "Kindling Flash watched with awe as the metal monster chugged into Vermilion. The newly-built Vermilion Grand Central Terminus was packed with kirin of all trots of life, jammed so close together that the regiment of bannerkirin brought on for security struggled to keep the crowd from pushing them onto the glistening steel tracks in the station. Nokirin wanted to miss the exciting event, and he couldn't deny that he found it all exciting as well. After all, there would only ever be one first train from Radiance to Vermilion, reestablishing the link between the Realm's capital and its traditional gateway along the coast. This moment, mundane as it normally otherwise would have been, meant something fantastic for so many kirin, and for the prosperity of the Realm itself.\n\nWhen the train finally rolled into the station, everykirin present let out a cheer and stomped their hooves for the engineers at the controls. As the engineers were escorted out of the engine and feted with garlands, food, and rice wine, Kindling Flash serenely smiled out over the crowd. "With the completion of the Vermilion-Radiance Line, our Commanalty is once again a part of the outside world," he announced, to much hooting and hollering. "This marvel is the first fruit of what I sincerely hope will be a bountiful harvest between our Commonalty. Hoof in hoof, I pray to Her Radiant Trinity in all of Her glory that our two nations will have many more partnerships of mutual friendship and cooperation such as this one."\n\nThen, to the surprise and awe of the crowd assembled, Kindling Flash stepped forward with his entourage and boarded the train as engineers get in the train engine. The train whistled as Kindling Flash waved out the window, and the crowd cheered."
+  baccocc.36.t: ""
+  baccocc.36.d: "Kindling Flash watched with awe as the metal monster chugged into Sorghum. The newly-built Sorghum Grand Central Terminus was packed with kirin of all trots of life, jammed so close together that the regiment of bannerkirin brought on for security struggled to keep the crowd from pushing them onto the glistening steel tracks in the station. Nokirin wanted to miss the exciting event, and he couldn't deny that he found it all exciting as well. After all, there would only ever be one first train from Verdant to Sorghum, reestablishing the link between the Realm's capital and its traditional gateway along the coast. This moment, mundane as it normally otherwise would have been, meant something fantastic for so many kirin, and for the prosperity of the Realm itself.\n\nWhen the train finally rolled into the station, everykirin present let out a cheer and stomped their hooves for the engineers at the controls. As the engineers were escorted out of the engine and feted with garlands, food, and rice wine, Kindling Flash serenely smiled out over the crowd. "With the completion of the Sorghum-Verdant Line, our Commanalty is once again a part of the outside world," he announced, to much hooting and hollering. "This marvel is the first fruit of what I sincerely hope will be a bountiful harvest between our Commonalty. Hoof in hoof, I pray to Her Radiant Trinity in all of Her glory that our two nations will have many more partnerships of mutual friendship and cooperation such as this one."\n\nThen, to the surprise and awe of the crowd assembled, Kindling Flash stepped forward with his entourage and boarded the train as engineers get in the train engine. The train whistled as Kindling Flash waved out the window, and the crowd cheered." #the option is kirin.36.a
 
  #madkirin
   madkirin.1.t: "The Lecture"
@@ -261,19 +263,20 @@
 
  #외교 - 정복하고 나서 군사 훈련 등 중점으로 테크 획득. 아마 평화 루트일 때는 보너스를 더 주는 방향으로? 주변 4개국을 다 처먹고 나면 엔딩 (열강 놀이는 다음 업데이트 때)
  
-#decisions 
-
+#decisions
+ bac_finish_railway: "Build the Sorghum-Verdant Line"
+ bac_finish_railway: "A little bit of political pressure will breathe new life into the venture — to carve a path through the plains and connect the capital to the sea."
  comm_WPU_1: "Enhance the Union"
  comm_WPU_1_desc: "Not everything that comes before the Senate is going to be the most important thing, but if some support for one of the less important things and getting away with a little political fluff could be exchanged with each other, it would sound like worth." #Senate에 올라오는 모든 안건이 가장 중요한 안건은 아닙니다. 하지만 그 덜 중요하다는 것들 중 하나에 대해 지지를 표한 후 가벼운 정치적 생색내기만으로 적당한 효과를 얻을 수 있다면 남는 장사겠죠.
  comm_COT_1: "Enhance the Communion"
  comm_COT_1_desc: "$comm_WPU_1_desc$"
  comm_COT_civ: "Equestrian Economic Aid" # 이퀘스트리아 경제 지원
  comm_COT_civ_desc: "Mahogany Blaze and Bright Burn were born and raised in Equestria, and in Mahogany's case, he's also a School of Friendship graduate. With his connections, he may be able to drag Equestria's capital to breathe new life into this ravaged country." #Mahogany Blaze와 Bright Burn은 이퀘스트리아에서 태어나 자랐으며 Mahogany의 경우 우정 학교 졸업자이기도 합니다. 그의 연줄을 이용하면 이 황폐해진 나라에 이퀘스트리아의 자본을 대어 숨통을 트이게 할 수 있을지도 모릅니다. #이퀘스트리아가 평화 중이면 정치력이 많이 드는 대신 강력한 효과의 개발딸 가능한 컨셉
- comm_WPU_rural: "Redistribution Program" #재분배 사업
+ comm_WPU_rural: "Redistribution Programme" #재분배 사업
  comm_WPU_rural_desc: "To be able to emphasise that the Commonal Senate can give more back more in return of taking a little from the complete freedom of the smaller sub-regions, it needed to be done so." #Commonal Senate가 더 작은 단위 지역들의 완전한 자유로부터 약간을 취하는 대신, 더 많은 혜택을 돌려줄 수 있다는 것을 강조할 수 있으려면 이를 직접 실천해야 합니다. 
  
- comm_COT_pursuit: "Pursuit The Way Remnant" #불의 길 잔당 추적 - 숙청 중점 완료 시 해금
- comm_COT_pursuit_desc: "There are still Kirin everywhere who believe in so-called-divine Fire, a corrupted and false faith. It would be a great misfortune if they were not converted or eliminated. Let us cut off them before what we have done come back to haunt us." # 타락한 거짓 신앙인 신성한 불을 믿는 키린들은 아직도 도처에 널려 있습니다. 이들을 개종시키거나 제거하지 않으면 분명 큰 우환이 될 것입니다. 우리가 저지른 일들이 우리의 발목을 잡기 전에 그 아귀를 끊어버립시다.
+ comm_COT_pursuit: "Pursuit The Heathen Remnant" #이교 잔당 추적 - 숙청 중점 완료 시 해금
+ comm_COT_pursuit_desc: "There are still creatures everywhere who believe in so-called-divine Fire - a corrupted and false faith, or the ugly filth whether derived from it or not . It would be a great misfortune if they were not converted or eliminated. Let us cut off them before what we have done come back to haunt us." # 타락한 거짓 신앙인 신성한 불이나 그것에서 파생되었건 아니건 추악한 오물을 믿는 생물들은 아직도 도처에 널려 있습니다. 이들을 개종시키거나 제거하지 않으면 분명 큰 우환이 될 것입니다. 우리가 저지른 일들이 우리의 발목을 잡기 전에 그 아귀를 끊어버립시다.
  comm_WPU_WOF: "Interchange With The Way" #불의 길 교류 사업 - 사원 교육 중점 완료 시 해금
  comm_WPU_WOF_desc: "Our collaboration with temple schools is proving to be a success, and we could benefit from a little more Senate support. Focusing our educational programmes on things that will benefit the Common's real lives wouldn't only improve their quality of life, but also solidify their support for our regime." # 사원 학교와의 협업이 성공적이라는 것이 드러나고 있으니, Senate에서 조금 더 힘을 실어준다면 추가적인 효과를 누릴 수 있을 것입니다. Common의 실생활에 도움이 되는 것들 위주로 교육 프로그램을 진행한다면 그들의 삶의 질이 제고될뿐만 아니라 우리 정권에 대한 지지 또한 공고해질 것입니다.
 
@@ -324,13 +327,16 @@
  BAC_prophet_of_the_common: "Prophet of Common"
  
 #misc
+ BAC_COC_fascism_party: "Extremist"
+ BAC_COC_fascism_party_long: "Communion of Her Radiant Trinity - Extremist"
  bac_RSTEC: "Rising Sun Technical University"
  bac_CIT: "Commonal Institute of Technology"
- BAC_COC_common_senate_desc: "" #갈 길은 멀고 할 일은 많습니다.
+ BAC_COC_common_senate_desc: ""Never to lead, always to help." ~ The official voted-on motto of the Common Senate\n\n§YPortrait by:§! Caspy" #갈 길은 멀고 할 일은 많습니다.
  BAC_commonalty_faction: "Commonal Mutual Assistance Bloc"
  BAC_commonalty: "Commonalty of Zebrica"
  BAC_commonalty_DEF: "the Free and Democratic Commonalty of Zebrica"
  BAC_commonalty_ADJ: "Commonalty" #
+ 
 
  BAC_commonalty_bop: "Two Factions of the §8Commonalty§!"
   commonalty_harmonic_control: "§FCommunion of Trinity§! - §7Harmonists§!"

@@ -56,22 +56,24 @@ economic_decisions = {
 			has_completed_focus = BAC_COC_eco_head
 			NOT = {
 				has_railway_connection = {
-					start_province = 20456
-					target_province = 20480
+					start_province = 20626
+					target_province = 16648
 				}
 			}
 		}
 		available = {
-			has_full_control_of_state = 1059
-			has_full_control_of_state = 817
+			has_full_control_of_state = 1069
+			has_full_control_of_state = 1073
+			has_full_control_of_state = 1076
+			has_full_control_of_state = 1077
 		}
 		highlight_states = {
 			highlight_state_targets = {
-				state = 1059
-				state = 817
+				state = 1069
+				state = 1073
 			}
 		}
-		cost = 30
+		cost = 20
 		days_remove = 30
 		ai_will_do = {
 			factor = 200
@@ -84,16 +86,16 @@ economic_decisions = {
 				build_railway = {
 					level = 1
 					fallback = yes
-					start_province = 20483
-					target_province = 20454
+					start_province = 16648
+					target_province = 20626
 				}
 			}
 		}
 		cancel_trigger = {
 			hidden_trigger = {
 				has_railway_connection = {
-					start_province = 20456
-					target_province = 20480
+					start_province = 20626
+					target_province = 16648
 				}
 			}
 		}

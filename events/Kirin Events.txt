@@ -1635,21 +1635,12 @@ country_event = {
 	id = kirin.36
 	immediate = {log = "[GetDateText]: [Root.GetName]: event kirin.36"}
 	title = kirin.36.t
-	desc = {
-		trigger = { original_tag = KIR }
-		id = kirin.36.d
-	}
-	desc = {
-		trigger = { original_tag = KIC }
-		id = kirin.36.coc
-	}
+	desc = kirin.36.d
+
 	picture = GFX_event_KIR_city
 
 	trigger = {
-		OR = { #bac change block
-			original_tag = KIR
-			has_country_flag = KIC_children_of_concord_flag
-		}
+		original_tag = KIR
 		has_railway_connection = {
 			start_province = 20456
 			target_province = 20480

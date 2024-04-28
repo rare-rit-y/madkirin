@@ -330,6 +330,37 @@ country_event = { # baccocc.12 - The Trial of NAKP
 		
 	}
 }
+country_event = {
+	id = baccocc.36
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.36"}
+	title = baccocc.36.t
+	desc = baccocc.36.d
+
+	picture = GFX_event_KIR_city
+
+	trigger = {
+		has_country_flag = KIC_children_of_concord_flag
+		original_tag = KIC
+		has_railway_connection = {
+			start_province = 20626
+			target_province = 16648
+		}
+	}
+	fire_only_once = yes
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = kirin.36.a
+		add_political_power = 33
+		add_popularity = {
+			ideology = communism
+			popularity = 0.033
+		}
+	}
+}
+
 country_event = { #146 are you with me
 	id = baccocc.146
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.146"}

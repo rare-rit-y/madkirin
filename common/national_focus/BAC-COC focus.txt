@@ -938,6 +938,10 @@ shared_focus = {
 			remove_idea = tot_economic_mobilisation
 			add_idea = undisturbed_isolation
 		}
+		swap_ideas = {
+			remove_idea = no_poverty
+			add_idea = poverty1
+		} #bac addition end
 		if = {
 			limit = {
 				set_temp_variable = { COC_power_struggle_DR_var_finale_temp = COC_power_struggle_DR_var }
@@ -1279,6 +1283,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_true_commonalty"
 		add_to_variable = { coc_start_foci_completed = 1 }
+		custom_effect_tooltip = BAC_COC_true_commonalty_tt
 		news_event = { id = kirin_council.326 hours = 6 }
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -1327,7 +1332,7 @@ shared_focus = { # Assertive Conversion # 적극적인 개종
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = -1
+	x = 1
 	y = 1
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1340,9 +1345,11 @@ shared_focus = { # Assertive Conversion # 적극적인 개종
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h1"
-		#정치력 주는 대신 안정도,순응도 깎는 타임드 아이디어
+		bac_eqs_popularity = yes
+		#TODO 정치력 주는 대신 저항도 순응도 깎는
 		add_political_power = 33
 		add_stability = -0.033
+		decrease_illiteracy = yes
 		bac_COT_small_effect = yes
 	}
 }
@@ -1352,7 +1359,7 @@ shared_focus = { #Allow The Way of Fire 불의 길 공존
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = 1
+	x = -1
 	y = 1
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1365,10 +1372,9 @@ shared_focus = { #Allow The Way of Fire 불의 길 공존
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_c1"
-		#정치력 깍는 대신 안정도 버프
+		#정치력 깍는 대신 안정,순응도 버프
 		add_political_power = -33
 		add_stability = 0.033
-		
 		bac_COT_small_effect = yes
 	}
 	
@@ -1381,7 +1387,7 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = -2
+	x = -4
 	y = 0
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1443,7 +1449,7 @@ shared_focus = { #자연과학
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = -4
+	x = -2
 	y = 0
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1521,7 +1527,7 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = -2
+	x = 2
 	y = 2
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1537,8 +1543,15 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h2"
-		add_political_power = 33
-		add_stability = -0.033
+		set_party_name = {
+			ideology = fascism
+			long_name = BAC_COC_fascism_party_long
+			name = BAC_COC_fascism_party
+		}
+		add_popularity = { #disharmony
+			ideology = fascism
+			popularity = 0.033
+		}
 		bac_COT_small_effect = yes
 		save_current_manpower = yes
 		every_owned_state = {
@@ -1580,7 +1593,7 @@ shared_focus = {
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = 2
+	x = -2
 	y = 2
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1611,7 +1624,7 @@ shared_focus = {
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = -1
+	x = 1
 	y = 3
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1625,6 +1638,9 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h3"
+		add_political_power = 3
+		decrease_poverty = yes
+		decrease_illiteracy = yes
 	}
 	
 }
@@ -1634,7 +1650,7 @@ shared_focus = {
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
-	x = 1
+	x = -1
 	y = 3
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1722,7 +1738,7 @@ shared_focus = { #BAC_COC_eco_h1 #Equestrian Model of Development
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = -1
+	x = 1
 	y = 1
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1732,12 +1748,7 @@ shared_focus = { #BAC_COC_eco_h1 #Equestrian Model of Development
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h1"
-		add_tech_bonus = {
-			name = industrial_bonus
-			bonus = 0.33
-			uses = 3
-			category = industry
-		}
+		bac_eqs_popularity = yes
 		custom_effect_tooltip = KIR_line_break
 		increase_society_development = yes
 		bac_COT_small_effect = yes
@@ -1750,7 +1761,7 @@ shared_focus = { #Initiate Land Reform 토지개혁 개시
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = 1
+	x = -1
 	y = 1
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1785,6 +1796,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m2"
+		increase_society_development = yes
 	}
 	
 }
@@ -1794,7 +1806,7 @@ shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = -2
+	x = 2
 	y = 2
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1802,8 +1814,16 @@ shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
 	prerequisite = {
 		focus = BAC_COC_eco_h1
 	}
+	prerequisite = {
+		focus = BAC_COC_diplo
+		focus = BAC_COC_m1
+	}
 	available = {
-		EQS = { has_opinion = { target = FROM value > 33 } has_war = no }
+		if = {
+			limit = { EQS = { is_EQS_SOL = yes } }
+			fascism > 0.09
+		}
+		EQS = { exists = yes is_subject = no has_war = no has_opinion = { target = ROOT value > 33 } }
 	}
 	# bypass = {
 	# 	OR = {
@@ -1820,8 +1840,15 @@ shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
 	# }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h2"
+		bac_eqs_popularity = yes
 		EAW_raise_trade_law = yes
 		increase_society_development = yes
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.33
+			uses = 3
+			category = industry
+		}
 		custom_effect_tooltip = BAC_COC_eco_h2_tt
 		hidden_effect = {
 			EQS = {
@@ -1858,7 +1885,7 @@ shared_focus = { #QKdzz
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = 2
+	x = -2
 	y = 2
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1868,6 +1895,7 @@ shared_focus = { #QKdzz
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c2"
+		decrease_poverty = yes
 		bac_WPU_medium_effect = yes
 	}
 	
@@ -1878,7 +1906,7 @@ shared_focus = {
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = -1
+	x = 1
 	y = 3
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1902,7 +1930,7 @@ shared_focus = {
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = 1
+	x = -1
 	y = 3
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1924,7 +1952,7 @@ shared_focus = {
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = 3
+	x = -3
 	y = 3
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1932,23 +1960,24 @@ shared_focus = {
 	prerequisite = {
 		focus = BAC_COC_eco_c2
 	}
-	available = { 
-		#EQS = { has_opinion = { target = FROM value > 33 } has_war = no }
+	available = {
+
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c3"
+		decrease_poverty = yes
 		bac_WPU_medium_effect = yes
 	}
 	
 }
 
-shared_focus = {
+shared_focus = { #BAC_COC_eco_h3 #The Lodge
 	id = BAC_COC_eco_h3 #The Lodge
 	icon = GFX_goal_ces_approach_baltimare #GFX_goal_UESR_TNO_sun_moon
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = -3
+	x = 3
 	y = 3
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -1958,23 +1987,33 @@ shared_focus = {
 	}
 	available = {
 		if = {
-			limit = { has_global_flag = equestrian_civil_war }
-			OR = {
-				CES = { exists = yes has_opinion = { target = FROM value > 33 } has_war = no }
-				EQS = { exists = yes has_opinion = { target = FROM value > 33 } has_war = no }
+			limit = { EQS = { is_EQS_SOL = yes } }
+			fascism > 0.09
+		}
+		if = {
+			limit = {
+				has_global_flag = equestrian_civil_war
+				CES = {
+					exists = yes
+					is_subject = no
+				}
+			}
+			CES = {
+				exists = yes
+				is_subject = no
+				has_war = no
+				has_opinion = { target = ROOT value > 33 }
 			}
 		}
 		else = {
-			EQS = { exists = yes has_opinion = { target = FROM value > 33 } has_war = no }
+			EQS = { exists = yes is_subject = no has_war = no has_opinion = { target = ROOT value > 33 } }
 		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h3"
-		add_popularity = {
-			ideology = democratic
-			popularity = 0.0333
-		}
+		bac_eqs_popularity = yes
 		bac_COT_medium_effect = yes
+		decrease_poverty = yes
 		if = {
 			limit = { CES = { exists = yes } }
 			custom_effect_tooltip = BAC_COC_eco_h3_tt
@@ -2012,11 +2051,15 @@ shared_focus = {
 }
 shared_focus = {
 	id = BAC_COC_eco_h4
-	icon = GFX_goal_generic_equestria #GFX_goal_KIR_gunboat
+	icon = {
+		trigger = { EQS = { is_EQS_SOL = no } }
+		value = GFX_goal_generic_equestria
+	}
+	icon = GFX_goal_solar_defence_of_the_empire
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = -4
+	x = 4
 	y = 4
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -2025,10 +2068,15 @@ shared_focus = {
 		focus = BAC_COC_eco_h3
 	}
 	available = {
-		EQS = { has_opinion = { target = FROM value > 33 } has_war = no }
+		if = {
+			limit = { EQS = { is_EQS_SOL = yes } }
+			fascism > 0.33
+		}
+		EQS = { exists = yes is_subject = no has_war = no has_opinion = { target = ROOT value > 33 } }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h4"
+		bac_eqs_popularity = yes
 		add_political_power = 333
 		bac_COT_large_effect = yes
 		#TODO make a good idea
@@ -2041,7 +2089,7 @@ shared_focus = { #BAC_COC_eco_m4h Plan Zebrica
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = -2
+	x = 2
 	y = 4
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -2095,7 +2143,7 @@ shared_focus = {
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = 2
+	x = -2
 	y = 4
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -2106,6 +2154,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4c"
+		decrease_poverty = yes
 		bac_WPU_small_effect = yes
 	}
 	
@@ -2117,7 +2166,7 @@ shared_focus = { #shdzz
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
-	x = 4
+	x = -4
 	y = 4
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
@@ -2336,6 +2385,7 @@ shared_focus = { # Beyond The Riverine Navy 강상군을 넘어서 (해군 건�
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_navy"
+		#TODO Kill the fucking pirates(if it exists)
 		set_country_flag = KIR_DM_maritime_systems_available
 		set_country_flag = KIC_deer_comrade_available
 		if = {
@@ -2389,7 +2439,11 @@ shared_focus = { #해군항공대
 }
 shared_focus = { #
 	id = BAC_COC_mil_h3
-	icon = GFX_goal_Equestrian_Royal_Navy_1 #
+	icon = {
+		trigger = { EQS = { is_EQS_SOL = no } }
+		value = GFX_goal_Equestrian_Royal_Navy_1
+	}
+	icon = GFX_goal_SOL_batnation
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -2453,7 +2507,7 @@ shared_focus = {
 	
 }
 
-shared_focus = { #대포를 빵 쐈습니다
+shared_focus = { #BAC_COC_mil_c3 대포를 빵 쐈습니다
 	id = BAC_COC_mil_c3
 	icon = GFX_goal_HEL_anar_cannon
 	cost = 4.8
@@ -2472,9 +2526,13 @@ shared_focus = { #대포를 빵 쐈습니다
 	}
 	
 }
-shared_focus = {
+shared_focus = { #BAC_COC_mil_h4
 	id = BAC_COC_mil_h4
-	icon = GFX_goal_cry_eqs_hat #
+	icon = {
+		trigger = { EQS = { is_EQS_SOL = no } }
+		value = GFX_goal_Equestrian_Royal_Navy_1
+	}
+	icon = GFX_goal_solar_empress_knows_best
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
