@@ -48,7 +48,7 @@ bac_coc_debug_cat = {
     
     }
 }
-economic_decisions = {
+economy_decisions = {
 	bac_finish_railway = {
 		icon = generic_wreckers
 		allowed = { original_tag = KIC }
@@ -310,8 +310,8 @@ foreign_politics = {
 					any_neighbor_state = {
 						owner = {
 							OR = {
-								tag = KIR
-								is_ally_with = KIR
+								tag = ROOT
+								is_ally_with = ROOT
 							}
 						}
 					}

@@ -361,6 +361,20 @@ country_event = {
 	}
 }
 
+country_event = { # baccocc.303 - Earthly Affairs
+	id = baccocc.303
+	title = baccocc.303.t
+	desc = baccocc.303.d
+	picture = GFX_event_KIR_evening
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.303"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = { # too long to be addressed here
+		name = baccocc.303.a
+		
+		TNO_BAC_Country_Closing_Screen_Show = yes
+	}
+}
 country_event = { #146 are you with me
 	id = baccocc.146
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.146"}

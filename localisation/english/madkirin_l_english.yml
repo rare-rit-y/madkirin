@@ -78,7 +78,7 @@
  
  BAC_COC_true_commonalty: "The Declaration!"
  BAC_COC_true_commonalty_desc: "Finally, the day has come! It's been a long, hard road since the uprising against the NAKP. There is still much work to be done, many gaps to be filled, and many unresolved disputes, but for today, let's celebrate our nation as one - along with the motto of the Common Senate, which was voted-on at the final session of the CPF!" #드디어 이 날이 왔습니다! NAKP에 맞선 봉기 때부터 돌이켜보면 정말 멀고 힘든 길이었습니다. 아직 해야 할 일이 많고, 채워야 할 빈틈도 많으며, 해결되지 않은 분쟁도 많지만, 오늘만큼은 하나된 마음으로 건국을 축하합시다, CPF의 마지막 표결을 통해 결정된 Common Senate의 모토와 함께요!
- BAC_COC_true_commonalty_tt: ""§YNever to §Olead§!, always to §Phelp§!.§!"\n\n"
+ BAC_COC_true_commonalty_tt: "§g"Never to §Olead§!, always to §Phelp§!."§!"
 
  BAC_COC_pol_head: "Committee for Commonal Education" #만민교육위원회
  BAC_COC_pol_head_desc: "Due to the complexity inherent in Kirin letters, the literacy rate is significantly higher compared to advanced nations. The CCE has been ordered to focus on this illiteracy issue according to the consensus of the Commonal Senate, yet progress is reportedly slow. The highly esteemed §PDayspring Rose§! will be appointed as a special chief commissioner to find out what problems are." #키린 문자 특유의 난해함으로 인해 키린 문맹률은 선진국들에 비해 월등히 높은 편입니다. 민회의 총의에 따라 만민교육위원회는 이러한 문맹 문제에 주력할 것을 하명받았으나 여전히 일의 진행이 지지부진하다고 합니다. 명망 높은 Dayspring Rose를 특별위원장으로 위촉해 어떤 문제가 벌어지고 있는지 알아내도록 할 필요가 있습니다.
@@ -106,7 +106,7 @@
  BAC_COC_eco_h3: "Reach Out To The Lodge"
  BAC_COC_eco_h3_desc: "$comm_COT_CES_desc$" #
  BAC_COC_eco_h4: "Equestria in Zebrica!"
- BAC_COC_eco_h4_desc: "At last, in the name of Her Radiant Trinity, we have achieved the feats of modernisation and globalisation simultaneously! Kirin are free, our streets are filled with friendship and love, and the Commonalty has become the land of harmony! We have had much help from Equestria, but we could not have done it without the hard work of the Common. Now, as equal economic players, we will ensure that this monumental success is forever remembered by signing a free trade agreement with the Equestrian Economic Bloc." #마침내 우리가 Her Radiant Trinity의 이름으로 현대화와 세계화라는 위업을 동시에 이루었습니다! 키린들은 자유롭고, 거리에는 우정과 사랑이 넘쳐나며, Commonalty는 조화의 나라가 되었습니다! 이퀘스트리아의 도움도 많이 받긴 했지만, Common의 근면함이 아니었다면 이루지 못했을 것입니다. 이제 우리는 대등한 경제주체로서 이퀘스트리아 경제블록과의 자유무역협정 체결을 통해 이 기념비적인 성공이 영원히 상기되도록 할 것입니다.
+ BAC_COC_eco_h4_desc: "At last, in the name of Her Radiant Trinity, we have achieved the feats of modernisation and globalisation simultaneously! Kirin are free, our streets are filled with friendship and love, and the Commonalty has become the land of harmony! Now, as equal economic player, we will ensure that this monumental success is forever remembered by signing a free trade agreement with the Equestrian Economic Bloc." #마침내 우리가 Her Radiant Trinity의 이름으로 현대화와 세계화라는 위업을 동시에 이루었습니다! 키린들은 자유롭고, 거리에는 우정과 사랑이 넘쳐나며, Commonalty는 조화의 나라가 되었습니다! 이제 우리는 대등한 경제주체로서 이퀘스트리아 경제블록과의 자유무역협정 체결을 통해 이 기념비적인 성공이 영원히 상기되도록 할 것입니다.
  BAC_COC_eco_c1: "Initiate Land Reform" #gives timed idea i think
  BAC_COC_eco_c1_desc: "The Communalists don't really care about all this talk of modernisation, because the only thing that matters is making sure that the kirin in this Realm don't go hungry. If we can follow the principle of 'Land to the Tiller' and give each farmer just enough land to ensure optimal production for themselves, there will be no more starving kirin." #Communalists들은 현대화니 뭐니 하는 이야기에 그다지 관심이 없습니다. 중요한 것은 이 Realm에 사는 키린들이 배곯지 않도록 하는 것 말고는 없으니까요. 경자유전의 원칙에 따라 각 농가에 스스로 최적생산량을 보장할 수 있을만큼의 토지를 분배하게 될 수만 있다면 더 이상 굶주리는 키린이 없게 될 것입니다.
  BAC_COC_eco_m2: "Todo"
@@ -148,7 +148,7 @@
  BAC_COC_mil_m2_desc: "TODO"
  BAC_COC_mil_c2: "Communalist"
  BAC_COC_mil_c2_desc: "TODO"
- BAC_COC_mil_h3: "Harmonist"
+ BAC_COC_mil_h3: "The Spearheads of Harmony"
  BAC_COC_mil_h3_desc: "TODO"
  BAC_COC_mil_m3h: "Favor Todo"
  BAC_COC_mil_m3h_desc: "TODO"
@@ -156,7 +156,7 @@
  BAC_COC_mil_m3c_desc: "TODO"
  BAC_COC_mil_c3: "Communalist"
  BAC_COC_mil_c3_desc: "TODO"
- BAC_COC_mil_h4: "Harmonist"
+ BAC_COC_mil_h4: "Fight For Her Radiance"
  BAC_COC_mil_h4_desc: "TODO"
  BAC_COC_mil_m4h: "Favor Todo"
  BAC_COC_mil_m4h_desc: "TODO"
@@ -172,8 +172,37 @@
  BAC_COC_mil_navalair: "Naval Air Corps"
  BAC_COC_mil_navalair_desc: "TODO"
 
- BAC_COC_pol_m4: "Todo"
+ BAC_COC_war_deer: "TODO"
+ BAC_COC_war_deer_desc: "TODO"
+ BAC_COC_convert_deer: "TODO"
+ BAC_COC_convert_deer_desc: "TODO"
+ BAC_COC_friend_deer: "TODO"
+ BAC_COC_friend_deer_desc: "TODO"
+
+ BAC_COC_war_babarian: "TODO"
+ BAC_COC_war_babarian_desc: "TODO"
+ BAC_COC_convert_babarian: "TODO"
+ BAC_COC_convert_babarian_desc: "TODO"
+ BAC_COC_friend_babarian: "TODO"
+ BAC_COC_friend_babarian_desc: "TODO"
+
+ BAC_COC_war_zaikiria: "TODO"
+ BAC_COC_war_zaikiria_desc: "TODO"
+ BAC_COC_convert_zaikiria: "TODO"
+ BAC_COC_convert_zaikiria_desc: "TODO"
+ BAC_COC_friend_zaikiria: "TODO"
+ BAC_COC_friend_zaikiria_desc: "TODO"
+
+ BAC_COC_war_tangpau: "TODO"
+ BAC_COC_war_tangpau_desc: "TODO"
+ BAC_COC_convert_tangpau: "TODO"
+ BAC_COC_convert_tangpau_desc: "TODO"
+ BAC_COC_friend_tangpau: "TODO"
+ BAC_COC_friend_tangpau_desc: "TODO"
+
+ BAC_COC_pol_m4: "Century For Commonalty"
  BAC_COC_pol_m4_desc: "TODO"
+ BAC_COC_pol_m4_trigger_tt: "Has concluded issues on §PZaikiria§!, §OTaungpau§!, §0Western Border§!, and §3Hindia§!"
 
 # events
  #debuggo
@@ -221,6 +250,10 @@
   baccocc.12.d: "" #NAKP의 패배와 함께 주요 구성원과 부역자들은 대부분 포로로 잡혔습니다. 물론 그 과정에서 '불운'하게도 목숨을 잃고 만 키린들도 있었지요. 어쨌든 당시 곧 민회가 될 지도부에서는 포로의 즉결처형을 금지하고 '공정한' 재판, 물론 비공식적인 표현으로는 '통쾌한' 재판을 열 것을 약속했습니다.\n\n헌법이 제정되고 하위법들이 제정됨에 따라 NAKP에 대한 형사재판도 치러지게 되었습니다. 물론 이 형사재판은 형사소송법에 규정된 절차에 따라 치러져야 마땅하겠으나, 사안의 특수성으로 인해 현행법뿐만 아니라 Way of Fire 율법과 그리포니아 대륙법에 의해서도 심리하게 되었습니다. #TODO: 카이롭테라 LMRD 전범재판 긴빠이치기
   baccocc.12.a: "Good riddance, after all."
 
+  baccocc.36.t: "The First Train From Verdant"
+  baccocc.36.d: "Kindling Flash watched with awe as the metal monster chugged into Sorghum. The newly-built Sorghum Grand Central Terminus was packed with kirin of all trots of life, jammed so close together that the regiment of bannerkirin brought on for security struggled to keep the crowd from pushing them onto the glistening steel tracks in the station. Nokirin wanted to miss the exciting event, and he couldn't deny that he found it all exciting as well. After all, there would only ever be one first train from Verdant to Sorghum, reestablishing the link between the Realm's capital and its traditional gateway along the coast. This moment, mundane as it normally otherwise would have been, meant something fantastic for so many kirin, and for the prosperity of the Realm itself.\n\nWhen the train finally rolled into the station, everykirin present let out a cheer and stomped their hooves for the engineers at the controls. As the engineers were escorted out of the engine and feted with garlands, food, and rice wine, Kindling Flash serenely smiled out over the crowd. "With the completion of the Sorghum-Verdant Line, our Commanalty is once again a part of the outside world," he announced, to much hooting and hollering. "This marvel is the first fruit of what I sincerely hope will be a bountiful harvest between our Commonalty. Hoof in hoof, I pray to Her Radiant Trinity in all of Her glory that our two nations will have many more partnerships of mutual friendship and cooperation such as this one."\n\nThen, to the surprise and awe of the crowd assembled, Kindling Flash stepped forward with his comrades and boarded the train as engineers get in the train engine. The train whistled as Kindling Flash waved out the window, and the crowd cheered." #the option is kirin.36.a
+
+
 
   baccocc.146.t: "[From.GetName] Invites Us To Their Faction"
   baccocc.146.d: "In an unexpected twist, [From.GetName] has invited us to join them. Shall we?"
@@ -238,8 +271,9 @@
   baccocc.149.d: "[From.GetName] have not only accepted our offer, but have also indicated that they are willing to give up some of their sovereignty, albeit with some demands and suggestions that accompany the counter-offer. Seemingly their positive opinion us or their precarious situation, had an effect. Our additive delegation has already departed and is headed there to negotiate detailed terms." #[From.GetName]은 우리의 제안을 받아들이는 것으로 모자라 자신들의 주권을 일부 포기할 뜻도 있음을 밝혔습니다. 물론 역제안에 수반하는 약간의 요구 및 제안이 추가되기는 했지만 말입니다. 아마 우리에 대한 강한 호감이나 저들의 불안정한 상황이 영향을 미친 것 같습니다. 이미 우리 대표단이 출발하여 상세한 조건을 협상하기 위해 그곳으로 향했습니다.
   baccocc.149.a: "Uh... Why, yes. Good thing."
 
-  baccocc.36.t: ""
-  baccocc.36.d: "Kindling Flash watched with awe as the metal monster chugged into Sorghum. The newly-built Sorghum Grand Central Terminus was packed with kirin of all trots of life, jammed so close together that the regiment of bannerkirin brought on for security struggled to keep the crowd from pushing them onto the glistening steel tracks in the station. Nokirin wanted to miss the exciting event, and he couldn't deny that he found it all exciting as well. After all, there would only ever be one first train from Verdant to Sorghum, reestablishing the link between the Realm's capital and its traditional gateway along the coast. This moment, mundane as it normally otherwise would have been, meant something fantastic for so many kirin, and for the prosperity of the Realm itself.\n\nWhen the train finally rolled into the station, everykirin present let out a cheer and stomped their hooves for the engineers at the controls. As the engineers were escorted out of the engine and feted with garlands, food, and rice wine, Kindling Flash serenely smiled out over the crowd. "With the completion of the Sorghum-Verdant Line, our Commanalty is once again a part of the outside world," he announced, to much hooting and hollering. "This marvel is the first fruit of what I sincerely hope will be a bountiful harvest between our Commonalty. Hoof in hoof, I pray to Her Radiant Trinity in all of Her glory that our two nations will have many more partnerships of mutual friendship and cooperation such as this one."\n\nThen, to the surprise and awe of the crowd assembled, Kindling Flash stepped forward with his entourage and boarded the train as engineers get in the train engine. The train whistled as Kindling Flash waved out the window, and the crowd cheered." #the option is kirin.36.a
+  baccocc.303.t: "Earthly Affairs"
+  baccocc.303.d: "In the train heading to Verdant, Sunny Clouds gazed out the window at the peaceful and prosperous landscape, true to its name, with somewhat sleepy eyes. She was a freshman at the Commonal Institute of Technology in Sorghum and was returning to her hometown for the weekend. Even after the train reached its destination, she had to take a small boat along the famous river for quite a while longer. But it was worth it, for the reunion with her waiting family and lover.\n\nMeanwhile, in the Common Senate building in Sorghum, Ember Glow was engrossed in the paperwork that plagued her. From the day's major committee meeting minutes to new bills introduced to the Senate, and endless special committee materials. It wasn't until her assistant interrupted her for the end of the workday that she remembered she had an important dinner engagement.\n\nIn a bustling restaurant that served both Hindian and Zaikirian cuisine, it was crowded with customers. A deer named Cherith Kattumaram was among them. He brought along his zebra and griffon colleagues, joking that he never imagined he could enjoy authentic Hindian food here.\n\nAt a lodging, Kindling Flash observed as Mahogany Blaze, Bright Burn, and Dayspring Rose exchanged opinions about the Radiant Trinity theology. Meanwhile Coral River teased Ember Glow with a smile for being late. The restrained Firethorn simply savored a sip of tea beside them. The old Banner patterns decorated on Firethorn’s military uniform hung on the wall sparkled under the light.\n\nOn a bright hillside in the outskirts, next to an unnamed grave, a kirin with a visibly unhappy expression lay beside the burial mound, endlessly staring at the setting sun. The grave was well-maintained. Despite facing the sunset, the old Banner pattern on his water bottle attached to his saddlebag did not sparkle at all."
+  baccocc.303.a: "Even after a long time since that day, no light had entered his heart. Waiting for someone who is in the underground never to return."
 
  #madkirin
   madkirin.1.t: "The Lecture"
@@ -364,5 +398,5 @@
   BAC_CountryClosing_epilogue_KIR_commonalty: "A new order sets as flames and explosions halt, brave new future lies ahead since the darkness has passed. After all those years of the §OSilence§!, the §7Gallop Onward§!, and the harsh ordeal of the §RSecond Cacophony§! - The §8Commonalty§! has won the new century for Kiria and Eastern Zebrica...\n\nWhat role will the §8Commonalty§! play in this stage been said brave new world? Will their ideals and revolution remain untainted until the very end? Will they face all the glories and trials that lie ahead and bring their ideals to the world?\n\nThe wild ride of the §8Commonalty§! will continue in the §8Commonalty§! expansion update 2.0§g(note that this version is 0.*)§! - After all, §Psincerely thanks for playing this path and submod!§!"
   BAC_CountryClosing_epilogue_KIR_generic: "$TNO_BAC_CountryClosing_epilogue_generic$"
   TNO_BAC_CountryClosing_credits_0: "§YProduction support§!\n\n§WSole Dev.\n§P_unicornia.§!§!"
-  TNO_BAC_CountryClosing_credits_1: "§YSpecial Thanks§!\n\n£eaw_text  §W§YEquestria at War§! Team and §OKirin developers§! for realization of this marvelous world, §1THE LAST EMPIRE§! and §1UKKRHEE§!(its head dev.) for giving permission to use his assets, §gKaiserreich§!, §LEight Years' War of Resistance§!, and §8The New Order§!.§!" 
+  TNO_BAC_CountryClosing_credits_1: "§YSpecial Thanks§!\n\n£eaw_text  §W§YEquestria at War§! Team and §OKirin developers§! for realization of this marvelous world, §1THE LAST EMPIRE§! and §1UKKRHEE§!(its head dev.) for giving permission to use his assets, §gKaiserreich§!, §LEight Years' War of Resistance§!, and §RThe New Order§!.§!" 
   TNO_BAC_CountryClosing_credits_2: "TEST"

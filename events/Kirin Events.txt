@@ -22341,7 +22341,7 @@ country_event = {
 					promote_leader = yes
 					country_leader = {
 						desc = "COC_kindling_flash_desc"
-						ideology = BAC_COC_com
+						ideology = BAC_COC_com # added from BAC
 						expire = "1965.1.1.1"
 						traits = { KIR_peasant_preacher }
 					}
@@ -22363,7 +22363,7 @@ country_event = {
 					promote_leader = yes
 					country_leader = {
 						desc = "COC_dayspring_rose_desc"
-						ideology = BAC_COC_dem  # added from BAC
+						ideology = BAC_COC_dem # added from BAC
 						expire = "1965.1.1.1"
 						traits = { KIR_tempered_flame }
 					}

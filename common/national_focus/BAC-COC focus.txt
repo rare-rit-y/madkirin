@@ -1283,8 +1283,9 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_true_commonalty"
 		add_to_variable = { coc_start_foci_completed = 1 }
-		custom_effect_tooltip = BAC_COC_true_commonalty_tt
 		news_event = { id = kirin_council.326 hours = 6 }
+		custom_effect_tooltip = KIR_line_break
+		custom_effect_tooltip = BAC_COC_true_commonalty_tt
 		mark_focus_tree_layout_dirty = yes
 	}
 	
@@ -1313,6 +1314,7 @@ shared_focus = { #교육위원회
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_head"
 		bac_COT_small_effect = yes
+		decrease_illiteracy = yes
 		KIR_dayspring_rose = {
 			unit_leader_event = { id = baccocc.7 hours = 3 random_hours = 33 } #Matter of Educational Model
 			add_trait = {
@@ -1320,8 +1322,6 @@ shared_focus = { #교육위원회
 				trait = BAC_prophet_of_the_common
 			}
 		}
-		effect_tooltip = { KIR_dayspring_rose = { add_trait = BAC_prophet_of_the_common } }
-		decrease_illiteracy = yes
 	}
 	
 }
@@ -1400,6 +1400,7 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_diplo"
+		EAW_raise_trade_law = yes
 		# if = {
 		# 	limit = {
 		# 		HIP = {
@@ -1438,7 +1439,7 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 			}
 		}
 		set_country_flag = bac_diplo_expanded
-		#unlock_decision_tooltip = my_decision
+		#TODO unlock_decision_tooltip = my_decision
 		custom_effect_tooltip = unlocks_bop_decision_tt
 	}
 	
@@ -1690,8 +1691,22 @@ shared_focus = { #Major Power of Eastern Zebrica
 	prerequisite = {
 		focus = BAC_COC_pol_m2
 	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = BAC_COC_pol_m4_trigger_tt
+			has_country_flag = commonalty_solved_deer
+			has_country_flag = commonalty_solved_barbarian
+			has_country_flag = commonalty_solved_zaikiria
+			has_country_flag = commonalty_solved_taungpau
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_m4"
+		country_event = {
+			id = baccocc.303
+			hours = 3
+			random_hours = 33
+		}
 	}
 }
 shared_focus = { #BAC_COC_eco_head 산업개발위원회 - 킨들링 플래시의 산업 오케스트라
@@ -1802,6 +1817,10 @@ shared_focus = {
 }
 shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
 	id = BAC_COC_eco_h2 #Equestrian Ties
+	icon = {
+		trigger = { has_global_flag = daybreaker_spawned }
+		value = GFX_goal_solar_corporate_council
+	}
 	icon = GFX_goal_PLB_eqs_ties
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -1820,10 +1839,14 @@ shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
 	}
 	available = {
 		if = {
-			limit = { EQS = { is_EQS_SOL = yes } }
-			fascism > 0.09
+			limit = { is_ai = no }
+			EQS = { has_opinion = { target = ROOT value > 33 } exists = yes is_subject = no has_war = no }
+			if = { #equestria.154
+				limit = { has_global_flag = daybreaker_spawned }
+				fascism > 0.09
+			}
 		}
-		EQS = { exists = yes is_subject = no has_war = no has_opinion = { target = ROOT value > 33 } }
+		else = { EQS = { exists = yes is_subject = no has_war = no } }
 	}
 	# bypass = {
 	# 	OR = {
@@ -1841,7 +1864,6 @@ shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h2"
 		bac_eqs_popularity = yes
-		EAW_raise_trade_law = yes
 		increase_society_development = yes
 		add_tech_bonus = {
 			name = industrial_bonus
@@ -1973,6 +1995,10 @@ shared_focus = {
 
 shared_focus = { #BAC_COC_eco_h3 #The Lodge
 	id = BAC_COC_eco_h3 #The Lodge
+	icon = {
+		trigger = { has_global_flag = daybreaker_spawned }
+		value = GFX_goal_CES_daybreaker
+	}
 	icon = GFX_goal_ces_approach_baltimare #GFX_goal_UESR_TNO_sun_moon
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -1987,7 +2013,7 @@ shared_focus = { #BAC_COC_eco_h3 #The Lodge
 	}
 	available = {
 		if = {
-			limit = { EQS = { is_EQS_SOL = yes } }
+			limit = { has_global_flag = daybreaker_spawned }
 			fascism > 0.09
 		}
 		if = {
@@ -2052,10 +2078,10 @@ shared_focus = { #BAC_COC_eco_h3 #The Lodge
 shared_focus = {
 	id = BAC_COC_eco_h4
 	icon = {
-		trigger = { EQS = { is_EQS_SOL = no } }
-		value = GFX_goal_generic_equestria
+		trigger = { has_global_flag = daybreaker_spawned }
+		value = GFX_goal_solar_defence_of_the_empire
 	}
-	icon = GFX_goal_solar_defence_of_the_empire
+	icon = GFX_goal_generic_equestria
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
@@ -2069,7 +2095,7 @@ shared_focus = {
 	}
 	available = {
 		if = {
-			limit = { EQS = { is_EQS_SOL = yes } }
+			limit = { has_global_flag = daybreaker_spawned }
 			fascism > 0.33
 		}
 		EQS = { exists = yes is_subject = no has_war = no has_opinion = { target = ROOT value > 33 } }
@@ -2433,17 +2459,16 @@ shared_focus = { #해군항공대
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_navalair"
-		set_country_flag = KIC_aerospace_engineer_available
 	}
 	
 }
 shared_focus = { #
 	id = BAC_COC_mil_h3
 	icon = {
-		trigger = { EQS = { is_EQS_SOL = no } }
-		value = GFX_goal_Equestrian_Royal_Navy_1
+		trigger = { has_global_flag = daybreaker_spawned }
+		value = GFX_goal_SOL_batnation
 	}
-	icon = GFX_goal_SOL_batnation
+	icon = GFX_goal_Equestrian_Royal_Navy_1
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -2529,10 +2554,10 @@ shared_focus = { #BAC_COC_mil_c3 대포를 빵 쐈습니다
 shared_focus = { #BAC_COC_mil_h4
 	id = BAC_COC_mil_h4
 	icon = {
-		trigger = { EQS = { is_EQS_SOL = no } }
-		value = GFX_goal_Equestrian_Royal_Navy_1
+		trigger = { has_global_flag = daybreaker_spawned }
+		value = GFX_goal_solar_empress_knows_best
 	}
-	icon = GFX_goal_solar_empress_knows_best
+	icon = GFX_goal_ces_our_cause
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -2651,7 +2676,7 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = BAC_COC_war_kirin #우월주의 아닌 기린 국가들한테는 이벤트로 괴뢰화하기
+	id = BAC_COC_war_zaikiria #우월주의 아닌 기린 국가들한테는 이벤트로 괴뢰화하기
 	icon = GFX_goal_chn_kirin
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -2683,7 +2708,7 @@ shared_focus = {
 		}
 	}	
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_kirin"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_zaikiria"
 	}
 	
 }
@@ -2891,48 +2916,56 @@ shared_focus = {
 }
 
 shared_focus = {
-	id = BAC_COC_core_zaikiria
-	icon = GFX_goal_KIR_foals_breath
+	id = BAC_COC_friend_zaikiria
+	icon = GFX_goal_KIR_KXN_banner
 	cost = 4.8
 	ai_will_do = { factor = 80 }
-	relative_position_id = BAC_COC_war_kirin
+	relative_position_id = BAC_COC_war_zaikiria
 	x = 1
 	y = 1
 	allow_branch = {
 		has_country_flag = COC_war_committee
 	}
+	mutually_exclusive = {
+		focus = BAC_COC_convert_zaikiria
+	}
 	prerequisite = {
-		focus = BAC_COC_war_kirin
+		focus = BAC_COC_war_zaikiria
 		focus = BAC_COC_m1
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_core_zaikiria"
+		set_country_flag = commonalty_solved_zaikiria
 	}
 	
 }
 
 shared_focus = {
-	id = BAC_COC_puppet_zaikiria
-	icon = GFX_goal_KIR_KXN_banner
+	id = BAC_COC_convert_zaikiria
+	icon = GFX_goal_KIR_foals_breath
 	cost = 4.8
 	ai_will_do = { factor = 80 }
-	relative_position_id = BAC_COC_war_kirin
+	relative_position_id = BAC_COC_war_zaikiria
 	x = -1
 	y = 1
 	allow_branch = {
 		has_country_flag = COC_war_committee
 	}
+	mutually_exclusive = {
+		focus = BAC_COC_friend_zaikiria
+	}
 	prerequisite = {
-		focus = BAC_COC_war_kirin
+		focus = BAC_COC_war_zaikiria
 		focus = BAC_COC_m1
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_puppet_zaikiria"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_zaikiria"
+		set_country_flag = commonalty_solved_zaikiria
 	}
 	
 }
 shared_focus = {
-	id = BAC_COC_core_taungpau
+	id = BAC_COC_friend_taungpau
 	icon = GFX_goal_KIR_creature_friend
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -2942,19 +2975,23 @@ shared_focus = {
 	allow_branch = {
 		has_country_flag = COC_war_committee
 	}
+	mutually_exclusive = {
+		focus = BAC_COC_convert_taungpau
+	}
 	prerequisite = {
 		focus = BAC_COC_war_taungpau
 		focus = BAC_COC_m1
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_core_taungpau"
+		set_country_flag = commonalty_solved_taungpau
 	}
 	
 }
 
 shared_focus = {
-	id = BAC_COC_puppet_taungpau
-	icon = GFX_goal_WNG_COM_const
+	id = BAC_COC_convert_taungpau
+	icon = GFX_goal_solar_strong_government
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_war_taungpau
@@ -2963,17 +3000,21 @@ shared_focus = {
 	allow_branch = {
 		has_country_flag = COC_war_committee
 	}
+	mutually_exclusive = {
+		focus = BAC_COC_friend_taungpau
+	}
 	prerequisite = {
 		focus = BAC_COC_war_taungpau
 		focus = BAC_COC_m1
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_puppet_taungpau"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_taungpau"
+		set_country_flag = commonalty_solved_taungpau
 	}
 	
 }
 shared_focus = {
-	id = BAC_COC_annex_barbarian
+	id = BAC_COC_friend_barbarian
 	icon = GFX_goal_KIR_zebra #GFX_goal_UESR_TNO_justice #GFX_goal_AF24_through_the_clearings
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -2983,19 +3024,23 @@ shared_focus = {
 	allow_branch = {
 		has_country_flag = COC_war_committee
 	}
+	mutually_exclusive = {
+		focus = BAC_COC_convert_barbarian
+	}
 	prerequisite = {
 		focus = BAC_COC_war_barbarian
 		focus = BAC_COC_m1
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_annex_barbarian"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_barbarian"
+		set_country_flag = commonalty_solved_barbarian
 	}
 	
 }
 
 shared_focus = {
-	id = BAC_COC_puppet_barbarian
-	icon = GFX_PAP_roman_senate
+	id = BAC_COC_convert_barbarian
+	icon = GFX_goal_solar_cult
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_war_barbarian
@@ -3004,17 +3049,21 @@ shared_focus = {
 	allow_branch = {
 		has_country_flag = COC_war_committee
 	}
+	mutually_exclusive = {
+		focus = BAC_COC_friend_barbarian
+	}
 	prerequisite = {
 		focus = BAC_COC_war_barbarian
 		focus = BAC_COC_m1
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_puppet_barbarian"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_barbarian"
+		set_country_flag = commonalty_solved_barbarian
 	}
 	
 }
 shared_focus = {
-	id = BAC_COC_annex_deer
+	id = BAC_COC_friend_deer
 	icon = GFX_goal_KIR_deer
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -3024,18 +3073,22 @@ shared_focus = {
 	allow_branch = {
 		has_country_flag = COC_war_committee
 	}
+	mutually_exclusive = {
+		focus = BAC_COC_convert_deer
+	}
 	prerequisite = {
 		focus = BAC_COC_war_deer
 		focus = BAC_COC_m1
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_annex_deer"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_deer"
+		set_country_flag = commonalty_solved_deer
 	}
 	
 }
 
 shared_focus = {
-	id = BAC_COC_puppet_deer
+	id = BAC_COC_convert_deer
 	icon = GFX_goal_CTL_A_deerm
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -3045,12 +3098,16 @@ shared_focus = {
 	allow_branch = {
 		has_country_flag = COC_war_committee
 	}
+	mutually_exclusive = {
+		focus = BAC_COC_friend_deer
+	}
 	prerequisite = {
 		focus = BAC_COC_war_deer
 		focus = BAC_COC_m1
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_puppet_deer"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_deer"
+		set_country_flag = commonalty_solved_deer
 	}
 	
 }
