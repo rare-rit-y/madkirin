@@ -67,3 +67,17 @@ music = {
   }
 }
 
+music = {
+	song = "Redspark-The_Way_Of_Fire_BAC"
+	chance = {
+		factor = 2
+		modifier = {
+			factor = 2
+			is_kirin_race = yes
+		}
+		modifier = {
+			factor = 0
+			has_war = yes
+		}
+	}
+}

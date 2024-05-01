@@ -102,7 +102,7 @@ economy_decisions = {
 	}
 }
 political_actions = {
-	military_aid_to_civil = {
+	BAC_military_aid_to_civil = {
 
 		icon = generic_industry
 

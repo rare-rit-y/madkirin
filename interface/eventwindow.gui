@@ -68,11 +68,11 @@ guiTypes = {
 	   
 		   instantTextBoxType = {
 			   name = "Description"
-			   position = { x = 52 y = -60 }
+			   position = { x = 45 y = -60 } 
 			   font = "aldrich_18_outline_b"
 			   borderSize = {x = 0 y = 0}
 			   text = "Long text here!"	
-			   maxWidth = 480
+			   maxWidth = 497
 			   maxHeight = 230
 			   format = left
 		   }
@@ -118,7 +118,7 @@ guiTypes = {
 			   name = "options_grid"
 			   position = { x = 223 y = -57 }
 			   size = { width = 300 height = 30 }
-			   slotsize = { width = 300 height = 51 }
+			   slotsize = { width = 300 height = 76 }
 			   max_slots_horizontal = 1
 			   Orientation = "UPPER_LEFT"
 			   #format = "UPPER_LEFT"
@@ -412,11 +412,11 @@ guiTypes = {
 	   
 		   instantTextBoxType = {
 			   name = "Description"
-			   position = { x = 46 y = -20 } 
+			   position = { x = 45 y = -20 } 
 			   font = "aldrich_18_outline_b"
 			   borderSize = {x = 0 y = 0}
 			   text = "Long text here!"	
-			   maxWidth = 495
+			   maxWidth = 497
 			   maxHeight = 230
 			   format = left
 		   }	

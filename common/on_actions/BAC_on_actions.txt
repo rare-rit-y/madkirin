@@ -1,0 +1,48 @@
+
+on_actions = {
+
+	#### MIO on actions
+	# ROOT is MIO
+	on_mio_size_increased = {
+		effect = {
+			if = {
+				limit = {
+					FROM = {
+						original_tag = KIC
+						has_country_flag = KIC_children_of_concord_flag
+					}
+				}
+				if = {
+					limit = {
+						# OR = {
+						# 	has_mio_trait = generic_mio_initial_trait_battle_line_ship_builders #DM_maritime
+						# 	has_mio_trait = generic_mio_initial_trait_cas_aircraft_designer #DM_aerospace
+						# }
+						has_mio_flag = cocc_cot_mio_flag
+					}
+					bac_COT_small_effect = yes
+				}
+				else_if = {
+					limit = {
+						# OR = {
+						# 	has_mio_trait = generic_mio_initial_trait_escort_fleet #deer_comrade
+						# 	has_mio_trait = generic_mio_initial_trait_multi_role_aircraft_designer #KIC_aerospace
+						# }
+						has_mio_flag = cocc_wpu_mio_flag
+					}
+					bac_WPU_small_effect = yes
+				}
+			}
+		}
+	}
+	# NB : all the following also exist at MIO level
+	# use on-action here if the purpose is to execute for any MIO
+	# use on-action at MIO level to execute just for one precise MIO
+	# i.e. don't use this here : if = { limit = { is_military_industrial_organisation = ... } } }
+	# on_mio_design_team_assigned_to_tech = {}
+	# on_mio_design_team_assigned_to_variant = {}
+	# on_mio_industrial_manufacturer_assigned = {}
+	# on_mio_tech_research_cancelled = {}
+	# on_mio_tech_research_completed = {}
+	# on_mio_industrial_manufacturer_unassigned = {}
+}

@@ -1002,7 +1002,7 @@ shared_focus = { #BAC_COC_m1 - Prepare The Foundation
 	}
 	available = {
 		hidden_trigger = {
-			NOT = { has_country_flag = your_focus_fucked_up }
+			NOT = { has_country_flag = your_focus_fucked_up_bac_flag }
 		}
 	}
 	completion_reward = {
@@ -1010,6 +1010,14 @@ shared_focus = { #BAC_COC_m1 - Prepare The Foundation
 		#add_to_variable = { coc_start_foci_completed = 1 }
 		#mark_focus_tree_layout_dirty = yes
 		#add_to_variable = { coc_t_foci_completed = 1 }
+		if = {
+			limit = {
+				has_completed_focus = BAC_COC_m1
+				check_variable = { coc_start_foci_completed = 0 }
+			}
+			custom_effect_tooltip = bac_cheater_tt
+		}
+		else = { effect_tooltip = { country_event = baccocc.1 } }
 	}
 	available_if_capitulated = no
 }
@@ -1283,10 +1291,15 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_true_commonalty"
 		add_to_variable = { coc_start_foci_completed = 1 }
-		news_event = { id = kirin_council.326 hours = 6 }
 		custom_effect_tooltip = KIR_line_break
 		custom_effect_tooltip = BAC_COC_true_commonalty_tt
 		mark_focus_tree_layout_dirty = yes
+		every_country = {
+			limit = {
+				is_kiria_country = yes
+			}
+			news_event = { id = kirin_council.326 hours = 3 } #bac
+		}
 	}
 	
 	
@@ -1316,7 +1329,7 @@ shared_focus = { #교육위원회
 		bac_COT_small_effect = yes
 		decrease_illiteracy = yes
 		KIR_dayspring_rose = {
-			unit_leader_event = { id = baccocc.7 hours = 3 random_hours = 33 } #Matter of Educational Model
+			unit_leader_event = { id = baccocc.10 hours = 3 random_hours = 33 } #Matter of Educational Model
 			add_trait = {
 				slot = political_advisor
 				trait = BAC_prophet_of_the_common
@@ -2013,10 +2026,6 @@ shared_focus = { #BAC_COC_eco_h3 #The Lodge
 	}
 	available = {
 		if = {
-			limit = { has_global_flag = daybreaker_spawned }
-			fascism > 0.09
-		}
-		if = {
 			limit = {
 				has_global_flag = equestrian_civil_war
 				CES = {
@@ -2024,15 +2033,26 @@ shared_focus = { #BAC_COC_eco_h3 #The Lodge
 					is_subject = no
 				}
 			}
-			CES = {
-				exists = yes
-				is_subject = no
-				has_war = no
-				has_opinion = { target = ROOT value > 33 }
+			if = {
+				limit = { is_ai = no }
+				CES = { has_opinion = { target = ROOT value > 33 } exists = yes is_subject = no has_war = no }
+				if = { #equestria.154
+					limit = { has_global_flag = daybreaker_spawned }
+					fascism > 0.09
+				}
 			}
+			else = { CES = { exists = yes is_subject = no has_war = no } }
 		}
 		else = {
-			EQS = { exists = yes is_subject = no has_war = no has_opinion = { target = ROOT value > 33 } }
+			if = {
+				limit = { is_ai = no }
+				EQS = { has_opinion = { target = ROOT value > 33 } exists = yes is_subject = no has_war = no }
+				if = { #equestria.154
+					limit = { has_global_flag = daybreaker_spawned }
+					fascism > 0.09
+				}
+			}
+			else = { EQS = { exists = yes is_subject = no has_war = no } }
 		}
 	}
 	completion_reward = {
@@ -2207,7 +2227,7 @@ shared_focus = { #shdzz
 	
 }
 
-shared_focus = { #군무위원회
+shared_focus = { #BAC_COC_mil_head
 	id = BAC_COC_mil_head
     icon = {
         trigger = { has_completed_focus = BAC_COC_mil_head }
@@ -2227,17 +2247,28 @@ shared_focus = { #군무위원회
 		check_variable = { coc_start_foci_completed > 9 }
 	}
 	select_effect = {
-		KIR_firethorn = {
-			unit_leader_event = {
-				id = baccocc.5
-				days = 3
-				hours = 33
-				random_hours = 33
+		hidden_effect = {
+			KIR_firethorn = {
+				unit_leader_event = {
+					id = baccocc.12
+					#days = 21
+					#random_hours = 33
+				}
 			}
 		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_head"
+		if = {
+			limit = { has_completed_focus = BAC_COC_mil_head }
+			KIR_firethorn = {
+				unit_leader_event = {
+					id = baccocc.12
+					days = 21
+					random_hours = 33
+				}
+			}
+		}
 		
 	}
 	
@@ -2374,13 +2405,19 @@ shared_focus = { #Flying Commonkirin #날으는 기린
 			mio:KIR_DM_aerospace_engineering_organization = {
 				add_mio_size = 1
 				add_mio_funds = 333
+				set_mio_flag = cocc_cot_mio_flag
 			}
+			custom_effect_tooltip = BAC_cocc_mio_size_up_prefix
+			custom_effect_tooltip = BAC_cocc_mio_size_up_cot
 			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = KIC_aerospace_engineer_organization
 			mio:KIC_aerospace_engineer_organization = {
 				add_mio_size = 1
 				add_mio_funds = 333
+				set_mio_flag = cocc_wpu_mio_flag
 			}
+			custom_effect_tooltip = BAC_cocc_mio_size_up_prefix
+			custom_effect_tooltip = BAC_cocc_mio_size_up_wpu
 		}
 		else = {
 			custom_effect_tooltip = available_designer
@@ -2411,9 +2448,20 @@ shared_focus = { # Beyond The Riverine Navy 강상군을 넘어서 (해군 건�
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_navy"
-		#TODO Kill the fucking pirates(if it exists)
+		#TODO Kill the fucking pirates(if it exists, give you decision)
+		every_possible_country = {
+			limit = { has_character = KIC_navy_chief_1 }
+			#hidden_effect = {
+				KIC_navy_chief_1 = {
+					set_nationality = ROOT
+				}
+			#}
+			custom_effect_tooltip = available_chief_of_navy_tt
+			show_ideas_tooltip = KIC_navy_chief_1
+		}
 		set_country_flag = KIR_DM_maritime_systems_available
 		set_country_flag = KIC_deer_comrade_available
+		custom_effect_tooltip = KIR_line_break
 		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
@@ -2423,13 +2471,19 @@ shared_focus = { # Beyond The Riverine Navy 강상군을 넘어서 (해군 건�
 			mio:KIR_DM_maritime_systems_organization = {
 				add_mio_size = 1
 				add_mio_funds = 333
+				set_mio_flag = cocc_cot_mio_flag
 			}
+			custom_effect_tooltip = BAC_cocc_mio_size_up_prefix
+			custom_effect_tooltip = BAC_cocc_mio_size_up_cot
 			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = KIC_deer_comrade_organization
 			mio:KIC_deer_comrade_organization = {
 				add_mio_size = 1
 				add_mio_funds = 333
+				set_mio_flag = cocc_wpu_mio_flag
 			}
+			custom_effect_tooltip = BAC_cocc_mio_size_up_prefix
+			custom_effect_tooltip = BAC_cocc_mio_size_up_wpu
 		}
 		else = {
 			custom_effect_tooltip = available_designer
@@ -2659,7 +2713,7 @@ shared_focus = { #결사항전
 
 shared_focus = {
 	id = BAC_COC_sekrit_war_committee
-	icon = GFX_goal_Equestrian_Royal_Army_1
+	icon = GFX_goal_bac_ember_glow
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_m1

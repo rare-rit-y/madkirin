@@ -1,15 +1,15 @@
 spriteTypes = {
 
 	SpriteType = {
-		name = "GFX_goal_placeholder"
-		texturefile = "gfx/interface/goals/goal_placeholder.DDS"
+		name = "GFX_goal_bac_ember_glow"
+		texturefile = "gfx/interface/goals/goal_bac_ember_glow.DDS"
 	}
 	SpriteType = {
-		name = "GFX_goal_placeholder_shine"
-		texturefile = "gfx/interface/goals/goal_placeholder.DDS"
+		name = "GFX_goal_bac_ember_glow_shine"
+		texturefile = "gfx/interface/goals/goal_bac_ember_glow.DDS"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_placeholder.DDS"
+			animationmaskfile = "gfx/interface/goals/goal_bac_ember_glow.DDS"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -22,49 +22,6 @@ spriteTypes = {
 		}
 	}
 
-	SpriteType = {
-		name = "GFX_goal_placeholder_vertical"
-		texturefile = "gfx/interface/goals/goal_placeholder_vertical.DDS"
-	}
-	SpriteType = {
-		name = "GFX_goal_placeholder_vertical_shine"
-		texturefile = "gfx/interface/goals/goal_placeholder_vertical.DDS"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_placeholder_vertical.DDS"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
-			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-	}
-
-	SpriteType = {
-		name = "GFX_goal_placeholder_inverted"
-		texturefile = "gfx/interface/goals/goal_placeholder_inverted.DDS"
-	}
-	SpriteType = {
-		name = "GFX_goal_placeholder_inverted_shine"
-		texturefile = "gfx/interface/goals/goal_placeholder_inverted.DDS"
-		effectFile = "gfx/FX/buttonstate.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_placeholder_inverted.DDS"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
-			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = no			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 }
-		}
-	}
 	SpriteType = {
 		name = "GFX_goal_bac_kindling"
 		texturefile = "gfx/interface/goals/goal_bac_kindling.DDS"

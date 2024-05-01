@@ -17,6 +17,18 @@
 			localization_key = KIC_rising_sun_u
 		}
 	}
+	defined_text = { # Country
+		name = GET_firethornsuffix
+		text = {
+			trigger = {
+				has_country_flag = KIC_children_of_concord_flag
+			}
+			localization_key = BAC_COC_firethorn_desc_suffix
+		}
+		text = {
+			localization_key = KIR_firethorn_desc_suffix
+		}
+	}
 	
 
 #################

@@ -11967,13 +11967,32 @@ country_event = {
 									fixed_ship_engine_slot = sub_ship_engine_1
 									rear_1_custom_slot = empty
 								}
+								allow_without_tech = yes
 							}
 							load_oob = "KIS_submarine"
 						}
 					}
 					else = {
 						hidden_effect = {
+							create_equipment_variant = {
+								name = "O Type"
+								type = submarine_1
+								parent_version = 0
+								modules = {
+									fixed_ship_torpedo_slot = ship_torpedo_sub_1
+									fixed_ship_engine_slot = sub_ship_engine_1
+									rear_1_custom_slot = empty
+								}
+								upgrades = {
+									ship_reliability_upgrade = 0
+									sub_torpedo_upgrade = 0
+									sub_stealth_upgrade = 0
+									sub_engine_upgrade = 0
+								}
+								allow_without_tech = yes
+							}
 							load_oob = "KIS_submarine_legacy"
+							set_country_flag = KIS_event_48_no_mtg_flag
 						}
 					}
 					add_fuel = 1500
@@ -16922,13 +16941,32 @@ country_event = {
 						fixed_ship_engine_slot = sub_ship_engine_1
 						rear_1_custom_slot = empty
 					}
-				}
-				load_oob = "KIS_submarine"
-			}
-		}
-		else = {
-			hidden_effect = {
-				load_oob = "KIS_submarine_legacy"
+								allow_without_tech = yes
+							}
+							load_oob = "KIS_submarine"
+						}
+					}
+					else = {
+						hidden_effect = {
+							create_equipment_variant = {
+								name = "O Type"
+								type = submarine_1
+								parent_version = 0
+								modules = {
+									fixed_ship_torpedo_slot = ship_torpedo_sub_1
+									fixed_ship_engine_slot = sub_ship_engine_1
+									rear_1_custom_slot = empty
+								}
+								upgrades = {
+									ship_reliability_upgrade = 0
+									sub_torpedo_upgrade = 0
+									sub_stealth_upgrade = 0
+									sub_engine_upgrade = 0
+								}
+								allow_without_tech = yes
+							}
+							load_oob = "KIS_submarine_legacy"
+							set_country_flag = KIS_event_48_no_mtg_flag
 			}
 		}
 		add_fuel = 1500
@@ -19249,13 +19287,32 @@ country_event = {
 									fixed_ship_engine_slot = sub_ship_engine_1
 									rear_1_custom_slot = empty
 								}
+allow_without_tech = yes
 							}
 							load_oob = "KIS_submarine"
 						}
 					}
 					else = {
 						hidden_effect = {
+							create_equipment_variant = {
+								name = "O Type"
+								type = submarine_1
+								parent_version = 0
+								modules = {
+									fixed_ship_torpedo_slot = ship_torpedo_sub_1
+									fixed_ship_engine_slot = sub_ship_engine_1
+									rear_1_custom_slot = empty
+								}
+								upgrades = {
+									ship_reliability_upgrade = 0
+									sub_torpedo_upgrade = 0
+									sub_stealth_upgrade = 0
+									sub_engine_upgrade = 0
+								}
+								allow_without_tech = yes
+							}
 							load_oob = "KIS_submarine_legacy"
+							set_country_flag = KIS_event_48_no_mtg_flag
 						}
 					}
 					add_fuel = 1500
@@ -22486,12 +22543,7 @@ country_event = {
 					}
 					KIR_firethorn = {
 						remove_unit_leader_trait = old_guard
-						add_unit_leader_trait = organisational_leader
-						# set_portraits = { #this would be in her event for national defense commission
-						# 	army = {
-						# 		large = "GFX_portrait_KIR_firethorn_new_uniform"
-						# 	}
-						# }
+						set_leader_description = BAC_COC_firethorn_desc
 						set_nationality = PREV.PREV
 					}
 				}
@@ -23336,14 +23388,15 @@ country_event = {
 		add_political_power = 150
 		add_stability = 0.1
 		add_war_support = 0.1
-		every_country = {
-			limit = {
-				is_kiria_country = yes
-			}
+		#every_country = {
+			#limit = {
+				#is_kiria_country = yes
+			#}
 			#news_event = { id = kirin_council.326 hours = 36 } #bac
-		}
+		#}
 		set_country_flag = to_the_commonalty
-		custom_effect_tooltip = bac_kic324a_tt
+		mark_focus_tree_layout_dirty = yes
+		custom_effect_tooltip = BAC_KIS_event_324_tt
 		custom_effect_tooltip = get_commonalty_tree_tt #bac end
 	}
 }
@@ -23385,15 +23438,6 @@ country_event = {
 news_event = {
 	id = kirin_council.326
 	immediate = {log = "[GetDateText]: [Root.GetName]: event kirin_council.326"}
-	immediate = {
-		hidden_effect = {
-			KIC = {
-				COC_common_senate = {
-					set_nationality = PREV.PREV
-				}
-			}
-		}
-	}
 	title = kirin_council.326.t
 	desc = kirin_council.326.d
 	picture = GFX_news_event_palace_supreme_harmony
@@ -23411,21 +23455,20 @@ news_event = {
 			# add_ideas = no_lack_of_scientists
 			# add_ideas = modern_society
 			custom_effect_tooltip = KIR_line_break
-			effect_tooltip = {
-				KIC = {
-					COC_common_senate = {
-						set_nationality = PREV.PREV
+			every_possible_country = {
+				limit = { has_character = COC_common_senate }
+				COC_common_senate = {
+					set_nationality = PREV.PREV
+					add_country_leader_role = {
+						character = "COC_common_senate"
+						promote_leader = yes
+						country_leader = {
+							desc = "BAC_COC_common_senate_desc" #bac
+							ideology = democratic_socialism
+							expire = "1965.1.1.1"
+							traits = { BAC_road_to_direct_democracy } #bac
+						}
 					}
-				}
-			}
-			add_country_leader_role = {
-				character = "COC_common_senate"
-				promote_leader = yes
-				country_leader = {
-					desc = "BAC_COC_common_senate_desc" #bac
-					ideology = democratic_socialism
-					expire = "1965.1.1.1"
-					traits = { BAC_road_to_direct_democracy } #bac
 				}
 			}
 			set_cosmetic_tag = COC_commonalty
@@ -23441,13 +23484,6 @@ news_event = {
 news_event = {
 	id = kirin_council.327
 	immediate = {log = "[GetDateText]: [Root.GetName]: event kirin_council.327"}
-	immediate = {
-		hidden_effect = {
-			KIR = { KIR_mahogany = {
-				set_nationality = PREV.PREV
-			} }
-		}
-	}
 	title = kirin_council.327.t
 	desc = kirin_council.327.d
 	picture = GFX_news_event_palace_supreme_harmony
@@ -23465,19 +23501,19 @@ news_event = {
 			add_ideas = no_lack_of_scientists
 			add_ideas = modern_society
 			custom_effect_tooltip = KIR_line_break
-			effect_tooltip = {
-				KIR = { KIR_mahogany = {
+			KIR = {
+				KIR_mahogany = {
 					set_nationality = PREV.PREV
-				} }
-			}
-			add_country_leader_role = {
-				character = "KIR_mahogany"
-				promote_leader = yes
-				country_leader = {
-					desc = "KIR_COC_mahogany_tranquil_light_desc"
-					ideology = socialist_monarchism
-					expire = "1965.1.1.1"
-					traits = { KIR_king_of_kirin }
+				}
+				add_country_leader_role = {
+					character = "KIR_mahogany"
+					promote_leader = yes
+					country_leader = {
+						desc = "KIR_COC_mahogany_tranquil_light_desc"
+						ideology = socialist_monarchism
+						expire = "1965.1.1.1"
+						traits = { KIR_king_of_kirin }
+					}
 				}
 			}
 			set_country_leader_portrait = {
@@ -25129,7 +25165,7 @@ country_event = {
 		add_to_variable = { KIC_democratic_var = 1 }
 		add_political_power = -75
 		add_tech_bonus = {
-			name = KIC_science_serves_the_state_idea
+			name = KIR_republic_postwar_focus_11d
 			bonus = 2.0
 			uses = 2
 			category = industry
@@ -29330,9 +29366,18 @@ country_event = {
 	option = {
 		name = kirin_republic.204.a
 		add_political_power = 25
+		set_country_flag = KIC_deer_comrade_available
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = KIC_deer_comrade_organization
+		}
+		else = {
 		custom_effect_tooltip = available_designer_individual
 		show_ideas_tooltip = KIC_deer_comrade
-		set_country_flag = KIC_deer_comrade_available
+		}
 	}
 }
 
@@ -32153,13 +32198,32 @@ country_event = { ## This is all buggy shit which no longer works and is not use
 							fixed_ship_engine_slot = sub_ship_engine_1
 							rear_1_custom_slot = empty
 						}
+						allow_without_tech = yes
 					}
 					load_oob = "KIS_submarine"
 				}
 			}
 			else = {
 				hidden_effect = {
+					create_equipment_variant = {
+						name = "O Type"
+						type = submarine_1
+						parent_version = 0
+						modules = {
+							fixed_ship_torpedo_slot = ship_torpedo_sub_1
+							fixed_ship_engine_slot = sub_ship_engine_1
+							rear_1_custom_slot = empty
+						}
+						upgrades = {
+							ship_reliability_upgrade = 0
+							sub_torpedo_upgrade = 0
+							sub_stealth_upgrade = 0
+							sub_engine_upgrade = 0
+						}
+						allow_without_tech = yes
+					}
 					load_oob = "KIS_submarine_legacy"
+					set_country_flag = KIS_event_48_no_mtg_flag
 				}
 			}
 			add_fuel = 1500
