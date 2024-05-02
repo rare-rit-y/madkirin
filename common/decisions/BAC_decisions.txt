@@ -13,6 +13,16 @@ bac_coc_debug_cat = {
 		complete_effect = {
 			set_variable = { coc_start_foci_completed = 10 }
             mark_focus_tree_layout_dirty = yes
+			
+			every_possible_country = {
+				limit = {
+					has_character = KIC_rising_sun_u
+				}
+				KIC_rising_sun_u = { # Rising Sun technical university
+					set_character_name = bac_CIT
+					set_nationality = PREV.PREV
+				}
+			}
 		}
     
     }
@@ -264,7 +274,7 @@ commonalty_bop_category = {
         }
         available = {
         }
-        days_remove = 3
+        days_remove = 33
 		modifier = {
             power_balance_weekly = -0.033
 		}

@@ -5,6 +5,7 @@ on_actions = {
 	# ROOT is MIO
 	on_mio_size_increased = {
 		effect = {
+			log = "[GetDateText]: ROOT: [Root.GetName] FROM: [From.GetName] on_mio_size_increased"
 			if = {
 				limit = {
 					FROM = {
@@ -20,7 +21,7 @@ on_actions = {
 						# }
 						has_mio_flag = cocc_cot_mio_flag
 					}
-					bac_COT_small_effect = yes
+					FROM = { bac_COT_small_effect = yes }
 				}
 				else_if = {
 					limit = {
@@ -30,7 +31,7 @@ on_actions = {
 						# }
 						has_mio_flag = cocc_wpu_mio_flag
 					}
-					bac_WPU_small_effect = yes
+					FROM = { bac_WPU_small_effect = yes }
 				}
 			}
 		}

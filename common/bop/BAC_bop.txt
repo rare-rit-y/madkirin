@@ -6,8 +6,8 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 
 	range = {
 		id = commonalty_balanced
-		min = -0.09
-		max = 0.09
+		min = -0.099
+		max = 0.099
 		modifier = {
 			political_power_factor = 0.07
 			command_power_gain = 0.07
@@ -17,7 +17,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 	
 	side = { #left: §RWorker-Peasant Union§! - §RCommunalists§!
 		id = commonalty_communal_control
-		icon = GFX_goal_KIR_companion
+		icon = GFX_goal_HEL_anar_death
         range = {
 			id = commonalty_communal_control_strong
 			min = -1
@@ -28,6 +28,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 				defensive_war_stability_factor = 0.333
 				army_core_defence_factor = 0.33
 				army_core_attack_factor = 0.33
+				stability_weekly = -0.003
 			}
 			on_activate = {
 			}
@@ -51,7 +52,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 		range = {
 			id = commonalty_communal_control_low
 			min = -0.33
-			max = -0.09
+			max = -0.099
 			modifier = {
 				political_power_factor = -0.03
 				stability_factor = -0.033
@@ -66,16 +67,17 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 
 	side = { # right: §FCommunion of Trinity§! - §7Harmonists§!
 		id = commonalty_harmonic_control
-		icon = GFX_goal_KIR_COC_trinity
+		icon = GFX_goal_solar_intelligence
 		range = {
 			id = commonalty_harmonic_control_strong
 			min = 0.66
 			max = 1
 			modifier = {
-				war_support_factor = 0.099
+				war_support_factor = 0.333
 				stability_factor = 0.099
 				research_speed_factor = -0.09
 				political_power_factor = -0.09
+				stability_weekly = -0.003
 			}
 			on_activate = {
 			}
@@ -86,8 +88,8 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			min = 0.33
 			max = 0.66
 			modifier = {
-				war_support_factor = 0.033
-				stability_factor = 0.033
+				war_support_factor = 0.099
+				stability_factor = 0.099
 				research_speed_factor = -0.03
 				political_power_factor = -0.03
 			}
@@ -97,10 +99,11 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 		
 		range = {
 			id = commonalty_harmonic_control_weak
-			min = 0.09
+			min = 0.099
 			max = 0.33
 			modifier = {
 				war_support_factor = 0.033
+				stability_factor = 0.033
 				political_power_factor = -0.03
 				command_power_gain = 0.03
 				research_speed_factor = 0.03

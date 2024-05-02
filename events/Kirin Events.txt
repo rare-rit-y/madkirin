@@ -22537,27 +22537,13 @@ country_event = {
 						set_nationality = PREV.PREV
 					}
 				}
-				every_possible_country = {
-					limit = {
-						has_character = KIR_firethorn
-					}
-					KIR_firethorn = {
-						remove_unit_leader_trait = old_guard
-						set_leader_description = BAC_COC_firethorn_desc
-						set_nationality = PREV.PREV
-					}
-				}
 				KIR = {
 					KIR_ochre_glint = {
 						set_nationality = PREV.PREV
 					}
-				}
-				every_possible_country = {
-					limit = {
-						has_character = KIC_rising_sun_u
-					}
-					KIC_rising_sun_u = { # Rising Sun technical university
-						set_character_name = bac_CIT
+					KIR_firethorn = {
+						remove_unit_leader_trait = old_guard
+						set_leader_description = BAC_COC_firethorn_desc
 						set_nationality = PREV.PREV
 					}
 				}
@@ -23532,7 +23518,14 @@ news_event = {
 			add_to_variable = { COC_power_struggle_DR_Progress_Bar_var = 1 }
 			clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
 			clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
+
 			load_focus_tree = generic_zebra_focus #bac added
+			set_country_flag = KIC_tank_designer_1_available
+			set_country_flag = KIC_tank_designer_2_available
+			set_country_flag = KIR_DM_aerospace_engineering_available
+			set_country_flag = KIC_aerospace_engineer_available
+			set_country_flag = KIR_DM_maritime_systems_available
+			set_country_flag = KIC_deer_comrade_available
 		}
 	}
 }

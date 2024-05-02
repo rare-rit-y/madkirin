@@ -79,7 +79,7 @@
  BAC_COC_c3_desc: "The loudest cry coming from all over the country is for to guarantee their lands that have been expunged by NAKP. It's also the most dangerous one. If all these allegations are true, surely there's no reason not to do so. First, we need to clear right and wrong. So that land reform can be implemented according to local conditions. At the very least, a plan should be announced." # 전국에서 몰려온 농민들이 부르짖는 아우성 중 가장 큰 소리로 나오는 것은 NAKP에 의해 말소된 토지 소유권을 보장해달라는 것입니다. 가장 위험한 내용이기도 하군요. 물론 이 주장이 전부 사실이라면 그리 하지 않을 이유는 없겠죠. 먼저 시시비비를 가려야 합니다. 그래야 현지 사정에 맞게 토지개혁을 실시할 수 있습니다. 적어도 이에 대한 계획이라도 발표해야 합니다.
  
  BAC_COC_true_commonalty: "The Declaration!"
- BAC_COC_true_commonalty_desc: "Finally, the day has come! It's been a long, hard road since the uprising against the NAKP. There is still much work to be done, many gaps to be filled, and many unresolved disputes, but for today, let's celebrate our nation as one - along with the motto of the Common Senate, which was voted-on at the final session of the CPF!" #드디어 이 날이 왔습니다! NAKP에 맞선 봉기 때부터 돌이켜보면 정말 멀고 힘든 길이었습니다. 아직 해야 할 일이 많고, 채워야 할 빈틈도 많으며, 해결되지 않은 분쟁도 많지만, 오늘만큼은 하나된 마음으로 건국을 축하합시다, CPF의 마지막 표결을 통해 결정된 Common Senate의 모토와 함께요!
+ BAC_COC_true_commonalty_desc: "Finally, the day has come! It's been a long, hard road since the uprising against the NAKP. There is still much work to be done, many gaps to be filled, and many unresolved disputes, but for today, let's celebrate our nation as one - along with the motto of the Common Senate, which was voted-on at the final session of the Committee for Preparation of the Foundation!" #드디어 이 날이 왔습니다! NAKP에 맞선 봉기 때부터 돌이켜보면 정말 멀고 힘든 길이었습니다. 아직 해야 할 일이 많고, 채워야 할 빈틈도 많으며, 해결되지 않은 분쟁도 많지만, 오늘만큼은 하나된 마음으로 건국을 축하합시다, 건국준비위원회의 마지막 표결을 통해 결정된 Common Senate의 모토와 함께요!
  BAC_COC_true_commonalty_tt: "§g"Never to §Olead§!, always to §Phelp§!."§!"
 
  BAC_COC_pol_head: "Committee for Commonal Education" #만민교육위원회
@@ -113,8 +113,8 @@
  BAC_COC_eco_c1_desc: "The Communalists don't really care about all this talk of modernisation, because the only thing that matters is making sure that the kirin in this Realm don't go hungry. If we can follow the principle of 'Land to the Tiller' and give each farmer just enough land to ensure optimal production for themselves, there will be no more starving kirin." #Communalists들은 현대화니 뭐니 하는 이야기에 그다지 관심이 없습니다. 중요한 것은 이 Realm에 사는 키린들이 배곯지 않도록 하는 것 말고는 없으니까요. 경자유전의 원칙에 따라 각 농가에 스스로 최적생산량을 보장할 수 있을만큼의 토지를 분배하게 될 수만 있다면 더 이상 굶주리는 키린이 없게 될 것입니다.
  BAC_COC_eco_m2: "Todo"
  BAC_COC_eco_m2_desc: "TODO"
- BAC_COC_eco_c2: "Communalist"
- BAC_COC_eco_c2_desc: "TODO"
+ BAC_COC_eco_c2: "Grain Propagation Plan" #産米增殖計劃
+ BAC_COC_eco_c2_desc: "Though reforming the land system and distributing land is the most important thing, but if there is no food in the stomachs of kirin, millions must starve. We need to put everything into farming this year. Because the fields - already devastated by the civil war - can't feed everykirin. Holding on for now, but it won't last long. The most urgent need is to improve irrigation, so let's get started." #토지제도의 개혁과 토지의 분배가 가장 중요한 일이긴 하지만, 정작 키린들의 뱃속에 들어갈 음식이 없다면 모두 굶게 될 것입니다. 올해 농사에 모든 것을 걸어야 합니다. 내전으로 이미 황폐해진 들판이 모든 키린들을 먹여살릴 수는 없을테니까요. 당장은 어떻게든 버티고 있지만, 오래 가지 못할 것입니다. 가장 급한 것은 관개시설의 정비입니다. 곧바로 시작합시다.
  BAC_COC_eco_m3h: "Favor Todo"
  BAC_COC_eco_m3h_desc: "TODO"
  BAC_COC_eco_m3c: "Todo"
@@ -174,36 +174,36 @@
  BAC_COC_mil_navalair: "Naval Air Corps"
  BAC_COC_mil_navalair_desc: "TODO"
 
- BAC_COC_sekrit_war_committee: "The Grand Strategy"
+ BAC_COC_sekrit_war_committee: "Prepare Another War"
  BAC_COC_sekrit_war_committee_desc: ""
 
- BAC_COC_war_deer: "TODO"
- BAC_COC_war_deer_desc: "TODO"
- BAC_COC_convert_deer: "TODO"
- BAC_COC_convert_deer_desc: "TODO"
- BAC_COC_friend_deer: "TODO"
- BAC_COC_friend_deer_desc: "TODO"
-
- BAC_COC_war_barbarian: "TODO"
- BAC_COC_war_barbarian_desc: "TODO"
- BAC_COC_convert_barbarian: "TODO"
- BAC_COC_convert_barbarian_desc: "TODO"
- BAC_COC_friend_barbarian: "TODO"
- BAC_COC_friend_barbarian_desc: "TODO"
-
- BAC_COC_war_zaikiria: "TODO"
- BAC_COC_war_zaikiria_desc: "TODO"
- BAC_COC_convert_zaikiria: "TODO"
+ BAC_COC_war_zaikiria: "March to Old Marches"
+ BAC_COC_war_zaikiria_desc: "Let the faithfuls save the poor kirin who have been alienated from Her Radiance by the great debacle of the Silence, emphasising that they are all Her children under Her Radiant Trinity. Kirin there are also already groaning under the mad Nirik warlords, reactionary despots, and decadent pagans. Let the common know that turning a blind eye to them will only lead to further disaster." #키린들은 Her Radiant Trinity 아래 모두 그분의 자녀임을 강조하면서, Silence라는 크나큰 패착으로 인해 Her Radiance로부터 멀어진 가엾은 키린들을 구원하자고 합시다. 그곳의 키린들은 또한 이미 미치광이 니릭 전쟁군주, 반동 전제군주, 퇴폐적인 이교도의 아래에서 신음하고 있습니다. 이를 외면하는 것은 더 큰 재앙으로 다가올 수 있음을 알려야 합니다.
+ BAC_COC_convert_zaikiria: "All Children of Her Radiant Trinity"
  BAC_COC_convert_zaikiria_desc: "TODO"
- BAC_COC_friend_zaikiria: "TODO"
+ BAC_COC_friend_zaikiria: "Everykirin Can Glitter"
  BAC_COC_friend_zaikiria_desc: "TODO"
 
- BAC_COC_war_tangpau: "TODO"
- BAC_COC_war_tangpau_desc: "TODO"
- BAC_COC_convert_tangpau: "TODO"
- BAC_COC_convert_tangpau_desc: "TODO"
- BAC_COC_friend_tangpau: "TODO"
- BAC_COC_friend_tangpau_desc: "TODO"
+ BAC_COC_war_taungpau: "End The Eternal Mandate" #이곳이 비록 키린들이 많이 사는 땅은 아니지만, 전략적으로 중요한 위치에 있습니다. 이곳을 확보하면 앞으로 있을 주변국과의 전쟁에서 큰 우위를 점할 수 있을 것입니다. Communion의 바람과는 달리 현지 종교 문제는 부수적인 사안일 뿐입니다.
+ BAC_COC_war_taungpau_desc: "Although this land is not heavily populated by kirin, it is strategically important. Securing it would give us a major advantage in any future wars with our neighbours, and contrary to the Communion's wishes, local religious issues are only a side issue."
+ BAC_COC_convert_taungpau: "Her Radiant Mandate"
+ BAC_COC_convert_taungpau_desc: "TODO"
+ BAC_COC_friend_taungpau: "Their Unique Way"
+ BAC_COC_friend_taungpau_desc: "TODO"
+
+ BAC_COC_war_deer: "Biggest Counterplayer"
+ BAC_COC_war_deer_desc: "There's unfortunately not much we could do to justify war with Hindia, other than utilise the international socialist rhetoric that's in a tiny minority in the Common Senate, which means that if those deers are 'ideological comrades', we will have to extend an olive branch first..." #힌디아와의 전쟁을 정당화하기 위한 수단은 안타깝게도 그리 많지 않습니다. Common Senate에서 극소수만을 차지하는 국제사회주의적 논조를 활용하는 것 말고는 말입니다. 이는 곧 저 사슴들이 '이념적 동지'에 해당한다면 올리브 가지를 먼저 내밀어야 함을 의미합니다...
+ BAC_COC_convert_deer: "Let Them Be Children Also"
+ BAC_COC_convert_deer_desc: "TODO"
+ BAC_COC_friend_deer: "Our Deer Comrades"
+ BAC_COC_friend_deer_desc: "TODO"
+
+ BAC_COC_war_barbarian: "Attack on Barbarian Lands"
+ BAC_COC_war_barbarian_desc: "The griffons and zebras beyond the Westren Territories have a history of raiding our lands. Does it make any difference even in the modern era? It wouldn't easy for our archaeologists, but let's highlight these old historical facts to justify our invasion and nip them in the bud before they grow in power from the outside." #Westren Territories 너머의 Griffon들과 얼룩말들은 우리 땅에서 노략질을 일삼아온 전과가 있습니다. 현대라고 달라지겠습니까? 우리 고증학자들에게 쉬운 일은 아니겠지만 이러한 옛 역사적 사실들을 강조하여 저들에 대한 침공을 정당화하고, 저들이 세외에서 힘을 키워 쳐들어오기전에 삭초제근합시다.
+ BAC_COC_convert_barbarian: "Edify Their Barbarism"
+ BAC_COC_convert_barbarian_desc: "TODO"
+ BAC_COC_friend_barbarian: "Comrades, Not Barbarian"
+ BAC_COC_friend_barbarian_desc: "TODO"
 
  BAC_COC_pol_m4: "Century For Commonalty"
  BAC_COC_pol_m4_desc: "TODO"
@@ -220,9 +220,9 @@
   bacdebug.1.e: "fuck off"
  #commonalty
   baccocc.1.t: "To Prepare The Foundation"
-  baccocc.1.d: "The soon-to-be Commonalty, the Children of Concord, was initially a loose alliance between the Communion of Her Radiant Trinity led by Dayspring Rose and the All-Kiria Union of Workers and Peasants led by Kindling Flash. Even at the onset of the uprising, this bond was solidified by a mutual animosity against the existential threat posed by the National Association of Kirin Patriots. However, now that a complete victory over the NAKP has been achieved, this bond has become as insubstantial as a mirage.\n\nWhile there is a certain closeness between Kindling Flash and Dayspring Rose, yet the realities of politics demand attention to their respective supporters. The CPF has invited as many kirin as possible to ensure no one is left behind Concord, resulting in a multitude of voices. However, the two most dominant voices are those represented by the Communion and the Union.\n\nUnfortunately, the current situation within the CPF is in deadlock, with members of the two factions in opposition, making consensus on key issues unattainable. Both sides are aware that pushing through decisions on the principle of majority rule, without it being an institutionally guaranteed decision-making mechanism, lacks a basis for enforcement and is unlikely to lead to proper progress. The possibility of Nirik transformation also cannot be ignored.\n\nFrom the start, the CPF has been mired in a stalemate."
+  baccocc.1.d: "The soon-to-be Commonalty, the Children of Concord, was initially a loose alliance between the Communion of Her Radiant Trinity led by Dayspring Rose and the All-Kiria Union of Workers and Peasants led by Kindling Flash. Even at the onset of the uprising, this bond was solidified by a mutual animosity against the existential threat posed by the National Association of Kirin Patriots. However, now that a complete victory over the NAKP has been achieved, this bond has become as insubstantial as a mirage.\n\nWhile there is a certain closeness between Kindling Flash and Dayspring Rose, yet the realities of politics demand attention to their respective supporters. The Committee for Preparation of the Foundation has invited as many kirin as possible to ensure no one is left behind Concord, resulting in a multitude of voices. However, the two most dominant voices are those represented by the Communion and the Union.\n\nUnfortunately, the current situation within the CPF is in deadlock, with members of the two factions in opposition, making consensus on key issues unattainable. Both sides are aware that pushing through decisions on the principle of majority rule, without it being an institutionally guaranteed decision-making mechanism, lacks a basis for enforcement and is unlikely to lead to proper progress. The possibility of Nirik transformation also cannot be ignored.\n\nFrom the start, the CPF has been mired in a stalemate."
   baccocc.1.a: "It have never been thought that would be easy, after all."
-  baccocc_1_tt: "The §YCoalition§! will not be broken, but the §Pideological§! §Rdifferences§! will be too much to overcome..."
+  baccocc_1_tt: "\n§gThe §YCoalition§! will not be broken, but the §Pideological§! §Rdifferences§! will be too much to overcome...§!\n\n"
 
   baccocc.2.t: "A Militarymare in the Committee"
   baccocc.2.d: "Once loyal to Rising Fire, Ember Glow now found herself idly seated in a corner of a meeting room within a building temporarily serving for Commonalty, as the headquarter for CPF. The grueling war with NAKP had finally come to an end, and though she wished to bask in the peace that followed, it was at the earnest request of the CPF that she found herself here. Having fought alongside the causes of Kindling Flash and Dayspring Rose, she had no intention of sounding a dissenting note. Instead, she merely planned to witness the unfolding of this new chapter in history with her own eyes...\n\n\"General Ember Glow, might I solicit your esteemed opinion on a matter that has proven exceedingly contentious and remains deadlocked?\" a kirin inquired. Though she had faced such queries more than a dozen times that day alone, preferring not to take sides between Kindling and Dayspring, she steadfastly refused all answers. Most attendees, heavily influenced by the obstinate bannerkirin like Firethorn, did the same.\n\n\"Well, as a militarymare, I prefer not to lean towards any side. Perhaps it would be better for you to directly persuade those who oppose you?\"\n\nYet, despite the ongoing stalemates, no consensus could be reached on the contentious issues at hoof. As days passed, marked by meaningless attendances at dawn and equally meaningless leavings at dusk, Ember Glow's thoughts began to shift."
@@ -237,7 +237,7 @@
   baccocc.4.a: "And so the night deepened for the two of them alone."
 
   baccocc.5.t: "Which Law Should We Use?"
-  baccocc.5.d: "In configuring the CPF, we have exerted a considerable amount of effort, yet there remains much to be desired. The most pressing issue is the constitution itself. In the process of modernizing Kiria, the constitution could be said to be the foundation of aspiring to be a rule-of-law country, to the extent that it has been translated once as 'the System of Realm' (國制). To regulate a population beyond a certain size, a legal stability defined order is the best means, and at the same time, it becomes the first step in gaining the strength to protect the commonkirin in line with modernization.\n\nThe problem lies in which legal system we adopt. It's crucial whether to transplant the legal system of Equestria as the Harmonists argue. On the other hoof, the Griffons' or the Riverland constitution is not a preferred proposal since it reminds of the Fickle Current and his NAKP. Adhering to Equestrian laws as preferred by the Harmonists could be more economical due to compatibility with the most widely used legal systems in the world and the abundance of referenceable precedents and cases. Of course, it's not without its somewhat pro-foreign elements, so the Harmonists might need to spend some of their influence to push this through. Alternatively, starting anew based on the grand principle held in high esteem by the Trinity-Worshipping, passed down from the old Rising Fire movement, could also be a method: All creatures should be equal before Concord."
+  baccocc.5.d: "In configuring the Committee for Preparation of the Foundation, we have exerted a considerable amount of effort, yet there remains much to be desired. The most pressing issue is the constitution itself. In the process of modernizing Kiria, the constitution could be said to be the foundation of aspiring to be a rule-of-law country, to the extent that it has been translated once as 'the System of Realm' (國制). To regulate a population beyond a certain size, a legal stability defined order is the best means, and at the same time, it becomes the first step in gaining the strength to protect the commonkirin in line with modernization.\n\nThe problem lies in which legal system we adopt. It's crucial whether to transplant the legal system of Equestria as the Harmonists argue. On the other hoof, the Griffons' or the Riverland constitution is not a preferred proposal since it reminds of the Fickle Current and his NAKP. Adhering to Equestrian laws as preferred by the Harmonists could be more economical due to compatibility with the most widely used legal systems in the world and the abundance of referenceable precedents and cases. Of course, it's not without its somewhat pro-foreign elements, so the Harmonists might need to spend some of their influence to push this through. Alternatively, starting anew based on the grand principle held in high esteem by the Trinity-Worshipping, passed down from the old Rising Fire movement, could also be a method: All creatures should be equal before Concord."
   baccocc.5.a: "Importing Equestrian Constitution is the best way."
   baccocc.5.b: "All creatures should be equal before Concord. That's where we start." #kirin.20.c
 
@@ -289,17 +289,17 @@
   baccocc.303.t: "Tathya-Samvrti" #속세의 만상
   baccocc.303.d: "In the train heading to Verdant, Sunny Clouds gazed out the window at the peaceful and prosperous landscape, true to its name, with somewhat sleepy eyes. She was a freshman at the Commonal Institute of Technology in Sorghum and was returning to her hometown for the weekend. Even after the train reached its destination, she had to take a small boat along the famous river for quite a while longer. But it was worth it, for the reunion with her waiting family and lover.\n\nMeanwhile, in the Common Senate building in Sorghum, Ember Glow was engrossed in the paperwork that plagued her. From the day's major committee meeting minutes to new bills introduced to the Senate, and endless special committee materials. It wasn't until her assistant interrupted her for the end of the workday that she remembered she had an important dinner engagement.\n\nIn a bustling restaurant that served both Hindian and Zaikirian cuisine, it was crowded with customers. A deer named Cherith Kattumaram was among them. He brought along his zebra and griffon colleagues, joking that he never imagined he could enjoy authentic Hindian food here.\n\nAt a lodging, Kindling Flash observed as Mahogany Blaze, Bright Burn, and Dayspring Rose exchanged opinions about the Radiant Trinity theology. Meanwhile Coral River teased Ember Glow with a smile for being late. The restrained Firethorn simply savored a sip of tea beside them. The old Banner patterns decorated on Firethorn’s military uniform hung on the wall sparkled under the light.\n\nOn a bright hillside in the outskirts, next to an unnamed grave, a kirin with a visibly unhappy expression lay beside the burial mound, endlessly staring at the setting sun. The grave was well-maintained. Despite facing the sunset, the old Banner pattern on his water bottle attached to his saddlebag did not sparkle at all. Even after a long time since that day, no light had entered his heart, waiting for someone who is in the underground never to return."
   baccocc.303.a: "Yet the rest of earthly affairs was going on, regardless."
-  baccocc_303_tt: "§gThose Auspicious Clouds don't care about earthly affairs, while the Autumn Begonia blooms and falls.§!"
+  baccocc_303_tt: "§gThose Auspicious Clouds don't care about mortal world, while the Autumn Begonia blooms and falls.§!"
 
  #madkirin
   madkirin.1.t: "The Lecture"
-  madkirin.1.d: "\"-Taking what is not one's own is called Theft (盜), and taking Life (生) and damaging Property (物) is called Robbery (賊).\"\n\nThe sun was high in the sky, and those rogues from NAKP, Divine Fire mystics, or mere bandits, were assembled in detention to listen to her lectures and be edified into true children of Concord.\n\n\"You, who roam day and night with sleeves rolled up and eyes glaring, shamelessly plunder, and the worst of you call money 'brother' and murder your own families to become generals, have no right to discuss ethics or morality. Moreover, you steal foods from locusts, clothes from silkworms, block bees and take their honey, and the cruelest of you pickle ant larvae by the name of Concord, what could be more brutal than you?\"\n\nThis time her gaze fell on Divine Fire mystics.\n\n\"You talk of Principle (理) and Nature (性), and frequently mention the Concord, but if we see it as the Celestial Call (召命), creatures and kirin are all part of the myriad of things. If we speak of the Benevolence (仁) with which Concord and creatures bring forth all things - equines, locusts, silkworms, bees, ants, and kirin are all nurtured by Concord and the earth; thus should not harm each other. Looking at the distinction between Good and Evil (善惡), openly plundering the homes of bees and ants would surely make one the Great Theft (巨盜) between Concord and creatures? And plundering the very foundation of locusts and silkworms, would that not make one the Arch-enemy (大賊) against Benevolent Morality (仁義) ?\"\n\nThen the rogues on the spot fell to their knees." #박지원, 호질(虎叱)
+  #madkirin.1.d: "\"-Taking what is not one's own is called Theft (盜), and taking Life (生) and damaging Property (物) is called Robbery (賊).\"\n\nThe sun was high in the sky, and those rogues from NAKP, Divine Fire mystics, or mere bandits, were assembled in detention to listen to her lectures and be edified into true children of Concord.\n\n\"You, who roam day and night with sleeves rolled up and eyes glaring, shamelessly plunder, and the worst of you call money 'brother' and murder your own families to become generals, have no right to discuss ethics or morality. Moreover, you steal foods from locusts, clothes from silkworms, block bees and take their honey, and the cruelest of you pickle ant larvae by the name of Concord, what could be more brutal than you?\"\n\nThis time her gaze fell on Divine Fire mystics.\n\n\"You talk of Principle (理) and Nature (性), and frequently mention the Concord, but if we see it as the Celestial Call (召命), creatures and kirin are all part of the myriad of things. If we speak of the Benevolence (仁) with which Concord and creatures bring forth all things - equines, locusts, silkworms, bees, ants, and kirin are all nurtured by Concord and the earth; thus should not harm each other. Looking at the distinction between Good and Evil (善惡), openly plundering the homes of bees and ants would surely make one the Great Theft (巨盜) between Concord and creatures? And plundering the very foundation of locusts and silkworms, would that not make one the Arch-enemy (大賊) against Benevolent Morality (仁義) ?\"\n\nThen the rogues on the spot fell to their knees." #박지원, 호질(虎叱)
   madkirin.1.c: "Her lecture is even more heretic."
 
  
 #decisions
  bac_finish_railway: "Build the Sorghum-Verdant Line"
- bac_finish_railway: "A little bit of political pressure will breathe new life into the venture — to carve a path through the plains and connect the capital to the sea."
+ bac_finish_railway_desc: "A little bit of political pressure will breathe new life into the venture — to carve a path through the plains and connect the capital to the sea."
  comm_WPU_1: "Enhance the Union"
  comm_WPU_1_desc: "Not everything that comes before the Senate is going to be the most important thing, but if some support for one of the less important things and getting away with a little political fluff could be exchanged with each other, it would sound like worth." #Senate에 올라오는 모든 안건이 가장 중요한 안건은 아닙니다. 하지만 그 덜 중요하다는 것들 중 하나에 대해 지지를 표한 후 가벼운 정치적 생색내기만으로 적당한 효과를 얻을 수 있다면 남는 장사겠죠.
  comm_COT_1: "Enhance the Communion"
@@ -349,8 +349,8 @@
  #bac_are_you_serious_tt: "Nothing §tbad§! will happen, isn't it?"
 
  bac_cheater_tt: "Remember: the console is for development, not cheating!"
- unlocks_bop_decision_tt: "This can be found in §YBalance of Power§! category."
- unlocks_bop_multiple_decisions_tt: "These can be found in §YBalance of Power§! category."
+ unlocks_bop_decision_tt: "This can be found in §YBalance of Power§! category.\n\n"
+ unlocks_bop_multiple_decisions_tt: "These can be found in §YBalance of Power§! category.\n\n"
  
  BAC_COC_commonalty_war_enacted: "Has passed a §RWar Initiative§!"
  BAC_COC_commonalty_war_days_tt: " Current days are: [?BAC_COC_commonalty_war_enacted_flag:days|Y0]"
@@ -380,9 +380,9 @@
 
  BAC_commonalty_bop: "Two Factions of the §8Commonalty§!"
   commonalty_harmonic_control: "§FCommunion of Trinity§! - §7Harmonists§!"
-  commonalty_harmonic_control_desc: "The §FCommunion of Trinity§! is a religion group of devoutly harmonic Trinity-worshippers, led by §ODayspring Rose§!, syncretic prophetess of the §PCommunion of Her Radiant Trinity§!."
+  #commonalty_harmonic_control_desc: "The §FCommunion of Trinity§! is a religion group of devoutly harmonic Trinity-worshippers, led by §ODayspring Rose§!, syncretic prophetess of the §PCommunion of Her Radiant Trinity§!."
   commonalty_communal_control: "§RWorker-Peasant Union§! - §RCommunalists§!"
-  commonalty_communal_control_desc: "Started by non-devout elements in the eclectic movement of the §9Children of Concord§!, The §RAll-Kiria Union of Workers and Peasants§! is led by §CKindling Flash§!, a fighter for democracy and friend of the downtrodden."
+  #commonalty_communal_control_desc: "Started by non-devout elements in the eclectic movement of the §9Children of Concord§!, The §RAll-Kiria Union of Workers and Peasants§! is led by §CKindling Flash§!, a fighter for democracy and friend of the downtrodden."
   commonalty_balanced: "§8Commonalty§! - §gNeutral§!"
   commonalty_harmonic_control_strong: "§8Commonalty§! - §7Harmonic§! Dominance"
   commonalty_harmonic_control_mid: "§8Commonalty§! - Major §7Harmonic§! Bias"
@@ -404,7 +404,7 @@
   TNO_BAC_CountryClosing_close_btn_tt: "§WMaybe so."
   TNO_BAC_CountryClosing_page_btn_tt: "§WPage [Get_TNO_BAC_CountryClosing_page_btn_text]§!"
   TNO_BAC_CountryClosing_epilogue_generic: "Thanks for your engagement in all the content with this submod!"
-  BAC_CountryClosing_epilogue_KIR_commonalty: "A new order sets as flames and explosions halt, brave new future lies ahead since the darkness has passed. After all those years of the §OSilence§!, the §7Gallop Onward§!, and the harsh ordeal of the §RSecond Cacophony§!, resulting the §tDeath§! of the §ODivine Fire§! - §8Her Radiant Trinity§! has born and the §8Commonalty§! has won the new century for Kiria and Eastern Zebrica...\n\nWhat role will the §8Commonalty§! play in this stage been said brave new world? Will their ideals and revolution remain untainted until the very end? Will they face all the glories and trials that lie ahead and bring their ideals to the world?\n\nThe wild ride of the §8Commonalty§! will continue in the §8Commonalty§! expansion update 2.0§g(note that this version is 0.*)§! - After all, §Psincerely thanks for playing this path and submod!§!"
+  BAC_CountryClosing_epilogue_KIR_commonalty: "\nA new order sets as flames and explosions halt, brave new future lies ahead since the darkness has passed. After all those years of the §OSilence§!, the §7Gallop Onward§!, and the harsh ordeal of the §RSecond Cacophony§!, resulting §tDeath§! of the §ODivine Fire§! - §8Her Radiant Trinity§! has born and the §8Commonalty§! has won the new century for Kiria and Eastern Zebrica...\n\n\nWhat role will the §8Commonalty§! play in this stage been said brave new world? Will their ideals and revolution remain untainted until the very end? Will they face all the glories and trials that lie ahead and bring their ideals to the world?\n\nThe wild ride of the §8Commonalty§! will continue in the §8Commonalty§! expansion update 2.0§g(note that this version is 0.*)§! - After all, §Psincerely thanks for playing this path and submod!§!"
   BAC_CountryClosing_epilogue_KIR_generic: "$TNO_BAC_CountryClosing_epilogue_generic$"
   TNO_BAC_CountryClosing_credits_0: "§YProduction support§!\n\n§WSole Dev.\n§P_unicornia.§!§!"
   TNO_BAC_CountryClosing_credits_1: "§YSpecial Thanks§!\n\n£eaw_text  §W§YEquestria at War§! Team and §OKirin developers§! for realization of this marvelous world, §0Hazel Horse§! for giving me inspiration to get started HOI4 modding, §1THE LAST EMPIRE§! and §1UKKRHEE§!(its head dev.) for giving permission to use some assets, §gKaiserreich§!, §LEight Years' War of Resistance§!, and §RThe New Order§! for several modding examples.§!"

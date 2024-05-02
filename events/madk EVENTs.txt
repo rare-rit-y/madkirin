@@ -335,6 +335,18 @@ country_event = { # baccocc.11 - The Trial of NAKP
 		name = baccocc.11.a
 		add_political_power = 33
 		add_stability = 0.033
+		every_possible_country = {
+			limit = { original_tag = KIS }
+			effect_tooltip = { kill_country_leader = yes }
+			every_character = {
+				limit = { is_country_leader = no }
+				retire = yes
+			}
+			hidden_effect = { kill_country_leader = yes }
+		}
+		effect_tooltip = {
+			add_manpower = -69 
+		}
 	}
 }
 unit_leader_event = { #baccocc.12 firethorn
@@ -349,8 +361,7 @@ unit_leader_event = { #baccocc.12 firethorn
 		name = baccocc.12.a # 
 		THIS = {
 			promote_leader = yes
-			#remove_unit_leader_trait = old_guard
-			add_unit_leader_trait = organisational_leader
+			#add_unit_leader_trait = organisational_leader
 			set_portraits = {
 				army = {
 					large = "GFX_portrait_KIR_firethorn_new_uniform"
