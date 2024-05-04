@@ -1,4 +1,30 @@
 ideas = {
+	materiel_manufacturer = {
+		designer = yes
+
+		BAC_star_energy_zeb = {
+			allowed = {
+				original_tag = KIC
+				has_country_flag = KIC_Children_of_Concord_flag
+			}
+			available = {
+				has_country_flag = BAC_star_energy_zeb_available
+				OR = {
+					country_exists = event_target:equestria
+					country_exists = event_target:solar_empire
+				}
+			}
+			research_bonus = {
+				artillery = 0.15
+			}
+
+			traits = { artillery_manufacturer }
+			picture = EQS_star_energy
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
 	country = {
 	
 		KIC_CFP = {
@@ -19,5 +45,62 @@ ideas = {
 			}
 		}
 	}
+	hidden_ideas = {
+		
+		BAC_road_to_direct_democracy_dummy_0 = {
+			name = BAC_road_to_direct_democracy
+			modifier = {
+				political_power_factor = -0.09
+				drift_defence_factor = -0.33
+				war_support_factor = -0.03
+				stability_weekly = -0.0033
+				army_core_defence_factor = 0.06
+				army_core_attack_factor = 0.06
+			}
+		}
+		BAC_road_to_direct_democracy_dummy_h = {
+			name = BAC_road_to_direct_democracy
+			modifier = {
+				political_power_factor = -0.18
+				drift_defence_factor = -0.66
+				war_support_factor = -0.06
+				army_core_defence_factor = 0.09
+				army_core_attack_factor = 0.09
+				stability_weekly = -0.0033
+			}
+		}
+		BAC_road_to_direct_democracy_dummy_c = {
+			name = BAC_road_to_direct_democracy
+			modifier = {
+				stability_weekly = -0.0066
+				army_core_defence_factor = 0.09
+				army_core_attack_factor = 0.09
+				political_power_factor = -0.09
+				drift_defence_factor = -0.33
+				war_support_factor = -0.03
+			}
+		}
+		BAC_direct_democracy_dummy = {
+			name = BAC_direct_democracy
+			modifier = {
+				army_core_defence_factor = 0.09
+				army_core_attack_factor = 0.09
+				drift_defence_factor = -0.03
+			}
+		}
+		BAC_regional_self_centeredness_dummy_0 = {
+			name = BAC_regional_self_centeredness
+			modifier = {
 
+			}
+		}
+		BAC_regional_self_centeredness_dummy_1 = {
+			name = BAC_regional_self_centeredness
+			modifier = {
+				army_core_defence_factor = 0.33
+				army_core_attack_factor = 0.33
+				stability_weekly = -0.0011
+			}
+		}
+	}
 }

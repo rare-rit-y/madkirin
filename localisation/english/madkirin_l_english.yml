@@ -67,8 +67,9 @@
  BAC_COC_m2_desc: "While it is important to ensure freedom for common, it is also essential to keep pace with the modern world if we are not to be swept away helplessly by the tyrannical tide of heartless steel. The platform of a modern state is legal stability, and the first step in ensuring that is the constitution." #만민의 자유를 보장하는 것은 중요하지만 우리가 폭압적인 강철의 물결에 힘없이 스러져가지 않게 되기 위해서는 현대 세계에 발맞추어 걸어가는 것이 필수적입니다. 바로 직전까지 치렀던 그 모든 국난을 통해 피로써 얻은 교훈이겠지요. 현대국가의 기반은 법적 안정성이고 그것을 보장하기 위한 첫걸음은 바로 헌법입니다.
  BAC_COC_h2: "Adopt Equestrian Autunomy System"
  BAC_COC_h2_desc: "§7Equestria§! is ruled by alicorns - the immortal monarchs, but it's actually very decentralised. It would be a great idea to emphasise this fact and push for the system to be embraced and even enshrined in the constitution. And it's one that no one would argue against. There is a reason we follow Equestria, after all." #이퀘스트리아는 불멸의 군주가 다스리는 알리콘정 국가이지만 실상은 대단히 분권화되어 있습니다. 이 사실을 강조하면서 그 제도를 적극적으로 받아들이며 심지어 헌법에까지 명시할 수 있도록 추진해보는 것은 정말 좋은 생각입니다. 아무렴 누구도 반대하지 않을 안건이니까요. 우리가 이퀘스트리아를 따르는 것에는 그만한 이유가 있습니다.
+ BAC_start_phase_2_tt: "§gThis trait will be gained upon the foundation.§!"
  BAC_COC_c2: "Codify Empowerment Action" 
- BAC_COC_c2_desc: ""§7Mass Empowerment Through Direct Action§!" (colloquially referred to as "§7empowerment actions§!") was a clever tactic we employed in the revolution against the Empire. It's also quite democratic. We need to build on this and constantly inspire the common so that we don't become another "§OD§!ivine but corrupted" §OFire§!! Not by dumbing the common down." #"직접 행동을 통한 대중 자율권 부여"(구어체로 "자율권행동"이라고도 함)는 황국에 맞선 혁명에서 우리가 발휘하였던 기발한 전술이었습니다. 또한 상당히 민주적이라고도 할 수 있죠. 이를 토대로 우리가 또다른 '신성하지만 타락한' 불이 되지 않도록 대중들을 끊임없이 고무시켜야 합니다! 그들을 멍청하게 만드는 게 아니라요.
+ BAC_COC_c2_desc: ""§tMass Empowerment Through Direct Action§!" (colloquially referred to as "§tempowerment actions§!") was a clever tactic we employed in the revolution against the Empire. It's also quite democratic. We need to build on this and constantly inspire the common so that we don't become another "§ODivine§! but corrupted" §OFire§!! Not by dumbing the common down." #'직접 행동을 통한 대중 자율권 부여'(구어체로 '자율권행동'이라고도 함)는 황국에 맞선 혁명에서 우리가 발휘하였던 기발한 전술이었습니다. 또한 상당히 민주적이라고도 할 수 있죠. 이를 토대로 우리가 또다른 '신성하지만 타락한' 불이 되지 않도록 대중들을 끊임없이 고무시켜야 합니다! 그들을 멍청하게 만드는 게 아니라요.
  #BAC_COC_prop: "Our Cause Must Be Informed" 
  #BAC_COC_prop_desc: "There are still so many kirin in the rural Realm who don't know that we've won, and we need to make sure they know that, but we also need to make sure they know that we can speak for them, and we need to make sure their voices are heard further. That's why we do these hard works." #Realm에는 아직도 우리가 승리했다는 사실을 모르는 시골 키린들이 많습니다. 그 사실을 알리는 것은 물론이고 우리가 그들을 대변해줄 수 있다는 사실 또한 알려야 합니다. 그리고 저들의 목소리가 더욱 대변될 수 있도록 해야 합니다. 그게 바로 우리가 이 고된 일들을 하는 이유입니다.
  BAC_COC_m3: "The Countdown!"
@@ -131,7 +132,7 @@
  BAC_COC_eco_m4m_desc: "A vast network of power lines shall connect the bustling metropolises to the farthest rural hamlet, the tendrils of modernity criss-crossing Kiria to weave a web of illumination and progress. The fervent spirit of innovation ignited by the Grand Gallop Onward, churned into being by the gears of industry, will leap and spark from pylon to towering pylon, breathing fire and vigor into the veins of the Commonalty." #KIR_focus_9g_desc
  focus_eco_m4m_tt: "State Category of every original @KIR §OKirian§! core states will be upgraded for a single level."
  BAC_COC_diplo: "Expand Foreign Affairs" # 외교 업무 확장
- BAC_COC_diplo_desc: "Putting on a face may not be enough. The international community is cold. We need to blend in if we don't want to be swayed by what they decide behind closed doors." # 안면을 트는 것만으로는 부족할 수 있습니다. 국제사회는 냉혹합니다. 저들이 밀실에서 결정할 내용에 휘둘리지 않으려면 저들과 섞여야 합니다.
+ BAC_COC_diplo_desc: "Putting on a face may not be enough. The international community is cold. We need to blend in if we don't want to be swayed by what they decide behind closed doors. Currently, the Committee for Foreign Affairs is a ragtag organization that was hastily thrown together on the eve of the foundation, so we need to start by revamping it." # 안면을 트는 것만으로는 부족할 수 있습니다. 국제사회는 냉혹합니다. 저들이 밀실에서 결정할 내용에 휘둘리지 않으려면 저들과 섞여야 합니다. 현재 아국 외무부는 건국 직전에 급조된 누더기 조직이므로, 이를 개편하는 것부터 시작해야 합니다.
  BAC_COC_diplo_tt: "Unlocks §Y$BAC_COC_embassy$§! £decision_icon_small Decisions, which allows us to establish §CCommanlty Embassies§! in the capital cities of §Gfriendly countries§!."
  BAC_COC_modern_science: "Committee for Science and Technology" #과학기술위원회
  BAC_COC_modern_science_desc: "We're reaching the point where we can't simply look at superficial aspects and copy them. The time has come for another standing committee to devise a more systematic approach." #이제 단순히 피상적인 면들을 곁눈으로 보고 베끼는 것만으로는 한계에 도달하고 있습니다. 더욱더 체계적인 접근방법을 고안하기 위해 또 하나의 상설위원회가 탄생할 때가 된 것입니다.
@@ -292,9 +293,9 @@
   baccocc_303_tt: "§gThose Auspicious Clouds don't care about mortal world, while the Autumn Begonia blooms and falls.§!"
 
  #madkirin
-  madkirin.1.t: "The Lecture"
+  #madkirin.1.t: "The Lecture"
   #madkirin.1.d: "\"-Taking what is not one's own is called Theft (盜), and taking Life (生) and damaging Property (物) is called Robbery (賊).\"\n\nThe sun was high in the sky, and those rogues from NAKP, Divine Fire mystics, or mere bandits, were assembled in detention to listen to her lectures and be edified into true children of Concord.\n\n\"You, who roam day and night with sleeves rolled up and eyes glaring, shamelessly plunder, and the worst of you call money 'brother' and murder your own families to become generals, have no right to discuss ethics or morality. Moreover, you steal foods from locusts, clothes from silkworms, block bees and take their honey, and the cruelest of you pickle ant larvae by the name of Concord, what could be more brutal than you?\"\n\nThis time her gaze fell on Divine Fire mystics.\n\n\"You talk of Principle (理) and Nature (性), and frequently mention the Concord, but if we see it as the Celestial Call (召命), creatures and kirin are all part of the myriad of things. If we speak of the Benevolence (仁) with which Concord and creatures bring forth all things - equines, locusts, silkworms, bees, ants, and kirin are all nurtured by Concord and the earth; thus should not harm each other. Looking at the distinction between Good and Evil (善惡), openly plundering the homes of bees and ants would surely make one the Great Theft (巨盜) between Concord and creatures? And plundering the very foundation of locusts and silkworms, would that not make one the Arch-enemy (大賊) against Benevolent Morality (仁義) ?\"\n\nThen the rogues on the spot fell to their knees." #박지원, 호질(虎叱)
-  madkirin.1.c: "Her lecture is even more heretic."
+  #madkirin.1.c: "Her lecture is even more heretic."
 
  
 #decisions
@@ -309,10 +310,10 @@
  comm_WPU_rural: "Redistribution Programme" #재분배 사업
  comm_WPU_rural_desc: "To be able to emphasise that the Commonal Senate can give more back more in return of taking a little from the complete freedom of the smaller sub-regions, it needed to be done so." #Commonal Senate가 더 작은 단위 지역들의 완전한 자유로부터 약간을 취하는 대신, 더 많은 혜택을 돌려줄 수 있다는 것을 강조할 수 있으려면 이를 직접 실천해야 합니다. 
  
- comm_COT_pursuit: "Pursuit The Heathen Remnant" #이교 잔당 추적 - 숙청 중점 완료 시 해금
+ comm_COT_pursuit: "Pursuit The Heathen Remnant" #이교 잔당 추적 - 숙청 중점 완료 시 해금(점령 주 저항도/인구 감소, 우월 지지도 증가, 지휘력 감소)
  comm_COT_pursuit_desc: "There are still creatures everywhere who believe in so-called-divine Fire - a corrupted and false faith, or the ugly filth whether derived from it or not . It would be a great misfortune if they were not converted or eliminated. Let us cut off them before what we have done come back to haunt us." # 타락한 거짓 신앙인 신성한 불이나 그것에서 파생되었건 아니건 추악한 오물을 믿는 생물들은 아직도 도처에 널려 있습니다. 이들을 개종시키거나 제거하지 않으면 분명 큰 우환이 될 것입니다. 우리가 저지른 일들이 우리의 발목을 잡기 전에 그 아귀를 끊어버립시다.
- comm_WPU_WOF: "Interchange With The Way" #불의 길 교류 사업 - 사원 교육 중점 완료 시 해금
- comm_WPU_WOF_desc: "Our collaboration with temple schools is proving to be a success, and we could benefit from a little more Senate support. Focusing our educational programmes on things that will benefit the Common's real lives wouldn't only improve their quality of life, but also solidify their support for our regime." # 사원 학교와의 협업이 성공적이라는 것이 드러나고 있으니, Senate에서 조금 더 힘을 실어준다면 추가적인 효과를 누릴 수 있을 것입니다. Common의 실생활에 도움이 되는 것들 위주로 교육 프로그램을 진행한다면 그들의 삶의 질이 제고될뿐만 아니라 우리 정권에 대한 지지 또한 공고해질 것입니다.
+ comm_WPU_WOF: "Religious Interchange Programme" #종교 교류 사업 - 사원 교육 중점 완료 시 해금(점령 주 순응도/인구 증가 but 정치력 비싸고 소비재 듦)
+ comm_WPU_WOF_desc: "Our collaboration with temple schools is proving to be a success, and we could benefit from a little more Senate support. Religiously being tolerant but focusing our educational programmes on things that will benefit the Common's real lives wouldn't only improve their quality of life, but also solidify their support for our regime." # 사원 학교와의 협업이 성공적이라는 것이 드러나고 있으니, Senate에서 조금 더 힘을 실어준다면 추가적인 효과를 누릴 수 있을 것입니다. 종교적으로 관용을 베풀되 Common의 실생활에 도움이 되는 것들 위주로 교육 프로그램을 진행한다면 그들의 삶의 질이 제고될뿐만 아니라 우리 정권에 대한 지지 또한 공고해질 것입니다.
 
  comm_COT_CES: "Welcome Missionaries From The Lodge" #Lodge 선교사 환영 #The Lodge와 접촉 중점 완료 시 해금
  comm_COT_CES_desc: "In order to seek a true understanding of Princess Celestia - a part of Her Radiant Trinity, the idea of inviting members of a group that claims to act like that Princess Celestia for a theological exchange was discussed. Of course, the toys they would bring with them would be a gift that our foals and fillies would love." # Her Radiant Trinity의 일면을 구성하는 Princess Celestia에 대한 진실된 이해를 모색하기 위하여, 바로 그 Princess Celestia처럼 행동해야 한다고 주장하는 단체의 구성원을 초빙하여 신학적 교류를 이루는 방안이 논의되었습니다. 물론 그들이 함께 들고 들어올 장난감들은 우리 망아지들이 아주 좋아할 선물이 될 것입니다.
@@ -364,13 +365,13 @@
  BAC_prophet_of_the_common: "Prophet of Common"
  
 #misc
+ BAC_star_energy_zeb: "Star Energy - Zebrican Chamber"
  BAC_COC_fascism_party: "Extremist"
  BAC_COC_fascism_party_long: "Communion of Her Radiant Trinity - Extremist"
  bac_RSTEC: "Rising Sun Technical University"
  bac_CIT: "Commonal Institute of Technology"
 
  BAC_COC_common_senate_desc: ""Never to lead, always to help." ~ The official voted-on motto of the Common Senate\n\n§YPortrait by:§! Caspy"
- #KIR_firethorn_desc_suffix: " No longer will her Banner and the soldiers she takes care of serve themselves and the decrepit pieces of a dying government. A reborn Realm she serves: the Realm and all the kirin that are now suddenly free."
  BAC_COC_firethorn_desc: "Heaps of praise could be had upon the head of the Banner of the Scented Moonflower. Its Matriarch-Commander, Firethorn was raised in a Banner that had both evolved into a complex clan and retained enough soldiers to fight alongside its equals (at least before the Silence).\n\nIn the Silence's last years, Firethorn had seen the folly of the Silence a century in the making. Her clan had propped themselves up thanks to their loyalty to the Realm, but outside the Banner's cosy home villages, the rest of Kiria had languished: just miles away, a small city had thrived; that seemed a lie when all she saw and walked through was a ghost town populated by farmers who lived hoof to mouth.\n\nThat memory returned when Rain Shine announced the Silence's end. No longer would her Banner and the soldiers she takes care of serve themselves and the decrepit pieces of a dying government. A reborn Realm she would serve: the Realm and all the kirin that are now suddenly free.\n\nBut the Second Cacophony did not leave any room for such a smooth destiny: she was forced to lose many of her bannerkirin - her kins - in the battle, and joined a hopeless peasant revolt to take revenge on the NAKP for causing the civil war. Only time would tell her final fate.\n\n§YPortrait by:§! Tek"
 
  BAC_commonalty_faction: "Commonal Mutual Assistance Bloc"

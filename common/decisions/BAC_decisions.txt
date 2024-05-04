@@ -23,6 +23,10 @@ bac_coc_debug_cat = {
 					set_nationality = PREV.PREV
 				}
 			}
+			set_power_balance = {
+				id = BAC_commonalty_bop
+			}
+			country_event = kirin_council.326
 		}
     
     }
@@ -39,6 +43,7 @@ bac_coc_debug_cat = {
 		complete_effect = {
 			set_variable = { coc_start_foci_completed = 0 }
             mark_focus_tree_layout_dirty = yes
+			complete_national_focus = BAC_COC_finale
 		}
     
     }
@@ -58,7 +63,7 @@ bac_coc_debug_cat = {
     
     }
 }
-economy_decisions = {
+economy_decisions = { #Economic Policy
 	bac_finish_railway = {
 		icon = generic_wreckers
 		allowed = { original_tag = KIC }
@@ -114,7 +119,7 @@ economy_decisions = {
 political_actions = {
 	BAC_military_aid_to_civil = {
 
-		icon = generic_industry
+		icon = GFX_decision_generic_army_support
 
 		available = {
 			has_war = no

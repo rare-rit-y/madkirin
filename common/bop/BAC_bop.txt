@@ -13,6 +13,10 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			command_power_gain = 0.07
 			research_speed_factor = 0.07
 		}
+		on_activate = {
+			log = "balanced activated"
+			
+		}
 	}
 	
 	side = { #left: §RWorker-Peasant Union§! - §RCommunalists§!
@@ -31,6 +35,8 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 				stability_weekly = -0.003
 			}
 			on_activate = {
+				log = "FULL WPU activated"
+				
 			}
 		}
 
@@ -46,6 +52,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 				army_core_attack_factor = 0.09
 			}
 			on_activate = {
+				log = "mid WPU activated"
 			}
 		}
 
@@ -61,6 +68,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 				army_core_attack_factor = 0.03
 			}
 			on_activate = {
+				log = "low WPU activated"
 			}
 		}
 	}
@@ -73,13 +81,31 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			min = 0.66
 			max = 1
 			modifier = {
-				war_support_factor = 0.333
-				stability_factor = 0.099
+				modifier_army_sub_unit_kirin_braves_attack_factor = 0.3
+				modifier_army_sub_unit_kirin_braves_defence_factor = 0.3
 				research_speed_factor = -0.09
 				political_power_factor = -0.09
 				stability_weekly = -0.003
 			}
 			on_activate = {
+				log = "FULL COT activated"
+				if = {
+					limit = {
+						has_global_flag = daybreaker_spawned
+						has_completed_focus = BAC_COC_pol_h2
+					}
+					set_politics = { ruling_party = fascism }
+					set_power_balance_gfx = {
+						id = BAC_commonalty_bop
+						side = commonalty_harmonic_control
+						gfx = GFX_goal_solar_inquisition
+					}
+				}
+				else = { set_politics = { ruling_party = democratic } }
+			}
+			on_deactivate = {
+				set_politics = { ruling_party = communism }
+				
 			}
 		}
 		
@@ -88,12 +114,13 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			min = 0.33
 			max = 0.66
 			modifier = {
-				war_support_factor = 0.099
-				stability_factor = 0.099
+				modifier_army_sub_unit_kirin_braves_attack_factor = 0.099
+				modifier_army_sub_unit_kirin_braves_defence_factor = 0.099
 				research_speed_factor = -0.03
 				political_power_factor = -0.03
 			}
 			on_activate = {
+				log = "mid COT activated"
 			}
 		}
 		
@@ -102,13 +129,14 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			min = 0.099
 			max = 0.33
 			modifier = {
-				war_support_factor = 0.033
-				stability_factor = 0.033
+				modifier_army_sub_unit_kirin_braves_attack_factor = 0.033
+				modifier_army_sub_unit_kirin_braves_defence_factor = 0.033
 				political_power_factor = -0.03
 				command_power_gain = 0.03
 				research_speed_factor = 0.03
 			}
 			on_activate = {
+				log = "low COT activated"
 			}
 		}
 	}

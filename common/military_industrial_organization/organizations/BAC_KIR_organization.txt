@@ -1,0 +1,20 @@
+
+BAC_star_energy_zeb_organization = {
+	name = BAC_star_energy_zeb
+	include = generic_artillery_organization
+	icon = GFX_idea_EQS_star_energy
+	allowed = {
+		original_tag = KIC
+		has_country_flag = KIC_Children_of_Concord_flag
+		has_dlc = "Arms Against Tyranny" 
+	}
+	available = {
+		owner = {
+			has_country_flag = BAC_star_energy_zeb_available
+		}
+		OR = {
+			country_exists = event_target:equestria
+			country_exists = event_target:solar_empire
+		}
+	}
+}

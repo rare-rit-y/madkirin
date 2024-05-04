@@ -7684,8 +7684,21 @@ news_event = {
 		}
 		custom_effect_tooltip = KIR_line_break
 		set_country_flag = KIR_rhapsody_arsenal_available
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = KIR_rhapsody_arsenal_organization
+			mio:KIR_rhapsody_arsenal_organization = {
+				add_mio_size = 1
+				add_mio_funds = 300
+			}
+		}
+		else = {
 		custom_effect_tooltip = available_designer
         show_ideas_tooltip = KIR_rhapsody_arsenal
+		}
 		custom_effect_tooltip = KIR_line_break
 		custom_effect_tooltip = KIR_unlock_entry_fickle_current
 		if = {
@@ -17091,8 +17104,21 @@ country_event = {
 			}
 			custom_effect_tooltip = KIR_line_break
 			set_country_flag = KIR_rhapsody_arsenal_available
+			if = {
+				limit = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				custom_effect_tooltip = available_mio_tt
+				show_mio_tooltip = KIR_rhapsody_arsenal_organization
+				mio:KIR_rhapsody_arsenal_organization = {
+					add_mio_size = 1
+					add_mio_funds = 300
+				}
+			}
+			else = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = KIR_rhapsody_arsenal
+		}
 		}
 		if = {
 			limit = {
@@ -23440,29 +23466,75 @@ news_event = {
 			# add_ideas = proper_science_base #bac
 			# add_ideas = no_lack_of_scientists
 			# add_ideas = modern_society
+			remove_ideas = KIC_CFP
 			custom_effect_tooltip = KIR_line_break
-			every_possible_country = {
-				limit = { has_character = COC_common_senate }
-				COC_common_senate = {
-					set_nationality = PREV.PREV
-					add_country_leader_role = {
-						character = "COC_common_senate"
-						promote_leader = yes
-						country_leader = {
-							desc = "BAC_COC_common_senate_desc" #bac
-							ideology = democratic_socialism
-							expire = "1965.1.1.1"
-							traits = { BAC_road_to_direct_democracy } #bac
+			if = {
+				limit = { has_country_flag = baccocc_7b_flag }
+				every_possible_country = {
+					limit = { has_character = COC_common_senate }
+					COC_common_senate = {
+						set_nationality = PREV.PREV
+						add_country_leader_role = {
+							character = "COC_common_senate"
+							promote_leader = yes
+							country_leader = {
+								desc = "BAC_COC_common_senate_desc" #bac
+								ideology = democratic_socialism
+								expire = "1965.1.1.1"
+								traits = { BAC_road_to_direct_democracy BAC_regional_self_centeredness } #bac
+							}
+						}
+						hidden_effect = {
+							add_country_leader_role = {
+								character = "COC_common_senate"
+								promote_leader = yes
+								country_leader = {
+									desc = "BAC_COC_common_senate_desc" #bac
+									ideology = harmonic_theocracy
+									expire = "1965.1.1.1"
+									traits = { BAC_road_to_direct_democracy BAC_regional_self_centeredness } #bac
+								}
+							}
+						}
+					}
+				}
+			}
+			else = {
+				every_possible_country = {
+					limit = { has_character = COC_common_senate }
+					COC_common_senate = {
+						set_nationality = PREV.PREV
+						add_country_leader_role = {
+							character = "COC_common_senate"
+							promote_leader = yes
+							country_leader = {
+								desc = "BAC_COC_common_senate_desc" #bac
+								ideology = democratic_socialism
+								expire = "1965.1.1.1"
+								traits = { BAC_road_to_direct_democracy } #bac
+							}
+						}
+						hidden_effect = {
+							add_country_leader_role = {
+								character = "COC_common_senate"
+								promote_leader = yes
+								country_leader = {
+									desc = "BAC_COC_common_senate_desc" #bac
+									ideology = harmonic_theocracy
+									expire = "1965.1.1.1"
+									traits = { BAC_road_to_direct_democracy } #bac
+								}
+							}
 						}
 					}
 				}
 			}
 			set_cosmetic_tag = COC_commonalty
-			custom_effect_tooltip = COC_kindling_add1_tt
-			add_to_variable = { COC_power_struggle_KF_var = 1 }
-			add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
-			clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
-			clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
+			# custom_effect_tooltip = COC_kindling_add1_tt
+			# add_to_variable = { COC_power_struggle_KF_var = 1 }
+			# add_to_variable = { COC_power_struggle_KF_Progress_Bar_var = 1 }
+			# clamp_variable = { var = COC_power_struggle_KF_var min = 0 max = 7 }
+			# clamp_variable = { var = COC_power_struggle_KF_Progress_Bar_var min = 1 max = 8 }
 		}
 	}
 }
@@ -24646,8 +24718,21 @@ country_event = {
 			}
 		}
 		custom_effect_tooltip = KIR_line_break
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = KIR_aureolin_monastery
+		if = {
+			limit = {
+				has_dlc = "Arms Against Tyranny"
+			}
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = KIR_aureolin_monastery_organization
+			mio:KIR_aureolin_monastery_organization = {
+				add_mio_size = 1
+				add_mio_funds = 300
+			}
+		}
+		else = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = KIR_aureolin_monastery
+		}
 		set_country_flag = KIR_aureolin_monastery_available
 	}
 }

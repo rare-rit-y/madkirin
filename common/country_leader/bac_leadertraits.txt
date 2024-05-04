@@ -1,14 +1,15 @@
 leader_traits = {
 	BAC_regional_self_centeredness = {
 		random = no
-		
-		political_power_factor = 0.33
+		army_core_defence_factor = 0.33
+		army_core_attack_factor = 0.33
 		stability_weekly = -0.0011
 	
 	}
 	BAC_road_to_direct_democracy = {
 		random = no
-		
+		army_core_defence_factor = 0.06
+		army_core_attack_factor = 0.06
 		political_power_factor = -0.09
 		drift_defence_factor = -0.33
 		war_support_factor = -0.03

@@ -154,9 +154,7 @@ country_event = { # baccocc.1 - To Prepare The Foundation
 	picture = GFX_event_KIR_street
 	option = { #"I have never thought this would be easy, after all."
 		name = baccocc.1.a
-		add_political_power = -3
-		add_stability = -0.033
-		add_war_support = -0.033
+		add_ideas = KIC_CFP
 		custom_effect_tooltip = baccocc_1_tt
 		set_power_balance = {
 			id = BAC_commonalty_bop
@@ -289,8 +287,8 @@ country_event = { # baccocc.6 - Matter of Regional Autonomy
 		add_stability = 0.033
 	}
 }
-country_event = { # baccocc.7 - Matter of Regional Autonomy
-	id = baccocc.7 
+country_event = { #Matter of Empowerment Action
+	id = baccocc.7
 	title = baccocc.7.t
 	desc = baccocc.7.d 
 	picture = GFX_event_KIR_stamp_A
@@ -299,8 +297,23 @@ country_event = { # baccocc.7 - Matter of Regional Autonomy
 	fire_only_once = yes
 	option = { # Tearful persuasion eventually had an effect!
 		name = baccocc.7.a
-		add_political_power = 33
-		add_stability = 0.033
+		add_popularity = {
+			ideology = communism
+			popularity = -0.033
+		}
+		add_stability = -0.033
+		add_political_power = -33
+	}
+	option = { # Perhaps it would be better just to step back...
+		name = baccocc.7.b
+		custom_effect_tooltip = BAC_start_phase_2_tt
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_regional_self_centeredness_dummy_0
+				add_idea = BAC_regional_self_centeredness_dummy_1
+			}
+		}
+		set_country_flag = baccocc_7b_flag
 	}
 }
 
@@ -592,6 +605,7 @@ country_event = { # baccocc.303 - Tathya-Samvrti
 		name = baccocc.303.a
 		custom_effect_tooltip = baccocc_303_tt
 		TNO_BAC_Country_Closing_Screen_Show = yes
+		set_country_flag = commonalty_ending_flag
 	}
 }
 
