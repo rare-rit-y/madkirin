@@ -154,12 +154,17 @@ country_event = { # baccocc.1 - To Prepare The Foundation
 	picture = GFX_event_KIR_street
 	option = { #"I have never thought this would be easy, after all."
 		name = baccocc.1.a
-		add_ideas = KIC_CFP
+		add_ideas = KIC_CPF
 		custom_effect_tooltip = baccocc_1_tt
 		set_power_balance = {
 			id = BAC_commonalty_bop
 		}
 		set_country_flag = your_focus_fucked_up_bac_flag
+		mio:KIC_small_arms_inventor_organization = {
+			set_mio_flag = cocc_wpu_mio_flag
+		}
+		custom_effect_tooltip = BAC_mio_size_up_prefix
+		custom_effect_tooltip = BAC_mio_size_up_wpu
 		hidden_effect = {
 			remove_country_leader_role = {
 				character = "KIR_kindling_flash"
@@ -210,7 +215,17 @@ unit_leader_event = { # baccocc.2 - A Militarykirin in the Committee
 	fire_only_once = yes
 	option = { #I cannot continue like this. #계속 이러고 있을 수는 없겠어.
 		name = baccocc.2.a
-		THIS = { add_unit_leader_trait = trait_SOV_determined }
+		THIS = {
+			add_unit_leader_trait = trait_SOV_determined
+			remove_advisor_role = { slot = high_command }
+			add_country_leader_role = {
+				promote_leader = yes
+				country_leader = {
+					ideology = centrism
+					expire = "1965.1.1.1"
+				}
+			}
+		}
 		KIR_coral_river = {
 			unit_leader_event = {
 				id = baccocc.3

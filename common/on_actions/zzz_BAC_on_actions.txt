@@ -10,25 +10,17 @@ on_actions = {
 				limit = {
 					FROM = {
 						original_tag = KIC
-						has_country_flag = KIC_children_of_concord_flag
+						has_country_flag = to_the_commonalty
 					}
 				}
 				if = {
 					limit = {
-						# OR = {
-						# 	has_mio_trait = generic_mio_initial_trait_battle_line_ship_builders #DM_maritime
-						# 	has_mio_trait = generic_mio_initial_trait_cas_aircraft_designer #DM_aerospace
-						# }
 						has_mio_flag = cocc_cot_mio_flag
 					}
 					FROM = { bac_COT_small_effect = yes }
 				}
 				else_if = {
 					limit = {
-						# OR = {
-						# 	has_mio_trait = generic_mio_initial_trait_escort_fleet #deer_comrade
-						# 	has_mio_trait = generic_mio_initial_trait_multi_role_aircraft_designer #KIC_aerospace
-						# }
 						has_mio_flag = cocc_wpu_mio_flag
 					}
 					FROM = { bac_WPU_small_effect = yes }

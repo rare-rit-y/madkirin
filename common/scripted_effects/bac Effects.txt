@@ -139,7 +139,7 @@ COC_Champion_add_WarHero_trait = {
 				}
 			}
 		}
-		#else = { add_stab = 5 }
+		#else = { }
 	}
 }
 
@@ -159,7 +159,7 @@ bac_eqs_popularity = {
 	}
 }
 
-#Strengthening WPU
+#Strengthening COT
 bac_COT_small_effect = {
 	#set_temp_variable = { bac_size_var = bac_size_small_var }
 	if = {

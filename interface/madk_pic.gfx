@@ -2,14 +2,14 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_bac_ember_glow"
-		texturefile = "gfx/interface/goals/goal_bac_ember_glow.DDS"
+		texturefile = "gfx/interface/goals/goal_bac_ember_glow.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_bac_ember_glow_shine"
-		texturefile = "gfx/interface/goals/goal_bac_ember_glow.DDS"
+		texturefile = "gfx/interface/goals/goal_bac_ember_glow.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_bac_ember_glow.DDS"
+			animationmaskfile = "gfx/interface/goals/goal_bac_ember_glow.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -21,7 +21,41 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_bac_ember_glow.DDS"
+			animationmaskfile = "gfx/interface/goals/goal_bac_ember_glow.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
+			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+	SpriteType = {
+		name = "GFX_goal_bac_kirin_ichiban_shibori"
+		texturefile = "gfx/interface/goals/goal_bac_kirin_ichiban_shibori.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_bac_kirin_ichiban_shibori_shine"
+		texturefile = "gfx/interface/goals/goal_bac_kirin_ichiban_shibori.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_bac_kirin_ichiban_shibori.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
+			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
+			animationlooping = no			# yes or no ;)
+			animationtime = 0.75				# in seconds
+			animationdelay = 0			# in seconds
+			animationblendmode = "add"       #add, multiply, overlay
+			animationtype = "scrolling"      #scrolling, rotating, pulsing
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		animation = {
+			animationmaskfile = "gfx/interface/goals/goal_bac_kirin_ichiban_shibori.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -37,14 +71,14 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_goal_bac_kindling"
-		texturefile = "gfx/interface/goals/goal_bac_kindling.DDS"
+		texturefile = "gfx/interface/goals/goal_bac_kindling.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_bac_kindling_shine"
-		texturefile = "gfx/interface/goals/goal_bac_kindling.DDS"
+		texturefile = "gfx/interface/goals/goal_bac_kindling.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_bac_kindling.DDS"
+			animationmaskfile = "gfx/interface/goals/goal_bac_kindling.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -56,7 +90,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_bac_kindling.DDS"
+			animationmaskfile = "gfx/interface/goals/goal_bac_kindling.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -71,14 +105,14 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_bac_firethorn"
-		texturefile = "gfx/interface/goals/goal_bac_firethorn.DDS"
+		texturefile = "gfx/interface/goals/goal_bac_firethorn.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_bac_firethorn_shine"
-		texturefile = "gfx/interface/goals/goal_bac_firethorn.DDS"
+		texturefile = "gfx/interface/goals/goal_bac_firethorn.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_bac_firethorn.DDS"
+			animationmaskfile = "gfx/interface/goals/goal_bac_firethorn.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -90,7 +124,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_bac_firethorn.DDS"
+			animationmaskfile = "gfx/interface/goals/goal_bac_firethorn.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -105,14 +139,14 @@ spriteTypes = {
 	}
 	SpriteType = {
 		name = "GFX_goal_bac_dayspring"
-		texturefile = "gfx/interface/goals/goal_bac_dayspring.DDS"
+		texturefile = "gfx/interface/goals/goal_bac_dayspring.dds"
 	}
 	SpriteType = {
 		name = "GFX_goal_bac_dayspring_shine"
-		texturefile = "gfx/interface/goals/goal_bac_dayspring.DDS"
+		texturefile = "gfx/interface/goals/goal_bac_dayspring.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_bac_dayspring.DDS"
+			animationmaskfile = "gfx/interface/goals/goal_bac_dayspring.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -124,7 +158,7 @@ spriteTypes = {
 			animationtexturescale = { x = 1.0 y = 1.0 }
 		}
 		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_bac_dayspring.DDS"
+			animationmaskfile = "gfx/interface/goals/goal_bac_dayspring.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	##<- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)

@@ -5,7 +5,6 @@ ideas = {
 		BAC_star_energy_zeb = {
 			allowed = {
 				original_tag = KIC
-				has_country_flag = KIC_Children_of_Concord_flag
 			}
 			available = {
 				has_country_flag = BAC_star_energy_zeb_available
@@ -25,9 +24,63 @@ ideas = {
 			}
 		}
 	}
+	bac_verdant_accord_idea = {
+			allowed = {
+				always = no
+			}
+			picture = equestrian_treaty
+			available = {
+				any_country = {
+					OR = {
+						has_event_target = equestria
+						has_event_target = solar_empire
+					}
+					exists = yes
+					is_subject = no
+					NOT = { has_war_with = KIR }
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = bac_verdant_accord_3_offmap_civ_facs
+			}
+			on_remove = {
+				ROOT = {
+					add_offsite_building = { type = industrial_complex level = -2 }
+				}
+			}
+		}
 	country = {
+		BAC_famine_initial = {
+			name = KIC_famine_modifier
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GRW_famine_start
+			removal_cost = -1
+			modifier = {
+				MONTHLY_POPULATION = -0.3
+				stability_weekly_factor = -0.003
+			}
+		}
+		BAC_famine_timed = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GRW_famine_start
+			removal_cost = -1
+			modifier = {
+				MONTHLY_POPULATION = -0.3
+			}
+		}
 	
-		KIC_CFP = {
+		KIC_CPF = {
 			picture = KIR_split_government
 			allowed = {
 				original_tag = KIC
@@ -42,6 +95,41 @@ ideas = {
 				stability_factor = -0.09
 				stability_weekly = -0.003
 				war_support_factor = -0.3
+			}
+		}
+
+		BAC_COC_eco_h1_idea = {
+			name = BAC_COC_eco_h1
+			picture = KIR_unity
+			allowed = {
+				original_tag = KIC
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				local_building_slots_factor = 0.09
+				INDUSTRY_FREE_REPAIR_FACTOR = 0.09
+				production_speed_buildings_factor = 0.09
+			}
+		}
+		BAC_COC_eco_c1_idea = {
+			name = BAC_COC_eco_c1
+			picture = KIR_split_government
+			allowed = {
+				original_tag = KIC
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				compliance_growth = -0.3
+				political_power_cost = 0.3
+				stability_weekly = -0.001
 			}
 		}
 	}

@@ -104,6 +104,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 				else = { set_politics = { ruling_party = democratic } }
 			}
 			on_deactivate = {
+				log = "FULL COT deactivated"
 				set_politics = { ruling_party = communism }
 				
 			}

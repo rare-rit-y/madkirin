@@ -32,9 +32,9 @@ leader_traits = {
 	}
 	BAC_prophet_of_the_common = {
 		random = no
-		political_power_factor = 0.03
 		stability_weekly = 0.0033
-		research_speed_factor = 0.03
+		modifier_army_sub_unit_kirin_braves_attack_factor = 0.033
+		modifier_army_sub_unit_kirin_braves_defence_factor = 0.033
 	}
 	BAC_firethorn_advisor_trait = {
 		random = no

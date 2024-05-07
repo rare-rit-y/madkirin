@@ -22438,6 +22438,14 @@ country_event = {
 							limit = { has_trait = KIR_Roaring_Fire_unit_leader_trait }
 							remove_unit_leader_trait = KIR_Roaring_Fire_unit_leader_trait
 						}
+						remove_trait = {
+							slot = political_advisor
+							trait = KIR_tempered_flame
+						}
+						add_trait = {
+							slot = political_advisor
+							trait = BAC_prophet_of_the_common
+						}
 						set_nationality = PREV.PREV
 					}
 				}
@@ -22574,7 +22582,8 @@ country_event = {
 					}
 				}
 				set_temp_variable = { coalition_partner_var = token:democratic }
-				add_to_coalition = yes # added from BAC end
+				add_to_coalition = yes
+				add_ideas = BAC_famine_initial # added from BAC end
 				add_ideas = tot_economic_mobilisation
 				add_ideas = closed_economy
 				add_ideas = scraping_the_barrel
@@ -23466,7 +23475,7 @@ news_event = {
 			# add_ideas = proper_science_base #bac
 			# add_ideas = no_lack_of_scientists
 			# add_ideas = modern_society
-			remove_ideas = KIC_CFP
+			remove_ideas = KIC_CPF
 			custom_effect_tooltip = KIR_line_break
 			if = {
 				limit = { has_country_flag = baccocc_7b_flag }
@@ -23592,6 +23601,11 @@ news_event = {
 			clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
 
 			load_focus_tree = generic_zebra_focus #bac added
+			swap_ideas = {
+				remove_idea = scraping_the_barrel
+				add_idea = volunteer_only
+			}
+			add_ideas = civilian_economy #bac added end
 			set_country_flag = KIC_tank_designer_1_available
 			set_country_flag = KIC_tank_designer_2_available
 			set_country_flag = KIR_DM_aerospace_engineering_available
@@ -24723,8 +24737,8 @@ country_event = {
 				has_dlc = "Arms Against Tyranny"
 			}
 			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = KIR_aureolin_monastery_organization
-			mio:KIR_aureolin_monastery_organization = {
+			show_mio_tooltip = KIR_aureolin_monastery
+			mio:KIR_aureolin_monastery = {
 				add_mio_size = 1
 				add_mio_funds = 300
 			}

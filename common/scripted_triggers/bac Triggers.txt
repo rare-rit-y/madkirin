@@ -12,7 +12,23 @@
 	#		exampel_trigger = yes
 	#	}
 #
-
+#'any of scopes' version is a thing (note
+bac_all_original_cores_controlled_by_ROOT_or_ally = {
+	custom_trigger_tooltip = {
+		tooltip = bac_controlls_all_cores_original_ally_tt
+		hidden_trigger = {
+			all_of_scopes = {
+				array = original_cores
+				controller = {
+					OR = {
+						tag = ROOT
+						is_in_faction_with = ROOT
+					}
+				}
+			}
+		}
+	}
+}
 
 is_in_coalition_with_dem = {
 	set_temp_variable = { coalition_target = token:democratic }

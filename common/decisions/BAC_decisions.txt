@@ -13,7 +13,7 @@ bac_coc_debug_cat = {
 		complete_effect = {
 			set_variable = { coc_start_foci_completed = 10 }
             mark_focus_tree_layout_dirty = yes
-			
+			complete_national_focus = BAC_COC_true_commonalty
 			every_possible_country = {
 				limit = {
 					has_character = KIC_rising_sun_u
@@ -60,7 +60,6 @@ bac_coc_debug_cat = {
 			set_country_flag = COC_war_committee
             mark_focus_tree_layout_dirty = yes
 		}
-    
     }
 }
 economy_decisions = { #Economic Policy
@@ -175,9 +174,10 @@ political_actions = {
 		fire_only_once = no
 
 		modifier = {
-			stability_weekly = 0.005
-			command_power_gain = -0.10
-			industrial_capacity_factory = -0.1
+			stability_weekly = 0.003
+			command_power_gain = -0.3
+			training_time_army_factor = -0.3
+			planning_speed = -0.3
 		}
 
 		days_remove = 180
@@ -282,6 +282,7 @@ commonalty_bop_category = {
         days_remove = 33
 		modifier = {
             power_balance_weekly = -0.033
+			political_power_factor = -0.3
 		}
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision comm_WPU_1"
@@ -301,6 +302,7 @@ commonalty_bop_category = {
         days_remove = 33
 		modifier = {
             power_balance_weekly = 0.033
+			political_power_factor = -0.3
 		}
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision comm_COT_1"
@@ -336,7 +338,13 @@ foreign_politics = {
 		}
 
 		visible = {
-			ROOT = { has_country_flag = bac_diplo_expanded }
+			ROOT = {
+				has_country_flag = bac_diplo_expanded
+				any_owned_state = {
+					is_coastal = yes
+					is_fully_controlled_by = ROOT
+				}
+			}
 			FROM = {
 				is_capital = yes
 				owner = {
@@ -345,9 +353,17 @@ foreign_politics = {
 						has_war_with = ROOT
 						has_opinion_modifier = commonalty_embassy
 						has_idea = detached_country
+						tag = EQS
 					}
-					#has_opinion = { target = KIR value > 0 }
-					#TODO: should add fucking border or coast check
+					OR = {
+						is_neighbor_of = ROOT
+						capital_scope = { is_on_continent = africa }
+					}
+					any_owned_state = {
+						is_coastal = yes
+						is_fully_controlled_by = ROOT
+					}
+					#has_opinion = { target = ROOT value > 0 }
 				}
 			}
 		}
@@ -414,7 +430,6 @@ foreign_politics = {
 		visible = {
 			has_country_flag = commonalty_ending_flag
 			is_faction_leader = yes
-			is_subject = no
 		}
 
 		available = {
@@ -477,7 +492,7 @@ foreign_politics = {
 			}
 		}
 
-		cost = 75
+		cost = 33
 		days_re_enable = 180
 
 		remove_effect = {

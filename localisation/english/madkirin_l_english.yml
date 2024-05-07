@@ -95,42 +95,46 @@
  BAC_COC_pol_c2_desc: "The most devout of The Way of Fire's clergy would spend their life's savings to build schools. The bloodsuckers in  Sorghum before the Uprising were all evil, but why burn this beautiful tradition and its legacy to the ground now? With a few tweaks to suit realities for nowadays, it would be so much better, and it might even appease the Communion." # The Way of Fire의 성직자들 중에서도 가장 독실한 이들은 일생의 가산을 털어 학교를 세우곤 했습니다. 봉기 이전에 Sorghum의 고혈을 빨던 자들은 모두 사악한 족속들이었지만, 이제 와서 이 아름다운 전통과 그 유산들을 불태워버릴 필요가 있을까요? 단지 오늘날의 실정에 맞게 약간의 보완만 가해진다면 훨씬 좋을 것이며 이를 토대로 Communion 쪽도 달랠 수 있을 것입니다.
  BAC_COC_pol_m2: "Justice For Common" #
  BAC_COC_pol_m2_desc: "There is a cause for all of this, and there are somekirin who are responsible. But they have been unwilling to bear the weight of that responsibility, and it's time to make amends. A trial for the crimes of the NAKP and its henchmen would be a good start. Although it was concerned with the Committee on Judicial Affairs, number of exceptions will apply to this trial..." # 이 모든 참사에는 원인이 있으며 그에 책임이 있는 키린들도 있습니다. 하지만 그들은 그간 그 책임의 무게를 짊어지려 하지 않았지요. 이제 바로잡아야 할 때입니다. NAKP와 그 부역자들의 죄에 대한 재판은 좋은 시작이 될 것입니다. 비록 법무위원회의 소관이긴 하지만, 이 재판에는 여러 예외가 적용될 것입니다...
- BAC_COC_pol_h3: "Serve The Common" # 만민을 위한 봉사
- BAC_COC_pol_h3_desc: "There will be times when we have doubts and scepticism about why we've come this far, especially when we're doing hard work in a foreign land. Reminding ourselves of our purpose will help us stay motivated." # 우리가 왜 여기까지 왔는지에 대해, 마음을 좀먹는 회의감과 의심이 들 때가 있습니다. 특히 타지에서 고된 일을 하다보면 더욱 그렇겠지요. 우리의 목적을 되새긴다면 더욱 의욕적으로 사역에 임할 수 있을 것입니다.
+ BAC_COC_pol_h3: "Reorganise The Aureolin"
+ BAC_COC_pol_h3_desc: "The Aureolin Monastery has stood as a stalwart bastion for the Way of Fire and its successor Divine Fire, even though it is located in the Western Territories which has been Rising Fire's domain for some time. Now that our religious authority is stronger than ever, we can seize it. It will be of use." # Aureolin Monastery는 한동안 Rising Fire의 세력권이었던 Westren Territories에 위치해 있었음에도 그간 Way of Fire와 그 후신인 Divine Fire를 위해 굳건한 보루로서 서있었습니다. 이제 우리의 종교적 권위가 그 어느 때보다 강력해진 지금 이것을 확보할 수 있게 되었습니다. 쓸모가 있을 것입니다.
  BAC_COC_pol_c3: "Establish True Autunomy" # 진정한 지방자치제도의 정착 coring
  BAC_COC_pol_c3_desc: "Residents should be able to control their own destiny, except for matters that inevitably need to be dealt with by the Common Senate. Creating norms that allow for maximum freedom but are better suited to masking shenanigans will help between residents within a region, between regions, and between regions and the Senate." # 주민들은 스스로의 운명을 스스로 정할 수 있어야 합니다. 어쩔 수 없이 Common Senate에서 다루어야 할 사안을 제외하면요. 주민들의 자유를 최대한 보장하되 시시비비를 가리기에 더욱 적합한 규범을 만들면 지역 내 주민들 사이에서도, 지역 사이에서도, 지역과 Senate 사이에서도 도움이 될 것입니다.
  
  BAC_COC_eco_head: "Committee For Industry And Development" #산업개발위원회
  BAC_COC_eco_head_desc: "Riding the wave of modernisation is important. But there's a danger in our impatience we'll repeat the mistakes or outright faults, of our predecessors. Luckily, we have Kindling Flash. His ad hoc yet artistic control of production has brought out qualities in him. And of course, he's all about the people, which should allay these concerns." # 현대화의 물결에 발맞춰서 따라가는 것은 중요합니다. 하지만 조급한 마음에 지나치게 서둘렀다간 전임자들의 실수, 또는 명백한 과실을 답습하게 될 우려가 있지요. 다행히도 우리에겐 Kindling Flash가 있습니다. 일전에 그가 선보였던 임시방편식이지만 예술적이었던 생산 통제는 스스로도 몰랐을 그의 자질을 드러내게 되었는데, 물론 그는 인민을 중요시하기 때문에 앞서 언급한 우려도 불식시킬 수 있을 것입니다.
  BAC_COC_eco_h1: "Trinitarian Labor Collective"
- BAC_COC_eco_h1_desc: "Equestria is a fantastic land where different pony subspecies work together to do amazing things and solve problems. The qualities that Her Radiant Trinity has bestowed upon us - upon kirin, are nothing short! We've just been slow to realise. There is nothing that a group of sisters and brothers in faith can't accomplish." #이퀘스트리아는 서로 다른 포니 아종들이 서로 힘을 합쳐 놀라운 일들을 해내고 문제를 해결하는 환상적인 나라입니다. Her Radiant Trinity께서 우리 키린들에게 내려주신 자질은 결코 이에 못지 않습니다! 그저 우리가 이 사실을 뒤늦게나마 깨달았을 뿐입니다. 믿음의 형제자매들이 뭉치면 해내지 못할 일은 없습니다.
+ BAC_COC_eco_h1_desc: "Equestria is fantastic land where different pony subspecies work together to do amazing things and solve problems. The qualities that Her Radiant Trinity has bestowed upon us - upon kirin, are nothing short! We've just been slow to realise. There is nothing that a group of sisters and brothers in faith can't accomplish." #이퀘스트리아는 서로 다른 포니 아종들이 서로 힘을 합쳐 놀라운 일들을 해내고 문제를 해결하는 환상적인 나라입니다. Her Radiant Trinity께서 우리 키린들에게 내려주신 자질은 결코 이에 못지 않습니다! 그저 우리가 이 사실을 뒤늦게나마 깨달았을 뿐입니다. 믿음의 형제자매들이 뭉치면 해내지 못할 일은 없습니다.
  BAC_COC_eco_h2: "Contact With Equestrian Ties" #이퀘스트리아 연줄 접촉
- BAC_COC_eco_h2_desc: "We have many creatures from Equestria. We should focus on them and continue our connection to Equestria. ...Also many from elsewhere as well, but isn't it obvious that few would question the fact that Equestria is the most powerful nation in the world? At the very least, Equestria is far more prosperous than most of the socialist nations." #우리에겐 이퀘스트리아에서 온 생물들도 많습니다. 이들을 중심으로 이퀘스트리아와의 연결을 이어나가야 합니다. 물론 다른 곳에서 온 생물들도 많기는 하지만, 이퀘스트리아가 세계 최강대국이라는 사실에 의문을 표할 이는 그리 없을 것이 명백하지 않습니까? 적어도 사회주의 국가들보다는 훨씬 번영한 나라입니다.
- BAC_COC_eco_h3: "Reach Out To The Lodge"
- BAC_COC_eco_h3_desc: "$comm_COT_CES_desc$" #
+ BAC_COC_eco_h2_desc: "We have many creatures from Equestria. We should focus on them and continue our connection to Equestria. ...Also some from elsewhere as well, but isn't it obvious that few would question the fact that Equestria is the most powerful nation in the world? At the very least, Equestria is far more prosperous than most of the socialist nations, at least." #우리에겐 이퀘스트리아에서 온 생물들도 많습니다. 이들을 중심으로 이퀘스트리아와의 연결을 이어나가야 합니다. 물론 다른 곳에서 온 생물들도 많기는 하지만, 이퀘스트리아가 세계 최강대국이라는 사실에 의문을 표할 이는 그리 없을 것이 명백하지 않습니까? 적어도 사회주의 국가들보다는 훨씬 번영한 나라입니다.
+ BAC_COC_eco_h3: "Yet Another Accord"
+ BAC_COC_eco_h3_desc: "The Realm of Kiria was quite good terms with Equestria. But with the collapse of the Realm, the Hyacinth Accord - which was (or some would argue that) instrumental in the modernization of that country - was laid to rest. Now that we have been recognized by Equestria as the legitimate regime of Kiria, it would be of great benefit to us if we could enter into an equivalent terms." #Realm of Kiria는 이퀘스트리아와 그리 소원한 사이가 아니었습니다. 하지만 그것의 멸망과 함께, 그 나라의 현대화에 큰 도움이 되었던(혹은 그랬으리라 혹자가 주장하는) Hyacinth Accord는 휴지조각이 되었습니다. 이제 우리가 Kiria의 적법한 정권임을 이퀘스트리아로부터도 인정받았으니 그에 준하는 조약을 체결할 수 있다면 우리에게 큰 도움이 될 것입니다.
+ bac_verdant_accord_idea: "The Verdant Accord"
+ bac_verdant_accord_3_offmap_civ_facs: "$MODIFIER_INDUSTRIAL_FACTORY_DONATIONS$: §G£civ_factory  +3§!"
  BAC_COC_eco_h4: "Friendship is Magic!"
  BAC_COC_eco_h4_desc: "At last, in the name of Her Radiant Trinity, we have achieved the feats of modernisation and globalisation simultaneously! Kirin are free, our streets are filled with friendship and love, and the Commonalty has become the land of harmony! Now, as equal economic player, we will ensure that this monumental success is forever remembered by signing the Free Trade Agreement with the Equestrian Economic Bloc." #마침내 우리가 Her Radiant Trinity의 이름으로 현대화와 세계화라는 위업을 동시에 이루었습니다! 키린들은 자유롭고, 거리에는 우정과 사랑이 넘쳐나며, Commonalty는 조화의 나라가 되었습니다! 이제 우리는 대등한 경제주체로서 이퀘스트리아 경제블록과의 자유무역협정 체결을 통해 이 기념비적인 성공이 영원히 상기되도록 할 것입니다.
  BAC_COC_eco_c1: "Initiate Land Reform" #gives timed idea i think
  BAC_COC_eco_c1_desc: "The Communalists don't really care about all this talk of modernisation, because the only thing that matters is making sure that the kirin in this Realm don't go hungry. If we can follow the principle of 'Land to the Tiller' and give each farmer just enough land to ensure optimal production for themselves, there will be no more starving kirin." #Communalists들은 현대화니 뭐니 하는 이야기에 그다지 관심이 없습니다. 중요한 것은 이 Realm에 사는 키린들이 배곯지 않도록 하는 것 말고는 없으니까요. 경자유전의 원칙에 따라 각 농가에 스스로 최적생산량을 보장할 수 있을만큼의 토지를 분배하게 될 수만 있다면 더 이상 굶주리는 키린이 없게 될 것입니다.
- BAC_COC_eco_m2: "Todo"
- BAC_COC_eco_m2_desc: "TODO"
+ BAC_COC_eco_m2: "New Campaign Town" #새마을운동
+ BAC_COC_eco_m2_desc: "When the NAKP brought modernization to this land for the first time in this century, they said that we, the ignorant kirin, could only compete by working for low wages, poor diets, and harsh conditions. The foolishest and most rebellious were the first to die. We must continue to prove the NAKP wrong, as our very existence proves. That is the only honor we can give to those who have gone before us." #NAKP가 금세기 처음으로 이 땅에 현대화를 가져다주면서 말하기를, 무지몽매한 우리 키린들은 적은 임금과 빈곤한 식단, 열악한 환경에서 일해야만 경쟁력을 갖출 수 있다 하였습니다. 가장 어리석었던 이들과 가장 반항적이었던 이들은 가장 먼저 죽었습니다. 우리는 우리의 존재가 증명하듯 NAKP가 틀렸다는 사실을 계속해서 증명해야 합니다. 그것이 먼저 떠난 이들에게 갖출 수 있는 예우입니다.
  BAC_COC_eco_c2: "Grain Propagation Plan" #産米增殖計劃
  BAC_COC_eco_c2_desc: "Though reforming the land system and distributing land is the most important thing, but if there is no food in the stomachs of kirin, millions must starve. We need to put everything into farming this year. Because the fields - already devastated by the civil war - can't feed everykirin. Holding on for now, but it won't last long. The most urgent need is to improve irrigation, so let's get started." #토지제도의 개혁과 토지의 분배가 가장 중요한 일이긴 하지만, 정작 키린들의 뱃속에 들어갈 음식이 없다면 모두 굶게 될 것입니다. 올해 농사에 모든 것을 걸어야 합니다. 내전으로 이미 황폐해진 들판이 모든 키린들을 먹여살릴 수는 없을테니까요. 당장은 어떻게든 버티고 있지만, 오래 가지 못할 것입니다. 가장 급한 것은 관개시설의 정비입니다. 곧바로 시작합시다.
- BAC_COC_eco_m3h: "Favor Todo"
- BAC_COC_eco_m3h_desc: "TODO"
- BAC_COC_eco_m3c: "Todo"
- BAC_COC_eco_m3c_desc: "TODO"
- BAC_COC_eco_c3: "Communalist"
- BAC_COC_eco_c3_desc: "TODO"
+ BAC_COC_eco_c2_tt: "§Y$BAC_famine_timed$§! National Spirit will be removed in 730 days."
+ BAC_famine_timed: "Famine Effort"
+ BAC_COC_eco_m3c: "The Kirian Heritage"
+ BAC_COC_eco_m3c_desc: "The heritage that the name Kiria has left us is mostly filth, the most valuable of which are only the resources that lie dormant in the ground, and we have literally nothing to thank it for since a lot of sweat and tears will go into the process." #Kiria라는 이름이 우리에게 남겨준 Heritage는 대부분 오물뿐입니다. 그 중에서 가장 가치있는 것은 그 땅에 잠들어있는 자원들 뿐입니다. 그 과정에서 수많은 땀과 눈물이 들어갈 예정이니 고마워할 것은 일절 없습니다.
+ BAC_COC_eco_m3h: "Let Them Run Through The Vein of Industry"
+ BAC_COC_eco_m3h_desc: "If steel is the rice of industry, then oil is the blood of industry. Also if the modern armies in the heads of young generals are to become a reality, they need oil to run them of course." #철강이 산업의 쌀이라면 석유는 산업의 혈액입니다. 또한, 젊은 장군들의 머릿속에 들어있는 현대식 군대가 현실화되려면 그것들을 돌릴 석유가 당연히 필요합니다.
+ BAC_COC_eco_c3: "Conclusion of Land Reform"
+ BAC_COC_eco_c3_desc: "Land is the lifeline of peasants, so this land reform alone took a lot of hard work and had a lot of twists and turns, but we can be glad that it's over now. Nokirin is begging and starving in the streets just because they don't own the land, even though it's arable land all around them. If only the people would recognize our hard work..." # 토지는 농민의 목숨줄이라, 이 토지의 개혁 하나만으로도 엄청난 노고를 들여야 했고 우여곡절도 참 많았습니다. 하지만 이제 이렇게 토지개혁이 일단락되었으니 다행스러운 일입니다. 사방에 널린 것이 경작지인데도 소유권이 없어 길에서 구걸하며 굶주리는 키린은 이제 없습니다. 우리의 노고를 인민이 알아준다면 좋으련만...
+ BAC_COC_eco_c4: "Justice! Democracy! Dignity!"
+ BAC_COC_eco_c4_desc: "The unequal distribution of all things is becoming a thing of the past. The people have been given back what belongs to the people, and the land has been given back to the tillers. This is the result of everycrature coming together under the banner of Justice, Democracy, and Dignity. We will continue to move toward true equality!" #만물의 불평등한 분배는 이제 옛이야기가 되어가고 있습니다. 인민에게 인민이 가져야 할 것을 돌려주었고, 토지를 경작하는 이들에게 그 토지를 돌려주었습니다. Justice, Democracy, and Dignity라는 구호 아래 모두가 하나되어 이룬 결과입니다. 우리는 앞으로도 진정한 평등을 향해 나아갈 것입니다!
  BAC_COC_eco_m4h: "Plan Zebrica"
  BAC_COC_eco_m4h_desc: "Now that we have modernised the Commonalty, we need to further increase our naval power to ensure that our people's freedom is most assuredly protected at sea. Plan Zebrica will be the start." #이제 우리가 만민국의 현대화를 이룩하였으니, 해군력을 보다 증강시켜 우리 인민의 자유가 바다 위에서도 가장 확실하게 보호받을 수 있도록 해야 합니다. Plan Zebrica는 그 시작이 될 것입니다.
- BAC_COC_eco_m4c: "Todo"
- BAC_COC_eco_m4c_desc: "TODO"
- BAC_COC_eco_c4: "Communalist"
- BAC_COC_eco_c4_desc: "TODO"
+ BAC_COC_eco_m4c: "Light Industry For Everykirin"
+ BAC_COC_eco_m4c_desc: "We can't do what usual developmentalist dictatorships do: force sacrifices on the promise of increasing the pie, and then not care about anything at all. The fruits of modernization and development must be shared by all." #흔한 개발독재국가들처럼 파이를 늘리겠다는 약속으로 희생을 강요한 다음 나중에 가서 시치미를 뚝 떼는 짓을 우리는 할 수 없습니다. 현대화와 발전의 과실은 모두와 나누어야 합니다.
  BAC_COC_eco_m4m: "Electrify The Common" #만민에게 전력을
- BAC_COC_eco_m4m_desc: "A vast network of power lines shall connect the bustling metropolises to the farthest rural hamlet, the tendrils of modernity criss-crossing Kiria to weave a web of illumination and progress. The fervent spirit of innovation ignited by the Grand Gallop Onward, churned into being by the gears of industry, will leap and spark from pylon to towering pylon, breathing fire and vigor into the veins of the Commonalty." #KIR_focus_9g_desc
- focus_eco_m4m_tt: "State Category of every original @KIR §OKirian§! core states will be upgraded for a single level."
+ BAC_COC_eco_m4m_desc: "A vast network of power lines shall connect the bustling metropolises to the farthest rural hamlet, the tendrils of modernity criss-crossing Commonalty to weave a web of illumination and progress. The fervent spirit of innovation ignited, churned into being by the gears of industry, will leap and spark from pylon to towering pylon, breathing fire and vigor into the veins of the Commonalty." #KIR_focus_9g_desc
+ focus_eco_m4m_tt: "State Category of every original @KIR §OKirian§! core states will be upgraded for 1 level."
  BAC_COC_diplo: "Expand Foreign Affairs" # 외교 업무 확장
  BAC_COC_diplo_desc: "Putting on a face may not be enough. The international community is cold. We need to blend in if we don't want to be swayed by what they decide behind closed doors. Currently, the Committee for Foreign Affairs is a ragtag organization that was hastily thrown together on the eve of the foundation, so we need to start by revamping it." # 안면을 트는 것만으로는 부족할 수 있습니다. 국제사회는 냉혹합니다. 저들이 밀실에서 결정할 내용에 휘둘리지 않으려면 저들과 섞여야 합니다. 현재 아국 외무부는 건국 직전에 급조된 누더기 조직이므로, 이를 개편하는 것부터 시작해야 합니다.
  BAC_COC_diplo_tt: "Unlocks §Y$BAC_COC_embassy$§! £decision_icon_small Decisions, which allows us to establish §CCommanlty Embassies§! in the capital cities of §Gfriendly countries§!."
@@ -141,18 +145,18 @@
 
  BAC_COC_mil_head: "Committee for Military Affairs" #군무위원회
  BAC_COC_mil_head_desc: "There are many steeds that have been rumoured to be the chairman of the Committee for Military Affairs, but it is widely believed that some of the most active generals currently on the Senate will be among them. Ember Glow will soon be presenting a new motion to the Senate, and this current affairs gossip will be quickly forgotten." # Committee for Military Affairs의 위원장으로 거론되는 군마들은 많습니다. 하지만 현재 가장 활발한 의정활동을 하고 있는 몇몇 장군들이 그 중 하나가 되지 않겠는가 하는 의견이 대세입니다. Ember Glow가 곧 Senate에 새로운 발의안을 제출할 것입니다. 그러면 이런 시사 가십도 금방 잊히겠지요.
- BAC_COC_mil_h1: "Favor Harmonist"
- BAC_COC_mil_h1_desc: "TODO"
- BAC_COC_mil_c1: "Favor Communalist"
- BAC_COC_mil_c1_desc: "TODO"
- BAC_COC_mil_h2: "Harmonist"
- BAC_COC_mil_h2_desc: "TODO"
- BAC_COC_mil_m2: "Todo"
- BAC_COC_mil_m2_desc: "TODO"
+ BAC_COC_mil_h1: "In Her Valiancy"
+ BAC_COC_mil_h1_desc: "In the name of Her Radiant Trinity, we should be better able to draw on our own strength. Even in situations where close combat is not expected such as a battle on the plains, if we maintain a calm mind like Clean Mirror and Still Water, we can fight and win against superior enemies with inferior weapons." #Her Radiant Trinity의 이름으로 우리는 우리 스스로의 힘을 더 잘 끌어낼 수 있어야 합니다. 평야에서의 전투와 같이 근접전을 상정하지 않을 상황이라도, 명경지수와 같이 평온한 마음을 유지한다면 더 열악한 무기로도 더 우월한 적들을 상대로 싸워 이길 수 있습니다.
+ BAC_COC_mil_c1: "Let The Common Arms"
+ BAC_COC_mil_c1_desc: "We're sick and tired of suicide raids, onhoof rushes against superiorly equipped opponents. In order to properly harness and maximise the power of the people, we need to prioritise the distribution of equipment that everycreature can easily learn to use, rather than cumbersome martial arts training." #우월한 장비를 갖춘 적들을 상대로 맨몸으로 달려드는 자살 돌격은 지긋지긋합니다. 인민의 힘을 최대한으로 올바르게 활용하려면 번거로운 무예 수련 대신 누구나 사용법을 간단히 익힐 수 있는 장비의 원활한 보급이 우선시되어야 합니다.
+ BAC_COC_mil_h2: "Commission Star Energy"
+ BAC_COC_mil_h2_desc: "Our armies have never had much luck with artilleries, however it has been said that Star Energy has sensed this gap and contacted us. Doesn't it sound like a beautiful friendship that will yield great results for both sides? Her Radiant Trinity shall be pleased." #우리 군대는 대포와는 연이 없었는데, 이 빈틈을 포착한 것인지 스타 에너지에서 우리에게 접촉해왔다고 합니다. 양 측 모두에게 있어 훌륭한 결과를 낳는 아름다운 우정이 될 것 같지 않습니까? 분명 Her Radiant Trinity께서도 기뻐하실 것입니다.
+ BAC_COC_mil_m2: "Manage The Ivory Pieces"
+ BAC_COC_mil_m2_desc: "We can't win a war only with overwhelming motivation or high spirits alone - elaborate plans backed by careful intelligence-gathering and thorough examination are the key to victory. The most important thing to do this is to have training and discipline - two things this peasant army lacks..." #넘치는 의욕이나 고매한 정신만으로 전쟁에서 이길 수는 없습니다. 면밀한 정보수집과 철저한 검토로 뒷받침되는 정교한 계획이 승리의 열쇠입니다. 이를 수행하는 데 있어 가장 중요한 것은 훈련과 규율입니다. 이 농민군에게 있어 가장 부족한 것들이죠...
  BAC_COC_mil_c2: "Communalist"
  BAC_COC_mil_c2_desc: "TODO"
- BAC_COC_mil_h3: "The Spearheads of Harmony"
- BAC_COC_mil_h3_desc: "TODO"
+ BAC_COC_mil_h3: "The Spearheads of Her Radiant Trinity"
+ BAC_COC_mil_h3_desc: "To honor Her Radiant Trinity and Her will, we must be able to strike anywhere. Landing on the shore is one of the most difficult and arduous operations, but we kirin will do it, for we have accomplished a revolution that nocreature, not even ourselves, thought possible." # Her Radiant Trinity와 그분의 뜻을 받들기 위해서, 우리는 어디든 타격할 수 있어야 합니다. 해안 상륙은 가장 어렵고 고된 작전 중 하나이지만, 우리 키린들은 해낼 수 있을 것입니다. 모두가, 아니 우리 스스로도 불가능하다고 생각했던 혁명을 성공시켰으니까요.
  BAC_COC_mil_m3h: "Favor Todo"
  BAC_COC_mil_m3h_desc: "TODO"
  BAC_COC_mil_m3c: "Todo"
@@ -160,54 +164,56 @@
  BAC_COC_mil_c3: "Communalist"
  BAC_COC_mil_c3_desc: "TODO"
  BAC_COC_mil_h4: "Fight For Her Radiance"
- BAC_COC_mil_h4_desc: "TODO"
+ BAC_COC_mil_h4_desc: "We will fight not only in the muddy and dusty fields, dense forest, or rugged heights, but also at sea and in the air. Under the protection of Her Radiant Trinity, our enemies will not be able to stop our advance; it is our mission, and only our mission, to bring them to Her Primordial Fire. Onward!" #우리는 질척한 논밭이나 빽빽한 숲, 험준한 고지에서뿐만 아니라 바다에서도, 공중에서도 싸울 것입니다. Her Radiant Trinity의 가호 아래 적들은 우리의 전진을 막지 못할 것입니다. 적들을 그분의 Primordial Fire로 데려가는 것은 우리가 해야 할, 우리만이 할 수 있는 일입니다. 앞으로!
  BAC_COC_mil_m4h: "Favor Todo"
  BAC_COC_mil_m4h_desc: "TODO"
  BAC_COC_mil_m4c: "Todo"
  BAC_COC_mil_m4c_desc: "TODO"
+ BAC_COC_mil_m4m: "Todo"
+ BAC_COC_mil_m4m_desc: "TODO"
  BAC_COC_mil_c4: "Dare-to-die Resistance" #결사항전
- BAC_COC_mil_c4_desc: "TODO"
+ BAC_COC_mil_c4_desc: "We fought for our survival. We fought for our freedom. We will fight to the death ironically to preserve our survival and freedom. It has been said that "those who seek death shall live, those who seek life shall die"; even though we die, we will fight as a free being." #우리는 우리의 생존을 위해 싸웠습니다. 우리는 우리의 자유를 위해 싸웠습니다. 우리는 우리의 생존과 자유를 지키기 위해서라면 역설적으로 죽음을 불사하고 싸울 것입니다. 옛말에 이르기를 살고자 하면 죽을 것이고, 죽고자 하면 살 것이니, 우리는 죽더라도 자유로운 존재로서 싸울 것입니다.
 
  BAC_COC_mil_navy: "Beyond The Riverine Navy" #강상군을 넘어서
- BAC_COC_mil_navy_desc: "TODO"
+ BAC_COC_mil_navy_desc: "We fought on so many riverines of Mellifluve, and now that Kiria is unified and must look to the wider world, we can't even survive in our own waters. This situation must change. If we create a proper navy, backed by a proper realm, our sailors will no longer have to fear pirates." #Mellifluve의 수많은 강기슭에서 우리는 싸웠습니다. 이제 Kiria가 통일되고 더 넓은 세계를 바라보아야 하는 지금 우리는 우리 앞바다에서의 생존조차 도모할 수 없는 상황입니다. 이 상황을 타개해야 합니다. 제대로 된 국가에 의해 뒷받침되는 제대로 된 해군을 만들어낸다면 더 이상 우리 선원들이 해적을 두려워하는 일 따위는 없게 될 것입니다.
  BAC_COC_mil_air: "Flying Commonkirin" #날으는 기린
- BAC_COC_mil_air_desc: "TODO"
+ BAC_COC_mil_air_desc: "In the modern era, the battlefield has become a place where the air element must be actively considered. Fortunately, we don't have to go through the same trials and tribulations that others did, if we study intently the countless examples of aerial battles that have been and are still being fought in Griffonia and Zebrica. If we seize the air superiority, we can reap greater accomplishments with less bloodshed in a one-sided attack from above." #현대에 들어 전장은 이제 공중의 요소까지 적극적으로 고려해야 하는 곳이 되었습니다. 다행히도 우리는 다른 이들이 겪었던 시행착오를 그대로 겪지 않아도 됩니다. Griffonia와 Zebrica에서 펼쳐졌고 지금도 벌어지고 있는 수많은 공중전 사례들을 치열하게 연구한다면 말입니다. 제공권을 점한다면 일방적인 공격을 통해 더 적은 피를 흘리고도 더 큰 전과를 거둘 수 있을 것입니다.
  BAC_COC_mil_navalair: "Naval Air Corps"
- BAC_COC_mil_navalair_desc: "TODO"
+ BAC_COC_mil_navalair_desc: "The idea of a platform that allows aircraft to launch from the sea is an old one, but battleships still rule the seas. But will it ever be? With air launched torpedoes already getting better and better, how many more layers of armor do we need to protect our biggy warships? Taking a page from Equestria's playbook, developing naval aviation is the future of our navy." #항공기가 해상에서 발진할 수 있도록 하는 플랫폼이라는 발상은 오래되었지만, 아직까지는 전함이 바다를 지배하고 있습니다. 과연 앞으로도 그럴까요? 이미 항공어뢰의 성능은 계속해서 나아지고 있는데, 크고 육중한 전함을 보호하기 위해 몇 겹의 장갑을 더 둘러야 할까요? 이퀘스트리아의 기조를 본받아 해군항공력을 육성하는 것이 우리 해군의 미래가 될 것입니다.
 
- BAC_COC_sekrit_war_committee: "Prepare Another War"
- BAC_COC_sekrit_war_committee_desc: ""
+ BAC_COC_sekrit_war_committee: "Prepare For War"
+ BAC_COC_sekrit_war_committee_desc: "Through divine sacrifice, heroic deeds, desperate resistance, and kirin blood - the NAKP has been defeated, but those who threaten the Kirin, those who threaten the children of Her Radiant Trinity are everywhere. If we want peace, prepare for war." #숭고한 희생과 영웅적인 활약, 처절한 저항과 키린들의 피로써 NAKP에 맞서 승리하였지만 광휘의 삼위일체의 자녀들인 키린들을 위협하는 존재들이 도처에 도사리고 있습니다. 평화를 원하십니까? 전쟁을 준비하십시오.
 
- BAC_COC_war_zaikiria: "March to Old Marches"
- BAC_COC_war_zaikiria_desc: "Let the faithfuls save the poor kirin who have been alienated from Her Radiance by the great debacle of the Silence, emphasising that they are all Her children under Her Radiant Trinity. Kirin there are also already groaning under the mad Nirik warlords, reactionary despots, and decadent pagans. Let the common know that turning a blind eye to them will only lead to further disaster." #키린들은 Her Radiant Trinity 아래 모두 그분의 자녀임을 강조하면서, Silence라는 크나큰 패착으로 인해 Her Radiance로부터 멀어진 가엾은 키린들을 구원하자고 합시다. 그곳의 키린들은 또한 이미 미치광이 니릭 전쟁군주, 반동 전제군주, 퇴폐적인 이교도의 아래에서 신음하고 있습니다. 이를 외면하는 것은 더 큰 재앙으로 다가올 수 있음을 알려야 합니다.
+ BAC_COC_war_zaikiria: "March To Old Marches"
+ BAC_COC_war_zaikiria_desc: "Let the faithfuls save the poor kirin who have been alienated from Her Radiance by the great debacle of the Silence, emphasising that they are all children before Her Radiant Trinity. Kirin there are also already groaning under the mad Nirik warlords, reactionary despots, and decadent pagans. Let the common know that turning a blind eye to them will only lead to further disaster." #키린들은 Her Radiant Trinity 아래 모두 그분의 자녀임을 강조하면서, Silence라는 크나큰 패착으로 인해 Her Radiance로부터 멀어진 가엾은 키린들을 구원하자고 합시다. 그곳의 키린들은 또한 이미 미치광이 니릭 전쟁군주, 반동 전제군주, 퇴폐적인 이교도의 아래에서 신음하고 있습니다. 이를 외면하는 것은 더 큰 재앙으로 다가올 수 있음을 알려야 합니다.
  BAC_COC_convert_zaikiria: "All Children of Her Radiant Trinity"
- BAC_COC_convert_zaikiria_desc: "TODO"
+ BAC_COC_convert_zaikiria_desc: "We have learned the hard way what a false faith can do when combined with other evils, though it is not powerful on its own. And if we are to be better beings, we must not allow our brothers and sisters, our equals as children under Her Radiant Trinity, to maintain their poor lives unenlightened." #그릇된 신앙이 그 자체로 힘을 갖게 되지는 않지만 또다른 악과 결합했을 때 어떤 효과를 발휘하는지는 피로써 배웠습니다. 또 우리가 더 나은 존재로 거듭나려면 Her Radiant Trinity 아래 동등한 형제자매들이 계몽되지 않은 채 비루한 삶을 이어가는 것을 방조해서는 안 됩니다.
  BAC_COC_friend_zaikiria: "Everykirin Can Glitter"
- BAC_COC_friend_zaikiria_desc: "TODO"
+ BAC_COC_friend_zaikiria_desc: "Their beliefs and traditions should not be torn down by us as oppressors; they have their own value. It is a sign of weakness and insanity to paroxysmally try to correct others just because they are a little different from us - it is tyranny as well. We didn't accept Her Radiant Trinity to become that tyrant." #저들의 신앙과 전통을 우리가 억압자의 입장에서 무너뜨려서는 안 됩니다. 그것들에도 그것들만의 가치가 있습니다. 타인이 나와 조금 다르다고 해서 발작적으로 교정하려 드는 것은 나약함과 광기의 표지이며 폭정입니다. 우리는 폭군이 되기 위해 Her Radiant Trinity를 받아들인 것이 아닙니다.
 
  BAC_COC_war_taungpau: "End The Eternal Mandate" #이곳이 비록 키린들이 많이 사는 땅은 아니지만, 전략적으로 중요한 위치에 있습니다. 이곳을 확보하면 앞으로 있을 주변국과의 전쟁에서 큰 우위를 점할 수 있을 것입니다. Communion의 바람과는 달리 현지 종교 문제는 부수적인 사안일 뿐입니다.
  BAC_COC_war_taungpau_desc: "Although this land is not heavily populated by kirin, it is strategically important. Securing it would give us a major advantage in any future wars with our neighbours, and contrary to the Communion's wishes, local religious issues are only a side issue."
  BAC_COC_convert_taungpau: "Her Radiant Mandate"
- BAC_COC_convert_taungpau_desc: "TODO"
+ BAC_COC_convert_taungpau_desc: "Though they are a different race from us - kirin, they have embraced the Way of Fire and melded it with their own ways. If they have embraced the Way of Fire, surely they can embrace Her Radiant Trinity. We must lead these pure beings to the right path before they become corrupted like the Divine Fire." #우리 키린들과 종족은 다르지만 이들은 Way of Fire을 받아들여 그들만의 방식과 융화시켰습니다. 이들이 Way of Fire를 받아들였다면 분명 Her Radiant Trinity도 받아들일 수 있을 것입니다. 이 순수한 존재들이 Divine Fire처럼 타락하기 전에 올바른 길로 이끌어야만 합니다.
  BAC_COC_friend_taungpau: "Their Unique Way"
- BAC_COC_friend_taungpau_desc: "TODO"
+ BAC_COC_friend_taungpau_desc: "To impose the same way of life on those who live in peace in Monastic Commune and then become victims of our unjust aggressive war is tyranny and oppression in itself. Why impose a paranoid path on them when they are free to live their lives as different but equal beings, even though we have been wronged? It is we, not they, who must truly learn the right way." #고요한 사찰 코뮌에서 평화로이 살아가다가 부당한 침략 전쟁의 피해자가 된 이들에게까지 같은 방식을 강요하는 것은 그 자체로 폭정이요 압제입니다. 우리가 잘못을 범했지만, 저들과는 서로 다르지만 동등한 존재로서 자유로이 살아갈 수 있는데 왜 편집증적인 길을 강요합니까? 진정으로 올바른 길을 배워야 하는 것은 저들이 아니라 바로 우리입니다.
 
  BAC_COC_war_deer: "Biggest Counterplayer"
  BAC_COC_war_deer_desc: "There's unfortunately not much we could do to justify war with Hindia, other than utilise the international socialist rhetoric that's in a tiny minority in the Common Senate, which means that if those deers are 'ideological comrades', we will have to extend an olive branch first..." #힌디아와의 전쟁을 정당화하기 위한 수단은 안타깝게도 그리 많지 않습니다. Common Senate에서 극소수만을 차지하는 국제사회주의적 논조를 활용하는 것 말고는 말입니다. 이는 곧 저 사슴들이 '이념적 동지'에 해당한다면 올리브 가지를 먼저 내밀어야 함을 의미합니다...
  BAC_COC_convert_deer: "Let Them Be Children Also"
- BAC_COC_convert_deer_desc: "TODO"
+ BAC_COC_convert_deer_desc: "They are a foreign race and a pagan people who have never had much to do with us, but of course, if they wish, they should be encouraged to embrace our faith. While they were divided between the Olenians and the Hindians, we grew in strength, and we were victorious as a result, aren't we? Her Radiant Trinity will surely bless them if they are converted to our true faith." #우리와는 그다지 연이 없던 이종족이자 이교도이지만, 물론 저들이 원한다면 우리의 신앙을 받아들일 수 있도록 적극 지원해주어야 합니다. 저들이 Olenian과 Hindian으로 나뉘어져 싸우는 동안 우리는 국력을 크게 신장시켰고, 그 결과 승리한 것이 아니겠습니까? 우리의 참된 신앙으로 저들이 개심하게 된다면 Her Radiant Trinity께서도 분명 축복하실 것입니다.
  BAC_COC_friend_deer: "Our Deer Comrades"
- BAC_COC_friend_deer_desc: "TODO"
+ BAC_COC_friend_deer_desc: "We have liberated these deer, not conquered them. They have had a hard time under reactionary oppressors and now deserve peace under a free and democratic regime. They'll need a little protection and attention until they can run a truly mature democracy... but it is our duty." #우리는 이 사슴들을 해방시켜준 것입니다. 정복한 것이 아니라요. 사슴들도 그간 반동적인 압제자들에 의해 힘겨운 시간을 보냈으니 이제 자유롭고 민주적인 정권하에서 평화를 누릴 자격이 있습니다. 저들이 진정으로 성숙한 민주주의를 운영할 수 있게 되기까지는 약간의 보호와 관심이 필요하겠지만요... 우리의 의무입니다.
 
  BAC_COC_war_barbarian: "Attack on Barbarian Lands"
  BAC_COC_war_barbarian_desc: "The griffons and zebras beyond the Westren Territories have a history of raiding our lands. Does it make any difference even in the modern era? It wouldn't easy for our archaeologists, but let's highlight these old historical facts to justify our invasion and nip them in the bud before they grow in power from the outside." #Westren Territories 너머의 Griffon들과 얼룩말들은 우리 땅에서 노략질을 일삼아온 전과가 있습니다. 현대라고 달라지겠습니까? 우리 고증학자들에게 쉬운 일은 아니겠지만 이러한 옛 역사적 사실들을 강조하여 저들에 대한 침공을 정당화하고, 저들이 세외에서 힘을 키워 쳐들어오기전에 삭초제근합시다.
  BAC_COC_convert_barbarian: "Edify Their Barbarism"
- BAC_COC_convert_barbarian_desc: "TODO"
+ BAC_COC_convert_barbarian_desc: "These barbaric species have constantly threatened the Kirinity, the children of Her Radiant Trinity, and we need to make sure they never even think of doing so again. What if we can bring them to accept the gospel of Her Radiant Trinity? It's worth a try." #이 야만적인 족속들은 끊임없이 Her Radiant Trinity의 아이들인 우리 Kirinity를 위협해왔습니다. 저들이 두번 다시 그러한 짓을 도모할 생각조차 하지 못하도록 할 필요가 있겠습니다. Her Radiant Trinity의 복음을 저들도 받아들일 수 있게 된다면 어떻겠습니까? 시도해볼만한 가치는 있습니다.
  BAC_COC_friend_barbarian: "Comrades, Not Barbarian"
- BAC_COC_friend_barbarian_desc: "TODO"
+ BAC_COC_friend_barbarian_desc: ""Barbarism" is delusion created by pre-modern fear and ignorance. They are sapient like us. They have feelings and emotions like us. They deserve the same justice, democracy, and dignity like we have earned." #'야만성'이라는 것은 전근대적 공포와 무지가 만들어낸 허상입니다. 저들에게도 우리와 같은 지성이 있습니다. 저들에게도 우리와 같은 감정이 있습니다. 저들에게도 우리와 같은 정의, 민주, 존엄을 누릴 자격이 있습니다.
 
  BAC_COC_pol_m4: "Century For Commonalty"
- BAC_COC_pol_m4_desc: "TODO"
+ BAC_COC_pol_m4_desc: "At last, we have come this so far, through harsh trials. We have stripped away the illusions of an evil faith and embraced Her true Radiance. We have defended ourselves against the oppression of the reactionary oppressors and erased those filths from the free realm forever. We have salvaged ourselves from the hunger, poverty, and ignorance that threatened us. We have created a free and democratic beacon in this dark world." #마침내 우리는 가혹했던 시련들을 지나 여기까지 왔습니다. 우리는 사악한 신앙의 허상을 벗겨내고 진정한 광휘를 받아들였습니다. 우리는 반동 압제자들의 억압에 맞서 스스로를 지켜내고 저 오물들을 자유의 땅에서 영원히 지워냈습니다. 우리는 우리를 위협하던 기아와 빈곤, 그리고 무지로부터 스스로를 구해냈습니다. 우리는 이 어두운 세계에서 자유롭고 민주적인 beacon을 만들어냈습니다.
  BAC_COC_pol_m4_trigger_tt: "Has concluded issues on §PZaikiria§!, §OTaungpau§!, §0Western Border§!, and §3Hindia§!"
 
 # events
@@ -226,7 +232,7 @@
   baccocc_1_tt: "\n§gThe §YCoalition§! will not be broken, but the §Pideological§! §Rdifferences§! will be too much to overcome...§!\n\n"
 
   baccocc.2.t: "A Militarymare in the Committee"
-  baccocc.2.d: "Once loyal to Rising Fire, Ember Glow now found herself idly seated in a corner of a meeting room within a building temporarily serving for Commonalty, as the headquarter for CPF. The grueling war with NAKP had finally come to an end, and though she wished to bask in the peace that followed, it was at the earnest request of the CPF that she found herself here. Having fought alongside the causes of Kindling Flash and Dayspring Rose, she had no intention of sounding a dissenting note. Instead, she merely planned to witness the unfolding of this new chapter in history with her own eyes...\n\n\"General Ember Glow, might I solicit your esteemed opinion on a matter that has proven exceedingly contentious and remains deadlocked?\" a kirin inquired. Though she had faced such queries more than a dozen times that day alone, preferring not to take sides between Kindling and Dayspring, she steadfastly refused all answers. Most attendees, heavily influenced by the obstinate bannerkirin like Firethorn, did the same.\n\n\"Well, as a militarymare, I prefer not to lean towards any side. Perhaps it would be better for you to directly persuade those who oppose you?\"\n\nYet, despite the ongoing stalemates, no consensus could be reached on the contentious issues at hoof. As days passed, marked by meaningless attendances at dawn and equally meaningless leavings at dusk, Ember Glow's thoughts began to shift."
+  baccocc.2.d: "Once loyal to Rising Fire, Ember Glow now found herself idly seated as one of these commissioners being elected by their supporters, in a corner of the meeting room within a building temporarily serving for soon-to-be Commonalty, as the headquarter of CPF. She have been elected by her soldiers - her comrades in arms too. The grueling war with NAKP had finally come to an end, and though she wished to bask in the peace that followed, it was at the earnest request of the CPF that she found herself here. Having fought alongside the causes of Kindling Flash and Dayspring Rose, she had no intention of sounding a dissenting note. Instead, she merely planned to witness the unfolding of this new chapter in history with her own eyes...\n\n\"General Ember Glow, might I solicit your esteemed opinion on a matter that has proven exceedingly contentious and remains deadlocked?\" a kirin inquired. Though she had faced such queries more than a dozen times that day alone, preferring not to take sides between Kindling and Dayspring, she steadfastly refused all answers. Most attendees, heavily influenced by the obstinate bannerkirin like Firethorn, did the same.\n\n\"Well, as a militarymare, I prefer not to lean towards any side. Perhaps it would be better for you to directly persuade those who oppose you?\"\n\nYet, despite the ongoing stalemates, no consensus could be reached on the contentious issues at hoof. As days passed, marked by meaningless attendances at dawn and equally meaningless leavings at dusk, Ember Glow's thoughts began to shift."
   baccocc.2.a: ""I cannot continue like this."" 
 
   baccocc.3.t: "The Private Meeting"
@@ -234,7 +240,7 @@
   baccocc.3.a: ""And?" Firethorn's brows furrowed." 
 
   baccocc.4.t: "To Achieve The Foundation"
-  baccocc.4.d: "Ember continued, "That's why we need to step in, at least before the Communion and the Union irreversibly split apart. We need to prioritize with a broad perspective and offer a compromise that both sides can accept. If we can't set this country right, it will fall to foreign invasion once again."\n\nFirethorn, whose expression had already hardened, stood up. "I will not partake in such a play. I am a bannerkirin. My duty is to protect the kirin so they can enjoy democracy, not to make myself mingling with them."\n\n"Please, Firethorn. Your help would be invaluable. I'm not asking to become a warlord. To become a mediator." Ember's tone almost pleaded, but Firethorn did not heed and left the place.\n\n"..."\n\nEmber sighed. "What about you, Coral?"\n\nAfter rolling her eyes, Coral pondered for a moment before answering, "Seems like you have a point. At least in that we need a goal. So, what exactly are you planning to do?"\n\nA flush of excitement appeared on Ember's face. "You know, I have some ideas. First of all we need to actively appease both sides...""
+  baccocc.4.d: "Ember continued, "That's why we need to step in, at least before the Communion and the Union irreversibly split apart. We need to prioritize with a broad perspective and offer a compromise that both sides can accept. If we can't set this country right, it will fall to foreign invasion once again."\n\nFirethorn, whose expression had already hardened, stood up. "I will not partake in such a play. I am a bannerkirin. My duty is to protect the kirin so they can enjoy democracy, not to make myself mingling with them."\n\n"Please, Firethorn. Your help would be invaluable. I'm not asking to become a warlord. To become a mediator. We can't just sit here and let this victory paid for with the blood of so many kirin slip away." Ember's tone was almost pleading, but Firethorn was having none of it and left the place - with a more ferocious look on her face as she heard the last words.\n\n"..."\n\nEmber sighed. "What about you, Coral?"\n\nAfter rolling her eyes, Coral pondered for a moment before answering, "Seems like you have a point. At least in that we need a goal. So, what exactly are you planning to do?"\n\nA flush of excitement appeared on Ember's face. "You know, I have some ideas. First of all we need to actively appease both sides...""
   baccocc.4.a: "And so the night deepened for the two of them alone."
 
   baccocc.5.t: "Which Law Should We Use?"
@@ -334,6 +340,7 @@
  BAC_military_aid_to_resis_desc: "The populace in the occupied territories need to learn that their lives can be better under our regime. It will increase the discontent of our soldiers deployed there, but in the end, this is how less friendly blood is shed." #점령지의 주민들은 자신들의 삶이 우리 정권 하에서 더 나아질 수 있다는 것을 배워야 합니다. 현지 병사들의 불만은 높아지겠지만 결국 이것이야말로 아군의 피를 덜 흘리게 하는 방법입니다.
 
 #tt
+  bac_controlls_all_cores_original_ally_tt: "All core states are controlled by §Y[Root.GetName]§! or one of their allies.\n"
  #party_popularity_dynamic_modifier: "Party Popularity"
  #party_popularity_dynamic_modifier_ideology_mapped: "Party Popularity"
  party_popularity_dynamic_modifier_coalition: "Coalition"
@@ -365,7 +372,10 @@
  BAC_prophet_of_the_common: "Prophet of Common"
  
 #misc
- BAC_star_energy_zeb: "Star Energy - Zebrican Chamber"
+ WAR_NAME_COC_KIS: "Children of Concord Revolt"
+ KIC_CPF: "Committee for Preparation of the Foundation"
+ BAC_star_energy_zeb: "Star Energy - Zebrica"
+ BAC_star_energy_zeb_available: "Unlocked §Y$BAC_star_energy_zeb$§!"
  BAC_COC_fascism_party: "Extremist"
  BAC_COC_fascism_party_long: "Communion of Her Radiant Trinity - Extremist"
  bac_RSTEC: "Rising Sun Technical University"
@@ -391,9 +401,9 @@
   commonalty_communal_control_strong: "§8Commonalty§! - §RCommunal§! Dominance"
   commonalty_communal_control_mid: "§8Commonalty§! - Major §RCommunal§! Bias"
   commonalty_communal_control_low: "§8Commonalty§! - Slight §RCommunal§! Bias"
-  BAC_cocc_mio_size_up_prefix: "With this MIO size increased, effective change:"
-  BAC_cocc_mio_size_up_cot: "cot 3%\n\n"
-  BAC_cocc_mio_size_up_wpu: "wpu 3%\n\n"
+  BAC_mio_size_up_prefix: " §YWhen size §Gincreases§!, effective change§!:"
+  BAC_mio_size_up_cot: "  The §Y$BAC_commonalty_bop$§! moves £GFX_BoP_right_texticon §Y3.3%§! towards the §7Harmonist§! side.\n\n"
+  BAC_mio_size_up_wpu: "  The §Y$BAC_commonalty_bop$§! moves £GFX_BoP_left_texticon §Y3.3%§! towards the §RCommunalist§! side.\n\n"
  
 #ending
   TNO_BAC_CountryClosing_left_title: "And then the end came in an era\nForevermore..."
@@ -402,7 +412,7 @@
   TNO_BAC_CountryClosing_select_btn_credits_text: "Credit"
   TNO_BAC_CountryClosing_select_btn_credits_tt: "§PSincerely thank you for playing this submod, and hope you had a great time!§!"
   TNO_BAC_CountryClosing_close_btn_text: "End?..."
-  TNO_BAC_CountryClosing_close_btn_tt: "§WMaybe so."
+  TNO_BAC_CountryClosing_close_btn_tt: "§WPerhaps."
   TNO_BAC_CountryClosing_page_btn_tt: "§WPage [Get_TNO_BAC_CountryClosing_page_btn_text]§!"
   TNO_BAC_CountryClosing_epilogue_generic: "Thanks for your engagement in all the content with this submod!"
   BAC_CountryClosing_epilogue_KIR_commonalty: "\nA new order sets as flames and explosions halt, brave new future lies ahead since the darkness has passed. After all those years of the §OSilence§!, the §7Gallop Onward§!, and the harsh ordeal of the §RSecond Cacophony§!, resulting §tDeath§! of the §ODivine Fire§! - §8Her Radiant Trinity§! has born and the §8Commonalty§! has won the new century for Kiria and Eastern Zebrica...\n\n\nWhat role will the §8Commonalty§! play in this stage been said brave new world? Will their ideals and revolution remain untainted until the very end? Will they face all the glories and trials that lie ahead and bring their ideals to the world?\n\nThe wild ride of the §8Commonalty§! will continue in the §8Commonalty§! expansion update 2.0§g(note that this version is 0.*)§! - After all, §Psincerely thanks for playing this path and submod!§!"

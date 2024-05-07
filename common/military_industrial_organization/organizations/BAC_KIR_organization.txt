@@ -5,8 +5,10 @@ BAC_star_energy_zeb_organization = {
 	icon = GFX_idea_EQS_star_energy
 	allowed = {
 		original_tag = KIC
-		has_country_flag = KIC_Children_of_Concord_flag
 		has_dlc = "Arms Against Tyranny" 
+	}
+	visible = {
+		has_country_flag = to_the_commonalty
 	}
 	available = {
 		owner = {
@@ -15,6 +17,13 @@ BAC_star_energy_zeb_organization = {
 		OR = {
 			country_exists = event_target:equestria
 			country_exists = event_target:solar_empire
+		}
+	}
+	initial_trait = {
+		#original star energy has no research bonus
+		organization_modifier = {
+			custom_modifier_tooltip = BAC_mio_size_up_prefix
+			custom_modifier_tooltip = BAC_mio_size_up_cot
 		}
 	}
 }

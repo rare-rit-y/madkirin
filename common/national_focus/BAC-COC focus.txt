@@ -35,6 +35,20 @@ focus_tree = {
 				has_completed_focus = BAC_COC_finale
 			}
 		}
+		offset = {
+			x = 0
+			y = 4
+			trigger = {
+				has_completed_focus = BAC_COC_true_commonalty
+			}
+		}
+		offset = {
+			x = 0
+			y = 6
+			trigger = {
+				has_country_flag = COC_war_committee
+			}
+		}
 	}
 }
 
@@ -933,6 +947,7 @@ shared_focus = {
 		add_war_support = -0.333
 		# KIR = { add_to_ROOT_potential_cores = yes }
 		# KIS = { add_to_ROOT_potential_cores = yes }
+		custom_effect_tooltip = KIR_line_break
 
 		if = {
 			limit = {
@@ -967,16 +982,11 @@ shared_focus = {
 		else = {
 			news_event = { id = kirin_council.321 hours = 3 }
 		}
-		custom_effect_tooltip = KIR_line_break
 		remove_dynamic_modifier = { modifier = COC_desperate_revolt }
 		custom_effect_tooltip = KIR_line_break
 		swap_ideas = {
 			remove_idea = no_poverty
 			add_idea = poverty1
-		}
-		swap_ideas = {
-			remove_idea = scraping_the_barrel
-			add_idea = volunteer_only
 		}
 		swap_ideas = {
 			remove_idea = tot_economic_mobilisation
@@ -1053,7 +1063,11 @@ shared_focus = { #BAC_COC_h1 - Honour Our Friends
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h1"
 		add_to_variable = { coc_start_foci_completed = 1 }
-		add_political_power = 33
+		swap_ideas = {
+			remove_idea = scraping_the_barrel
+			add_idea = communal_militias
+		}
+		custom_effect_tooltip = KIR_line_break
 		bac_COT_mega_effect = yes
 		#add_to_variable = { coc_h_foci_completed = 1 }
 		if = {
@@ -1263,6 +1277,10 @@ shared_focus = {
 	
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h3"
+		swap_ideas = {
+			remove_idea = isolation
+			add_idea = civilian_economy
+		}
 		EAW_raise_trade_law = yes
 		bac_COT_medium_effect = yes
 
@@ -1299,6 +1317,7 @@ shared_focus = { # Land Investigation Program
 		add_stability = -0.03
 		increase_society_development_gradual = yes
 		every_controlled_state = {
+			limit = { NOT = { is_core_of = ROOT } }
 			add_resistance = 33
 			add_compliance = -3
 		}
@@ -1315,7 +1334,7 @@ shared_focus = { # Land Investigation Program
 shared_focus = {
 	id = BAC_COC_true_commonalty
 	icon = GFX_goal_KIR_tristar
-	cost = 1.3
+	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_m1
 	x = 0
@@ -1368,10 +1387,6 @@ shared_focus = { #교육위원회
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_head"
 		KIR_dayspring_rose = {
 			unit_leader_event = { id = baccocc.10 hours = 3 random_hours = 33 } #Matter of Educational Model
-			add_trait = {
-				slot = political_advisor
-				trait = BAC_prophet_of_the_common
-			}
 		}
 		decrease_illiteracy = yes
 		bac_COT_small_effect = yes
@@ -1453,7 +1468,7 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_diplo"
-		EAW_raise_trade_law = yes
+		#EAW_raise_trade_law = yes
 		# if = {
 		# 	limit = {
 		# 		HIP = {
@@ -1638,6 +1653,7 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 		bac_COT_small_effect = yes
 		save_current_manpower = yes
 		every_controlled_state = {
+			limit = { NOT = { is_core_of = ROOT } }
 			add_manpower = -333
 		}
 		restore_previous_manpower = yes
@@ -1724,22 +1740,27 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h3"
+		set_country_flag = KIR_aureolin_monastery_available
 		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
 			}
 			custom_effect_tooltip = available_mio_tt
-			show_mio_tooltip = KIR_aureolin_monastery_organization
-			mio:KIR_aureolin_monastery_organization = {
+			show_mio_tooltip = KIR_aureolin_monastery
+			mio:KIR_aureolin_monastery = {
 				add_mio_size = 1
 				add_mio_funds = 300
+				set_mio_flag = cocc_cot_mio_flag
 			}
+			custom_effect_tooltip = BAC_mio_size_up_prefix
+			custom_effect_tooltip = BAC_mio_size_up_cot
 		}
 		else = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = KIR_aureolin_monastery
 		}
 		decrease_illiteracy = yes
+		add_research_slot = 1
 	}
 	
 }
@@ -1816,6 +1837,7 @@ shared_focus = { #Century for Commonalty
 	y = 5
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
+		has_country_flag = COC_war_committee
 	}
 	prerequisite = {
 		focus = BAC_COC_pol_h3
@@ -1900,8 +1922,7 @@ shared_focus = { #BAC_COC_eco_h1 #Equestrian Model of Development
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h1"
 		bac_eqs_popularity = yes
-		custom_effect_tooltip = KIR_line_break
-		increase_society_development_gradual = yes
+		add_ideas = BAC_COC_eco_h1_idea
 		bac_COT_small_effect = yes
 	}
 	
@@ -1922,7 +1943,9 @@ shared_focus = { #Initiate Land Reform
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c1"
+		add_timed_idea = { idea = BAC_COC_eco_c1_idea days = 333 }
 		every_controlled_state = {
+			limit = { NOT = { is_core_of = ROOT } }
 			add_resistance = 33
 			add_compliance = -3
 		}
@@ -1931,11 +1954,10 @@ shared_focus = { #Initiate Land Reform
 		custom_effect_tooltip = KIR_line_break
 		bac_WPU_small_effect = yes
 	}
-	
 }
 
 
-shared_focus = {
+shared_focus = { #New Campaign Town
 	id = BAC_COC_eco_m2
 	icon = GFX_goal_KIR_construction
 	cost = 4.8
@@ -1955,6 +1977,66 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m2"
+		random_core_state = {
+			limit = {
+				has_built = {
+					type = infrastructure
+					value < 5
+				}
+			}
+			prioritize = { 1069 1076 1073 1077 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				has_built = {
+					type = infrastructure
+					value < 5
+				}
+			}
+			prioritize = { 1069 1076 1073 1077 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				has_built = {
+					type = infrastructure
+					value < 5
+				}
+			}
+			prioritize = { 1069 1076 1073 1077 }
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
 		increase_society_development_gradual = yes
 	}
 	
@@ -1982,25 +2064,53 @@ shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
 		focus = BAC_COC_m1
 	}
 	available = {
+		power_balance_value = {
+			id = BAC_commonalty_bop
+			value > 0.099
+		}
 		if = {
-			limit = { is_ai = no }
-			EQS = { has_opinion = { target = ROOT value > 33 } exists = yes is_subject = no has_war = no }
-			if = { #equestria.154
-				limit = { has_global_flag = daybreaker_spawned }
+			limit = { event_target:solar_empire = { exists = yes } }
+			if = {
+				limit = { has_completed_focus = BAC_COC_pol_h2 }
 				fascism > 0.09
 			}
+			else = { has_completed_focus = BAC_COC_pol_h2 }
+			event_target:solar_empire = {
+				is_subject = no
+				NOT = {
+					has_war_with = ROOT
+				}
+				surrender_progress < 0.1
+				if = {
+					limit = {
+						ROOT = { is_ai = no }
+					}
+					has_opinion = { target = ROOT value > 33 }
+				}
+			}
 		}
-		else = { EQS = { exists = yes is_subject = no has_war = no } }
+		else = {
+			event_target:equestria = {
+				exists = yes
+				is_subject = no
+				NOT = {
+					has_war_with = ROOT
+				}
+				surrender_progress < 0.1
+				if = {
+					limit = {
+						ROOT = { is_ai = no }
+					}
+					has_opinion = { target = ROOT value > 33 }
+				}
+			}
+		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h2"
-		add_tech_bonus = {
-			name = industrial_bonus
-			bonus = 0.33
-			uses = 3
-			category = industry
-		}
 		bac_eqs_popularity = yes
+		#unlock_decision_tooltip = my_decision
+		#custom_effect_tooltip = unlocks_bop_decision_tt
 		custom_effect_tooltip = BAC_COC_eco_h2_tt
 		bac_COT_small_effect = yes
 		hidden_effect = {
@@ -2048,7 +2158,19 @@ shared_focus = { #QKdzz
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c2"
+		hidden_effect = {
+			add_timed_idea = { idea = BAC_famine_timed days = 730 }
+			remove_ideas = BAC_famine_initial
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_famine_initial
+				add_idea = BAC_famine_timed
+			}
+		}
+		custom_effect_tooltip = BAC_COC_eco_c2_tt
 		decrease_poverty = yes
+		increase_society_development_gradual = yes
 		bac_WPU_medium_effect = yes
 	}
 	
@@ -2074,8 +2196,14 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m3h"
-		increase_society_development_gradual = yes
-		add_research_slot = 1
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
 		#todo add oil
 	}
 	
@@ -2102,7 +2230,14 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m3c"
-		increase_society_development_gradual = yes
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
 		#todo add res
 	}
 	
@@ -2134,13 +2269,13 @@ shared_focus = {
 	
 }
 
-shared_focus = { #BAC_COC_eco_h3 #The Lodge
-	id = BAC_COC_eco_h3 #The Lodge
+shared_focus = { #Yet Another Accord
+	id = BAC_COC_eco_h3 #
 	icon = {
 		trigger = { has_global_flag = daybreaker_spawned }
-		value = GFX_goal_CES_daybreaker
+		value = GFX_goal_solar_fair_but_just
 	}
-	icon = GFX_goal_ces_approach_baltimare #GFX_goal_UESR_TNO_sun_moon
+	icon = GFX_goal_EQS_TNO_equestria_saved #GFX_goal_UESR_TNO_sun_moon
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
@@ -2154,83 +2289,159 @@ shared_focus = { #BAC_COC_eco_h3 #The Lodge
 	}
 	available = {
 		if = {
-			limit = {
-				has_global_flag = equestrian_civil_war
-				CES = {
-					exists = yes
-					is_subject = no
-				}
-			}
+			limit = { event_target:solar_empire = { exists = yes } }
 			if = {
-				limit = { is_ai = no }
-				power_balance_value = {
-					id = BAC_commonalty_bop
-					value > 0.099
+				limit = { has_completed_focus = BAC_COC_pol_h2 }
+				fascism > 0.09
+			}
+			else = { has_completed_focus = BAC_COC_pol_h2 }
+			event_target:solar_empire = {
+				is_subject = no
+				NOT = {
+					has_war_with = ROOT
 				}
-				CES = { has_opinion = { target = ROOT value > 33 } exists = yes is_subject = no has_war = no }
-				if = { #equestria.154
-					limit = { has_global_flag = daybreaker_spawned }
-					fascism > 0.09
+				surrender_progress < 0.1
+				if = {
+					limit = {
+						ROOT = { is_ai = no }
+					}
+					has_opinion = { target = ROOT value > 99 }
 				}
 			}
-			else = { CES = { exists = yes is_subject = no has_war = no } }
 		}
 		else = {
-			EQS = { exists = yes is_subject = no has_war = no }
-			if = {
-				limit = { is_ai = no }
-				power_balance_value = {
-					id = BAC_commonalty_bop
-					value > 0.099
+			event_target:equestria = {
+				exists = yes
+				is_subject = no
+				NOT = {
+					has_war_with = ROOT
 				}
-				if = { #equestria.154
-					limit = { has_global_flag = daybreaker_spawned }
-					fascism > 0.09
+				surrender_progress < 0.1
+				if = {
+					limit = {
+						ROOT = { is_ai = no }
+					}
+					has_opinion = { target = ROOT value > 99 }
 				}
 			}
 		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h3"
-		bac_eqs_popularity = yes
-		decrease_poverty = yes
-		if = {
-			limit = { CES = { exists = yes } }
-			custom_effect_tooltip = BAC_COC_eco_h3_tt
-			hidden_effect = {
-				CES = {
-					add_opinion_modifier = {
-						target = ROOT
-						modifier = commonalty_embassy
-					}
-					add_relation_modifier = {
-						target = ROOT
-						modifier = commonalty_embassy
-					}
-					ROOT = {
-						add_opinion_modifier = {
-							target = PREV
-							modifier = commonalty_embassy
-						}
-						add_relation_modifier = {
-							target = PREV
-							modifier = commonalty_embassy
-						}
-						add_opinion_modifier = {
-							target = PREV
-							modifier = commonalty_embassy_trade
-						}
-					}
-				}
-			}
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 0.33
+			uses = 3
+			category = industry
 		}
-		#unlock_decision_tooltip = my_decision
-		custom_effect_tooltip = unlocks_bop_decision_tt
-		
+		add_ideas = bac_verdant_accord_idea
+		hidden_effect = {
+			#add_ideas = KIR_equestrian_treaty1
+			#remove_ideas = KIR_equestrian_treaty
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
+		bac_eqs_popularity = yes
 		bac_COT_medium_effect = yes
+		increase_society_development_gradual = yes
 	}
-	
 }
+# shared_focus = { #BAC_COC_eco_h3 #The Lodge
+# 	id = BAC_COC_eco_h3 #The Lodge
+# 	icon = {
+# 		trigger = { has_global_flag = daybreaker_spawned }
+# 		value = GFX_goal_CES_daybreaker
+# 	}
+# 	icon = GFX_goal_ces_approach_baltimare #GFX_goal_UESR_TNO_sun_moon
+# 	cost = 4.8
+# 	ai_will_do = { factor = 80 }
+# 	relative_position_id = BAC_COC_eco_head
+# 	x = 3
+# 	y = 3
+# 	allow_branch = {
+# 		check_variable = { coc_start_foci_completed > 9 }
+# 	}
+# 	prerequisite = {
+# 		focus = BAC_COC_eco_h2
+# 	}
+# 	available = {
+# 		if = {
+# 			limit = {
+# 				has_global_flag = equestrian_civil_war
+# 				CES = {
+# 					exists = yes
+# 					is_subject = no
+# 				}
+# 			}
+# 			if = {
+# 				limit = { is_ai = no }
+# 				power_balance_value = {
+# 					id = BAC_commonalty_bop
+# 					value > 0.099
+# 				}
+# 				CES = { has_opinion = { target = ROOT value > 33 } exists = yes is_subject = no has_war = no }
+# 				if = { #equestria.154
+# 					limit = { has_global_flag = daybreaker_spawned }
+# 					fascism > 0.09
+# 				}
+# 			}
+# 			else = { CES = { exists = yes is_subject = no has_war = no } }
+# 		}
+# 		else = {
+# 			EQS = { exists = yes is_subject = no has_war = no }
+# 			if = {
+# 				limit = { is_ai = no }
+# 				power_balance_value = {
+# 					id = BAC_commonalty_bop
+# 					value > 0.099
+# 				}
+# 				if = { #equestria.154
+# 					limit = { has_global_flag = daybreaker_spawned }
+# 					fascism > 0.09
+# 				}
+# 			}
+# 		}
+# 	}
+# 	completion_reward = {
+# 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h3"
+# 		bac_eqs_popularity = yes
+# 		decrease_poverty = yes
+# 		if = {
+# 			limit = { CES = { exists = yes } }
+# 			custom_effect_tooltip = BAC_COC_eco_h3_tt
+# 			hidden_effect = {
+# 				CES = {
+# 					add_opinion_modifier = {
+# 						target = ROOT
+# 						modifier = commonalty_embassy
+# 					}
+# 					add_relation_modifier = {
+# 						target = ROOT
+# 						modifier = commonalty_embassy
+# 					}
+# 					ROOT = {
+# 						add_opinion_modifier = {
+# 							target = PREV
+# 							modifier = commonalty_embassy
+# 						}
+# 						add_relation_modifier = {
+# 							target = PREV
+# 							modifier = commonalty_embassy
+# 						}
+# 						add_opinion_modifier = {
+# 							target = PREV
+# 							modifier = commonalty_embassy_trade
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		#unlock_decision_tooltip = my_decision
+# 		custom_effect_tooltip = unlocks_bop_decision_tt
+		
+# 		bac_COT_medium_effect = yes
+# 	}
+	
+# }
 shared_focus = {
 	id = BAC_COC_eco_h4
 	icon = {
@@ -2238,7 +2449,7 @@ shared_focus = {
 		value = GFX_goal_solar_defence_of_the_empire
 	}
 	icon = GFX_goal_generic_equestria
-	cost = 4.8
+	cost = 14.3
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = 4
@@ -2250,6 +2461,8 @@ shared_focus = {
 		focus = BAC_COC_eco_h3
 	}
 	available = {
+		has_modern_society = yes
+		has_idea = bac_verdant_accord_idea
 		if = {
 			limit = { is_ai = no }
 			if = {
@@ -2270,7 +2483,7 @@ shared_focus = {
 		bac_eqs_popularity = yes
 		add_political_power = 333
 		bac_COT_large_effect = yes
-		#TODO make a good idea
+		#TODO make a good idea (consumer fac)
 	}
 	
 }
@@ -2290,12 +2503,71 @@ shared_focus = { #BAC_COC_eco_m4h Plan Zebrica
 		focus = BAC_COC_eco_h3
 	}
 	available = {
-		has_stability > 0.66
+		has_war_support > 0.5
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4h"
 		bac_COT_small_effect = yes
-		#todo docks and maybe idea
+		random_core_state = {
+			limit = {
+				has_built = {
+					type = infrastructure
+					value < 5
+				}
+				is_coastal = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				has_built = {
+					type = infrastructure
+					value < 5
+				}
+				is_coastal = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			limit = {
+				has_built = {
+					type = infrastructure
+					value < 5
+				}
+				is_coastal = yes
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = dockyard
+				level = 1
+				instant_build = yes
+			}
+		}
 	}
 	
 }
@@ -2303,7 +2575,7 @@ shared_focus = { #BAC_COC_eco_m4h Plan Zebrica
 shared_focus = {
 	id = BAC_COC_eco_m4m
 	icon = GFX_goal_KIR_electricity
-	cost = 4.8
+	cost = 14.3
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = 0
@@ -2317,12 +2589,12 @@ shared_focus = {
 	}
 	available = {
 		has_stability > 0.66
-		has_political_power > 100
+		has_political_power > 99
 		has_war = no
 	}
 	completion_reward = { #maybe it would be some fancy gui mechanic? but not now
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4m"
-		add_political_power = -333
+		add_political_power = -99
 		#todo timed_idea
 		custom_effect_tooltip = focus_eco_m4m_tt
 		for_each_scope_loop = {
@@ -2334,7 +2606,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = BAC_COC_eco_m4c
-	icon = GFX_goal_KIR_communism
+	icon = GFX_goal_bac_kirin_ichiban_shibori
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
@@ -2348,12 +2620,38 @@ shared_focus = {
 		focus = BAC_COC_eco_c3
 	}
 	available = {
-		has_stability > 0.66
+		has_political_power > 33
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4c"
+		add_political_power = -33
+		increase_society_development_gradual = yes
 		decrease_poverty = yes
 		bac_WPU_small_effect = yes
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		random_core_state = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
 	}
 	
 }
@@ -2361,7 +2659,7 @@ shared_focus = {
 shared_focus = { #shdzz
 	id = BAC_COC_eco_c4
 	icon = GFX_goal_zebra_agriculture
-	cost = 4.8
+	cost = 14.3
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = -4
@@ -2374,6 +2672,9 @@ shared_focus = { #shdzz
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c4"
+		#todo add big idea like population?
+		decrease_poverty = yes
+		increase_society_development_gradual = yes
 		bac_WPU_large_effect = yes
 	}
 	
@@ -2450,7 +2751,7 @@ shared_focus = {
 }
 shared_focus = {
 	id = BAC_COC_mil_c1
-	icon = GFX_goal_HEL_anar_bomb
+	icon = GFX_goal_KIR_battle_rifle
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -2471,7 +2772,7 @@ shared_focus = {
 
 shared_focus = {
 	id = BAC_COC_mil_m2
-	icon = GFX_goal_KIR_battle_rifle
+	icon = GFX_HIP_chess #GFX_goal_KIR_sergeant
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -2507,15 +2808,52 @@ shared_focus = { #BAC_COC_mil_h2
 		focus = BAC_COC_mil_h1
 	}
 	available = {
+		has_idea = bac_verdant_accord
 		power_balance_value = {
 			id = BAC_commonalty_bop
 			value > 0.099
 		}
-		any_country = {
-			has_event_target = Equestria
-			has_opinion_modifier = commonalty_embassy
-			exists = yes
+		if = {
+			limit = { event_target:solar_empire = { exists = yes } }
+			if = {
+				limit = { has_completed_focus = BAC_COC_pol_h2 }
+				fascism > 0.09
+			}
+			else = { has_completed_focus = BAC_COC_pol_h2 }
+			event_target:solar_empire = {
+				is_subject = no
+				NOT = {
+					has_war_with = ROOT
+				}
+				surrender_progress < 0.1
+				if = {
+					limit = {
+						ROOT = { is_ai = no }
+					}
+					has_opinion = { target = ROOT value > 99 }
+				}
+			}
 		}
+		else = {
+			event_target:equestria = {
+				exists = yes
+				is_subject = no
+				NOT = {
+					has_war_with = ROOT
+				}
+				surrender_progress < 0.1
+				if = {
+					limit = {
+						ROOT = { is_ai = no }
+					}
+					has_opinion = { target = ROOT value > 99 }
+				}
+			}
+		}
+	}
+	bypass = {
+		event_target:equestria = { exists = no }
+		event_target:solar_empire = { exists = no }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h2"
@@ -2531,6 +2869,8 @@ shared_focus = { #BAC_COC_mil_h2
 				add_mio_funds = 333
 				set_mio_flag = cocc_cot_mio_flag
 			}
+			custom_effect_tooltip = BAC_mio_size_up_prefix
+			custom_effect_tooltip = BAC_mio_size_up_cot
 		}
 		else = {
 			custom_effect_tooltip = available_designer
@@ -2541,7 +2881,7 @@ shared_focus = { #BAC_COC_mil_h2
 }
 shared_focus = {
 	id = BAC_COC_mil_c2
-	icon = GFX_goal_HEL_anar_trollage
+	icon = GFX_goal_KIR_KIC_military
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -2599,8 +2939,8 @@ shared_focus = { #Flying Commonkirin
 				add_mio_funds = 333
 				set_mio_flag = cocc_cot_mio_flag
 			}
-			custom_effect_tooltip = BAC_cocc_mio_size_up_prefix
-			custom_effect_tooltip = BAC_cocc_mio_size_up_cot
+			custom_effect_tooltip = BAC_mio_size_up_prefix
+			custom_effect_tooltip = BAC_mio_size_up_cot
 			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = KIC_aerospace_engineer_organization
 			mio:KIC_aerospace_engineer_organization = {
@@ -2608,8 +2948,9 @@ shared_focus = { #Flying Commonkirin
 				add_mio_funds = 333
 				set_mio_flag = cocc_wpu_mio_flag
 			}
-			custom_effect_tooltip = BAC_cocc_mio_size_up_prefix
-			custom_effect_tooltip = BAC_cocc_mio_size_up_wpu
+			custom_effect_tooltip = BAC_mio_size_up_prefix
+			custom_effect_tooltip = BAC_mio_size_up_wpu
+
 		}
 		else = {
 			custom_effect_tooltip = available_designer
@@ -2622,7 +2963,7 @@ shared_focus = { #Flying Commonkirin
 }
 shared_focus = { # Beyond The Riverine Navy
 	id = BAC_COC_mil_navy
-	icon = GFX_goal_KIR_gunboat
+	icon = GFX_goal_KIR_junk_of_war
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -2666,8 +3007,9 @@ shared_focus = { # Beyond The Riverine Navy
 				add_mio_funds = 333
 				set_mio_flag = cocc_cot_mio_flag
 			}
-			custom_effect_tooltip = BAC_cocc_mio_size_up_prefix
-			custom_effect_tooltip = BAC_cocc_mio_size_up_cot
+			custom_effect_tooltip = BAC_mio_size_up_prefix
+			custom_effect_tooltip = BAC_mio_size_up_cot
+
 			custom_effect_tooltip = available_mio_tt
 			show_mio_tooltip = KIC_deer_comrade_organization
 			mio:KIC_deer_comrade_organization = {
@@ -2675,8 +3017,9 @@ shared_focus = { # Beyond The Riverine Navy
 				add_mio_funds = 333
 				set_mio_flag = cocc_wpu_mio_flag
 			}
-			custom_effect_tooltip = BAC_cocc_mio_size_up_prefix
-			custom_effect_tooltip = BAC_cocc_mio_size_up_wpu
+			custom_effect_tooltip = BAC_mio_size_up_prefix
+			custom_effect_tooltip = BAC_mio_size_up_wpu
+
 		}
 		else = {
 			custom_effect_tooltip = available_designer
@@ -2711,11 +3054,7 @@ shared_focus = { #해군항공대
 }
 shared_focus = { #
 	id = BAC_COC_mil_h3
-	icon = {
-		trigger = { has_global_flag = daybreaker_spawned }
-		value = GFX_goal_SOL_batnation
-	}
-	icon = GFX_goal_Equestrian_Royal_Navy_1
+	icon = GFX_goal_KIR_flotilla
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -2820,7 +3159,7 @@ shared_focus = { #BAC_COC_mil_h4
 	id = BAC_COC_mil_h4
 	icon = {
 		trigger = { has_global_flag = daybreaker_spawned }
-		value = GFX_goal_solar_empress_knows_best
+		value = GFX_goal_SOL_batnation
 	}
 	icon = GFX_PLB_HY_CELESTIA
 	cost = 4.8
@@ -2873,7 +3212,7 @@ shared_focus = {
 
 shared_focus = {
 	id = BAC_COC_mil_m4m
-	icon = GFX_goal_KIR_sergeant
+	icon = GFX_goal_KIR_pointing_hoof
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -2966,7 +3305,7 @@ shared_focus = {
 	
 }
 
-shared_focus = {
+shared_focus = { #March to Old Marches
 	id = BAC_COC_war_zaikiria #우월주의 아닌 기린 국가들한테는 이벤트로 괴뢰화하기
 	icon = GFX_goal_chn_kirin
 	cost = 4.8
@@ -2983,6 +3322,7 @@ shared_focus = {
 	}
 
 	available = {
+		has_war = no
 		if = {
 			limit = { is_ai = no }
 			has_war_support > 0.5
@@ -3001,14 +3341,72 @@ shared_focus = {
 				}
 			}
 		}
-	}	
+	}
+	bypass = {
+		KXN = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		NVA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		KHM = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+	}
+	will_lead_to_war_with = KXN
+	will_lead_to_war_with = NVA
+	will_lead_to_war_with = KHM
+	select_effect = {
+		every_country = {
+			limit = {
+				any_controlled_state = {
+					OR = {
+						state = 1054 #Lotus Crown
+						state = 1058 #Blossom
+						state = 1083 #Cassia Reach
+						state = 1085 #Razorgrain Frontier
+					}
+				}
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = ROOT
+				value = 1000
+			}
+		}
+		clr_country_flag = BAC_COC_commonalty_war_enacted
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_zaikiria"
+		every_state = {
+			limit = {
+				OR = {
+					is_in_array = { KXN.original_cores = THIS }
+					is_in_array = { NVA.original_cores = THIS }
+					is_in_array = { KHM.original_cores = THIS }
+				}
+			}
+			add_claim_by = ROOT
+		}
+		every_country = {
+			limit = {
+				any_controlled_state = {
+					OR = {
+						state = 1054 #Lotus Crown
+						state = 1058 #Blossom
+						state = 1083 #Cassia Reach
+						state = 1085 #Razorgrain Frontier
+					}
+				}
+				NOT = { tag = ROOT }
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
+				}
+			}
+		}
+		set_country_flag = BAC_COC_commonalty_war_enacted
 	}
 	
 }
 
-shared_focus = {
+shared_focus = { #Attack on barbarian lands
 	id = BAC_COC_war_barbarian
 	icon = GFX_goal_KIR_kaiser #GFX_goal_GRF_troubles_begin
 	cost = 4.8
@@ -3024,6 +3422,7 @@ shared_focus = {
 		has_country_flag = COC_war_committee
 	}
 	available = {
+		has_war = no
 		if = {
 			limit = { is_ai = no }
 			has_war_support > 0.66
@@ -3042,60 +3441,61 @@ shared_focus = {
 				}
 			}
 		}
-	}	
+	}
+	will_lead_to_war_with = ROA
+	will_lead_to_war_with = TSV
+	will_lead_to_war_with = GFS
+	will_lead_to_war_with = ZLU
+	will_lead_to_war_with = ZOO
+	select_effect = {
+		every_country = {
+			limit = {
+				any_controlled_state = {
+					OR = {
+						state = 909
+						state = 911
+						state = 922
+						state = 1132
+						state = 1135
+					}
+				}
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = ROOT
+				value = 1000
+			}
+		}
+		clr_country_flag = BAC_COC_commonalty_war_enacted
+	}
+	bypass = {
+		ROA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		TSV = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		GFS = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		ZLU = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		ZOO = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_barbarian"
-		create_wargoal = {
-			type = annex_everything
-			target = 909.owner
-		}
-		if = {
+		every_country = {
 			limit = {
-				TSV = {
-					exists = yes
-					NOT = { owns_state = 909 }
-				}
-			}
-			create_wargoal = { type = annex_everything target = TSV }
-		}
-		if = {
-			limit = {
-				GFS = {
-					exists = yes
+				any_controlled_state = {
 					OR = {
-						has_government = fascism
-						has_government = neutrality
-						# NOT = { has_country_flag = CTL_eva_in_power_smh }
-						# has_country_flag = CTL_hira_in_power_smh
-						# has_country_flag = CTL_ivar_in_power_smh
+						state = 909
+						state = 911
+						state = 922
+						state = 1132
+						state = 1135
 					}
 				}
+				NOT = { tag = ROOT }
 			}
-			create_wargoal = { type = annex_everything target = GFS }
-		}
-		if = {
-			limit = {
-				ZLU = {
-					exists = yes
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
 				}
 			}
-			create_wargoal = { type = annex_everything target = ZLU }
-		}
-		if = {
-			limit = {
-				ZOO = {
-					exists = yes
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-					}
-				}
-			}
-			create_wargoal = { type = annex_everything target = ZOO }
 		}
 		set_country_flag = BAC_COC_commonalty_war_enacted
 	}
@@ -3116,8 +3516,8 @@ shared_focus = {
 	allow_branch = {
 		has_country_flag = COC_war_committee
 	}
-
 	available = {
+		has_war = no
 		if = {
 			limit = { is_ai = no }
 			has_war_support > 0.66
@@ -3137,112 +3537,68 @@ shared_focus = {
 			}
 		}
 		has_global_flag = HIN_wars_over
-		NOT = {
-			has_war_with = KIR
-			has_war_with = KIC
-		}
 	}
+	bypass = {
+		BRS = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		SAM = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		HIN = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		CTL = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+	}
+	will_lead_to_war_with = BRS
+	will_lead_to_war_with = SAM
 	will_lead_to_war_with = HIN
 	will_lead_to_war_with = CTL
-	will_lead_to_war_with = SAM
-	will_lead_to_war_with = BRS
 	select_effect = {
-		hidden_effect = {
-			every_country = {
-				limit = {
+		every_country = {
+			limit = {
+				any_controlled_state = {
 					OR = {
-						original_tag = HIN
-						original_tag = CTL
-						original_tag = SAM
-						original_tag = BRS
+						state = 1097 #BRS
+						state = 1163 #SAM
+						state = 1171 #HIN
+						state = 1176 #CTL
 					}
-					OR = {
-						has_government = fascism
-						has_government = neutrality
-						NOT = { has_country_flag = CTL_eva_in_power_smh }
-						has_country_flag = CTL_hira_in_power_smh
-						has_country_flag = CTL_ivar_in_power_smh
-					}
-				}
-				add_ai_strategy = {
-					type = prepare_for_war
-					id = ROOT
-					value = 1000
 				}
 			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = ROOT
+				value = 1000
+			}
 		}
-		country_event = { id = baccocc.145 hours = 3 random_hours = 33 }
+		clr_country_flag = BAC_COC_commonalty_war_enacted
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_deer"
-		HIN = {
-			if = {
-				limit = { exists = yes }
-				if = {
-					limit = {
-						OR = {
-							has_government = fascism
-							has_government = neutrality
-						}
+		every_country = {
+			limit = {
+				any_controlled_state = {
+					OR = {
+						state = 1097 #BRS
+						state = 1163 #SAM
+						state = 1171 #HIN
+						state = 1176 #CTL
 					}
-					ROOT = { create_wargoal = { type = annex_everything target = HIN } }
 				}
-				else = { country_event = baccocc.146 }
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+					has_country_flag = CTL_hira_in_power_smh
+					has_country_flag = CTL_ivar_in_power_smh
+				}
 			}
-		}
-		CTL = {
-			if = {
-				limit = { exists = yes }
-				if = {
-					limit = {
-						OR = {
-							has_government = fascism
-							has_government = neutrality
-							NOT = { has_country_flag = CTL_eva_in_power_smh }
-							# has_country_flag = CTL_hira_in_power_smh
-							# has_country_flag = CTL_ivar_in_power_smh
-						}
-					}
-					ROOT = { create_wargoal = { type = annex_everything target = CTL } }
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PREV
 				}
-				else = { country_event = baccocc.146 }
-			}
-		}
-		SAM = {
-			if = {
-				limit = { exists = yes }
-				if = {
-					limit = {
-						OR = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					ROOT = { create_wargoal = { type = annex_everything target = SAM } }
-				}
-				else = { country_event = baccocc.146 }
-			}
-		}
-		BRS = {
-			if = {
-				limit = { exists = yes }
-				if = {
-					limit = {
-						OR = {
-							has_government = fascism
-							has_government = neutrality
-						}
-					}
-					ROOT = { create_wargoal = { type = annex_everything target = BRS } }
-				}
-				else = { country_event = baccocc.146 }
 			}
 		}
 		set_country_flag = BAC_COC_commonalty_war_enacted
 	}
 }
 shared_focus = {
-	id = BAC_COC_war_taungpau #우월주의 아닌 기린 국가들한테는 이벤트로 괴뢰화하기
+	id = BAC_COC_war_taungpau
 	icon = GFX_goal_KIR_pagoda
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -3258,6 +3614,7 @@ shared_focus = {
 	}
 
 	available = {
+		has_war = no
 		if = {
 			limit = { is_ai = no }
 			has_war_support > 0.5
@@ -3276,9 +3633,37 @@ shared_focus = {
 				}
 			}
 		}
+		has_war = no
+	}
+	will_lead_to_war_with = GAZ
+	select_effect = {
+		every_country = {
+			limit = {
+				any_controlled_state = {
+					OR = {
+						state = 924 #baganta
+					}
+				}
+			}
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = ROOT
+				value = 1000
+			}
+		}
+		clr_country_flag = BAC_COC_commonalty_war_enacted
+	}
+	bypass = {
+		GAZ = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_taungpau"
+		ROOT = {
+			create_wargoal = {
+				type = annex_everything
+				target = 924.owner
+			}
+		}
 		set_country_flag = BAC_COC_commonalty_war_enacted
 	}
 }
