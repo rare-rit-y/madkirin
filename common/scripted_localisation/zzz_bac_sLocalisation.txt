@@ -5,19 +5,18 @@
 #############                       #############
 #################################################
 
-	defined_text = { # Country
-		name = RSTEC_GETName
-		text = {
-			trigger = {
-				has_country_flag = KIC_children_of_concord_flag
-			}
-			localization_key = bac_CIT
+defined_text = { # Country
+	name = RSTEC_GETName
+	text = {
+		trigger = {
+			has_country_flag = KIC_children_of_concord_flag
 		}
-		text = {
-			localization_key = KIC_rising_sun_u
-		}
+		localization_key = bac_CIT
 	}
-	
+	text = {
+		localization_key = KIC_rising_sun_u
+	}
+}
 
 #################
 # /// Index /// # TNO ending screen

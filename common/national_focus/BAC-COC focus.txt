@@ -209,6 +209,11 @@ shared_focus = {
 			}
 			add_core_of = COC
 		}
+		hidden_effect = {
+			every_core_state = {
+				remove_claim_by = ROOT
+			}
+		}
 	}
 }
 
@@ -961,8 +966,7 @@ shared_focus = {
 			# 	}
 			# 	news_event = { id = kirin_council.326 hours = 6 }
 			# }
-			custom_effect_tooltip = BAC_KIS_event_324_tt
-			set_country_flag = to_the_commonalty
+			set_country_flag = BAC_get_commonalty_flag
 			custom_effect_tooltip = get_commonalty_tree_tt
 			mark_focus_tree_layout_dirty = yes
 		}
@@ -995,7 +999,7 @@ shared_focus = {
 	}
 }
 shared_focus = { #BAC_COC_m1 - Prepare The Foundation
-	id = BAC_COC_m1 #건국 준비
+	id = BAC_COC_m1
 	icon = GFX_goal_KIR_fire
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -1004,7 +1008,7 @@ shared_focus = { #BAC_COC_m1 - Prepare The Foundation
 	y = 2
 	allow_branch = {
 		check_variable = { coc_start_foci_completed < 3 }
-		has_country_flag = to_the_commonalty
+		has_country_flag = BAC_get_commonalty_flag
 	}
 	prerequisite = {
 		focus = BAC_COC_finale
@@ -1037,14 +1041,39 @@ shared_focus = { #BAC_COC_m1 - Prepare The Foundation
 		#add_to_variable = { coc_start_foci_completed = 1 }
 		#mark_focus_tree_layout_dirty = yes
 		#add_to_variable = { coc_t_foci_completed = 1 }
+		hidden_effect = {
+			set_temp_variable = { coalition_partner_var = token:neutrality }
+			add_to_coalition = yes
+		}
 		if = {
 			limit = {
-				has_completed_focus = BAC_COC_m1
-				check_variable = { coc_start_foci_completed = 0 }
+				has_completed_focus = BAC_COC_m1 
 			}
-			custom_effect_tooltip = bac_cheater_tt
+			if = {
+				limit = { 
+					check_variable = { coc_start_foci_completed = 0 }
+				}
+				custom_effect_tooltip = bac_cheater_tt
+				custom_effect_tooltip = KIR_line_break
+				custom_effect_tooltip = BAC_COC_M1_tt
+			}
+			else = {
+				effect_tooltip = {
+					country_event = baccocc.1
+					set_party_name = {
+						ideology = neutrality
+						long_name = BAC_COC_na_party_0_long
+						name = BAC_COC_na_party_0
+					}
+				}
+				custom_effect_tooltip = add_to_coalition
+			}
 		}
-		else = { effect_tooltip = { country_event = baccocc.1 } }
+		else = {
+			effect_tooltip = {
+				country_event = baccocc.1
+			}
+		}
 	}
 	available_if_capitulated = no
 }
@@ -1062,14 +1091,11 @@ shared_focus = { #BAC_COC_h1 - Honour Our Friends
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h1"
-		add_to_variable = { coc_start_foci_completed = 1 }
-		swap_ideas = {
-			remove_idea = scraping_the_barrel
-			add_idea = communal_militias
-		}
+		add_war_support = 0.033
 		custom_effect_tooltip = KIR_line_break
 		bac_COT_mega_effect = yes
 		#add_to_variable = { coc_h_foci_completed = 1 }
+		add_to_variable = { coc_start_foci_completed = 1 }
 		if = {
 			limit = { check_variable = { coc_start_foci_completed = 3 } }
 			mark_focus_tree_layout_dirty = yes
@@ -1359,6 +1385,13 @@ shared_focus = {
 			}
 			news_event = { id = kirin_council.326 hours = 3 } #bac
 		}
+		hidden_effect = {
+			set_party_name = {
+				ideology = neutrality
+				long_name = BAC_COC_na_party_1_long
+				name = BAC_COC_na_party_1
+			}
+		}
 	}
 	
 	
@@ -1621,6 +1654,8 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 			long_name = BAC_COC_fascism_party_long
 			name = BAC_COC_fascism_party
 		}
+		set_temp_variable = { coalition_partner_var = token:fascism }
+		add_to_coalition = yes
 		if = {
 			limit = { has_country_flag = baccocc_7b_flag }
 			add_country_leader_role = {
@@ -1653,7 +1688,7 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 		bac_COT_small_effect = yes
 		save_current_manpower = yes
 		every_controlled_state = {
-			limit = { NOT = { is_core_of = ROOT } }
+			limit = { has_resistance = yes }
 			add_manpower = -333
 		}
 		restore_previous_manpower = yes
@@ -1979,10 +2014,7 @@ shared_focus = { #New Campaign Town
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m2"
 		random_core_state = {
 			limit = {
-				has_built = {
-					type = infrastructure
-					value < 5
-				}
+				infrastructure < 5
 			}
 			prioritize = { 1069 1076 1073 1077 }
 			add_extra_state_shared_building_slots = 1
@@ -1999,10 +2031,7 @@ shared_focus = { #New Campaign Town
 		}
 		random_core_state = {
 			limit = {
-				has_built = {
-					type = infrastructure
-					value < 5
-				}
+				infrastructure < 5
 			}
 			prioritize = { 1069 1076 1073 1077 }
 			add_extra_state_shared_building_slots = 1
@@ -2019,10 +2048,7 @@ shared_focus = { #New Campaign Town
 		}
 		random_core_state = {
 			limit = {
-				has_built = {
-					type = infrastructure
-					value < 5
-				}
+				infrastructure < 5
 			}
 			prioritize = { 1069 1076 1073 1077 }
 			add_extra_state_shared_building_slots = 1
@@ -2510,10 +2536,7 @@ shared_focus = { #BAC_COC_eco_m4h Plan Zebrica
 		bac_COT_small_effect = yes
 		random_core_state = {
 			limit = {
-				has_built = {
-					type = infrastructure
-					value < 5
-				}
+				infrastructure < 5
 				is_coastal = yes
 			}
 			add_extra_state_shared_building_slots = 1
@@ -2530,10 +2553,7 @@ shared_focus = { #BAC_COC_eco_m4h Plan Zebrica
 		}
 		random_core_state = {
 			limit = {
-				has_built = {
-					type = infrastructure
-					value < 5
-				}
+				infrastructure < 5
 				is_coastal = yes
 			}
 			add_extra_state_shared_building_slots = 1
@@ -2550,10 +2570,7 @@ shared_focus = { #BAC_COC_eco_m4h Plan Zebrica
 		}
 		random_core_state = {
 			limit = {
-				has_built = {
-					type = infrastructure
-					value < 5
-				}
+				infrastructure < 5
 				is_coastal = yes
 			}
 			add_extra_state_shared_building_slots = 1
@@ -3328,15 +3345,15 @@ shared_focus = { #March to Old Marches
 			has_war_support > 0.5
 		}
 		OR = {
-			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted }
+			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted_flag }
 			has_country_flag = {
-				flag = BAC_COC_commonalty_war_enacted
+				flag = BAC_COC_commonalty_war_enacted_flag
 				days > 90
 			}
 			custom_trigger_tooltip = {
 				tooltip = BAC_COC_commonalty_war_days_tt
 				has_country_flag = {
-					flag = BAC_COC_commonalty_war_enacted
+					flag = BAC_COC_commonalty_war_enacted_flag
 					days > 90
 				}
 			}
@@ -3368,7 +3385,7 @@ shared_focus = { #March to Old Marches
 				value = 1000
 			}
 		}
-		clr_country_flag = BAC_COC_commonalty_war_enacted
+		clr_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_zaikiria"
@@ -3401,7 +3418,7 @@ shared_focus = { #March to Old Marches
 				}
 			}
 		}
-		set_country_flag = BAC_COC_commonalty_war_enacted
+		set_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 	
 }
@@ -3428,15 +3445,15 @@ shared_focus = { #Attack on barbarian lands
 			has_war_support > 0.66
 		}
 		OR = {
-			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted }
+			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted_flag }
 			has_country_flag = {
-				flag = BAC_COC_commonalty_war_enacted
+				flag = BAC_COC_commonalty_war_enacted_flag
 				days > 90
 			}
 			custom_trigger_tooltip = {
 				tooltip = BAC_COC_commonalty_war_days_tt
 				has_country_flag = {
-					flag = BAC_COC_commonalty_war_enacted
+					flag = BAC_COC_commonalty_war_enacted_flag
 					days > 90
 				}
 			}
@@ -3466,7 +3483,7 @@ shared_focus = { #Attack on barbarian lands
 				value = 1000
 			}
 		}
-		clr_country_flag = BAC_COC_commonalty_war_enacted
+		clr_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 	bypass = {
 		ROA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
@@ -3497,7 +3514,7 @@ shared_focus = { #Attack on barbarian lands
 				}
 			}
 		}
-		set_country_flag = BAC_COC_commonalty_war_enacted
+		set_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 	
 }
@@ -3523,15 +3540,15 @@ shared_focus = {
 			has_war_support > 0.66
 		}
 		OR = {
-			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted }
+			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted_flag }
 			has_country_flag = {
-				flag = BAC_COC_commonalty_war_enacted
+				flag = BAC_COC_commonalty_war_enacted_flag
 				days > 90
 			}
 			custom_trigger_tooltip = {
 				tooltip = BAC_COC_commonalty_war_days_tt
 				has_country_flag = {
-					flag = BAC_COC_commonalty_war_enacted
+					flag = BAC_COC_commonalty_war_enacted_flag
 					days > 90
 				}
 			}
@@ -3566,7 +3583,7 @@ shared_focus = {
 				value = 1000
 			}
 		}
-		clr_country_flag = BAC_COC_commonalty_war_enacted
+		clr_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_deer"
@@ -3594,7 +3611,7 @@ shared_focus = {
 				}
 			}
 		}
-		set_country_flag = BAC_COC_commonalty_war_enacted
+		set_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 }
 shared_focus = {
@@ -3620,15 +3637,15 @@ shared_focus = {
 			has_war_support > 0.5
 		}
 		OR = {
-			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted }
+			NOT = { has_country_flag = BAC_COC_commonalty_war_enacted_flag }
 			has_country_flag = {
-				flag = BAC_COC_commonalty_war_enacted
+				flag = BAC_COC_commonalty_war_enacted_flag
 				days > 90
 			}
 			custom_trigger_tooltip = {
 				tooltip = BAC_COC_commonalty_war_days_tt
 				has_country_flag = {
-					flag = BAC_COC_commonalty_war_enacted
+					flag = BAC_COC_commonalty_war_enacted_flag
 					days > 90
 				}
 			}
@@ -3651,7 +3668,7 @@ shared_focus = {
 				value = 1000
 			}
 		}
-		clr_country_flag = BAC_COC_commonalty_war_enacted
+		clr_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 	bypass = {
 		GAZ = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
@@ -3664,7 +3681,7 @@ shared_focus = {
 				target = 924.owner
 			}
 		}
-		set_country_flag = BAC_COC_commonalty_war_enacted
+		set_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 }
 

@@ -26,7 +26,6 @@ bac_coc_debug_cat = {
 			set_power_balance = {
 				id = BAC_commonalty_bop
 			}
-			country_event = kirin_council.326
 		}
     
     }

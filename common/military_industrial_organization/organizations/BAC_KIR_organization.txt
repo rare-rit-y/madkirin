@@ -8,7 +8,7 @@ BAC_star_energy_zeb_organization = {
 		has_dlc = "Arms Against Tyranny" 
 	}
 	visible = {
-		has_country_flag = to_the_commonalty
+		owner = { has_country_flag = BAC_get_commonalty_flag }
 	}
 	available = {
 		owner = {

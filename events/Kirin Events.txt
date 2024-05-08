@@ -23415,7 +23415,7 @@ country_event = {
 			#}
 			#news_event = { id = kirin_council.326 hours = 36 } #bac
 		#}
-		set_country_flag = to_the_commonalty
+		set_country_flag = BAC_get_commonalty_flag
 		mark_focus_tree_layout_dirty = yes
 		custom_effect_tooltip = BAC_KIS_event_324_tt
 		custom_effect_tooltip = get_commonalty_tree_tt #bac end
@@ -23601,10 +23601,8 @@ news_event = {
 			clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
 
 			load_focus_tree = generic_zebra_focus #bac added
-			swap_ideas = {
-				remove_idea = scraping_the_barrel
-				add_idea = volunteer_only
-			}
+			KIR = { add_to_ROOT_potential_cores = yes }
+			KIS = { add_to_ROOT_potential_cores = yes }
 			add_ideas = civilian_economy #bac added end
 			set_country_flag = KIC_tank_designer_1_available
 			set_country_flag = KIC_tank_designer_2_available

@@ -1,5 +1,18 @@
 
 on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = { has_variable = coalition_partners^num }
+				set_variable = { coalition_stab_gain = 0 }
+				for_each_loop = {
+					array = coalition_partners
+					add_to_variable = { coalition_stab_gain = party_popularity@var:v }
+				}
+				multiply_variable = { coalition_stab_gain = 0.15 }
+			}
+		}
+	}
 
 	#### MIO on actions
 	# ROOT is MIO
@@ -10,7 +23,7 @@ on_actions = {
 				limit = {
 					FROM = {
 						original_tag = KIC
-						has_country_flag = to_the_commonalty
+						has_country_flag = BAC_get_commonalty_flag
 					}
 				}
 				if = {

@@ -24,32 +24,7 @@ ideas = {
 			}
 		}
 	}
-	bac_verdant_accord_idea = {
-			allowed = {
-				always = no
-			}
-			picture = equestrian_treaty
-			available = {
-				any_country = {
-					OR = {
-						has_event_target = equestria
-						has_event_target = solar_empire
-					}
-					exists = yes
-					is_subject = no
-					NOT = { has_war_with = KIR }
-				}
-			}
-			removal_cost = -1
-			modifier = {
-				custom_modifier_tooltip = bac_verdant_accord_3_offmap_civ_facs
-			}
-			on_remove = {
-				ROOT = {
-					add_offsite_building = { type = industrial_complex level = -2 }
-				}
-			}
-		}
+	
 	country = {
 		BAC_famine_initial = {
 			name = KIC_famine_modifier
@@ -64,6 +39,7 @@ ideas = {
 			modifier = {
 				MONTHLY_POPULATION = -0.3
 				stability_weekly_factor = -0.003
+				war_support_weekly = -0.003
 			}
 		}
 		BAC_famine_timed = {
@@ -92,9 +68,9 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				political_power_cost = 0.99
-				stability_factor = -0.09
+				political_power_factor = -0.33
 				stability_weekly = -0.003
-				war_support_factor = -0.3
+				war_support_weekly = -0.003
 			}
 		}
 
@@ -130,6 +106,32 @@ ideas = {
 				compliance_growth = -0.3
 				political_power_cost = 0.3
 				stability_weekly = -0.001
+			}
+		}
+		bac_verdant_accord_idea = {
+			allowed = {
+				always = no
+			}
+			picture = equestrian_treaty
+			available = {
+				any_country = {
+					OR = {
+						has_event_target = equestria
+						has_event_target = solar_empire
+					}
+					exists = yes
+					is_subject = no
+					NOT = { has_war_with = KIR }
+				}
+			}
+			removal_cost = -1
+			modifier = {
+				custom_modifier_tooltip = bac_verdant_accord_3_offmap_civ_facs
+			}
+			on_remove = {
+				ROOT = {
+					add_offsite_building = { type = industrial_complex level = -2 }
+				}
 			}
 		}
 	}

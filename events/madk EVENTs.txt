@@ -21,21 +21,45 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
+		trigger = {
+			NOT = {
+				is_in_array = { coalition_partners = communism }
+				has_government = communism
+			}
+		}
 		name = bacdebug.1.a
 		set_temp_variable = { coalition_partner_var = token:communism }
 		add_to_coalition = yes
 	}
 	option = {
+		trigger = {
+			NOT = {
+				is_in_array = { coalition_partners = fascism }
+				has_government = fascism
+			}
+		}
 		name = bacdebug.1.b
 		set_temp_variable = { coalition_partner_var = token:fascism }
 		add_to_coalition = yes
 	}
 	option = {
+		trigger = {
+			NOT = {
+				is_in_array = { coalition_partners = neutrality }
+				has_government = neutrality
+			}
+		}
 		name = bacdebug.1.c
 		set_temp_variable = { coalition_partner_var = token:neutrality }
 		add_to_coalition = yes
 	}
 	option = {
+		trigger = {
+			NOT = {
+				is_in_array = { coalition_partners = democratic }
+				has_government = democratic
+			}
+		}
 		name = bacdebug.1.d
 		set_temp_variable = { coalition_partner_var = token:democratic }
 		add_to_coalition = yes
@@ -159,12 +183,13 @@ country_event = { # baccocc.1 - To Prepare The Foundation
 		set_power_balance = {
 			id = BAC_commonalty_bop
 		}
-		set_country_flag = your_focus_fucked_up_bac_flag
+		custom_effect_tooltip = KIR_line_break
 		mio:KIC_small_arms_inventor_organization = {
 			set_mio_flag = cocc_wpu_mio_flag
-		}
 		custom_effect_tooltip = BAC_mio_size_up_prefix
+		custom_effect_tooltip = KIR_line_break
 		custom_effect_tooltip = BAC_mio_size_up_wpu
+		}
 		hidden_effect = {
 			remove_country_leader_role = {
 				character = "KIR_kindling_flash"
@@ -194,6 +219,7 @@ country_event = { # baccocc.1 - To Prepare The Foundation
 					traits = { KIR_tempered_flame }
 				}
 			}
+			set_country_flag = your_focus_fucked_up_bac_flag
 			KIC_ember_glow = {
 				unit_leader_event = {
 					id = baccocc.2
@@ -231,6 +257,15 @@ unit_leader_event = { # baccocc.2 - A Militarykirin in the Committee
 				id = baccocc.3
 				days = 3
 				random_hours = 33
+			}
+		}
+		hidden_effect = {
+			ROOT = {
+				set_party_name = {
+					ideology = neutrality
+					long_name = BAC_COC_na_party_0_long
+					name = BAC_COC_na_party_0
+				}
 			}
 		}
 	}

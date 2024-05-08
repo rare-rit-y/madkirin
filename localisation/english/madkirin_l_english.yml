@@ -336,8 +336,6 @@
  #generic decisions
  BAC_military_aid_to_civil: "Military Aid to Civil" #대민지원
  BAC_military_aid_to_civil_desc: "The military serves the country, not the country serves the military! Our soldiers need to know who their food comes from, even if they get a little tired." #군이 나라를 섬기는 것이지, 나라가 군을 섬기는 것이 아닙니다! 우리 병사들은 조금 피곤하더라도 자신들의 숙식이 누구에게서 나오는 것인지 알아야 합니다.
- BAC_military_aid_to_resis: "Military Aid to Occupied Civil" #점령지 대민지원
- BAC_military_aid_to_resis_desc: "The populace in the occupied territories need to learn that their lives can be better under our regime. It will increase the discontent of our soldiers deployed there, but in the end, this is how less friendly blood is shed." #점령지의 주민들은 자신들의 삶이 우리 정권 하에서 더 나아질 수 있다는 것을 배워야 합니다. 현지 병사들의 불만은 높아지겠지만 결국 이것이야말로 아군의 피를 덜 흘리게 하는 방법입니다.
 
 #tt
   bac_controlls_all_cores_original_ally_tt: "All core states are controlled by §Y[Root.GetName]§! or one of their allies.\n"
@@ -357,10 +355,11 @@
  #bac_are_you_serious_tt: "Nothing §tbad§! will happen, isn't it?"
 
  bac_cheater_tt: "Remember: the console is for development, not cheating!"
+ BAC_COC_M1_tt: "§RDISCLAIMER§!: §gIf you don't have any working save file, type §Levent baccocc.1 §!into the console command.§!"
  unlocks_bop_decision_tt: "This can be found in §YBalance of Power§! category.\n\n"
  unlocks_bop_multiple_decisions_tt: "These can be found in §YBalance of Power§! category.\n\n"
  
- BAC_COC_commonalty_war_enacted: "Has passed a §RWar Initiative§!"
+ BAC_COC_commonalty_war_enacted_flag: "Has passed a §RWar Initiative§!"
  BAC_COC_commonalty_war_days_tt: " Current days are: [?BAC_COC_commonalty_war_enacted_flag:days|Y0]"
  
 
@@ -371,13 +370,24 @@
  BAC_maestro: "Maestro of Industry"
  BAC_prophet_of_the_common: "Prophet of Common"
  
+#cosmetic_tags
+ BAC_commonalty: "Commonalty of Zebrica"
+ BAC_commonalty_DEF: "the Free and Democratic Commonalty of Zebrica"
+ BAC_commonalty_ADJ: "Commonal"
+ GAZ_KIR_CoC_subject: "Commonal Mandate"
+ GAZ_KIR_CoC_subject_DEF: "the Commonal Mandate of Taungpau for Extermination of the Way of Fire"
+ GAZ_KIR_CoC_subject_ADJ: "Taungpauan"
 #misc
- WAR_NAME_COC_KIS: "Children of Concord Revolt"
+ #WAR_NAME_KIR_CoC_KIS: "Children of Concord Revolt"
  KIC_CPF: "Committee for Preparation of the Foundation"
  BAC_star_energy_zeb: "Star Energy - Zebrica"
  BAC_star_energy_zeb_available: "Unlocked §Y$BAC_star_energy_zeb$§!"
- BAC_COC_fascism_party: "Extremist"
+ BAC_COC_fascism_party: "Communion - Extremist"
  BAC_COC_fascism_party_long: "Communion of Her Radiant Trinity - Extremist"
+ BAC_COC_na_party_0: "CPF - Moderates"
+ BAC_COC_na_party_0_long: "Committee For Preparation of The Foundation - Moderates"
+ BAC_COC_na_party_1: "Senate - Moderates"
+ BAC_COC_na_party_1_long: "Common Senate - Moderates"
  bac_RSTEC: "Rising Sun Technical University"
  bac_CIT: "Commonal Institute of Technology"
 
@@ -385,9 +395,6 @@
  BAC_COC_firethorn_desc: "Heaps of praise could be had upon the head of the Banner of the Scented Moonflower. Its Matriarch-Commander, Firethorn was raised in a Banner that had both evolved into a complex clan and retained enough soldiers to fight alongside its equals (at least before the Silence).\n\nIn the Silence's last years, Firethorn had seen the folly of the Silence a century in the making. Her clan had propped themselves up thanks to their loyalty to the Realm, but outside the Banner's cosy home villages, the rest of Kiria had languished: just miles away, a small city had thrived; that seemed a lie when all she saw and walked through was a ghost town populated by farmers who lived hoof to mouth.\n\nThat memory returned when Rain Shine announced the Silence's end. No longer would her Banner and the soldiers she takes care of serve themselves and the decrepit pieces of a dying government. A reborn Realm she would serve: the Realm and all the kirin that are now suddenly free.\n\nBut the Second Cacophony did not leave any room for such a smooth destiny: she was forced to lose many of her bannerkirin - her kins - in the battle, and joined a hopeless peasant revolt to take revenge on the NAKP for causing the civil war. Only time would tell her final fate.\n\n§YPortrait by:§! Tek"
 
  BAC_commonalty_faction: "Commonal Mutual Assistance Bloc"
- BAC_commonalty: "Commonalty of Zebrica"
- BAC_commonalty_DEF: "the Free and Democratic Commonalty of Zebrica"
- BAC_commonalty_ADJ: "Commonalty"
 
  BAC_commonalty_bop: "Two Factions of the §8Commonalty§!"
   commonalty_harmonic_control: "§FCommunion of Trinity§! - §7Harmonists§!"
