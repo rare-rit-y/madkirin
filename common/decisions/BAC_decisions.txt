@@ -53,10 +53,10 @@ bac_coc_debug_cat = {
 		visible = {
 			is_debug = yes
             has_country_flag = KIC_children_of_concord_flag
-			NOT = { has_country_flag = COC_war_committee }
+			NOT = { has_country_flag = COC_war_committee_flag }
 		}
 		complete_effect = {
-			set_country_flag = COC_war_committee
+			set_country_flag = COC_war_committee_flag
             mark_focus_tree_layout_dirty = yes
 		}
     }

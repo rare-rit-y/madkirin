@@ -160,7 +160,7 @@ country_event = {  #hidden event for debuggo
 	fire_only_once = yes
 	option = {
 		load_focus_tree = BAC_COC_tree
-		set_country_flag = COC_war_committee
+		set_country_flag = COC_war_committee_flag
 	}
 }
 
@@ -316,11 +316,15 @@ country_event = { # baccocc.5 - Which Law Should We Use?
 	fire_only_once = yes
 	option = { #이퀘스트리아 헌법을 이식하는 것이 최선의 방법이다. # 
 		name = baccocc.5.a
-		
+		EAW_raise_trade_law = yes
+		bac_WPU_small_effect = yes
 	}
 	option = { # All creatures should be equal before Concord. That's where we start. #kirin.20.c
 		name = baccocc.5.b
-		
+		add_popularity = {
+			ideology = democratic
+			popularity = 0.03
+		}
 	}
 }
 country_event = { # baccocc.6 - Matter of Regional Autonomy
@@ -370,8 +374,7 @@ country_event = { #Matter of Empowerment Action
 unit_leader_event = { # baccocc.10 - Matter of Educational Model
 	id = baccocc.10 
 	title = baccocc.10.t
-	desc = baccocc.10.d 
-	picture = GFX_event_KIR_village
+	desc = baccocc.10.d
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.10"}
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -416,7 +419,6 @@ unit_leader_event = { #baccocc.12 firethorn
 	id = baccocc.12
 	title = kirin.112.t
 	desc = baccocc.12.d 
-	picture = GFX_event_KIR_eaves
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.12"}
 	is_triggered_only = yes
 	fire_only_once = yes
@@ -432,7 +434,38 @@ unit_leader_event = { #baccocc.12 firethorn
 			}
 			add_unit_leader_trait = trait_SOV_determined
 		}
-		complete_national_focus = BAC_COC_mil_head
+	}
+}
+unit_leader_event = { #baccocc.13 firethorn
+	id = baccocc.13
+	title = baccocc.13.t
+	desc = baccocc.13.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.13"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.13.a # 
+		ROOT = {
+			country_event = {
+				id = baccocc.14
+				hours = 6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = baccocc.14
+	title = baccocc.14.t
+	desc = baccocc.14.d 
+	picture = GFX_event_KIR_lantern
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.14"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.14.a
+		set_country_flag = COC_war_committee_flag
+		custom_effect_tooltip = baccocc_14a_tt
 	}
 }
 country_event = {
@@ -515,10 +548,6 @@ country_event = { #146 are you with me
 				}
 			}
 			modifier = {
-				factor = 1.25
-				FROM = { has_tech = tech_kirin_astrology }
-			}
-			modifier = {
 				has_war = yes
 				OR = {
 					surrender_progress > 0.1
@@ -534,6 +563,10 @@ country_event = { #146 are you with me
 				}
 				add = 333
 			}
+			modifier = {
+				factor = 1.25
+				FROM = { has_tech = tech_kirin_astrology }
+			}
 		}
 	}
 }
@@ -545,11 +578,13 @@ country_event = { #ject
 	picture = GFX_event_KIR_stamp_B
 	is_triggered_only = yes
 	option = { #oke
+		trigger = { is_ai = no }
 		name = baccocc.147.a
 	}
 	option = { #kill
 		name = baccocc.147.b
-		add_war_support = -0.1
+		add_political_power = -30
+		add_war_support = -0.03
 		create_wargoal = {
 			type = annex_everything
 			target = FROM
@@ -649,6 +684,7 @@ country_event = { # baccocc.303 - Tathya-Samvrti
 	desc = baccocc.303.d
 	picture = GFX_event_KIR_evening
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.303"}
+	immediate = { hidden_effect = { scoped_play_song = "KandariaDomain" } }
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = { # too long to be addressed here

@@ -22,14 +22,19 @@ music = {
     volume = 0.85
 }
 
-#music = {
-#   name = "Leonhart_LARK"
-#    file = "Leonhart_LARK.ogg"
-#    volume = 0.9
-#}
+music = {
+  name = "Leonhart_LARK"
+   file = "Leonhart_LARK.ogg"
+   volume = 0.9
+}
 music = {
     name = "Song_of_Lazernes"
     file = "Song_of_Lazernes.ogg"
+    volume = 0.95
+}
+music = {
+    name = "KandariaDoamin"
+    file = "KandariaDomain.ogg"
     volume = 0.95
 }
 music = {
@@ -37,5 +42,62 @@ music = {
     file = "Redspark-The_Way_Of_Fire_BAC.ogg"
     volume = 0.95
 }
+music = {
+    name = "Battle_Strange_Theme"
+    file = "Battle_Strange_Theme.ogg"
+    volume = 0.95
+}
 
+music = {
+    name = "Chamber_Chu_-_Fighting_Spirit"
+    file = "Chamber_Chu_-_Fighting_Spirit.ogg"
+    volume = 0.95
+}
 
+music = {
+    name = "Colorful_Voice"
+    file = "Colorful_Voice.ogg"
+    volume = 0.95
+}
+
+music = {
+    name = "Duty_Calls"
+    file = "Duty_Calls.ogg"
+    volume = 0.95
+}
+
+music = {
+    name = "Flawless_Theory_(Endless_Legend_Version)"
+    file = "Flawless_Theory_(Endless_Legend_Version).ogg"
+    volume = 0.95
+}
+
+# music = {
+#     name = "Flowing_Flutes"
+#     file = "Flowing_Flutes.ogg"
+#     volume = 0.95
+# }
+
+music = {
+    name = "Kokoro_(Long_Version)"
+    file = "Kokoro_(Long_Version).ogg"
+    volume = 0.95
+}
+
+music = {
+    name = "Like_Asian_Spirit"
+    file = "Like_Asian_Spirit.ogg"
+    volume = 0.95
+}
+
+music = {
+    name = "sdorica_aurora_ost_-_title_BGM"
+    file = "sdorica_aurora_ost_-_title_BGM.ogg"
+    volume = 0.95
+}
+
+music = {
+    name = "Shamisen_Drives_The_Wind"
+    file = "Shamisen_Drives_The_Wind.ogg"
+    volume = 0.95
+}

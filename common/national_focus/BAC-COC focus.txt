@@ -46,7 +46,7 @@ focus_tree = {
 			x = 0
 			y = 6
 			trigger = {
-				has_country_flag = COC_war_committee
+				has_country_flag = COC_war_committee_flag
 			}
 		}
 	}
@@ -1030,6 +1030,7 @@ shared_focus = { #BAC_COC_m1 - Prepare The Foundation
 				set_nationality = PREV.PREV
 			}
 		}
+		scoped_play_song = "Leonhart_LARK"
 	}
 	available = {
 		hidden_trigger = {
@@ -1688,16 +1689,25 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 		bac_COT_small_effect = yes
 		save_current_manpower = yes
 		every_controlled_state = {
-			limit = { has_resistance = yes }
+			limit = {
+				OR = {
+					has_resistance = yes
+					state = 1071 #fragrance
+					state = 1059 #Vermilion
+					state = 1060 #Rhapsody
+					state = 1064 #Massicot
+					state = 817 #Radiance
+				}
+			}
 			add_manpower = -333
 		}
 		restore_previous_manpower = yes
 		#unlock_decision_tooltip = my_decision
 		custom_effect_tooltip = unlocks_bop_decision_tt
 	}
-	
 }
-shared_focus = { # Justice For Common
+
+shared_focus = { #Justice For Common
 	id = BAC_COC_pol_m2
 	icon = GFX_goal_KIR_table
 	cost = 4.8
@@ -1712,11 +1722,27 @@ shared_focus = { # Justice For Common
 		focus = BAC_COC_pol_h1
 		focus = BAC_COC_pol_c1
 	}
+	bypass = {
+		if = {
+			limit = {
+				1071 = {
+					owner = {
+						original_tag = CHN
+					}
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = BAC_COC_pol_m2_ctt
+				NOT = { has_country_flag = KIS_event_737_fickle_current_POW_flag }
+			}
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_m2"
-		country_event = {
+		country_event = { #- Trial of NAKP and Divine Fire
 			id = baccocc.11
 			hours = 3
+			random_hours = 33
 		}
 	}
 	
@@ -1872,7 +1898,7 @@ shared_focus = { #Century for Commonalty
 	y = 5
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	prerequisite = {
 		focus = BAC_COC_pol_h3
@@ -1885,7 +1911,7 @@ shared_focus = { #Century for Commonalty
 	}
 	available = {
 		custom_trigger_tooltip = {
-			tooltip = BAC_COC_pol_m4_trigger_tt
+			tooltip = BAC_COC_pol_m4_ctt
 			has_country_flag = commonalty_solved_deer
 			has_country_flag = commonalty_solved_barbarian
 			has_country_flag = commonalty_solved_zaikiria
@@ -2166,8 +2192,8 @@ shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
 			}
 		}
 	}
-	
 }
+
 shared_focus = { #QKdzz
 	id = BAC_COC_eco_c2
 	icon = GFX_goal_KIR_bread
@@ -2196,11 +2222,11 @@ shared_focus = { #QKdzz
 		}
 		custom_effect_tooltip = BAC_COC_eco_c2_tt
 		decrease_poverty = yes
-		increase_society_development_gradual = yes
 		bac_WPU_medium_effect = yes
 	}
-	
 }
+
+
 shared_focus = {
 	id = BAC_COC_eco_m3h
 	icon = GFX_goal_KIR_barrels
@@ -2222,18 +2248,30 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m3h"
-		random_core_state = {
-			add_extra_state_shared_building_slots = 1
+		1074 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = synthetic_refinery
+				level = 1
+				instant_build = yes
+			}
 			add_building_construction = {
 				type = industrial_complex
 				level = 1
 				instant_build = yes
 			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
 		}
-		#todo add oil
 	}
-	
 }
+
+
+
+
 
 shared_focus = {
 	id = BAC_COC_eco_m3c
@@ -2263,10 +2301,23 @@ shared_focus = {
 				level = 1
 				instant_build = yes
 			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
 		}
-		#todo add res
+		increase_society_development_gradual = yes
+		set_country_flag = kiria_resource_develop_decisions_unlocked
+		unlock_decision_tooltip = develop_sorghum_steel
+		unlock_decision_tooltip = develop_peril_peaks_mines
+		unlock_decision_tooltip = develop_jade_crystals
+		unlock_decision_tooltip = develop_trypan_crystals
+		unlock_decision_tooltip = develop_providence_demesne_aluminium
+		unlock_decision_tooltip = develop_sunshine_chromium
+		unlock_decision_tooltip = develop_vermilion_basin_crystals
+		unlock_decision_tooltip = develop_vermilion_basin_tungsten
 	}
-	
 }
 
 shared_focus = {
@@ -2284,19 +2335,19 @@ shared_focus = {
 		focus = BAC_COC_eco_c2
 	}
 	available = {
-
+		NOT = { has_idea = BAC_famine_timed }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_c3"
+		add_political_power = 33
+		increase_society_development_gradual = yes
 		decrease_poverty = yes
 		bac_WPU_medium_effect = yes
-		increase_society_development_gradual = yes
 	}
-	
 }
 
 shared_focus = { #Yet Another Accord
-	id = BAC_COC_eco_h3 #
+	id = BAC_COC_eco_h3
 	icon = {
 		trigger = { has_global_flag = daybreaker_spawned }
 		value = GFX_goal_solar_fair_but_just
@@ -2697,7 +2748,7 @@ shared_focus = { #shdzz
 	
 }
 
-shared_focus = { #BAC_COC_mil_head
+shared_focus = { #Military Affairs
 	id = BAC_COC_mil_head
     icon = {
         trigger = { has_completed_focus = BAC_COC_mil_head }
@@ -2735,6 +2786,11 @@ shared_focus = { #BAC_COC_mil_head
 					id = baccocc.12
 					hours = 3
 					random_hours = 33
+				}
+				unit_leader_event = {
+					id = baccocc.13
+					days = 33
+					hours = 10
 				}
 			}
 		}
@@ -3314,7 +3370,7 @@ shared_focus = {
 	y = 10
 
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_sekrit_war_committee"
@@ -3335,7 +3391,7 @@ shared_focus = { #March to Old Marches
 		focus = BAC_COC_m1
 	}
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 
 	available = {
@@ -3436,7 +3492,7 @@ shared_focus = { #Attack on barbarian lands
 		focus = BAC_COC_m1
 	}
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	available = {
 		has_war = no
@@ -3531,7 +3587,7 @@ shared_focus = {
 		focus = BAC_COC_m1
 	}
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	available = {
 		has_war = no
@@ -3627,7 +3683,7 @@ shared_focus = {
 		focus = BAC_COC_m1
 	}
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 
 	available = {
@@ -3694,7 +3750,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	mutually_exclusive = {
 		focus = BAC_COC_convert_zaikiria
@@ -3719,7 +3775,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	mutually_exclusive = {
 		focus = BAC_COC_friend_zaikiria
@@ -3743,7 +3799,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	mutually_exclusive = {
 		focus = BAC_COC_convert_taungpau
@@ -3768,7 +3824,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	mutually_exclusive = {
 		focus = BAC_COC_friend_taungpau
@@ -3792,7 +3848,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	mutually_exclusive = {
 		focus = BAC_COC_convert_barbarian
@@ -3817,7 +3873,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	mutually_exclusive = {
 		focus = BAC_COC_friend_barbarian
@@ -3841,7 +3897,7 @@ shared_focus = {
 	x = 1
 	y = 1
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	mutually_exclusive = {
 		focus = BAC_COC_convert_deer
@@ -3866,7 +3922,7 @@ shared_focus = {
 	x = -1
 	y = 1
 	allow_branch = {
-		has_country_flag = COC_war_committee
+		has_country_flag = COC_war_committee_flag
 	}
 	mutually_exclusive = {
 		focus = BAC_COC_friend_deer

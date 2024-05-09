@@ -18333,6 +18333,15 @@ country_event = {
 			}
 		}
 	}
+	desc = {
+		text = kirin_council.73.d_3
+		trigger = {
+			ROOT = {
+				original_tag = KIC
+				has_country_flag = KIC_children_of_concord_flag
+			}
+		}
+	}
 
 	picture = GFX_event_KIR_raining
 	is_triggered_only = yes
@@ -18346,9 +18355,10 @@ country_event = {
 				character = KIR_rising_sun
 				ruling_only = yes
 			}
-		}
-		NOT = {
-			has_country_flag = KIC_children_of_concord_flag
+			has_country_leader = {
+				character = KIR_kindling_flash
+				ruling_only = yes
+			}
 		}
 	}
 
@@ -18488,6 +18498,7 @@ country_event = {
 				has_country_flag = CHN_FRV_flag
 			}
 		}
+		NOT = { has_country_flag = KIC_children_of_concord_flag }
 	}
 
 	option = {
