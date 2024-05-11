@@ -1126,8 +1126,6 @@ shared_focus = { #BAC_COC_c1 - The Voice Must Be Spoken
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	
-	
 }
 shared_focus = { #BAC_COC_m2 - Commonalty Constitutional Senate
 	id = BAC_COC_m2 #제헌만민회
@@ -1164,8 +1162,6 @@ shared_focus = { #BAC_COC_m2 - Commonalty Constitutional Senate
 			add_idea = isolation
 		}
 	}
-	
-	
 }
 shared_focus = { # Adopt Equestrian Autunomy System
 	id = BAC_COC_h2
@@ -1205,8 +1201,6 @@ shared_focus = { # Adopt Equestrian Autunomy System
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	
-	
 }
 shared_focus = { # Our Cause Must Be Informed
 	id = BAC_COC_c2
@@ -1247,8 +1241,6 @@ shared_focus = { # Our Cause Must Be Informed
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	
-	
 }
 shared_focus = {
 	id = BAC_COC_m3
@@ -1280,8 +1272,6 @@ shared_focus = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	
-	
 }
 shared_focus = {
 	id = BAC_COC_h3
@@ -1317,8 +1307,6 @@ shared_focus = {
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	
-	
 }
 shared_focus = { # Land Investigation Program
 	id = BAC_COC_c3
@@ -1355,8 +1343,6 @@ shared_focus = { # Land Investigation Program
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
-	
-	
 }
 shared_focus = {
 	id = BAC_COC_true_commonalty
@@ -1394,8 +1380,6 @@ shared_focus = {
 			}
 		}
 	}
-	
-	
 }
 
 shared_focus = { #교육위원회 
@@ -1425,7 +1409,6 @@ shared_focus = { #교육위원회
 		decrease_illiteracy = yes
 		bac_COT_small_effect = yes
 	}
-	
 }
 
 shared_focus = { # Assertive Conversion # 적극적인 개종
@@ -1479,7 +1462,6 @@ shared_focus = { #Allow The Way of Fire 불의 길 공존
 		add_stability = 0.033
 		bac_COT_small_effect = yes
 	}
-	
 }
 
 
@@ -1544,7 +1526,6 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 		#TODO unlock_decision_tooltip = my_decision
 		custom_effect_tooltip = unlocks_bop_decision_tt
 	}
-	
 }
 shared_focus = { #자연과학
 	id = BAC_COC_modern_science
@@ -1695,6 +1676,7 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 					state = 1071 #fragrance
 					state = 1059 #Vermilion
 					state = 1060 #Rhapsody
+					state = 1062 #agate
 					state = 1064 #Massicot
 					state = 817 #Radiance
 				}
@@ -1739,13 +1721,12 @@ shared_focus = { #Justice For Common
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_m2"
-		country_event = { #- Trial of NAKP and Divine Fire
+		country_event = { #Trial of NAKP and Divine Fire
 			id = baccocc.11
 			hours = 3
 			random_hours = 33
 		}
 	}
-	
 }
 shared_focus = {
 	id = BAC_COC_pol_c2
@@ -1777,7 +1758,6 @@ shared_focus = {
 		#unlock_decision_tooltip = my_decision
 		custom_effect_tooltip = unlocks_bop_decision_tt
 	}
-	
 }
 
 
@@ -1810,7 +1790,7 @@ shared_focus = {
 			show_mio_tooltip = KIR_aureolin_monastery
 			mio:KIR_aureolin_monastery = {
 				add_mio_size = 1
-				add_mio_funds = 300
+				add_mio_funds = 333
 				set_mio_flag = cocc_cot_mio_flag
 			}
 			custom_effect_tooltip = BAC_mio_size_up_prefix
@@ -1823,7 +1803,6 @@ shared_focus = {
 		decrease_illiteracy = yes
 		add_research_slot = 1
 	}
-	
 }
 shared_focus = {
 	id = BAC_COC_pol_c3 
@@ -1885,7 +1864,6 @@ shared_focus = {
 			swap_ruler_traits = { remove = BAC_road_to_direct_democracy add = BAC_direct_democracy }
 		}
 	}
-	
 }
 
 shared_focus = { #Century for Commonalty
@@ -1927,7 +1905,8 @@ shared_focus = { #Century for Commonalty
 		}
 	}
 }
-shared_focus = { #BAC_COC_eco_head 산업개발위원회 - 킨들링 플래시의 산업 오케스트라
+
+shared_focus = { #Committee For Industry And Development
 	id = BAC_COC_eco_head
     icon = {
         trigger = { has_completed_focus = BAC_COC_eco_head }
@@ -1951,7 +1930,6 @@ shared_focus = { #BAC_COC_eco_head 산업개발위원회 - 킨들링 플래시�
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_head"
 		unlock_decision_tooltip = bac_finish_railway
 		KIR_kindling_flash = {
-			#unit_leader_event = { id = baccocc.17 hours = 3 random_hours = 33 } #
 			add_trait = {
 				slot = political_advisor
 				trait = BAC_maestro
@@ -1959,14 +1937,11 @@ shared_focus = { #BAC_COC_eco_head 산업개발위원회 - 킨들링 플래시�
 		}
 		custom_effect_tooltip = KIR_line_break
 		bac_WPU_small_effect = yes
-
 	}
-	
-	
 }
 
 
-shared_focus = { #BAC_COC_eco_h1 #Equestrian Model of Development
+shared_focus = { #Equestrian Model of Development
 	id = BAC_COC_eco_h1 #Equestrian Model of Development
 	icon = GFX_goal_solar_legion_of_labour
 	cost = 4.8
@@ -1986,8 +1961,8 @@ shared_focus = { #BAC_COC_eco_h1 #Equestrian Model of Development
 		add_ideas = BAC_COC_eco_h1_idea
 		bac_COT_small_effect = yes
 	}
-	
 }
+
 shared_focus = { #Initiate Land Reform
 	id = BAC_COC_eco_c1
 	icon = GFX_goal_KIR_crumble #
@@ -2091,7 +2066,6 @@ shared_focus = { #New Campaign Town
 		}
 		increase_society_development_gradual = yes
 	}
-	
 }
 shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
 	id = BAC_COC_eco_h2 #Equestrian Ties
@@ -2295,6 +2269,15 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m3c"
 		random_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+				state_has_any_resource = yes
+			}
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = industrial_complex
@@ -2561,10 +2544,10 @@ shared_focus = {
 		add_political_power = 333
 		bac_COT_large_effect = yes
 		#TODO make a good idea (consumer fac)
-	}
-	
+	#}
 }
-shared_focus = { #BAC_COC_eco_m4h Plan Zebrica
+
+shared_focus = { #Plan Zebrica
 	id = BAC_COC_eco_m4h
 	icon = GFX_goal_KIR_docks
 	cost = 4.8
@@ -2585,45 +2568,18 @@ shared_focus = { #BAC_COC_eco_m4h Plan Zebrica
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4h"
 		bac_COT_small_effect = yes
-		random_core_state = {
+		every_core_state = {
 			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = dockyard
+					size > 0
+					include_locked = yes
+				}
 				infrastructure < 5
 				is_coastal = yes
 			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_core_state = {
-			limit = {
-				infrastructure < 5
-				is_coastal = yes
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_core_state = {
-			limit = {
-				infrastructure < 5
-				is_coastal = yes
-			}
+			random_select_amount = 3
 			add_extra_state_shared_building_slots = 1
 			add_building_construction = {
 				type = infrastructure
@@ -2637,13 +2593,12 @@ shared_focus = { #BAC_COC_eco_m4h Plan Zebrica
 			}
 		}
 	}
-	
 }
 
 shared_focus = {
 	id = BAC_COC_eco_m4m
 	icon = GFX_goal_KIR_electricity
-	cost = 14.3
+	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = 0
@@ -2662,16 +2617,19 @@ shared_focus = {
 	}
 	completion_reward = { #maybe it would be some fancy gui mechanic? but not now
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4m"
-		add_political_power = -99
-		#todo timed_idea
-		custom_effect_tooltip = focus_eco_m4m_tt
-		for_each_scope_loop = {
-			array = KIR.original_cores
+		capital_scope = {
 			increase_state_category = yes
+			add_victory_points = {
+				province = 20626
+				value = 9
+			}
+			add_dynamic_modifier = { modifier = BAC_its_electric_state }
 		}
+		custom_effect_tooltip = BAC_COC_eco_m4m_tt
+		set_country_flag = BAC_COC_eco_m4m_flag
 	}
-	
 }
+
 shared_focus = {
 	id = BAC_COC_eco_m4c
 	icon = GFX_goal_bac_kirin_ichiban_shibori
@@ -2695,33 +2653,25 @@ shared_focus = {
 		add_political_power = -33
 		increase_society_development_gradual = yes
 		decrease_poverty = yes
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = industrial_complex
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 3
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
 		bac_WPU_small_effect = yes
-		random_core_state = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_core_state = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-		random_core_state = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
 	}
-	
 }
 
 shared_focus = { #shdzz
@@ -2745,7 +2695,6 @@ shared_focus = { #shdzz
 		increase_society_development_gradual = yes
 		bac_WPU_large_effect = yes
 	}
-	
 }
 
 shared_focus = { #Military Affairs
@@ -2767,17 +2716,6 @@ shared_focus = { #Military Affairs
 	allow_branch = {
 		check_variable = { coc_start_foci_completed > 9 }
 	}
-	select_effect = {
-		# hidden_effect = {
-		# 	KIR_firethorn = {
-		# 		unit_leader_event = {
-		# 			id = baccocc.12
-		# 			#days = 21
-		# 			#random_hours = 33
-		# 		}
-		# 	}
-		# }
-	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_head"
 		hidden_effect = {
@@ -2797,10 +2735,7 @@ shared_focus = { #Military Affairs
 		effect_tooltip = {
 			KIC_ember_glow = { unit_leader_event = baccocc.12 }
 		}
-		
 	}
-	
-	
 }
 
 shared_focus = {
@@ -2820,8 +2755,8 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h1"
 	}
-	
 }
+
 shared_focus = {
 	id = BAC_COC_mil_c1
 	icon = GFX_goal_KIR_battle_rifle
@@ -2839,7 +2774,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c1"
 	}
-	
 }
 
 
@@ -2864,7 +2798,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m2"
 	}
-	
 }
 shared_focus = { #BAC_COC_mil_h2
 	id = BAC_COC_mil_h2
@@ -2950,7 +2883,6 @@ shared_focus = { #BAC_COC_mil_h2
 			show_ideas_tooltip = BAC_star_energy_zeb
 		}
 	}
-	
 }
 shared_focus = {
 	id = BAC_COC_mil_c2
@@ -2975,7 +2907,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c2"
 	}
-	
 }
 
 shared_focus = { #Flying Commonkirin
@@ -3032,7 +2963,6 @@ shared_focus = { #Flying Commonkirin
 			show_ideas_tooltip = KIC_aerospace_engineer
 		}
 	}
-	
 }
 shared_focus = { # Beyond The Riverine Navy
 	id = BAC_COC_mil_navy
@@ -3101,7 +3031,6 @@ shared_focus = { # Beyond The Riverine Navy
 			show_ideas_tooltip = KIC_deer_comrade
 		}
 	}
-	
 }
 shared_focus = { #해군항공대
 	id = BAC_COC_mil_navalair
@@ -3123,7 +3052,6 @@ shared_focus = { #해군항공대
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_navalair"
 	}
-	
 }
 shared_focus = { #
 	id = BAC_COC_mil_h3
@@ -3152,7 +3080,6 @@ shared_focus = { #
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h3"
 	}
-	
 }
 
 shared_focus = { #BAC_COC_mil_m3h heavy industry
@@ -3176,7 +3103,6 @@ shared_focus = { #BAC_COC_mil_m3h heavy industry
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m3h"
 	}
-	
 }
 
 shared_focus = {
@@ -3200,7 +3126,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m3c"
 	}
-	
 }
 
 shared_focus = { #BAC_COC_mil_c3 cannon
@@ -3226,7 +3151,6 @@ shared_focus = { #BAC_COC_mil_c3 cannon
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c3"
 	}
-	
 }
 shared_focus = { #BAC_COC_mil_h4
 	id = BAC_COC_mil_h4
@@ -3280,7 +3204,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m4h"
 	}
-	
 }
 
 shared_focus = {
@@ -3304,7 +3227,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m4m"
 	}
-	
 }
 
 shared_focus = {
@@ -3331,7 +3253,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m4c"
 	}
-	
 }
 
 shared_focus = { #결사항전
@@ -3357,7 +3278,6 @@ shared_focus = { #결사항전
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c4"
 	}
-	
 }
 
 shared_focus = {
@@ -3374,8 +3294,8 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_sekrit_war_committee"
+		create_faction = BAC_commonalty_faction
 	}
-	
 }
 
 shared_focus = { #March to Old Marches
@@ -3476,7 +3396,6 @@ shared_focus = { #March to Old Marches
 		}
 		set_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
-	
 }
 
 shared_focus = { #Attack on barbarian lands
@@ -3572,7 +3491,6 @@ shared_focus = { #Attack on barbarian lands
 		}
 		set_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
-	
 }
 shared_focus = {
 	id = BAC_COC_war_deer
@@ -3763,7 +3681,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_core_zaikiria"
 		set_country_flag = commonalty_solved_zaikiria
 	}
-	
 }
 
 shared_focus = {
@@ -3788,7 +3705,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_zaikiria"
 		set_country_flag = commonalty_solved_zaikiria
 	}
-	
 }
 shared_focus = {
 	id = BAC_COC_friend_taungpau
@@ -3812,7 +3728,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_core_taungpau"
 		set_country_flag = commonalty_solved_taungpau
 	}
-	
 }
 
 shared_focus = {
@@ -3837,7 +3752,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_taungpau"
 		set_country_flag = commonalty_solved_taungpau
 	}
-	
 }
 shared_focus = {
 	id = BAC_COC_friend_barbarian
@@ -3861,7 +3775,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_barbarian"
 		set_country_flag = commonalty_solved_barbarian
 	}
-	
 }
 
 shared_focus = {
@@ -3886,7 +3799,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_barbarian"
 		set_country_flag = commonalty_solved_barbarian
 	}
-	
 }
 shared_focus = {
 	id = BAC_COC_friend_deer
@@ -3910,7 +3822,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_deer"
 		set_country_flag = commonalty_solved_deer
 	}
-	
 }
 
 shared_focus = {
@@ -3935,5 +3846,4 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_deer"
 		set_country_flag = commonalty_solved_deer
 	}
-	
 }

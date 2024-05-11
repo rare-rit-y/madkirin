@@ -13,9 +13,104 @@ on_actions = {
 			}
 		}
 	}
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = {
+					has_country_flag = BAC_COC_alliance_member
+					has_game_rule = {
+						rule = allow_faction
+						option = BLOCKED
+					}
+				}
+				create_faction = BAC_commonalty_faction
+				every_other_country = {
+					limit = {
+						OR = {
+							has_country_flag = BAC_COC_alliance_member
+							is_subject_of = COC
+						}
+					}
+					COC = {add_to_faction = PREV}
+				}
+			}
+		}
+	}
+
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					is_in_faction_with = COC
+					is_faction_leader = yes
+					COC = {
+						exists = yes
+						has_capitulated = no
+						NOT = {
+							any_owned_state = {
+								OR = {
+									is_controlled_by = FROM
+									CONTROLLER = {
+										is_ally_with = FROM
+									}
+								}
+							}
+						}
+						has_war_with = FROM
+					}
+				}
+				COC = {
+					leave_faction = yes
+					if = {
+						limit = { has_war_with = FROM }
+						set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+						white_peace = FROM
+						remove_wargoal = {
+							type = all
+							target = FROM
+						}
+					}
+					if = {
+						limit = {
+							has_country_flag = BAC_COC_alliance_member
+						}
+						create_faction = BAC_commonalty_faction
+						every_other_country = {
+							limit = {
+								OR = {
+									has_country_flag = BAC_COC_alliance_member
+									is_subject_of = COC
+								}
+							}
+							COC = {add_to_faction = PREV}
+						}
+						every_other_country = {
+							limit = {
+								OR = {
+									has_country_flag = BAC_COC_alliance_member
+									is_subject_of = COC
+									AND = {
+										is_in_faction_with = COC
+										NOT = {
+											is_in_faction_with = ROOT
+										}
+									}
+								}
+							}
+							if = {
+								limit = { has_war_with = FROM }
+								set_country_flag = { flag = bypass_on_peaceconference_ended days = 1 value = 1 }
+								white_peace = FROM
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 
 	#### MIO on actions
-	# ROOT is MIO
+	# ROOT is MIO ##FROM is fucking nationality
 	on_mio_size_increased = {
 		effect = {
 			log = "[GetDateText]: ROOT: [Root.GetName] FROM: [From.GetName] on_mio_size_increased"

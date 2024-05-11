@@ -35,8 +35,11 @@ leader_traits = {
 		stability_weekly = 0.0033
 		modifier_army_sub_unit_kirin_braves_attack_factor = 0.033
 		modifier_army_sub_unit_kirin_braves_defence_factor = 0.033
+		#research_bonus = {
+		#	race_tech = 0.15
+		#}
 	}
-	BAC_firethorn_advisor_trait = {
+	BAC_ember_glow_advisor_trait = {
 		random = no
 		war_support_weekly = 0.0033
 	}

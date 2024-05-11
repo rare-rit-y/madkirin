@@ -28,7 +28,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			max = -0.66
 			modifier = {
 				political_power_factor = -0.09
-				stability_factor = -0.333
+				stability_factor = -0.099
 				defensive_war_stability_factor = 0.333
 				army_core_defence_factor = 0.33
 				army_core_attack_factor = 0.33
@@ -36,7 +36,10 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			}
 			on_activate = {
 				log = "FULL WPU activated"
-				
+				set_country_flag = commonalty_bop_fucked_flag
+			}
+			on_deactivate = {
+				clr_country_flag = commonalty_bop_fucked_flag
 			}
 		}
 
@@ -102,11 +105,12 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 					}
 				}
 				else = { set_politics = { ruling_party = democratic } }
+				set_country_flag = commonalty_bop_fucked_flag
 			}
 			on_deactivate = {
 				log = "FULL COT deactivated"
 				set_politics = { ruling_party = communism }
-				
+				clr_country_flag = commonalty_bop_fucked_flag
 			}
 		}
 		

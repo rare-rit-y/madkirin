@@ -20,3 +20,10 @@ party_popularity_dynamic_modifier_coalition = {
 # 	training_time_factor = mobilisation_penalty_var_positive
 # 	consumer_goods_factor = mobilisation_penalty_var_positive
 # }
+
+BAC_its_electric_state = { #State Modifier
+	enable = { always = yes }
+	icon = GFX_decision_generic_electricity
+	state_production_speed_buildings_factor = 0.09
+	monthly_population = 0.03
+}

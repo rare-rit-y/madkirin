@@ -22449,13 +22449,21 @@ country_event = {
 							limit = { has_trait = KIR_Roaring_Fire_unit_leader_trait }
 							remove_unit_leader_trait = KIR_Roaring_Fire_unit_leader_trait
 						}
-						remove_trait = {
+						remove_advisor_role = {
 							slot = political_advisor
-							trait = KIR_tempered_flame
 						}
-						add_trait = {
-							slot = political_advisor
-							trait = BAC_prophet_of_the_common
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								cost = 150
+								idea_token = COC_dayspring_idea
+								traits = {
+									BAC_prophet_of_the_common
+								}
+								research_bonus = {
+									race_tech = 0.09
+								}
+							}
 						}
 						set_nationality = PREV.PREV
 					}
@@ -22572,6 +22580,16 @@ country_event = {
 					}
 					KIC_ember_glow = {
 						set_nationality = PREV.PREV
+						add_advisor_role = {
+							advisor = {
+								slot = political_advisor
+								cost = 150
+								idea_token = COC_ember_glow_idea
+								traits = {
+									BAC_ember_glow_advisor_trait
+								}
+							}
+						}
 					}
 				}
 				every_possible_country = {
@@ -23510,7 +23528,7 @@ news_event = {
 								promote_leader = yes
 								country_leader = {
 									desc = "BAC_COC_common_senate_desc" #bac
-									ideology = harmonic_theocracy
+									ideology = harmonic_libertarianism
 									expire = "1965.1.1.1"
 									traits = { BAC_road_to_direct_democracy BAC_regional_self_centeredness } #bac
 								}
@@ -23540,7 +23558,7 @@ news_event = {
 								promote_leader = yes
 								country_leader = {
 									desc = "BAC_COC_common_senate_desc" #bac
-									ideology = harmonic_theocracy
+									ideology = harmonic_libertarianism
 									expire = "1965.1.1.1"
 									traits = { BAC_road_to_direct_democracy } #bac
 								}

@@ -69,6 +69,7 @@ country_event = {
 		end_coalition = yes
 	}
 }
+
 country_event = { 
 	id = bacdebug.2 #hidden event for debuggo
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bacdebug.2"}
@@ -76,10 +77,6 @@ country_event = {
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
-		remove_country_leader_role = {
-			character = "KIR_kindling_flash"
-			ideology = primitive_communism
-		}
 		add_country_leader_role = {
 			character = "KIR_kindling_flash"
 			promote_leader = yes
@@ -89,10 +86,6 @@ country_event = {
 				expire = "1965.1.1.1"
 				traits = { KIR_peasant_preacher }
 			}
-		}
-		remove_country_leader_role = {
-			character = "KIR_dayspring_rose"
-			ideology = harmonic_theocracy
 		}
 		add_country_leader_role = {
 			character = "KIR_dayspring_rose"
@@ -104,79 +97,18 @@ country_event = {
 				traits = { KIR_tempered_flame }
 			}
 		}
-		every_possible_country = {
-			limit = {
-				has_character = KIC_ember_glow
-			}
-			KIC_ember_glow = {
-				set_nationality = PREV.PREV
-			}
-		}
-		every_possible_country = {
-			limit = {
-				has_character = KIR_coral_river
-			}
-			KIR_coral_river = {
-				set_nationality = PREV.PREV
-			}
-		}
-		every_possible_country = {
-			limit = {
-				has_character = KIR_firethorn
-			}
-			KIR_firethorn = {
-				remove_unit_leader_trait = old_guard
-				add_unit_leader_trait = organisational_leader
-				# set_portraits = { #this would be in her event for national defense commission
-				# 	army = {
-				# 		large = "GFX_portrait_KIR_firethorn_new_uniform"
-				# 	}
-				# }
-				set_nationality = PREV.PREV
-			}
-		}
-		# every_possible_country = {
-		# 	limit = {
-		# 		has_character = KIR_high_command_4 #Golden Lumen is fucking war criminal in kirin_republic.10
-		# 	}
-		# 	KIR_high_command_4 = {
-		# 		set_nationality = PREV.PREV
-		# 	}
-		# }
-		KIR = {
-			KIR_ochre_glint = {
-				set_nationality = PREV.PREV
-			}
-		}
-		set_temp_variable = { coalition_partner_var = token:democratic }
-		add_to_coalition = yes
-	} #KIC_navy_chief_1 / KIR_navy_chief_1 () should be added when you complete the navy building focus
-}
-country_event = {  #hidden event for debuggo
-	id = bacdebug.3
-	immediate = {log = "[GetDateText]: [Root.GetName]: event bacdebug.3"}
-	hidden = yes
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		load_focus_tree = BAC_COC_tree
-		set_country_flag = COC_war_committee_flag
 	}
 }
 
-
-
-
-
-country_event = { # baccocc.1 - To Prepare The Foundation
-	id = baccocc.1 
+country_event = { #To Prepare The Foundation
+	id = baccocc.1
 	title = baccocc.1.t
-	desc = baccocc.1.d 
+	desc = baccocc.1.d
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.1"}
 	is_triggered_only = yes
 	fire_only_once = yes
 	picture = GFX_event_KIR_street
-	option = { #"I have never thought this would be easy, after all."
+	option = { # I have never thought this would be easy, after all.
 		name = baccocc.1.a
 		add_ideas = KIC_CPF
 		custom_effect_tooltip = baccocc_1_tt
@@ -186,15 +118,11 @@ country_event = { # baccocc.1 - To Prepare The Foundation
 		custom_effect_tooltip = KIR_line_break
 		mio:KIC_small_arms_inventor_organization = {
 			set_mio_flag = cocc_wpu_mio_flag
-		custom_effect_tooltip = BAC_mio_size_up_prefix
-		custom_effect_tooltip = KIR_line_break
-		custom_effect_tooltip = BAC_mio_size_up_wpu
+			custom_effect_tooltip = BAC_mio_size_up_prefix
+			custom_effect_tooltip = KIR_line_break
+			custom_effect_tooltip = BAC_mio_size_up_wpu
 		}
 		hidden_effect = {
-			remove_country_leader_role = {
-				character = "KIR_kindling_flash"
-				ideology = BAC_COC_com
-			}
 			add_country_leader_role = {
 				character = "KIR_kindling_flash"
 				promote_leader = yes
@@ -204,10 +132,6 @@ country_event = { # baccocc.1 - To Prepare The Foundation
 					expire = "1965.1.1.1"
 					traits = { KIR_peasant_preacher }
 				}
-			}
-			remove_country_leader_role = {
-				character = "KIR_dayspring_rose"
-				ideology = BAC_COC_dem
 			}
 			add_country_leader_role = {
 				character = "KIR_dayspring_rose"
@@ -231,7 +155,7 @@ country_event = { # baccocc.1 - To Prepare The Foundation
 	}
 }
 
-unit_leader_event = { # baccocc.2 - A Militarykirin in the Committee
+unit_leader_event = { #A Militarykirin in the Committee
 	id = baccocc.2 
 	title = baccocc.2.t
 	desc = baccocc.2.d 
@@ -278,7 +202,7 @@ unit_leader_event = { # baccocc.3 - The Private Meeting
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.3"}
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = {  #And? Firethorn's brows furrowed. # 그래서? 파이어쏜의 눈살이 찌푸려졌다. 
+	option = {  #And? Firethorn's brows furrowed.
 		name = baccocc.3.a
 		
 		country_event = {
@@ -433,6 +357,18 @@ unit_leader_event = { #baccocc.12 firethorn
 				}
 			}
 			add_unit_leader_trait = trait_SOV_determined
+			add_advisor_role = {
+				advisor = {
+					slot = army_chief
+					idea_token = COC_Firethorn_idea
+					#ledger = army
+					traits = { NCR_mass_warfare_general_2 }
+					ai_will_do = {
+						factor = 5
+					}
+				}
+				activate = yes
+			}
 		}
 	}
 }
@@ -466,6 +402,48 @@ country_event = {
 		name = baccocc.14.a
 		set_country_flag = COC_war_committee_flag
 		custom_effect_tooltip = baccocc_14a_tt
+	}
+}
+country_event = {
+	id = baccocc.29
+	title = baccocc.29.t
+	desc = baccocc.29.d
+	picture = GFX_event_KIR_stamp_B
+	is_triggered_only = yes
+
+	option = {#yes
+		name = baccocc.29.a
+		ai_chance = { factor = 200 }
+		every_country = {
+			limit = {
+				OR = {
+					original_tag = FROM
+					AND = {
+						is_in_faction_with = FROM
+						is_subject = no
+					}
+				}
+			}
+
+			EQS = {add_to_faction = PREV}
+			add_ai_strategy = {
+				type = alliance
+				id = "EQS"
+				value = 700
+			}
+			set_country_flag = BAC_COC_alliance_member
+		}
+		FROM = {dismantle_faction = yes}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 700
+		}
+	}
+
+	option = {#naw
+		name = baccocc.29.b
+		ai_chance = {factor = 0}
 	}
 }
 country_event = {
@@ -619,7 +597,6 @@ country_event = { #yes
 					id = ROOT
 					value = 200
 				}
-				#set_country_flag = coc_alliance_member
 			}
 			FROM = {dismantle_faction = yes}
 		}

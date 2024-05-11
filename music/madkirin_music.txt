@@ -1,0 +1,245 @@
+music_station = "madkirinmusic"
+music = {
+  song = "A_Kirin_Tale"
+	chance = {
+    base = 1
+		modifier = {
+			factor = 3
+      AND = {
+        is_kirin_race = yes
+        has_government = democratic
+      }
+		}
+		modifier = {
+			factor = 0
+			has_war = yes
+		}
+	}
+}
+music = {
+  song = "Amongst_the_Mighty"
+  chance = {
+    base = 3
+    modifier = {
+      factor = 0
+      OR = {
+        is_major = no
+      }
+    }
+  } 
+}
+
+music = {
+  song = "Battle_Hesitant_Blade_Eclipse"
+  chance = {
+    base = 2
+    modifier = {
+      add = 2
+      has_country_flag = KIC_children_of_concord_flag
+    }
+    modifier = { factor = 0 has_war = no }
+  }
+}
+
+music = {
+  song = "Battle_Strange_Theme"
+  chance = {
+    base = 1
+    modifier = {
+      add = 1
+      has_country_flag = KIC_children_of_concord_flag
+    }
+    modifier = { factor = 0 has_war = no }
+  }
+}
+
+music = {
+  song = "Battle_Tournament_Theme"
+  chance = {
+    base = 2
+    modifier = {
+      add = 2
+      has_country_flag = KIC_children_of_concord_flag
+    }
+    modifier = { factor = 0 has_war = no }
+  }
+}
+
+music = {
+  song = "Colorful_Voice"
+  chance = {
+    base = 1
+    modifier = {
+      add = 2
+      is_kirin_race = yes
+    }
+    modifier = {
+      factor = 0
+      OR = {
+        has_war = yes
+        has_government = fascism
+        has_government = neutrality
+        has_country_leader = {
+					ruling_only = yes
+					character = KIR_rising_sun
+        }
+      }
+    }
+  }
+}
+
+music = {
+  song = "Duty_Calls"
+  chance = {
+    base = 1
+    modifier = {
+      add = 2
+      tag = KIS
+    }
+    modifier = { factor = 0 has_war = no }
+  }
+}
+
+music = { #Fighting Spirit
+  song = "Chamber_Chu_-_Fighting_Spirit"
+  chance = {
+    base = 2
+    modifier = {
+      add = 2
+      has_country_flag = KIC_children_of_concord_flag
+    }
+    modifier = { factor = 0 has_war = no }
+  }
+}
+
+music = {
+  song = "Flawless_Theory_Endless_Legend_Version"
+  chance = {
+    base = 3
+    modifier = { factor = 0 has_war = yes }
+  }
+}
+
+# music = {
+#   song = "Flowing_Flutes"
+#   chance = {
+#     base = 2
+#     modifier = {
+#       add = 2
+#       has_country_flag = KIC_children_of_concord_flag
+#     }
+#     modifier = { factor = 0 has_war = yes }
+#   }
+# }
+
+music = {
+  song = "KandariaDomain"
+  chance = {
+    base = 0
+    modifier = { 
+      add = 3 
+      has_country_flag = commonalty_ending_flag
+    }
+    modifier = { 
+      factor = 0 
+      #OR = { 
+        has_war = yes 
+      #}
+    }
+  }
+}
+music = {
+  song = "Kokoro_Long_Version"
+  chance = {
+    base = 2
+    modifier = {
+      add = 2
+      has_country_flag = BAC_get_commonalty_flag
+    }
+    modifier = { factor = 0 has_war = no }
+  }
+}
+
+music = {
+  song = "Lauriel_Phase_2"
+  chance = {
+    base = 1
+    modifier = { factor = 3 has_war_with_major = yes }
+    modifier = { factor = 0 has_war = no } 
+  }
+}
+music = {
+   song = "Leonhart_LARK"
+   chance = {
+     base = 2
+     modifier = { 
+       add = 2
+       has_country_flag = KIC_children_of_concord_flag
+     }
+     modifier = { factor = 0 has_war = yes }
+   }
+}
+music = {
+  song = "Like_Asian_Spirit"
+  chance = {
+    base = 1
+    modifier = {
+      add = 2
+      has_country_flag = BAC_get_commonalty_flag
+    }
+    modifier = { factor = 0 has_war = no }
+  }
+}
+
+music = {
+	song = "Redspark-The_Way_Of_Fire_BAC"
+	chance = {
+		factor = 1
+		modifier = {
+			factor = 3
+			is_kirin_race = yes
+		}
+		modifier = {
+			factor = 0
+			has_war = yes
+		}
+	}
+}
+
+music = {
+  song = "sdorica_aurora_ost_-_title_BGM"
+  chance = {
+    base = 2
+    modifier = {
+      add = 1
+      has_country_flag = KIC_children_of_concord_flag
+    }
+    #modifier = { factor = 0 has_war = yes }
+  }
+}
+
+music = {
+  song = "Shamisen_Drives_The_Wind"
+  chance = {
+    base = 1
+    modifier = {
+      add = 1
+      has_country_flag = BAC_get_commonalty_flag
+    }
+    modifier = { factor = 0 has_war = no }
+  }
+}
+
+music = {
+  song = "Song_of_Lazernes"
+  chance = {
+    base = 3
+    modifier = { 
+      factor = 0 
+      OR = { 
+        has_government = fascism
+        has_war = yes 
+      }
+    }
+  }
+}

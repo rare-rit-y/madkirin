@@ -63,7 +63,7 @@ bac_coc_debug_cat = {
 }
 economy_decisions = { #Economic Policy
 	bac_finish_railway = {
-		icon = generic_wreckers
+		icon = GFX_decision_generic_train
 		allowed = { original_tag = KIC }
 		visible = {
 			has_completed_focus = BAC_COC_eco_head
@@ -94,6 +94,13 @@ economy_decisions = { #Economic Policy
 		fire_only_once = yes
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision remove bac_finish_railway"
+			capital_scope = {
+				increase_state_category = yes
+				add_victory_points = {
+					province = 20626
+					value = 9
+				}
+			}
 			country_event = { id = kirin.36 hours = 1 }
 			hidden_effect = {
 				build_railway = {
@@ -109,6 +116,54 @@ economy_decisions = { #Economic Policy
 				has_railway_connection = {
 					start_province = 20626
 					target_province = 16648
+				}
+			}
+		}
+	}
+
+
+	BAC_cocc_dance_magic_and_its_electric = {
+		icon = GFX_decision_generic_electricity
+		allowed = {
+			original_tag = KIC
+		}
+
+		visible = {
+			ROOT = {
+				has_country_flag = BAC_COC_eco_m4m_flag
+			}
+			FROM = {
+				NOT = { has_dynamic_modifier = { modifier = BAC_its_electric_state } }
+			}
+		}
+
+		state_target = any_core_state
+		target_array = core_states
+		on_map_mode = map_only
+
+		cost = 33
+		days_remove = 33
+		days_re_enable = 365
+		fire_only_once = yes
+		modifier = {
+			political_power_factor = -0.3
+			consumer_goods_factor = 0.03
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision BAC_cocc_dance_magic_and_its_electric target: [From.GetName]"
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove BAC_cocc_dance_magic_and_its_electric target: [From.GetName]"
+			FROM = {
+				increase_state_category = yes
+				add_dynamic_modifier = { modifier = BAC_its_electric_state }
+			}
+		}
+		cancel_trigger = {
+			FROM = {
+				NOT = {
+					is_controlled_by = ROOT
 				}
 			}
 		}
@@ -173,10 +228,11 @@ political_actions = {
 		fire_only_once = no
 
 		modifier = {
-			stability_weekly = 0.003
-			command_power_gain = -0.3
-			training_time_army_factor = -0.3
-			planning_speed = -0.3
+			stability_weekly = 0.001
+			command_power_gain = -0.1
+			training_time_army_factor = -0.1
+			planning_speed = -0.1
+			experience_gain_army_factor = -0.1
 		}
 
 		days_remove = 180
@@ -185,7 +241,7 @@ political_actions = {
 		cost = 100
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision improved_worker_conditions"
+			log = "[GetDateText]: [Root.GetName]: Decision BAC_military_aid_to_civil"
 
 		}
 
@@ -213,61 +269,8 @@ political_actions = {
 			}
 		}
 	}
-    # EQS_ff_establish_Audit_Office = {
-    #     icon = GFX_decision_modern_city
-    #     visible = { has_country_flag = EQS_Audit_began }
-    #     available = { 
-    #         has_completed_focus = eqs_admin_reforms
-    #         NOT = { has_country_flag = EQS_HIP_elements_sent }
-    #     }
-    #     cost = 5
-    #     ai_will_do = { factor = 100 }
-    #     modifier = {
-	# 		political_power_cost = 0.05
-	# 	}
-    #     fire_only_once = yes
-    #     days_remove = 49
-    #     complete_effect = {
-	# 		log = "[GetDateText]: [Root.GetName]: Decision EQS_ff_establish_Audit_Office"
-    #         EQS_applejack = {
-    #             unit_leader_event = {
-    #                 id = EQS_advisor.510
-    #                 days = 2
-    #             }
-    #         }
-	# 	}
-    #     remove_effect = {
-    #         set_country_flag = EQS_Audit_established
-    #         custom_effect_tooltip = EQS_ff_establish_Audit_Office_tt
-    #     }
-    # }
 }
 # military_training_category = {
-#     EQS_meme_generals = {
-# 		icon = generic_prepare_civil_war
-
-# 		allowed = {
-# 			original_tag = EQS
-# 		}
-
-# 		fire_only_once = yes
-
-
-# 		cost = 0
-
-# 		complete_effect = {
-# 			log = "[GetDateText]: [Root.GetName]: Decision EQS_meme_generals"
-# 			set_country_flag = EQS_meme_generals_acquired
-#             effect_tooltip = { add_corps_commander_role = { character = EQS_anonfilly } }
-# 	        custom_effect_tooltip = anonfilly_stats_tp
-#             custom_effect_tooltip = chungus_stats_tp
-#             custom_effect_tooltip = ugandan_stats_tp
-# 		}
-
-# 		ai_will_do = {
-# 			base = 0
-# 		}
-# 	}
 # }
 commonalty_bop_category = {
     comm_WPU_1 = {
@@ -362,7 +365,10 @@ foreign_politics = {
 						is_coastal = yes
 						is_fully_controlled_by = ROOT
 					}
-					#has_opinion = { target = ROOT value > 0 }
+					if = {
+						limit = { ROOT = { is_ai = no } }
+						has_opinion = { target = ROOT value > 0 }
+					}
 				}
 			}
 		}
@@ -417,7 +423,8 @@ foreign_politics = {
 			}
 		}
 	}
-	COC_join_faction_decision = {
+
+	commonalty_add_you_faction_decision = {
 		icon = generic_protection
 		allowed = {
 			original_tag = KIC
@@ -495,14 +502,93 @@ foreign_politics = {
 		days_re_enable = 180
 
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove COC_join_faction_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision remove commonalty_add_you_faction_decision"
 			FROM = {
-				country_event = baccocc.148
+				country_event = baccocc.146
 			}
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision COC_join_faction_decision"
+			log = "[GetDateText]: [Root.GetName]: Decision commonalty_add_you_faction_decision"
+		}
+	}
+	commonalty_asks_to_join_your_faction_decision = {
+		icon = generic_protection
+		allowed = {
+			original_tag = KIC
+		}
+		ai_will_do = {
+			#factor = 25
+		}
+
+		visible = {
+			has_country_flag = commonalty_bop_fucked_flag
+			is_faction_leader = yes
+		}
+
+		available = {
+			FROM = {
+				OR = {
+					has_opinion_modifier = commonalty_embassy
+					has_opinion = { target = ROOT value > 74 }
+				}
+				has_war = no
+				OR = {
+					AND = {
+						ROOT = { is_ai = no }
+						any_owned_state = {
+							is_controlled_by = FROM
+							is_coastal = yes
+						}
+					}
+					any_neighbor_country = {
+						OR = {
+							tag = ROOT
+							is_ally_with = ROOT
+						}
+					}
+				}
+			}
+		}
+
+		target_trigger = {
+			FROM = {
+				#capital_scope = { is_on_continent = africa }
+				if = {
+					limit = {
+						is_power_balance_side_active = {
+							id = commonalty_harmonic_control
+							side = TAG_my_bop_right_range
+						}
+					}
+					OR = {
+						tag = event_target:equestria
+						tag = event_target:solar_empire
+					}
+				}
+				else = {
+					has_government = communism
+					is_faction_leader = yes
+				}
+				is_subject = no
+				NOT = {
+					is_in_faction_with = ROOT
+				}
+			}
+		}
+
+		cost = 99
+		days_re_enable = 180
+
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove commonalty_asks_to_join_your_faction_decision"
+			FROM = {
+				country_event = baccocc.29
+			}
+		}
+
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision commonalty_asks_to_join_your_faction_decision"
 		}
 	}
 }
