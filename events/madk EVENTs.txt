@@ -341,7 +341,7 @@ country_event = { # baccocc.11 - The Trial of NAKP
 }
 unit_leader_event = { #baccocc.12 firethorn
 	id = baccocc.12
-	title = kirin.112.t
+	title = baccocc.12.t
 	desc = baccocc.12.d 
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.12"}
 	is_triggered_only = yes

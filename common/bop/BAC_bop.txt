@@ -21,7 +21,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 	
 	side = { #left: §RWorker-Peasant Union§! - §RCommunalists§!
 		id = commonalty_communal_control
-		icon = GFX_goal_HEL_anar_death
+		icon = GFX_bop_KIR_Communism
         range = {
 			id = commonalty_communal_control_strong
 			min = -1
@@ -29,9 +29,9 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			modifier = {
 				political_power_factor = -0.09
 				stability_factor = -0.099
-				defensive_war_stability_factor = 0.333
-				army_core_defence_factor = 0.33
-				army_core_attack_factor = 0.33
+				defensive_war_stability_factor = 0.3
+				army_core_defence_factor = 0.3
+				army_core_attack_factor = 0.3
 				stability_weekly = -0.003
 			}
 			on_activate = {
@@ -78,7 +78,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 
 	side = { # right: §FCommunion of Trinity§! - §7Harmonists§!
 		id = commonalty_harmonic_control
-		icon = GFX_goal_solar_intelligence
+		icon = GFX_bop_solar_intelligence
 		range = {
 			id = commonalty_harmonic_control_strong
 			min = 0.66

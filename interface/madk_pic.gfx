@@ -1,5 +1,13 @@
 spriteTypes = {
 
+	spriteType = {
+		name = "GFX_bop_KIR_Communism"
+		texturefile = "gfx/interface/bop_KIR_Communism.dds"
+	}
+	spriteType = {
+		name = "GFX_bop_solar_intelligence"
+		texturefile = "gfx/interface/bop_solar_intelligence.dds"
+	}
 	SpriteType = {
 		name = "GFX_goal_bac_ember_glow"
 		texturefile = "gfx/interface/goals/goal_bac_ember_glow.dds"

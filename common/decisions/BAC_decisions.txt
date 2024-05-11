@@ -137,7 +137,7 @@ economy_decisions = { #Economic Policy
 			}
 		}
 
-		state_target = any_core_state
+		state_target = any_controlled_state
 		target_array = core_states
 		on_map_mode = map_only
 
@@ -557,8 +557,8 @@ foreign_politics = {
 				if = {
 					limit = {
 						is_power_balance_side_active = {
-							id = commonalty_harmonic_control
-							side = TAG_my_bop_right_range
+							id = BAC_commonalty_bop
+							side = commonalty_harmonic_control
 						}
 					}
 					OR = {

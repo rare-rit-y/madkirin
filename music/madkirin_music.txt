@@ -4,7 +4,7 @@ music = {
 	chance = {
     base = 1
 		modifier = {
-			factor = 3
+			factor = 2
       AND = {
         is_kirin_race = yes
         has_government = democratic
@@ -19,7 +19,7 @@ music = {
 music = {
   song = "Amongst_the_Mighty"
   chance = {
-    base = 3
+    base = 2
     modifier = {
       factor = 0
       OR = {
@@ -32,9 +32,9 @@ music = {
 music = {
   song = "Battle_Hesitant_Blade_Eclipse"
   chance = {
-    base = 2
+    base = 1
     modifier = {
-      add = 2
+      add = 3
       has_country_flag = KIC_children_of_concord_flag
     }
     modifier = { factor = 0 has_war = no }
@@ -47,7 +47,7 @@ music = {
     base = 1
     modifier = {
       add = 1
-      has_country_flag = KIC_children_of_concord_flag
+			is_zebrican_continent_country = yes
     }
     modifier = { factor = 0 has_war = no }
   }
@@ -56,9 +56,9 @@ music = {
 music = {
   song = "Battle_Tournament_Theme"
   chance = {
-    base = 2
+    base = 1
     modifier = {
-      add = 2
+      add = 3
       has_country_flag = KIC_children_of_concord_flag
     }
     modifier = { factor = 0 has_war = no }
@@ -103,10 +103,10 @@ music = {
 music = { #Fighting Spirit
   song = "Chamber_Chu_-_Fighting_Spirit"
   chance = {
-    base = 2
+    base = 1
     modifier = {
-      add = 2
-      has_country_flag = KIC_children_of_concord_flag
+      add = 3
+      has_modern_society = yes
     }
     modifier = { factor = 0 has_war = no }
   }
@@ -126,9 +126,15 @@ music = {
 #     base = 2
 #     modifier = {
 #       add = 2
-#       has_country_flag = KIC_children_of_concord_flag
+#       is_kirin_race = yes
 #     }
-#     modifier = { factor = 0 has_war = yes }
+      # modifier = { 
+      #   factor = 0 
+      #   OR = { 
+      #     has_war = yes
+      #     has_government = fascism
+      #   }
+      # }
 #   }
 # }
 
@@ -171,11 +177,7 @@ music = {
 music = {
    song = "Leonhart_LARK"
    chance = {
-     base = 2
-     modifier = { 
-       add = 2
-       has_country_flag = KIC_children_of_concord_flag
-     }
+     base = 3
      modifier = { factor = 0 has_war = yes }
    }
 }
@@ -212,7 +214,12 @@ music = {
     base = 2
     modifier = {
       add = 1
-      has_country_flag = KIC_children_of_concord_flag
+      any_character = {
+        OR = {
+          has_trait = winter_specialist
+          has_trait = winter_expert
+        }
+      }
     }
     #modifier = { factor = 0 has_war = yes }
   }

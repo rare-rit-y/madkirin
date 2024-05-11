@@ -1718,6 +1718,7 @@ shared_focus = { #Justice For Common
 				NOT = { has_country_flag = KIS_event_737_fickle_current_POW_flag }
 			}
 		}
+		else = { always = no }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_m2"
@@ -1781,6 +1782,14 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h3"
+		if = {
+			limit = { has_completed_focus = BAC_COC_pol_h2 }
+			save_current_manpower = yes
+			1079 = {
+				add_manpower = -333
+			}
+			restore_previous_manpower = yes
+		}
 		set_country_flag = KIR_aureolin_monastery_available
 		if = {
 			limit = {
@@ -2070,7 +2079,7 @@ shared_focus = { #New Campaign Town
 shared_focus = { #BAC_COC_eco_h2 #Equestrian Ties
 	id = BAC_COC_eco_h2 #Equestrian Ties
 	icon = {
-		trigger = { has_global_flag = daybreaker_spawned }
+		trigger = { event_target:solar_empire = { exists = yes } }
 		value = GFX_goal_solar_corporate_council
 	}
 	icon = GFX_goal_PLB_eqs_ties
@@ -2332,7 +2341,7 @@ shared_focus = {
 shared_focus = { #Yet Another Accord
 	id = BAC_COC_eco_h3
 	icon = {
-		trigger = { has_global_flag = daybreaker_spawned }
+		trigger = { event_target:solar_empire = { exists = yes } }
 		value = GFX_goal_solar_fair_but_just
 	}
 	icon = GFX_goal_EQS_TNO_equestria_saved #GFX_goal_UESR_TNO_sun_moon
@@ -2399,7 +2408,13 @@ shared_focus = { #Yet Another Accord
 			#add_ideas = KIR_equestrian_treaty1
 			#remove_ideas = KIR_equestrian_treaty
 			add_offsite_building = { type = industrial_complex level = 3 }
+			if = {
+				limit = { event_target:solar_empire = { exists = yes } }
+				event_target:solar_empire = { add_ideas = bac_verdant_accord_eqs_idea }
+			}
+			else = { event_target:equestria = { add_ideas = bac_verdant_accord_eqs_idea } }
 		}
+		EAW_raise_trade_law = yes
 		bac_eqs_popularity = yes
 		bac_COT_medium_effect = yes
 		increase_society_development_gradual = yes
@@ -2408,7 +2423,7 @@ shared_focus = { #Yet Another Accord
 # shared_focus = { #BAC_COC_eco_h3 #The Lodge
 # 	id = BAC_COC_eco_h3 #The Lodge
 # 	icon = {
-# 		trigger = { has_global_flag = daybreaker_spawned }
+# 		trigger = { event_target:solar_empire = { exists = yes } }
 # 		value = GFX_goal_CES_daybreaker
 # 	}
 # 	icon = GFX_goal_ces_approach_baltimare #GFX_goal_UESR_TNO_sun_moon
@@ -2440,7 +2455,7 @@ shared_focus = { #Yet Another Accord
 # 				}
 # 				CES = { has_opinion = { target = ROOT value > 33 } exists = yes is_subject = no has_war = no }
 # 				if = { #equestria.154
-# 					limit = { has_global_flag = daybreaker_spawned }
+# 					limit = { event_target:solar_empire = { exists = yes } }
 # 					fascism > 0.09
 # 				}
 # 			}
@@ -2455,7 +2470,7 @@ shared_focus = { #Yet Another Accord
 # 					value > 0.099
 # 				}
 # 				if = { #equestria.154
-# 					limit = { has_global_flag = daybreaker_spawned }
+# 					limit = { event_target:solar_empire = { exists = yes } }
 # 					fascism > 0.09
 # 				}
 # 			}
@@ -2497,19 +2512,19 @@ shared_focus = { #Yet Another Accord
 # 		}
 # 		#unlock_decision_tooltip = my_decision
 # 		custom_effect_tooltip = unlocks_bop_decision_tt
-		
 # 		bac_COT_medium_effect = yes
 # 	}
-	
 # }
+
+
 shared_focus = {
 	id = BAC_COC_eco_h4
 	icon = {
-		trigger = { has_global_flag = daybreaker_spawned }
+		trigger = { event_target:solar_empire = { exists = yes } }
 		value = GFX_goal_solar_defence_of_the_empire
 	}
 	icon = GFX_goal_generic_equestria
-	cost = 14.3
+	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = 4
@@ -2526,7 +2541,7 @@ shared_focus = {
 		if = {
 			limit = { is_ai = no }
 			if = {
-				limit = { has_global_flag = daybreaker_spawned }
+				limit = { event_target:solar_empire = { exists = yes } }
 				fascism > 0.33
 			}
 			else = {
@@ -2540,14 +2555,18 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_h4"
-		bac_eqs_popularity = yes
-		add_political_power = 333
+		swap_ideas = {
+			remove_idea = bac_verdant_accord_idea
+			add_idea = bac_verdant_accord_2_idea
+		}
+		EAW_raise_trade_law = yes
+		hidden_effect = {
+			add_offsite_building = { type = industrial_complex level = 3 }
+		}
 		bac_COT_large_effect = yes
-		#TODO make a good idea (consumer fac)
-	#}
+	}
 }
-
-shared_focus = { #Plan Zebrica
+shared_focus = { #Plan Zebrica -build docks
 	id = BAC_COC_eco_m4h
 	icon = GFX_goal_KIR_docks
 	cost = 4.8
@@ -2617,16 +2636,17 @@ shared_focus = {
 	}
 	completion_reward = { #maybe it would be some fancy gui mechanic? but not now
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4m"
+		custom_effect_tooltip = BAC_COC_eco_m4m_tt
+		set_country_flag = BAC_COC_eco_m4m_flag
 		capital_scope = {
 			increase_state_category = yes
 			add_victory_points = {
 				province = 20626
 				value = 9
 			}
+			custom_effect_tooltip = KIR_line_break
 			add_dynamic_modifier = { modifier = BAC_its_electric_state }
 		}
-		custom_effect_tooltip = BAC_COC_eco_m4m_tt
-		set_country_flag = BAC_COC_eco_m4m_flag
 	}
 }
 
@@ -2646,11 +2666,11 @@ shared_focus = {
 		focus = BAC_COC_eco_c3
 	}
 	available = {
-		has_political_power > 33
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4c"
-		add_political_power = -33
+		add_political_power = 33
+		add_stability = 0.03
 		increase_society_development_gradual = yes
 		decrease_poverty = yes
 		every_core_state = {
@@ -2814,7 +2834,7 @@ shared_focus = { #BAC_COC_mil_h2
 		focus = BAC_COC_mil_h1
 	}
 	available = {
-		has_idea = bac_verdant_accord
+		has_idea = bac_verdant_accord_idea
 		power_balance_value = {
 			id = BAC_commonalty_bop
 			value > 0.099
@@ -2864,6 +2884,7 @@ shared_focus = { #BAC_COC_mil_h2
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h2"
 		set_country_flag = BAC_star_energy_zeb_available
+		set_country_flag = BAC_fillydelphia_arms_available
 		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
@@ -2875,16 +2896,25 @@ shared_focus = { #BAC_COC_mil_h2
 				add_mio_funds = 333
 				set_mio_flag = cocc_cot_mio_flag
 			}
+			custom_effect_tooltip = available_mio_tt
+			show_mio_tooltip = BAC_fillydelphia_arms_organization
+			mio:BAC_fillydelphia_arms_organization = {
+				add_mio_size = 1
+				add_mio_funds = 333
+				set_mio_flag = cocc_cot_mio_flag
+			}
 			custom_effect_tooltip = BAC_mio_size_up_prefix
 			custom_effect_tooltip = BAC_mio_size_up_cot
 		}
 		else = {
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = BAC_star_energy_zeb
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = BAC_fillydelphia_arms
 		}
 	}
 }
-shared_focus = {
+shared_focus = { #
 	id = BAC_COC_mil_c2
 	icon = GFX_goal_KIR_KIC_military
 	cost = 4.8
@@ -3155,7 +3185,7 @@ shared_focus = { #BAC_COC_mil_c3 cannon
 shared_focus = { #BAC_COC_mil_h4
 	id = BAC_COC_mil_h4
 	icon = {
-		trigger = { has_global_flag = daybreaker_spawned }
+		trigger = { event_target:solar_empire = { exists = yes } }
 		value = GFX_goal_SOL_batnation
 	}
 	icon = GFX_PLB_HY_CELESTIA

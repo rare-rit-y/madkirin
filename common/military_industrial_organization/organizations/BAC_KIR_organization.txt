@@ -27,3 +27,33 @@ BAC_star_energy_zeb_organization = {
 		}
 	}
 }
+BAC_fillydelphia_arms_organization = {
+	name = BAC_fillydelphia_arms
+	include = generic_motorized_mechanized_organization
+	icon = GFX_idea_EQS_fillydelphia_arms
+	allowed = {	
+		original_tag = KIC
+		has_dlc = "Arms Against Tyranny"
+	}
+	visible = {
+		owner = { has_country_flag = BAC_get_commonalty_flag }
+	}
+	available = {
+		owner = {
+			has_country_flag = BAC_fillydelphia_arms_available
+		}
+		OR = {
+			country_exists = event_target:equestria
+			country_exists = event_target:solar_empire
+		}
+	}
+	initial_trait = {
+		equipment_bonus = {
+			maximum_speed = 0.05
+		}
+		organization_modifier = {
+			custom_modifier_tooltip = BAC_mio_size_up_prefix
+			custom_modifier_tooltip = BAC_mio_size_up_cot
+		}
+	}
+}

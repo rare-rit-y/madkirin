@@ -22464,6 +22464,7 @@ country_event = {
 									race_tech = 0.09
 								}
 							}
+							
 						}
 						set_nationality = PREV.PREV
 					}

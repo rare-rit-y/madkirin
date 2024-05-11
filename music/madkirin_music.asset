@@ -8,18 +8,18 @@
 music = {
     name = "A_Kirin_Tale"
     file = "A_Kirin_Tale.ogg"
-    volume = 0.85
+    volume = 0.8
 }
 music = {
     name = "Amongst_the_Mighty"
     file = "Amongst_the_Mighty.ogg"
-    volume = 0.85
+    volume = 0.8
 }
 
 music = {
     name = "Lauriel_Phase_2"
     file = "LaurielPhase2.ogg"
-    volume = 0.85
+    volume = 0.65
 }
 
 music = {
@@ -30,38 +30,38 @@ music = {
 music = {
     name = "Song_of_Lazernes"
     file = "Song_of_Lazernes.ogg"
-    volume = 0.95
+    volume = 0.9
 }
 music = {
-    name = "KandariaDoamin"
+    name = "KandariaDomain"
     file = "KandariaDomain.ogg"
-    volume = 0.95
+    volume = 0.9
 }
 music = {
     name = "Redspark-The_Way_Of_Fire_BAC"
     file = "Redspark-The_Way_Of_Fire_BAC.ogg"
-    volume = 0.95
+    volume = 0.8
 }
 music = {
     name = "Battle_Hesitant_Blade_Eclipse"
     file = "Battle_Hesitant_Blade_Eclipse.ogg"
-    volume = 0.95
+    volume = 0.65
 }
 music = {
     name = "Battle_Strange_Theme"
     file = "Battle_Strange_Theme.ogg"
-    volume = 0.95
+    volume = 0.8
 }
 music = {
     name = "Battle_Tournament_Theme"
     file = "Battle_Tournament_Theme.ogg"
-    volume = 0.95
+    volume = 0.7
 }
 
 music = {
     name = "Chamber_Chu_-_Fighting_Spirit"
     file = "Chamber_Chu_-_Fighting_Spirit.ogg"
-    volume = 0.95
+    volume = 0.8
 }
 
 music = {
@@ -73,7 +73,7 @@ music = {
 music = {
     name = "Duty_Calls"
     file = "Duty_Calls.ogg"
-    volume = 0.90
+    volume = 0.65
 }
 
 music = {
@@ -85,29 +85,29 @@ music = {
 # music = {
 #     name = "Flowing_Flutes"
 #     file = "Flowing_Flutes.ogg"
-#     volume = 0.95
+#     volume = 0.7
 # }
 
 music = {
     name = "Kokoro_Long_Version"
     file = "Kokoro_(Long_Version).ogg"
-    volume = 0.95
+    volume = 0.65
 }
 
 music = {
     name = "Like_Asian_Spirit"
     file = "Like_Asian_Spirit.ogg"
-    volume = 0.90
+    volume = 0.65
 }
 
 music = {
     name = "sdorica_aurora_ost_-_title_BGM"
     file = "sdorica_aurora_ost_-_title_BGM.ogg"
-    volume = 1
+    volume = 0.8
 }
 
 music = {
     name = "Shamisen_Drives_The_Wind"
     file = "Shamisen_Drives_The_Wind.ogg"
-    volume = 0.90
+    volume = 0.65
 }
