@@ -441,9 +441,9 @@ guiTypes = {
 		#    }
 		   gridBoxType = {
 			   name = "options_grid"
-			   position = { x = 223 y = -32 }
-			   size = { width = 300 height = 30 }
-			   slotsize = { width = 300 height = 51 }
+			   position = { x = 43 y = -32 }
+			   size = { width = 500 height = 30 }
+			   slotsize = { width = 500 height = 51 }
 			   max_slots_horizontal = 1
 			   Orientation = "UPPER_LEFT"
 			   #format = "UPPER_LEFT"
@@ -469,7 +469,7 @@ guiTypes = {
 		   }
 	   }
 
-     }
+    }
    
 #  # ### #   #  ##     ### #   # ### #  # ###  ## 
 ## # #   #   # #       #   #   # #   ## #  #  #   
@@ -570,27 +570,26 @@ guiTypes = {
 		}
 	}
 	
-   containerWindowType = {
-	   name = "event_option_entry"
-	   size = { width = 300 height = 47 }
-	   clipping = no
-	   
-	   background = {
-		   name = "event_option_background"	
-		   spriteType ="GFX_event_option_entry"
-	   }
-	   
-	   instantTextBoxType = {
-		   name = "Name"
-		   position = { x = 24 y = -42 }
-		   font = "aldrich_22_outline_b"
-		   maxWidth = 280
-		   maxHeight = 20
-		   format = left
-		   Orientation = "LOWER_LEFT"
-			   #format = "UPPER_LEFT"
-		   alwaystransparent = yes
-	   }
-   }
-   
+	containerWindowType = {
+		name = "event_option_entry"
+		size = { width = 300 height = 47 }
+		clipping = no
+		
+		background = {
+			name = "event_option_background"	
+			spriteType ="GFX_event_option_entry"
+		}
+		
+		instantTextBoxType = {
+			name = "Name"
+			position = { x = 20 y = -42 }
+			font = "aldrich_22_outline_b"
+			maxWidth = 290
+			maxHeight = 20
+			format = left
+			Orientation = "LOWER_LEFT"
+				#format = "UPPER_LEFT"
+			alwaystransparent = yes
+		}
+	}
 }

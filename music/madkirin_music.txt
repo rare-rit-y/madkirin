@@ -4,7 +4,7 @@ music = {
 	chance = {
     base = 1
 		modifier = {
-			factor = 2
+			factor = 1
       AND = {
         is_kirin_race = yes
         has_government = democratic
@@ -70,7 +70,7 @@ music = {
   chance = {
     base = 1
     modifier = {
-      add = 2
+      add = 1
       is_kirin_race = yes
     }
     modifier = {

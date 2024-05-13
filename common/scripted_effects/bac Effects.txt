@@ -145,16 +145,16 @@ COC_Champion_add_WarHero_trait = {
 
 bac_eqs_popularity = {
 	if = {
-		limit = { EQS = { is_EQS_SOL = no } }
+		limit = { country_exists = event_target:solar_empire }
 		add_popularity = {
-			ideology = democratic
-			popularity = 0.033
+			ideology = fascism
+			popularity = 0.03
 		}
 	}
 	else = {
 		add_popularity = {
-			ideology = fascism
-			popularity = 0.033
+			ideology = democratic
+			popularity = 0.03
 		}
 	}
 }
@@ -450,7 +450,9 @@ remove_from_coalition = {
 			}
 			else = {
 				remove_from_array = { coalition_partners = coalition_partner_var }
-				subtract_from_variable = { coalition_stab_gain = party_popularity@var:coalition_partner_var }
+				set_temp_variable = { get_temp_stab = party_popularity@var:coalition_partner_var }
+				multiply_temp_variable = { get_temp_stab = 0.15 }
+				subtract_from_variable = { coalition_stab_gain = get_temp_stab }
 			}
 		}
 	}

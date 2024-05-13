@@ -23447,8 +23447,7 @@ country_event = {
 		#}
 		set_country_flag = BAC_get_commonalty_flag
 		mark_focus_tree_layout_dirty = yes
-		custom_effect_tooltip = BAC_KIS_event_324_tt
-		custom_effect_tooltip = get_commonalty_tree_tt #bac end
+		custom_effect_tooltip = BAC_KIS_event_324_tt #bac end
 	}
 }
 

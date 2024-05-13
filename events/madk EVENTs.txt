@@ -3,7 +3,26 @@ add_namespace = bacdebug
 add_namespace = baccocc
 add_namespace = bacutility
 #made by _unicornia. (github: rare-rit-y)
-country_event = { 
+country_event = {
+	id = bacutility.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bacutility.1"}
+	hidden = yes
+	is_triggered_only = yes
+	option = {
+		create_faction = BAC_commonalty_faction
+		every_other_country = {
+			limit = {
+				OR = {
+					has_country_flag = BAC_COC_alliance_member
+					is_subject_of = COC
+				}
+			}
+			COC = {add_to_faction = PREV}
+		}
+	}
+}
+
+country_event = { #shows you ending event by taking option
 	id = bacdebug.999 #hidden event for debuggo
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bacdebug.999"}
 	hidden = yes
@@ -190,12 +209,15 @@ unit_leader_event = { #A Militarykirin in the Committee
 					long_name = BAC_COC_na_party_0_long
 					name = BAC_COC_na_party_0
 				}
+				set_temp_variable = { coalition_partner_var = token:neutrality }
+				add_to_coalition = yes
 			}
 		}
 	}
 }
 
-unit_leader_event = { # baccocc.3 - The Private Meeting
+
+unit_leader_event = { #The Private Meeting
 	id = baccocc.3 
 	title = baccocc.3.t
 	desc = baccocc.3.d 
@@ -411,29 +433,51 @@ country_event = {
 	picture = GFX_event_KIR_stamp_B
 	is_triggered_only = yes
 
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_inviter
+			FROM = {
+				save_event_target_as = alliance_applicant
+			}
+		}
+	}
 	option = {#yes
 		name = baccocc.29.a
 		ai_chance = { factor = 200 }
-		every_country = {
+		every_other_country = {
 			limit = {
 				OR = {
 					original_tag = FROM
 					AND = {
-						is_in_faction_with = FROM
+						if = {
+							limit = { FROM = { is_faction_leader = yes } }
+							is_in_faction_with = FROM
+						}
+						else = { has_country_flag = BAC_COC_alliance_member }
 						is_subject = no
 					}
 				}
 			}
-
-			EQS = {add_to_faction = PREV}
+			ROOT = {add_to_faction = PREV}
 			add_ai_strategy = {
 				type = alliance
-				id = "EQS"
+				id = ROOT
 				value = 700
 			}
 			set_country_flag = BAC_COC_alliance_member
 		}
-		FROM = {dismantle_faction = yes}
+		FROM = {
+			if = {
+				limit = { is_faction_leader = yes }
+				dismantle_faction = yes
+			}
+			country_event = { id = generic.3 hours = 6 }
+		}
+		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
 		add_ai_strategy = {
 			type = alliance
 			id = FROM
@@ -503,7 +547,11 @@ country_event = { #146 are you with me
 			factor = 1
 			modifier = {
 				factor = 33
-				has_opinion = { target = FROM value < 33 }
+				OR = {
+					has_opinion = { target = FROM value < 33 }
+					has_country_flag = CTL_hira_in_power_smh
+					has_country_flag = CTL_ivar_in_power_smh
+				}
 			}
 		}
 	}
@@ -580,7 +628,7 @@ country_event = { #yes
 		name = baccocc.148.a
 		if = {
 			limit = { FROM = { is_faction_leader = yes } }
-			every_country = {
+			every_other_country = {
 				limit = {
 					OR = {
 						original_tag = FROM
@@ -608,9 +656,19 @@ country_event = { #yes
 				value = 200
 			}
 		}
+		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
+			news_event = { id = news.289 hours = 12 }
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 700
+		}
 	}
 }
-country_event = { #149 yesmaar
+country_event = { #149 yesmaar - puppet
 	id = baccocc.149
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.149"}
 	title = baccocc.149.t
@@ -618,7 +676,7 @@ country_event = { #149 yesmaar
 	picture = GFX_event_KIR_stamp_B
 	is_triggered_only = yes
 	option = {
-		name = baccocc.149.a #reuse
+		name = baccocc.149.a
 		if = {
 			limit = { FROM = { is_faction_leader = yes } }
 			every_country = {
@@ -631,7 +689,6 @@ country_event = { #149 yesmaar
 						}
 					}
 				}
-
 				ROOT = { 
 					set_autonomy = {
 						target = PREV
@@ -653,9 +710,19 @@ country_event = { #149 yesmaar
 				}
 			}
 		}
+		hidden_effect = {
+			set_country_flag = alliance_inviter@ROOT
+			FROM = { set_country_flag = alliance_applicant@ROOT }
+			news_event = { id = news.289 hours = 12 } #subject to change
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = FROM
+			value = 700
+		}
 	}
 }
-country_event = { # baccocc.303 - Tathya-Samvrti
+country_event = { # baccocc.303 - Tathya-Samvrti - ending event
 	id = baccocc.303
 	title = baccocc.303.t
 	desc = baccocc.303.d
@@ -664,7 +731,7 @@ country_event = { # baccocc.303 - Tathya-Samvrti
 	immediate = { hidden_effect = { scoped_play_song = "KandariaDomain" } }
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { # too long to be addressed here
+	option = { # Yet the rest of earthly affairs was going on, regardless.
 		name = baccocc.303.a
 		custom_effect_tooltip = baccocc_303_tt
 		TNO_BAC_Country_Closing_Screen_Show = yes

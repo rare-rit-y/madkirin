@@ -36,10 +36,23 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			}
 			on_activate = {
 				log = "FULL WPU activated"
-				set_country_flag = commonalty_bop_fucked_flag
+				custom_effect_tooltip = BAC_FULL_WPU
+				set_temp_variable = { coalition_partner_var = token:democratic }
+				remove_from_coalition = yes
+				if = {
+					limit = { has_completed_focus = BAC_COC_pol_h2 }
+					set_temp_variable = { coalition_partner_var = token:fascism }
+					remove_from_coalition = yes
+				}
 			}
 			on_deactivate = {
-				clr_country_flag = commonalty_bop_fucked_flag
+				set_temp_variable = { coalition_partner_var = token:democratic }
+				add_to_coalition = yes
+				if = {
+					limit = { has_completed_focus = BAC_COC_pol_h2 }
+					set_temp_variable = { coalition_partner_var = token:fascism }
+					add_to_coalition = yes
+				}
 			}
 		}
 
@@ -94,7 +107,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 				log = "FULL COT activated"
 				if = {
 					limit = {
-						has_global_flag = daybreaker_spawned
+						country_exists = event_target:solar_empire
 						has_completed_focus = BAC_COC_pol_h2
 					}
 					set_politics = { ruling_party = fascism }
@@ -103,14 +116,29 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 						side = commonalty_harmonic_control
 						gfx = GFX_goal_solar_inquisition
 					}
+					hidden_effect = {
+						set_temp_variable = { coalition_partner_var = token:fascism }
+						remove_from_coalition = yes
+					}
 				}
-				else = { set_politics = { ruling_party = democratic } }
-				set_country_flag = commonalty_bop_fucked_flag
+				else = {
+					set_politics = { ruling_party = democratic }
+					set_temp_variable = { coalition_partner_var = token:democratic }
+					remove_from_coalition = yes
+					set_temp_variable = { coalition_partner_var = token:communism }
+					add_to_coalition = yes
+				}
+				if = {
+					limit = { country_exists = event_target:solar_empire }
+					custom_effect_tooltip = BAC_FULL_COT_SOL
+				}
+				else = { custom_effect_tooltip = BAC_FULL_COT }
 			}
 			on_deactivate = {
 				log = "FULL COT deactivated"
 				set_politics = { ruling_party = communism }
-				clr_country_flag = commonalty_bop_fucked_flag
+				set_temp_variable = { coalition_partner_var = token:fascism }
+				add_to_coalition = yes
 			}
 		}
 		
