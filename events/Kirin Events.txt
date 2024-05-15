@@ -22581,16 +22581,6 @@ country_event = {
 					}
 					KIC_ember_glow = {
 						set_nationality = PREV.PREV
-						add_advisor_role = {
-							advisor = {
-								slot = political_advisor
-								cost = 150
-								idea_token = COC_ember_glow_idea
-								traits = {
-									BAC_ember_glow_advisor_trait
-								}
-							}
-						}
 					}
 				}
 				every_possible_country = {

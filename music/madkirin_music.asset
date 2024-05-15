@@ -19,7 +19,7 @@ music = {
 music = {
     name = "Lauriel_Phase_2"
     file = "LaurielPhase2.ogg"
-    volume = 0.65
+    volume = 0.7
 }
 
 music = {
@@ -45,7 +45,7 @@ music = {
 music = {
     name = "Battle_Hesitant_Blade_Eclipse"
     file = "Battle_Hesitant_Blade_Eclipse.ogg"
-    volume = 0.65
+    volume = 0.75
 }
 music = {
     name = "Battle_Strange_Theme"
@@ -73,7 +73,7 @@ music = {
 music = {
     name = "Duty_Calls"
     file = "Duty_Calls.ogg"
-    volume = 0.65
+    volume = 0.7
 }
 
 music = {
@@ -91,13 +91,13 @@ music = {
 music = {
     name = "Kokoro_Long_Version"
     file = "Kokoro_(Long_Version).ogg"
-    volume = 0.65
+    volume = 0.7
 }
 
 music = {
     name = "Like_Asian_Spirit"
     file = "Like_Asian_Spirit.ogg"
-    volume = 0.65
+    volume = 0.7
 }
 
 music = {
@@ -109,5 +109,5 @@ music = {
 music = {
     name = "Shamisen_Drives_The_Wind"
     file = "Shamisen_Drives_The_Wind.ogg"
-    volume = 0.65
+    volume = 0.7
 }

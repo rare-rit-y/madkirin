@@ -315,7 +315,7 @@ ideas = {
 				political_power_factor = -0.09
 				drift_defence_factor = -0.33
 				war_support_factor = -0.03
-				stability_weekly = -0.0033
+				stability_weekly = -0.003
 				army_core_defence_factor = 0.06
 				army_core_attack_factor = 0.06
 			}
@@ -328,13 +328,13 @@ ideas = {
 				war_support_factor = -0.06
 				army_core_defence_factor = 0.09
 				army_core_attack_factor = 0.09
-				stability_weekly = -0.0033
+				stability_weekly = -0.003
 			}
 		}
 		BAC_road_to_direct_democracy_dummy_c = {
 			name = BAC_road_to_direct_democracy
 			modifier = {
-				stability_weekly = -0.0066
+				stability_weekly = -0.006
 				army_core_defence_factor = 0.09
 				army_core_attack_factor = 0.09
 				political_power_factor = -0.09
@@ -361,7 +361,7 @@ ideas = {
 			modifier = {
 				army_core_defence_factor = 0.33
 				army_core_attack_factor = 0.33
-				stability_weekly = -0.0011
+				stability_weekly = -0.001
 			}
 		}
 		BAC_COC_peasant_dummy = {
@@ -400,6 +400,14 @@ ideas = {
 				army_attack_factor = 0.03
 				army_defence_factor = 0.03
 				research_speed_factor = 0.03
+			}
+		}
+		BAC_PaPA_dummy_c4 = {
+			name = BAC_PaPA
+			modifier = {
+				army_morale_factor = 0.3
+				army_core_attack_factor = 0.3
+				army_core_defence_factor = 0.3
 			}
 		}
 		BAC_PaPA_dummy_m2 = {

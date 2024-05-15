@@ -249,6 +249,17 @@ country_event = { # baccocc.4 - To Achieve The Foundation
 	picture = GFX_event_KIR_festival
 	option = { # And so, the night deepened for the two of them alone.
 		name = baccocc.4.a
+		add_advisor_role = {
+			character = KIC_ember_glow
+			advisor = {
+				slot = political_advisor
+				cost = 150
+				idea_token = COC_ember_glow_idea
+				traits = {
+					BAC_ember_glow_advisor_trait
+				}
+			}
+		}
 		KIR_coral_river = { add_unit_leader_trait = trait_SOV_determined }
 		clr_country_flag = your_focus_fucked_up_bac_flag
 		complete_national_focus = BAC_COC_m1
@@ -436,6 +447,7 @@ country_event = {
 	option = {
 		name = baccocc.14.a
 		set_country_flag = COC_war_committee_flag
+		mark_focus_tree_layout_dirty = yes
 		custom_effect_tooltip = baccocc_14a_tt
 	}
 }
@@ -444,6 +456,26 @@ unit_leader_event = { #Ember Wane
 	title = baccocc.15.t
 	desc = baccocc.15.d 
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.15"}
+	# immediate = {
+	# 	hidden_effect = {
+	# 		KIR = {
+	# 			if = {
+	# 				limit = {
+	# 					has_dlc = "La Resistance"
+	# 				}
+	# 				KIR_ember_wane_lar = {
+	# 					set_nationality = PREV.PREV
+	# 				}
+	# 			}
+	# 			else = {
+	# 				KIR_ember_wane = {
+	# 					set_nationality = PREV.PREV
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# }
+	
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
@@ -455,18 +487,48 @@ unit_leader_event = { #Ember Wane
 				}
 				KIR_ember_wane_lar = {
 					set_nationality = ROOT
-					country_event = {
-						id = baccocc.14
-						hours = 6
+					hidden_effect = {
+						add_corps_commander_role = {
+							traits = { 
+								kirin_race_trait 
+								adaptable
+								bannerkirin_commander
+							}
+							skill = 2
+							attack_skill = 1
+							defense_skill = 1
+							planning_skill = 3
+							logistics_skill = 2
+						}
+						add_unit_leader_trait = trait_SOV_determined
+					}
+					unit_leader_event = {
+						id = baccocc.16
+						hours = 1
 					}
 				}
 			}
 			else = {
 				KIR_ember_wane = {
 					set_nationality = ROOT
-					country_event = {
-						id = baccocc.14
-						hours = 6
+					hidden_effect = {
+						add_corps_commander_role = {
+							traits = { 
+								kirin_race_trait 
+								adaptable
+								bannerkirin_commander
+							}
+							skill = 2
+							attack_skill = 1
+							defense_skill = 1
+							planning_skill = 3
+							logistics_skill = 2
+						}
+						add_unit_leader_trait = trait_SOV_determined
+					}
+					unit_leader_event = {
+						id = baccocc.16
+						hours = 1
 					}
 				}
 			}
@@ -478,11 +540,52 @@ unit_leader_event = { #Ember Wane 2
 	title = baccocc.16.t
 	desc = baccocc.16.d 
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.16"}
+	immediate = {
+		hidden_effect = {
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				KIR_ember_wane_lar = {
+					remove_advisor_role = { slot = political_advisor }
+					add_advisor_role = {
+						advisor = {
+							cost = 200
+							slot = high_command
+							idea_token = bac_birdkeeper_lar
+							traits = { KIR_birdkeeper_lar }
+							modifier = {
+								terrain_penalty_reduction = 0.07
+								intel_from_combat_factor = 0.07
+							}
+						}
+					}
+				}
+			}
+			else = {
+				KIR_ember_wane = {
+					remove_advisor_role = { slot = political_advisor }
+					add_advisor_role = {
+						advisor = {
+							cost = 200
+							slot = high_command
+							idea_token = bac_birdkeeper
+							traits = { KIR_birdkeeper }
+							modifier = {
+								terrain_penalty_reduction = 0.07
+								intel_from_combat_factor = 0.07
+							}
+						}
+					}
+				}
+			}
+			
+		}
+	}
 	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		name = baccocc.16.a
-		set_country_flag = KIR_pol_7_available
 		army_experience = 7
 		custom_effect_tooltip = BAC_birdkeeper_stats_tp
 		if = {
@@ -490,69 +593,11 @@ unit_leader_event = { #Ember Wane 2
 				has_dlc = "La Resistance"
 			}
 			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = KIR_pol_7_lar
-			hidden_effect = {
-				KIR_ember_wane_lar = {
-					remove_advisor_role = { slot = political_advisor }
-					add_advisor_role = {
-						advisor = {
-							slot = high_command
-							idea_token = bac_birdkeeper
-							traits = { KIR_birdkeeper_lar }
-							modifier = {
-								terrain_penalty_reduction = 0.07
-								intel_from_combat_factor = 0.07
-							}
-						}
-					}
-					add_corps_commander_role = {
-						traits = { 
-							kirin_race_trait 
-							trait_SOV_determined
-							adaptable
-							bannerkirin_commander
-						}
-						skill = 2
-						attack_skill = 1
-						defense_skill = 1
-						planning_skill = 3
-						logistics_skill = 2
-					}
-				}
-			}
+			show_ideas_tooltip = bac_birdkeeper_lar
 		}
 		else = {
 			custom_effect_tooltip = available_military_high_command
-			show_ideas_tooltip = KIR_pol_7
-			hidden_effect = {
-				KIR_ember_wane_lar = {
-					remove_advisor_role = { slot = political_advisor }
-					add_advisor_role = {
-						advisor = {
-							slot = high_command
-							idea_token = bac_birdkeeper
-							traits = { KIR_birdkeeper_lar }
-							modifier = {
-								terrain_penalty_reduction = 0.07
-								intel_from_combat_factor = 0.07
-							}
-						}
-					}
-					add_corps_commander_role = {
-						traits = { 
-							kirin_race_trait 
-							trait_SOV_determined
-							adaptable
-							bannerkirin_commander
-						}
-						skill = 2
-						attack_skill = 1
-						defense_skill = 1
-						planning_skill = 3
-						logistics_skill = 2
-					}
-				}
-			}
+			show_ideas_tooltip = bac_birdkeeper
 		}
 	}
 }

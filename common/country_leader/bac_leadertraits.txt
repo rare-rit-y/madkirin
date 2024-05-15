@@ -3,7 +3,7 @@ leader_traits = {
 		random = no
 		army_core_defence_factor = 0.33
 		army_core_attack_factor = 0.33
-		stability_weekly = -0.0011
+		stability_weekly = -0.001
 	
 	}
 	BAC_road_to_direct_democracy = {
@@ -13,7 +13,7 @@ leader_traits = {
 		political_power_factor = -0.09
 		drift_defence_factor = -0.33
 		war_support_factor = -0.03
-		stability_weekly = -0.0033
+		stability_weekly = -0.003
 	}
 	BAC_direct_democracy = {
 		random = no
@@ -32,16 +32,18 @@ leader_traits = {
 	}
 	BAC_prophet_of_the_common = {
 		random = no
-		stability_weekly = 0.0033
-		modifier_army_sub_unit_kirin_braves_attack_factor = 0.033
-		modifier_army_sub_unit_kirin_braves_defence_factor = 0.033
+		stability_weekly = 0.003
+		modifier_army_sub_unit_kirin_braves_attack_factor = 0.03
+		modifier_army_sub_unit_kirin_braves_defence_factor = 0.03
 		#research_bonus = {
 		#	race_tech = 0.15
 		#}
 	}
 	BAC_ember_glow_advisor_trait = {
 		random = no
-		war_support_weekly = 0.0033
+		war_support_weekly = 0.003
+		command_power_gain = 0.3
+		production_speed_arms_factory_factor = 0.03
 	}
 
 }

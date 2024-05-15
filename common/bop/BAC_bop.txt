@@ -150,7 +150,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 				modifier_army_sub_unit_kirin_braves_attack_factor = 0.099
 				modifier_army_sub_unit_kirin_braves_defence_factor = 0.099
 				research_speed_factor = -0.03
-				political_power_factor = -0.03
+				political_power_factor = -0.9
 			}
 			on_activate = {
 				log = "mid COT activated"

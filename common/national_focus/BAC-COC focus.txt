@@ -667,7 +667,7 @@ shared_focus = {
 		}
 		KIR_dayspring_rose = { #added for BAC
 			if = {
-				limit = { is_army_leader = no }
+				limit = { is_unit_leader = no }
 				hidden_effect = {
 					add_corps_commander_role = { skill = 2 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
 					add_unit_leader_trait = kirin_race_trait
@@ -683,7 +683,6 @@ shared_focus = {
 		}
 		custom_effect_tooltip = COC_dayspring_tt
 		hidden_effect = {
-			}
 			capital_scope = {
 				create_unit = {
 					division = "division_template = \"Peasant Militia\" start_experience_factor = 0.2 start_equipment_factor = 0.95"
@@ -2821,6 +2820,7 @@ shared_focus = {
 				category = race_tech
 			}
 		}
+		else = { add_war_support = 0.03 }
 		set_variable = {
 			BAC_PaPA_h1 = 0.09
 		}
@@ -2830,7 +2830,6 @@ shared_focus = {
 				add_idea = BAC_PaPA_dummy_h1
 			}
 		}
-		else = { add_war_support = 0.03 }
 		custom_effect_tooltip = KIR_line_break
 		bac_WPU_small_effect = yes
 	}
