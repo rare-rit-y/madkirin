@@ -27,3 +27,28 @@ BAC_its_electric_state = { #State Modifier
 	state_production_speed_buildings_factor = 0.09
 	monthly_population = 0.03
 }
+BAC_PaPA = {
+	icon = GFX_idea_KIR_imperial_army
+	enable = { has_country_flag = BAC_get_commonalty_flag }
+	
+	research_speed_factor = COC_1_var
+	land_reinforce_rate = COC_3_var
+	experience_loss_factor = COC_4_var
+	army_attack_factor = COC_5_var
+	army_defence_factor = COC_6_var
+	dig_in_speed_factor = COC_7_var
+	terrain_penalty_reduction = COC_8_var
+	pocket_penalty = COC_18_var
+	supply_consumption_factor = COC_9_var
+	supply_node_range = COC_26_var
+	modifier_army_sub_unit_kirin_braves_attack_factor = BAC_PaPA_h1
+	modifier_army_sub_unit_kirin_braves_defence_factor = BAC_PaPA_h1
+	special_forces_attack_factor = BAC_PaPA_h1
+
+	max_planning = BAC_PaPA_m2
+
+	army_morale_factor = BAC_PaPA_c4
+	army_core_attack_factor= BAC_PaPA_c4
+	army_core_defence_factor = BAC_PaPA_c4
+	breakthrough_factor = BAC_PaPA_wuot
+}

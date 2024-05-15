@@ -665,18 +665,24 @@ shared_focus = {
 		effect_tooltip = {
 			swap_ideas = { add_idea = COC_desperate_revolt_dummy1 remove_idea = COC_desperate_revolt_dummy }
 		}
-		custom_effect_tooltip = BAC_dayspring_stats_tp
-		custom_effect_tooltip = COC_dayspring_tt
-		hidden_effect = {
-			KIR_dayspring_rose = { #added for BAC
-				if = {
-					limit = { is_army_leader = yes }
+		KIR_dayspring_rose = { #added for BAC
+			if = {
+				limit = { is_army_leader = no }
+				hidden_effect = {
 					add_corps_commander_role = { skill = 2 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
 					add_unit_leader_trait = kirin_race_trait
-					add_unit_leader_trait = trait_SOV_determined
 					add_unit_leader_trait = militias_officer
+					add_unit_leader_trait = trait_SOV_determined
 					#add_unit_leader_trait = KIR_Roaring_Fire_unit_leader_trait
 				}
+				custom_effect_tooltip = BAC_dayspring_stats_tp
+			}
+			else = { 
+				add_unit_leader_trait = trait_SOV_determined
+			}
+		}
+		custom_effect_tooltip = COC_dayspring_tt
+		hidden_effect = {
 			}
 			capital_scope = {
 				create_unit = {
@@ -988,6 +994,14 @@ shared_focus = {
 			news_event = { id = kirin_council.321 hours = 3 }
 		}
 		remove_dynamic_modifier = { modifier = COC_desperate_revolt }
+		clear_variable = COC_10_var
+		clear_variable = COC_11_var #done
+		clear_variable = COC_12_var
+		clear_variable = COC_13_var
+		clear_variable = COC_14_var ##Morale - done
+		clear_variable = COC_15_var
+		clear_variable = COC_16_var
+		clear_variable = COC_17_var ##Breakthrough - done
 		custom_effect_tooltip = KIR_line_break
 		swap_ideas = {
 			remove_idea = no_poverty
@@ -1008,7 +1022,7 @@ shared_focus = { #BAC_COC_m1 - Prepare The Foundation
 	x = 0
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed < 3 }
+		check_variable = { baccocc_start_foci_completed < 3 }
 		has_country_flag = BAC_get_commonalty_flag
 	}
 	prerequisite = {
@@ -1040,7 +1054,7 @@ shared_focus = { #BAC_COC_m1 - Prepare The Foundation
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_m1"
-		#add_to_variable = { coc_start_foci_completed = 1 }
+		#add_to_variable = { baccocc_start_foci_completed = 1 }
 		#mark_focus_tree_layout_dirty = yes
 		#add_to_variable = { coc_t_foci_completed = 1 }
 		hidden_effect = {
@@ -1053,7 +1067,7 @@ shared_focus = { #BAC_COC_m1 - Prepare The Foundation
 			}
 			if = {
 				limit = { 
-					check_variable = { coc_start_foci_completed = 0 }
+					check_variable = { baccocc_start_foci_completed = 0 }
 				}
 				custom_effect_tooltip = bac_cheater_tt
 				custom_effect_tooltip = KIR_line_break
@@ -1089,8 +1103,8 @@ shared_focus = { #BAC_COC_h1 - Honour Our Friends
 	x = -3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed < 3 }
-		check_variable = { coc_start_foci_completed > 0 }
+		check_variable = { baccocc_start_foci_completed < 3 }
+		check_variable = { baccocc_start_foci_completed > 0 }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_h1"
@@ -1098,9 +1112,9 @@ shared_focus = { #BAC_COC_h1 - Honour Our Friends
 		custom_effect_tooltip = KIR_line_break
 		bac_COT_mega_effect = yes
 		#add_to_variable = { coc_h_foci_completed = 1 }
-		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { baccocc_start_foci_completed = 1 }
 		if = {
-			limit = { check_variable = { coc_start_foci_completed = 3 } }
+			limit = { check_variable = { baccocc_start_foci_completed = 3 } }
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
@@ -1114,17 +1128,17 @@ shared_focus = { #BAC_COC_c1 - The Voice Must Be Spoken
 	x = 3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed < 3 }
-		check_variable = { coc_start_foci_completed > 0 }
+		check_variable = { baccocc_start_foci_completed < 3 }
+		check_variable = { baccocc_start_foci_completed > 0 }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c1"
-		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { baccocc_start_foci_completed = 1 }
 		add_stability = 0.033
 		bac_WPU_mega_effect = yes
 		#add_to_variable = { coc_c_foci_completed = 1 }
 		if = {
-			limit = { check_variable = { coc_start_foci_completed = 3 } }
+			limit = { check_variable = { baccocc_start_foci_completed = 3 } }
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
@@ -1138,8 +1152,8 @@ shared_focus = { #BAC_COC_m2 - Commonalty Constitutional Senate
 	x = 0
 	y = 0
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 2 }
-		check_variable = { coc_start_foci_completed < 6 }
+		check_variable = { baccocc_start_foci_completed > 2 }
+		check_variable = { baccocc_start_foci_completed < 6 }
 	}
 	prerequisite = {
 		focus = BAC_COC_finale
@@ -1148,15 +1162,15 @@ shared_focus = { #BAC_COC_m2 - Commonalty Constitutional Senate
 	# available = {
 	# 	custom_trigger_tooltip = {
 	# 		tooltip = BAC_please_take_previous_foci
-	# 		check_variable = { coc_start_foci_completed > 2 }
+	# 		check_variable = { baccocc_start_foci_completed > 2 }
 	# 	}
 	# }
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_m2"
-		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { baccocc_start_foci_completed = 1 }
 		#add_to_variable = { coc_t_foci_completed = 1 }
 		if = {
-			limit = { check_variable = { coc_start_foci_completed = 6 } }
+			limit = { check_variable = { baccocc_start_foci_completed = 6 } }
 			mark_focus_tree_layout_dirty = yes
 		}
 		swap_ideas = {
@@ -1174,8 +1188,8 @@ shared_focus = { # Adopt Equestrian Autunomy System
 	x = -3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 2 }
-		check_variable = { coc_start_foci_completed < 6 }
+		check_variable = { baccocc_start_foci_completed > 2 }
+		check_variable = { baccocc_start_foci_completed < 6 }
 	}
 	available = {
 		has_completed_focus = BAC_COC_m2
@@ -1186,7 +1200,7 @@ shared_focus = { # Adopt Equestrian Autunomy System
 		bac_COT_large_effect = yes
 		custom_effect_tooltip = KIR_line_break
 		custom_effect_tooltip = BAC_start_phase_2_tt
-		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { baccocc_start_foci_completed = 1 }
 		effect_tooltip = {
 			swap_ideas = {
 				remove_idea = BAC_road_to_direct_democracy_dummy_0
@@ -1195,7 +1209,7 @@ shared_focus = { # Adopt Equestrian Autunomy System
 		}
 		#add_to_variable = { coc_h_foci_completed = 1 }
 		if = {
-			limit = { check_variable = { coc_start_foci_completed = 6 } }
+			limit = { check_variable = { baccocc_start_foci_completed = 6 } }
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
@@ -1209,20 +1223,20 @@ shared_focus = { # Our Cause Must Be Informed
 	x = 3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 2 }
-		check_variable = { coc_start_foci_completed < 6 }
+		check_variable = { baccocc_start_foci_completed > 2 }
+		check_variable = { baccocc_start_foci_completed < 6 }
 	}
 	available = {
 		has_completed_focus = BAC_COC_m2
 	# 	custom_trigger_tooltip = {
 	# 		tooltip = BAC_please_take_previous_foci
-	# 		check_variable = { coc_start_foci_completed > 2 }
+	# 		check_variable = { baccocc_start_foci_completed > 2 }
 	# 	}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_c2"
 		country_event = { id = baccocc.7 hours = 3 random_hours = 33 }
-		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { baccocc_start_foci_completed = 1 }
 		#add_to_variable = { COC_c_foci_completed = 1 }
 		bac_WPU_large_effect = yes
 		custom_effect_tooltip = KIR_line_break
@@ -1235,7 +1249,7 @@ shared_focus = { # Our Cause Must Be Informed
 		}
 		
 		if = {
-			limit = { check_variable = { coc_start_foci_completed = 6 } }
+			limit = { check_variable = { baccocc_start_foci_completed = 6 } }
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
@@ -1249,7 +1263,7 @@ shared_focus = {
 	x = 0
 	y = 0
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 5 }
+		check_variable = { baccocc_start_foci_completed > 5 }
 	}
 
 	prerequisite = {
@@ -1259,12 +1273,12 @@ shared_focus = {
 	available = {
 		# custom_trigger_tooltip = {
 		# 	tooltip = BAC_please_take_previous_foci
-		# 	check_variable = { coc_start_foci_completed > 5 }
+		# 	check_variable = { baccocc_start_foci_completed > 5 }
 		# }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_m3"
-		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { baccocc_start_foci_completed = 1 }
 		swap_ideas = {
 			remove_idea = isolation
 			add_idea = civilian_economy
@@ -1280,8 +1294,8 @@ shared_focus = {
 	x = -3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 5 }
-		check_variable = { coc_start_foci_completed < 10 }
+		check_variable = { baccocc_start_foci_completed > 5 }
+		check_variable = { baccocc_start_foci_completed < 10 }
 	}
 	available = {
 		has_completed_focus = BAC_COC_m3
@@ -1299,9 +1313,9 @@ shared_focus = {
 		}
 		bac_COT_medium_effect = yes
 
-		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { baccocc_start_foci_completed = 1 }
 		if = {
-			limit = { check_variable = { coc_start_foci_completed = 9 } }
+			limit = { check_variable = { baccocc_start_foci_completed = 9 } }
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
@@ -1315,8 +1329,8 @@ shared_focus = { # Land Investigation Program
 	x = 3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 5 }
-		check_variable = { coc_start_foci_completed < 10 }
+		check_variable = { baccocc_start_foci_completed > 5 }
+		check_variable = { baccocc_start_foci_completed < 10 }
 	}
 	available = {
 		has_completed_focus = BAC_COC_m3
@@ -1332,9 +1346,9 @@ shared_focus = { # Land Investigation Program
 			add_compliance = -3
 		}
 		bac_WPU_medium_effect = yes
-		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { baccocc_start_foci_completed = 1 }
 		if = {
-			limit = { check_variable = { coc_start_foci_completed = 9 } }
+			limit = { check_variable = { baccocc_start_foci_completed = 9 } }
 			mark_focus_tree_layout_dirty = yes
 		}
 	}
@@ -1348,7 +1362,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 8 }
+		check_variable = { baccocc_start_foci_completed > 8 }
 	}
 	prerequisite = {
 		focus = BAC_COC_m3
@@ -1356,7 +1370,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_true_commonalty"
-		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { baccocc_start_foci_completed = 1 }
 		custom_effect_tooltip = KIR_line_break
 		custom_effect_tooltip = BAC_COC_true_commonalty_tt
 		custom_effect_tooltip = KIR_line_break
@@ -1390,7 +1404,7 @@ shared_focus = { #교육위원회
 	x = 0
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_true_commonalty
@@ -1415,7 +1429,7 @@ shared_focus = { # Assertive Conversion # 적극적인 개종
 	x = 1
 	y = 1
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_pol_head
@@ -1442,7 +1456,7 @@ shared_focus = { #Allow The Way of Fire 불의 길 공존
 	x = -1
 	y = 1
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_pol_head
@@ -1469,7 +1483,7 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 	x = -4
 	y = 0
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_true_commonalty
@@ -1494,6 +1508,7 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 					}
 				}
 			}
+			save_global_event_target_as = bac_commonalty_target
 		}
 		set_country_flag = bac_diplo_expanded
 		custom_effect_tooltip = KIR_line_break
@@ -1509,7 +1524,7 @@ shared_focus = { #자연과학
 	x = -2
 	y = 0
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_true_commonalty
@@ -1538,7 +1553,7 @@ shared_focus = { # Research and Development Complex #복합연구개발단지
 	x = -3
 	y = 1
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_modern_science
@@ -1589,7 +1604,7 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 	x = 2
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_pol_h1
@@ -1672,7 +1687,7 @@ shared_focus = { #Justice For Common
 	x = 0
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_pol_h1
@@ -1712,7 +1727,7 @@ shared_focus = {
 	x = -2
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_pol_c1
@@ -1745,7 +1760,7 @@ shared_focus = {
 	x = 1
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_pol_h2
@@ -1799,7 +1814,7 @@ shared_focus = {
 	x = -1
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_pol_h2
@@ -1863,7 +1878,7 @@ shared_focus = { #Century for Commonalty
 	x = 0
 	y = 5
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 		has_country_flag = COC_war_committee_flag
 	}
 	prerequisite = {
@@ -1912,7 +1927,7 @@ shared_focus = { #Committee For Industry And Development
 		focus = BAC_COC_m1
 	}
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_head"
@@ -1938,7 +1953,7 @@ shared_focus = { #Equestrian Model of Development
 	x = 1
 	y = 1
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_head
@@ -1960,7 +1975,7 @@ shared_focus = { #Initiate Land Reform
 	x = -1
 	y = 1
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_head
@@ -1990,7 +2005,7 @@ shared_focus = { #New Campaign Town
 	x = 0
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_h1
@@ -2068,7 +2083,7 @@ shared_focus = { # #Equestrian Ties
 	x = 2
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_h1
@@ -2166,7 +2181,7 @@ shared_focus = { #QKdzz
 	x = -2
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_c1
@@ -2199,7 +2214,7 @@ shared_focus = {
 	x = 1
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_m2
@@ -2211,8 +2226,9 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m3h"
+		add_stability = -0.03
 		add_tech_bonus = {
-			name = synth_bonus
+			name = BAC_COC_eco_m3h
 			bonus = 3.0
 			uses = 3
 			category = synth_resources
@@ -2252,7 +2268,7 @@ shared_focus = {
 	x = -1
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_m2
@@ -2264,6 +2280,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m3c"
+		add_stability = -0.03
 		random_core_state = {
 			limit = {
 				is_fully_controlled_by = ROOT
@@ -2308,7 +2325,7 @@ shared_focus = {
 	x = -3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_c2
@@ -2338,7 +2355,7 @@ shared_focus = { #Yet Another Accord
 	x = 3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_h2
@@ -2421,7 +2438,7 @@ shared_focus = { #Yet Another Accord
 # 	x = 3
 # 	y = 3
 # 	allow_branch = {
-# 		check_variable = { coc_start_foci_completed > 9 }
+# 		check_variable = { baccocc_start_foci_completed > 9 }
 # 	}
 # 	prerequisite = {
 # 		focus = BAC_COC_eco_h2
@@ -2517,7 +2534,7 @@ shared_focus = {
 	x = 4
 	y = 4
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_h3
@@ -2570,7 +2587,7 @@ shared_focus = { #Plan Zebrica -build docks
 	x = 2
 	y = 4
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_m3h
@@ -2611,7 +2628,7 @@ shared_focus = { #Plan Zebrica -build docks
 			}
 		}
 		custom_effect_tooltip = KIR_line_break
-		bac_COT_small_effect = yes
+		bac_WPU_small_effect = yes
 	}
 }
 
@@ -2624,7 +2641,7 @@ shared_focus = {
 	x = 0
 	y = 4
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_m3h
@@ -2659,7 +2676,7 @@ shared_focus = {
 	x = -2
 	y = 4
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_m3c
@@ -2705,7 +2722,7 @@ shared_focus = { #shdzz
 	x = -4
 	y = 4
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_eco_c3
@@ -2742,7 +2759,7 @@ shared_focus = { #Military Affairs
 		focus = BAC_COC_m1
 	}
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_head"
@@ -2754,15 +2771,28 @@ shared_focus = { #Military Affairs
 					random_hours = 33
 				}
 				unit_leader_event = {
+					id = baccocc.15
+					days = 15
+					hours = 15
+				}
+				unit_leader_event = {
 					id = baccocc.13
-					days = 33
+					days = 99
 					hours = 10
 				}
 			}
+			add_dynamic_modifier = { modifier = BAC_PaPA }
+			clear_variable = COC_2_var
+			add_to_variable = { COC_1_var = 0.03 }
 		}
 		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_COC_peasant_dummy
+				add_idea = BAC_PaPA_dummy1
+			}
 			KIC_ember_glow = { unit_leader_event = baccocc.12 }
 		}
+		custom_effect_tooltip = BAC_COC_mil_head_tt
 	}
 }
 
@@ -2775,13 +2805,34 @@ shared_focus = {
 	x = -1
 	y = 1
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_head
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h1"
+		if = {
+			limit = { bac_hasnt_researched_all_kirin_techs = yes }
+			add_tech_bonus = {
+				name = race_tech_bonus
+				bonus = 0.33
+				uses = 3
+				category = race_tech
+			}
+		}
+		set_variable = {
+			BAC_PaPA_h1 = 0.09
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_PaPA_dummy
+				add_idea = BAC_PaPA_dummy_h1
+			}
+		}
+		else = { add_war_support = 0.03 }
+		custom_effect_tooltip = KIR_line_break
+		bac_WPU_small_effect = yes
 	}
 }
 
@@ -2794,13 +2845,30 @@ shared_focus = {
 	x = 1
 	y = 1
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_head
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c1"
+		add_tech_bonus = {
+			name = BAC_COC_mil_c1
+			bonus = 0.33
+			uses = 3
+			category = infantry_weapons
+		}
+		add_to_variable = { COC_1_var = 0.03 }
+		add_to_variable = { COC_5_var = 0.03 }
+		add_to_variable = { COC_6_var = 0.03 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_PaPA_dummy
+				add_idea = BAC_PaPA_dummy_c1
+			}
+		}
+		custom_effect_tooltip = KIR_line_break
+		bac_COT_small_effect = yes
 	}
 }
 
@@ -2814,7 +2882,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_h1
@@ -2825,6 +2893,17 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m2"
+		army_experience = 33
+		every_unit_leader = {
+			add_planning = 1
+		}
+		add_to_variable = { BAC_PaPA_m2 = 0.09 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_PaPA_dummy
+				add_idea = BAC_PaPA_dummy_m2
+			}
+		}
 	}
 }
 shared_focus = { #BAC_COC_mil_h2
@@ -2836,7 +2915,7 @@ shared_focus = { #BAC_COC_mil_h2
 	x = -2
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_h1
@@ -2920,6 +2999,8 @@ shared_focus = { #BAC_COC_mil_h2
 			custom_effect_tooltip = available_designer
 			show_ideas_tooltip = BAC_fillydelphia_arms
 		}
+		custom_effect_tooltip = KIR_line_break
+		bac_WPU_small_effect = yes
 	}
 }
 shared_focus = { #
@@ -2931,7 +3012,7 @@ shared_focus = { #
 	x = 2
 	y = 2
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_c1
@@ -2944,6 +3025,9 @@ shared_focus = { #
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c2"
+
+		custom_effect_tooltip = KIR_line_break
+		bac_COT_small_effect = yes
 	}
 }
 
@@ -2956,7 +3040,7 @@ shared_focus = { #Flying Commonkirin
 	x = -2
 	y = 0
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_true_commonalty
@@ -3011,7 +3095,7 @@ shared_focus = { # Beyond The Riverine Navy
 	x = -4
 	y = 0
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_true_commonalty
@@ -3024,7 +3108,7 @@ shared_focus = { # Beyond The Riverine Navy
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_navy"
 		add_tech_bonus = {
-			name = naval_research
+			name = BAC_COC_mil_navy
 			bonus = 1.0
 			uses = 3
 			category = naval_equipment
@@ -3084,7 +3168,7 @@ shared_focus = { #해군항공대
 	x = -3
 	y = 1
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_navy
@@ -3099,7 +3183,7 @@ shared_focus = { #해군항공대
 				has_dlc = "By Blood Alone"
 			}
 			add_tech_bonus = {
-				name = nav_bomber_bonus
+				name = BAC_COC_mil_navalair
 				bonus = 1
 				uses = 3
 				category = mio_cat_all_naval_bomber_and_modules
@@ -3107,7 +3191,7 @@ shared_focus = { #해군항공대
 		}
 		else = {
 			add_tech_bonus = {
-				name = nav_bomber_bonus
+				name = BAC_COC_mil_navalair
 				bonus = 1
 				uses = 3
 				category = naval_bomber
@@ -3125,7 +3209,7 @@ shared_focus = { #spearhead thing
 	x = -3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_h2
@@ -3147,13 +3231,13 @@ shared_focus = { #spearhead thing
 				has_dlc = "Arms Against Tyranny"
 			}
 			add_doctrine_cost_reduction = {
-				name = special_forces_bonus
+				name = BAC_COC_mil_h3
 				cost_reduction = 0.33
 				uses = 3
 				category = cat_marines_doctrine
 			}
 			add_tech_bonus = {
-				name = special_forces_bonus
+				name = BAC_COC_mil_h3
 				bonus = 0.33
 				uses = 3
 				category = marine_tech
@@ -3162,13 +3246,22 @@ shared_focus = { #spearhead thing
 		}
 		else = {
 			add_tech_bonus = {
-				name = special_forces_bonus
+				name = BAC_COC_mil_h3
 				bonus = 1.0
 				uses = 3
 				category = marine_tech
 				category = tp_tech
 			}
 		}
+		add_to_variable = { BAC_PaPA_h1 = 0.09 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_PaPA_dummy
+				add_idea = BAC_PaPA_dummy_h1
+			}
+		}
+		custom_effect_tooltip = KIR_line_break
+		bac_WPU_medium_effect = yes
 	}
 }
 
@@ -3183,7 +3276,7 @@ shared_focus = { #heavy industry ig?
 	x = -1
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_m2
@@ -3206,7 +3299,7 @@ shared_focus = {
 	x = 1
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_h2
@@ -3220,7 +3313,7 @@ shared_focus = {
 	}
 }
 
-shared_focus = { #BAC_COC_mil_c3 cannon
+shared_focus = { # cannon
 	id = BAC_COC_mil_c3
 	icon = GFX_goal_HEL_anar_cannon
 	cost = 4.8
@@ -3229,7 +3322,7 @@ shared_focus = { #BAC_COC_mil_c3 cannon
 	x = 3
 	y = 3
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_c2
@@ -3242,6 +3335,8 @@ shared_focus = { #BAC_COC_mil_c3 cannon
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c3"
+		custom_effect_tooltip = KIR_line_break
+		bac_COT_medium_effect = yes
 	}
 }
 shared_focus = { #BAC_COC_mil_h4
@@ -3257,7 +3352,7 @@ shared_focus = { #BAC_COC_mil_h4
 	x = -4
 	y = 4
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_h3
@@ -3270,6 +3365,8 @@ shared_focus = { #BAC_COC_mil_h4
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h4"
+		custom_effect_tooltip = KIR_line_break
+		bac_WPU_large_effect = yes
 	}
 }
 shared_focus = {
@@ -3281,7 +3378,7 @@ shared_focus = {
 	x = -2
 	y = 4
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_m3h
@@ -3307,7 +3404,7 @@ shared_focus = {
 	x = 0
 	y = 4
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_m3h
@@ -3330,7 +3427,7 @@ shared_focus = {
 	x = 2
 	y = 4
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_m3c
@@ -3347,7 +3444,7 @@ shared_focus = {
 	}
 }
 
-shared_focus = { #결사항전
+shared_focus = {
 	id = BAC_COC_mil_c4
 	icon = GFX_goal_KIR_deaths_head
 	cost = 4.8
@@ -3356,12 +3453,13 @@ shared_focus = { #결사항전
 	x = 4
 	y = 4
 	allow_branch = {
-		check_variable = { coc_start_foci_completed > 9 }
+		check_variable = { baccocc_start_foci_completed > 9 }
 	}
 	prerequisite = {
 		focus = BAC_COC_mil_c3
 	}
 	available = {
+		has_defensive_war = yes 
 		power_balance_value = {
 			id = BAC_commonalty_bop
 			value < -0.33
@@ -3369,6 +3467,17 @@ shared_focus = { #결사항전
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c4"
+		set_variable = {
+			BAC_PaPA_c4 = 0.3
+		}
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_PaPA_dummy
+				add_idea = BAC_PaPA_dummy_c4
+			}
+		}
+		custom_effect_tooltip = KIR_line_break
+		bac_COT_large_effect = yes
 	}
 }
 
@@ -3402,10 +3511,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_sekrit_war_committee"
+		set_rule = { can_create_factions = yes }
 		if = {
 			limit = { is_in_faction = no }
 			create_faction = BAC_commonalty_faction
-			set_country_flag = BAC_COC_alliance_member
 		}
 		else = {
 			custom_effect_tooltip = BAC_COC_sekrit_war_committee_tt
@@ -3413,10 +3522,9 @@ shared_focus = {
 				create_faction = BAC_commonalty_faction
 			}
 		}
-		
-		set_rule = { can_create_factions = yes }
 	}
 }
+
 
 shared_focus = { #March to Old Marches
 	id = BAC_COC_war_zaikiria #우월주의 아닌 기린 국가들한테는 이벤트로 괴뢰화하기

@@ -10,20 +10,23 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		create_faction = BAC_commonalty_faction
-		every_other_country = {
-			limit = {
-				OR = {
-					has_country_flag = BAC_COC_alliance_member
-					is_subject_of = COC
+		if = {
+			limit = { has_country_flag = BAC_COC_alliance_member }
+			every_other_country = {
+				limit = {
+					OR = {
+						has_country_flag = BAC_COC_alliance_member
+						is_subject_of = ROOT
+					}
 				}
+				ROOT = {add_to_faction = PREV}
 			}
-			COC = {add_to_faction = PREV}
 		}
 	}
 }
 
-country_event = { #shows you ending event by taking option
-	id = bacdebug.999 #hidden event for debuggo
+country_event = { #hidden event for debuggo #shows you ending event by taking option
+	id = bacdebug.999
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bacdebug.999"}
 	hidden = yes
 	is_triggered_only = yes
@@ -32,6 +35,7 @@ country_event = { #shows you ending event by taking option
 		TNO_BAC_Country_Closing_Screen_Show = yes
 	}
 }
+
 country_event = { 
 	id = bacdebug.1 #debug event for coal
 	title = bacdebug.1.t
@@ -248,7 +252,7 @@ country_event = { # baccocc.4 - To Achieve The Foundation
 		KIR_coral_river = { add_unit_leader_trait = trait_SOV_determined }
 		clr_country_flag = your_focus_fucked_up_bac_flag
 		complete_national_focus = BAC_COC_m1
-		add_to_variable = { coc_start_foci_completed = 1 }
+		add_to_variable = { baccocc_start_foci_completed = 1 }
 		mark_focus_tree_layout_dirty = yes
 	}
 }
@@ -351,13 +355,19 @@ country_event = { # baccocc.11 - The Trial of NAKP
 			limit = { original_tag = KIS }
 			effect_tooltip = { kill_country_leader = yes }
 			every_character = {
-				limit = { is_country_leader = no }
+				limit = { is_country_leader = no } #without this, Silver Silks survives (she is adorable though)
 				retire = yes
 			}
-			hidden_effect = { kill_country_leader = yes }
+			hidden_effect = { kill_country_leader = yes } #Without this, Fickle wouldn't fucking die
 		}
-		effect_tooltip = {
-			add_manpower = -69 
+		every_controlled_state = {
+			limit = {
+				OR = {
+					state = 1071 #Fragrance
+					state = 1088 #Sycee
+				}
+			}
+			population_reduction_1 = yes
 		}
 	}
 }
@@ -379,17 +389,20 @@ unit_leader_event = { #baccocc.12 firethorn
 				}
 			}
 			add_unit_leader_trait = trait_SOV_determined
-			add_advisor_role = {
-				advisor = {
-					slot = army_chief
-					idea_token = COC_Firethorn_idea
-					#ledger = army
-					traits = { NCR_mass_warfare_general_2 }
-					ai_will_do = {
-						factor = 5
+			if = {
+				limit = { is_advisor = no }
+				add_advisor_role = {
+					advisor = {
+						slot = army_chief
+						idea_token = COC_Firethorn_idea
+						#ledger = army
+						traits = { NCR_mass_warfare_general_2 }
+						ai_will_do = {
+							factor = 5
+						}
 					}
+					activate = yes
 				}
-				activate = yes
 			}
 		}
 	}
@@ -426,7 +439,124 @@ country_event = {
 		custom_effect_tooltip = baccocc_14a_tt
 	}
 }
-country_event = {
+unit_leader_event = { #Ember Wane
+	id = baccocc.15
+	title = baccocc.15.t
+	desc = baccocc.15.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.15"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.15.a
+		KIR = {
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				KIR_ember_wane_lar = {
+					set_nationality = ROOT
+					country_event = {
+						id = baccocc.14
+						hours = 6
+					}
+				}
+			}
+			else = {
+				KIR_ember_wane = {
+					set_nationality = ROOT
+					country_event = {
+						id = baccocc.14
+						hours = 6
+					}
+				}
+			}
+		}
+	}
+}
+unit_leader_event = { #Ember Wane 2
+	id = baccocc.16
+	title = baccocc.16.t
+	desc = baccocc.16.d 
+	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.16"}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = baccocc.16.a
+		set_country_flag = KIR_pol_7_available
+		army_experience = 7
+		custom_effect_tooltip = BAC_birdkeeper_stats_tp
+		if = {
+			limit = {
+				has_dlc = "La Resistance"
+			}
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = KIR_pol_7_lar
+			hidden_effect = {
+				KIR_ember_wane_lar = {
+					remove_advisor_role = { slot = political_advisor }
+					add_advisor_role = {
+						advisor = {
+							slot = high_command
+							idea_token = bac_birdkeeper
+							traits = { KIR_birdkeeper_lar }
+							modifier = {
+								terrain_penalty_reduction = 0.07
+								intel_from_combat_factor = 0.07
+							}
+						}
+					}
+					add_corps_commander_role = {
+						traits = { 
+							kirin_race_trait 
+							trait_SOV_determined
+							adaptable
+							bannerkirin_commander
+						}
+						skill = 2
+						attack_skill = 1
+						defense_skill = 1
+						planning_skill = 3
+						logistics_skill = 2
+					}
+				}
+			}
+		}
+		else = {
+			custom_effect_tooltip = available_military_high_command
+			show_ideas_tooltip = KIR_pol_7
+			hidden_effect = {
+				KIR_ember_wane_lar = {
+					remove_advisor_role = { slot = political_advisor }
+					add_advisor_role = {
+						advisor = {
+							slot = high_command
+							idea_token = bac_birdkeeper
+							traits = { KIR_birdkeeper_lar }
+							modifier = {
+								terrain_penalty_reduction = 0.07
+								intel_from_combat_factor = 0.07
+							}
+						}
+					}
+					add_corps_commander_role = {
+						traits = { 
+							kirin_race_trait 
+							trait_SOV_determined
+							adaptable
+							bannerkirin_commander
+						}
+						skill = 2
+						attack_skill = 1
+						defense_skill = 1
+						planning_skill = 3
+						logistics_skill = 2
+					}
+				}
+			}
+		}
+	}
+}
+country_event = { #please let me in your faction my mommy
 	id = baccocc.29
 	title = baccocc.29.t
 	desc = baccocc.29.d
@@ -443,7 +573,13 @@ country_event = {
 	}
 	option = {#yes
 		name = baccocc.29.a
-		ai_chance = { factor = 200 }
+		ai_chance = {
+			factor = 200
+			modifier = {
+				factor = 1.25
+				has_tech = tech_kirin_astrology 
+			}
+		}
 		every_other_country = {
 			limit = {
 				OR = {
@@ -487,7 +623,13 @@ country_event = {
 
 	option = {#naw
 		name = baccocc.29.b
-		ai_chance = {factor = 0}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 20
+				FROM = { has_war_with_major = yes }
+			}
+		}
 	}
 }
 country_event = {
@@ -552,6 +694,10 @@ country_event = { #146 are you with me
 					has_country_flag = CTL_hira_in_power_smh
 					has_country_flag = CTL_ivar_in_power_smh
 				}
+			}
+			modifier = {
+				factor = 0.75
+				NOT = { has_tech = tech_kirin_astrology }
 			}
 		}
 	}
@@ -740,33 +886,33 @@ country_event = { # baccocc.303 - Tathya-Samvrti - ending event
 }
 
 
-country_event = { # madkirin.1 - The Lecture
-	id = madkirin.1 
-	title = madkirin.1.t
-	desc = madkirin.1.d #박지원, 호질(虎叱)
-	immediate = {log = "[GetDateText]: [Root.GetName]: event madkirin.1"}
-	picture = GFX_event_KIR_stamp_B
-	is_triggered_only = yes
-	fire_only_once = yes
-	option = {
-		name = madkirin.1.c #Her lecture is even more heretic.
-		hidden_effect = {
-			retire_ideology_leader = fascism
-			add_country_leader_role = {
-				character = KIR_fiery_azalea #placeholder, need to make a new OC
-				promote_leader = yes
-				country_leader = {
-					expire = "1965.1.1"
-					ideology = falangism
-					traits = { }
-				}
-			}
-		}
-		set_temp_variable = { coalition_partner_var = token:fascism }
-		add_to_coalition = yes
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.1
-		}
-	}
-}
+# country_event = { # madkirin.1 - The Lecture
+# 	id = madkirin.1 
+# 	title = madkirin.1.t
+# 	desc = madkirin.1.d #박지원, 호질(虎叱)
+# 	immediate = {log = "[GetDateText]: [Root.GetName]: event madkirin.1"}
+# 	picture = GFX_event_KIR_stamp_B
+# 	is_triggered_only = yes
+# 	fire_only_once = yes
+# 	option = {
+# 		name = madkirin.1.c #Her lecture is even more heretic.
+# 		hidden_effect = {
+# 			retire_ideology_leader = fascism
+# 			add_country_leader_role = {
+# 				character = KIR_fiery_azalea #placeholder, need to make a new OC
+# 				promote_leader = yes
+# 				country_leader = {
+# 					expire = "1965.1.1"
+# 					ideology = falangism
+# 					traits = { }
+# 				}
+# 			}
+# 		}
+# 		set_temp_variable = { coalition_partner_var = token:fascism }
+# 		add_to_coalition = yes
+# 		add_popularity = {
+# 			ideology = fascism
+# 			popularity = 0.1
+# 		}
+# 	}
+# }

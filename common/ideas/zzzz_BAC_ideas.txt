@@ -257,6 +257,8 @@ ideas = {
 			}
 			modifier = {
 				consumer_goods_factor = 0.3
+				production_speed_dockyard_factor = 0.3
+				industrial_capacity_dockyard = 0.3
 			}
 			equipment_bonus = {
 				ship_hull_submarine = {
@@ -360,6 +362,56 @@ ideas = {
 				army_core_defence_factor = 0.33
 				army_core_attack_factor = 0.33
 				stability_weekly = -0.0011
+			}
+		}
+		BAC_COC_peasant_dummy = {
+			name = COC_peasant_army
+			modifier = {
+
+			}
+		}
+		BAC_PaPA_dummy = {
+			name = BAC_PaPA
+			modifier = {
+
+			}
+		}
+		BAC_PaPA_dummy1 = {
+			name = BAC_PaPA
+			modifier = {
+				research_speed_factor = 0.03
+				modifier_army_sub_unit_irregular_infantry_attack_factor = -0.15
+				modifier_army_sub_unit_irregular_infantry_defence_factor = -0.15
+				modifier_army_sub_unit_irregular_infantry_speed_factor = -0.05
+				equipment_capture_factor = -0.25
+			}
+		}
+		BAC_PaPA_dummy_h1 = {
+			name = BAC_PaPA
+			modifier = {
+				modifier_army_sub_unit_kirin_braves_attack_factor = 0.5
+				modifier_army_sub_unit_kirin_braves_defence_factor = 0.5
+				special_forces_attack_factor = 0.5
+			}
+		}
+		BAC_PaPA_dummy_c1 = {
+			name = BAC_PaPA
+			modifier = {
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				research_speed_factor = 0.03
+			}
+		}
+		BAC_PaPA_dummy_m2 = {
+			name = BAC_PaPA
+			modifier = {
+				max_planning = 0.09
+			}
+		}
+		BAC_PaPA_dummy_COC_1_var = {
+			name = BAC_PaPA
+			modifier = {
+				research_speed_factor = 0.03
 			}
 		}
 	}

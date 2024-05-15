@@ -8,10 +8,11 @@ bac_coc_debug_cat = {
 		visible = {
 			is_debug = yes
             has_country_flag = KIC_children_of_concord_flag
-			check_variable = { coc_start_foci_completed < 10 }
+			check_variable = { baccocc_start_foci_completed < 10 }
 		}
 		complete_effect = {
-			set_variable = { coc_start_foci_completed = 10 }
+			set_variable = { baccocc_start_foci_completed = 10 }
+			set_country_flag = BAC_get_commonalty_flag
             mark_focus_tree_layout_dirty = yes
 			complete_national_focus = BAC_COC_true_commonalty
 			every_possible_country = {
@@ -37,10 +38,10 @@ bac_coc_debug_cat = {
 		visible = {
 			is_debug = yes
             has_country_flag = KIC_children_of_concord_flag
-			check_variable = { coc_start_foci_completed > 3 }
+			check_variable = { baccocc_start_foci_completed > 3 }
 		}
 		complete_effect = {
-			set_variable = { coc_start_foci_completed = 0 }
+			set_variable = { baccocc_start_foci_completed = 0 }
             mark_focus_tree_layout_dirty = yes
 			complete_national_focus = BAC_COC_finale
 		}
@@ -397,12 +398,16 @@ commonalty_bop_category = {
         remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_wuxia"
 			add_stability = 0.03
-			add_tech_bonus = {
-				name = race_tech_bonus
-				bonus = 0.33
-				uses = 1
-				category = race_tech
+			if = {
+				limit = { bac_hasnt_researched_all_kirin_techs = yes }
+				add_tech_bonus = {
+					name = race_tech_bonus
+					bonus = 0.33
+					uses = 1
+					category = race_tech
+				}
 			}
+			else = { add_political_power = 33 }
 			every_core_state = {
 				population_increase_0_1 = yes
 			}
@@ -446,8 +451,8 @@ commonalty_bop_category = {
 				add_resistance = -9
 				add_compliance = 3
 			}
-			custom_effect_tooltip = KIR_line_break
-			bac_WPU_small_effect = yes
+			custom_effect_tooltip = comm_COT_pursuit_tt
+			#bac_WPU_small_effect = yes
         }
     }
 	
@@ -638,12 +643,16 @@ commonalty_bop_category = {
 		}
         remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_CES"
-			add_tech_bonus = {
-				name = race_tech_bonus
-				bonus = 1.0
-				uses = 1
-				category = race_tech
+			if = {
+				limit = { bac_hasnt_researched_all_kirin_techs = yes }
+				add_tech_bonus = {
+					name = race_tech_bonus
+					bonus = 1.0
+					uses = 1
+					category = race_tech
+				}
 			}
+			else = { add_political_power = 100 }
 			custom_effect_tooltip = KIR_line_break
 			bac_eqs_popularity = yes
             bac_COT_small_effect = yes
@@ -798,7 +807,7 @@ foreign_politics = {
 						any_country = {
 							OR = {
 								is_ally_with = FROM
-								is_subject_of = FROM
+								is_subject_of = FROM #in case they don't have faction
 							}
 							any_owned_state = {
 								is_coastal = yes
@@ -1004,7 +1013,6 @@ foreign_politics = {
 
 		target_trigger = {
 			FROM = {
-				#capital_scope = { is_on_continent = africa }
 				if = {
 					limit = {
 						ROOT = {
