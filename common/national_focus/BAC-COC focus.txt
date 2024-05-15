@@ -534,7 +534,7 @@ shared_focus = {
 		clamp_variable = { var = COC_power_struggle_DR_var min = 0 max = 7 }
 		clamp_variable = { var = COC_power_struggle_DR_Progress_Bar_var min = 1 max = 8 }
 		custom_effect_tooltip = COC_pretender_Y_tt
-		hidden_effect = {
+		hidden_effect = { #summons 6 peasant militia
 			random_owned_controlled_state = {
 				create_unit = { division = "name = \"First Peasants' Army Division 'Vermilion Dreams'\" division_template = \"Peasant Militia\" start_equipment_factor = 0.99 start_experience_factor = 0.3" owner = PREV allow_spawning_on_enemy_provs = no }
 			}
@@ -930,6 +930,7 @@ shared_focus = {
 
 	available = {
 		has_completed_focus = BAC_COC_kindling_X
+		has_completed_focus = BAC_COC_dayspring_1a
 		KIR_controls_all_kiria_proper = yes
 		KIS = {
 			NOT = {
@@ -1419,7 +1420,7 @@ shared_focus = { #교육위원회
 	}
 }
 
-shared_focus = { # Assertive Conversion # 적극적인 개종
+shared_focus = { # Assertive Conversion
 	id = BAC_COC_pol_h1
 	icon = GFX_goal_solar_care_for_weak
 	cost = 4.8
@@ -1438,17 +1439,20 @@ shared_focus = { # Assertive Conversion # 적극적인 개종
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h1"
-		bac_eqs_popularity = yes
-		#TODO 정치력 주는 대신 저항도 순응도 깎는
 		add_political_power = 33
 		add_stability = -0.033
+		every_core_state = {
+			remove_claim_by = KIC
+			remove_core_of = KIR
+		}
 		decrease_illiteracy = yes
+		bac_eqs_popularity = yes
 		bac_COT_small_effect = yes
 	}
 }
-shared_focus = { #Allow The Way of Fire 불의 길 공존
+shared_focus = { #Allow The Way of Fire
 	id = BAC_COC_pol_c1
-	icon = GFX_goal_KIR_chrysanthemum #GFX_goal_KIR_matriarch #GFX_goal_KIR_cooperation  #GFX_goal_KIR_chrysanthemum
+	icon = GFX_goal_KIR_chrysanthemum #GFX_goal_KIR_matriarch #GFX_goal_KIR_cooperation
 	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
