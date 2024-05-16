@@ -1356,7 +1356,7 @@ shared_focus = { # Land Investigation Program
 shared_focus = {
 	id = BAC_COC_true_commonalty
 	icon = GFX_goal_KIR_tristar
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_m1
 	x = 0
@@ -1391,7 +1391,7 @@ shared_focus = {
 	}
 }
 
-shared_focus = { #교육위원회 
+shared_focus = {
 	id = BAC_COC_pol_head
     icon = {
         trigger = { has_completed_focus = BAC_COC_pol_head }
@@ -1480,7 +1480,7 @@ shared_focus = { #Allow The Way of Fire
 shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 	id = BAC_COC_diplo
 	icon = GFX_goal_KIR_goal_government_icon
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
 	x = -4
@@ -1521,7 +1521,7 @@ shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
 shared_focus = { #자연과학
 	id = BAC_COC_modern_science
 	icon = GFX_goal_KIR_collegium_focus
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
 	x = -2
@@ -1550,7 +1550,7 @@ shared_focus = { #자연과학
 shared_focus = { # Research and Development Complex #복합연구개발단지
 	id = BAC_COC_applied_science
 	icon = GFX_goal_break_into_the_electronic_industry
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
 	x = -3
@@ -1757,7 +1757,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_pol_h3 
 	icon = GFX_goal_solar_harmony_in_order
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
 	x = 1
@@ -1811,7 +1811,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_pol_c3 
 	icon = GFX_goal_KIR_embrace
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
 	x = -1
@@ -1875,7 +1875,7 @@ shared_focus = {
 shared_focus = { #Century for Commonalty
 	id = BAC_COC_pol_m4
 	icon = GFX_goal_UESR_TNO_post_scarcity
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_pol_head
 	x = 0
@@ -1919,7 +1919,7 @@ shared_focus = { #Committee For Industry And Development
         value = GFX_goal_bac_kindling
     }
 	icon = GFX_goal_KIR_kiria_1007
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_m1
 	x = -6
@@ -1950,7 +1950,7 @@ shared_focus = { #Committee For Industry And Development
 shared_focus = { #Equestrian Model of Development
 	id = BAC_COC_eco_h1 #Equestrian Model of Development
 	icon = GFX_goal_solar_legion_of_labour
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = 1
@@ -1972,7 +1972,7 @@ shared_focus = { #Equestrian Model of Development
 shared_focus = { #Initiate Land Reform
 	id = BAC_COC_eco_c1
 	icon = GFX_goal_KIR_crumble #
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = -1
@@ -2002,7 +2002,7 @@ shared_focus = { #Initiate Land Reform
 shared_focus = { #New Campaign Town
 	id = BAC_COC_eco_m2
 	icon = GFX_goal_KIR_construction
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = 0
@@ -2080,7 +2080,7 @@ shared_focus = { # #Equestrian Ties
 		value = GFX_goal_solar_corporate_council
 	}
 	icon = GFX_goal_PLB_eqs_ties
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = 2
@@ -2178,7 +2178,7 @@ shared_focus = { # #Equestrian Ties
 shared_focus = { #QKdzz
 	id = BAC_COC_eco_c2
 	icon = GFX_goal_KIR_bread
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = -2
@@ -2211,7 +2211,7 @@ shared_focus = { #QKdzz
 shared_focus = {
 	id = BAC_COC_eco_m3h
 	icon = GFX_goal_KIR_barrels
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = 1
@@ -2265,7 +2265,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_eco_m3c
 	icon = GFX_goal_KIR_resources
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = -1
@@ -2322,7 +2322,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_eco_c3
 	icon = GFX_goal_HEL_anar_peasant
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = -3
@@ -2352,7 +2352,7 @@ shared_focus = { #Yet Another Accord
 		value = GFX_goal_solar_fair_but_just
 	}
 	icon = GFX_goal_EQS_TNO_equestria_saved #GFX_goal_UESR_TNO_sun_moon
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_eco_head
 	x = 3
@@ -2435,7 +2435,7 @@ shared_focus = { #Yet Another Accord
 # 		value = GFX_goal_CES_daybreaker
 # 	}
 # 	icon = GFX_goal_ces_approach_baltimare #GFX_goal_UESR_TNO_sun_moon
-# 	cost = 4.8
+# 	cost = 7
 # 	ai_will_do = { factor = 80 }
 # 	relative_position_id = BAC_COC_eco_head
 # 	x = 3
@@ -2752,7 +2752,7 @@ shared_focus = { #Military Affairs
         value = GFX_goal_bac_firethorn
     }
 	icon = GFX_goal_KIR_ranks
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_m1
 	x = 6
@@ -2802,7 +2802,7 @@ shared_focus = { #Military Affairs
 shared_focus = {
 	id = BAC_COC_mil_h1
 	icon = GFX_goal_KIR_kirins_rampant #GFX_goal_cry_eqs_hat
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = -1
@@ -2835,6 +2835,10 @@ shared_focus = {
 			}
 		}
 		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
 		bac_WPU_small_effect = yes
 	}
 }
@@ -2842,7 +2846,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_mil_c1
 	icon = GFX_goal_KIR_battle_rifle
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = 1
@@ -2871,6 +2875,10 @@ shared_focus = {
 			}
 		}
 		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
 		bac_COT_small_effect = yes
 	}
 }
@@ -2879,7 +2887,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_mil_m2
 	icon = GFX_HIP_chess #GFX_goal_KIR_sergeant
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = 0
@@ -2897,9 +2905,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m2"
 		army_experience = 33
-		every_unit_leader = {
-			add_planning = 1
-		}
 		add_to_variable = { BAC_PaPA_m2 = 0.09 }
 		effect_tooltip = {
 			swap_ideas = {
@@ -2907,12 +2912,15 @@ shared_focus = {
 				add_idea = BAC_PaPA_dummy_m2
 			}
 		}
+		every_unit_leader = {
+			add_planning = 1
+		}
 	}
 }
 shared_focus = { #BAC_COC_mil_h2
 	id = BAC_COC_mil_h2
 	icon = GFX_goal_KIR_cannon_helmet
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = -2
@@ -3003,13 +3011,17 @@ shared_focus = { #BAC_COC_mil_h2
 			show_ideas_tooltip = BAC_fillydelphia_arms
 		}
 		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
 		bac_WPU_small_effect = yes
 	}
 }
-shared_focus = { #
+shared_focus = {
 	id = BAC_COC_mil_c2
-	icon = GFX_goal_KIR_KIC_military
-	cost = 4.8
+	icon = GFX_goal_KIR_companion
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = 2
@@ -3028,8 +3040,18 @@ shared_focus = { #
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c2"
+		add_tech_bonus = {
+			name = BAC_COC_mil_c2
+			bonus = 0.33
+			uses = 1
+			category = hospital_tech
+		}
 
 		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
 		bac_COT_small_effect = yes
 	}
 }
@@ -3037,7 +3059,7 @@ shared_focus = { #
 shared_focus = { #Flying Commonkirin
 	id = BAC_COC_mil_air
 	icon = GFX_goal_KIR_flyby
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = -2
@@ -3092,7 +3114,7 @@ shared_focus = { #Flying Commonkirin
 shared_focus = { # Beyond The Riverine Navy
 	id = BAC_COC_mil_navy
 	icon = GFX_goal_KIR_junk_of_war
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = -4
@@ -3160,12 +3182,18 @@ shared_focus = { # Beyond The Riverine Navy
 			custom_effect_tooltip = available_designer_individual
 			show_ideas_tooltip = KIC_deer_comrade
 		}
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+		bac_WPU_medium_effect = yes
 	}
 }
 shared_focus = { #해군항공대
 	id = BAC_COC_mil_navalair
 	icon = GFX_goal_KIR_air
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = -3
@@ -3200,13 +3228,19 @@ shared_focus = { #해군항공대
 				category = naval_bomber
 			}
 		}
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+		bac_WPU_medium_effect = yes
 	}
 }
 
 shared_focus = { #spearhead thing
 	id = BAC_COC_mil_h3
 	icon = GFX_goal_KIR_flotilla
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = -3
@@ -3264,6 +3298,10 @@ shared_focus = { #spearhead thing
 			}
 		}
 		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
 		bac_WPU_medium_effect = yes
 	}
 }
@@ -3273,7 +3311,7 @@ shared_focus = { #spearhead thing
 shared_focus = { #heavy industry ig?
 	id = BAC_COC_mil_m3h
 	icon = GFX_goal_KIR_factory
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = -1
@@ -3290,13 +3328,23 @@ shared_focus = { #heavy industry ig?
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m3h"
+		swap_ideas = {
+			remove_idea = BAC_COC_eco_h1_idea
+			add_idea = BAC_COC_eco_h1_upgraded_idea
+		}
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+		bac_WPU_small_effect = yes
 	}
 }
 
 shared_focus = {
 	id = BAC_COC_mil_m3c
 	icon = GFX_goal_KIR_KIC_military
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = 1
@@ -3318,8 +3366,8 @@ shared_focus = {
 
 shared_focus = { # cannon
 	id = BAC_COC_mil_c3
-	icon = GFX_goal_HEL_anar_cannon
-	cost = 4.8
+	icon = GFX_goal_KIR_rocketeer
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = 3
@@ -3339,6 +3387,10 @@ shared_focus = { # cannon
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c3"
 		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
 		bac_COT_medium_effect = yes
 	}
 }
@@ -3349,7 +3401,7 @@ shared_focus = { #BAC_COC_mil_h4
 		value = GFX_goal_SOL_batnation
 	}
 	icon = GFX_PLB_HY_CELESTIA
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = -4
@@ -3369,13 +3421,17 @@ shared_focus = { #BAC_COC_mil_h4
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h4"
 		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
 		bac_WPU_large_effect = yes
 	}
 }
 shared_focus = {
 	id = BAC_COC_mil_m4h
 	icon = GFX_goal_KIR_panzer
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = -2
@@ -3401,7 +3457,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_mil_m4m
 	icon = GFX_goal_KIR_pointing_hoof
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = 0
@@ -3423,8 +3479,8 @@ shared_focus = {
 
 shared_focus = {
 	id = BAC_COC_mil_m4c
-	icon = GFX_goal_KIR_rocketeer
-	cost = 4.8
+	icon = GFX_goal_KIR_deaths_head
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = 2
@@ -3437,6 +3493,8 @@ shared_focus = {
 		focus = BAC_COC_mil_c3
 	}
 	available = {
+		NOT = { has_offensive_war = yes }
+		has_completed_focus = BAC_COC_kindling_4a
 		power_balance_value = {
 			id = BAC_commonalty_bop
 			value < -0.099
@@ -3444,13 +3502,31 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m4c"
+		set_variable = {
+			BAC_PaPA_c4 = 0.3
+		}
+		custom_effect_tooltip = COC_event_318_a_tt
+		add_to_variable = { GuerillaOrgDmgVar = 60 }
+		add_to_variable = { GuerillaStrDmgVar = 100 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_PaPA_dummy
+				add_idea = BAC_PaPA_dummy_c4
+			}
+		}
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
+		bac_COT_small_effect = yes
 	}
 }
 
 shared_focus = {
 	id = BAC_COC_mil_c4
-	icon = GFX_goal_KIR_deaths_head
-	cost = 4.8
+	icon = GFX_goal_magical_nukes
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
 	x = 4
@@ -3462,7 +3538,6 @@ shared_focus = {
 		focus = BAC_COC_mil_c3
 	}
 	available = {
-		has_defensive_war = yes 
 		power_balance_value = {
 			id = BAC_commonalty_bop
 			value < -0.33
@@ -3470,16 +3545,11 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c4"
-		set_variable = {
-			BAC_PaPA_c4 = 0.3
-		}
-		effect_tooltip = {
-			swap_ideas = {
-				remove_idea = BAC_PaPA_dummy
-				add_idea = BAC_PaPA_dummy_c4
-			}
-		}
 		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
 		bac_COT_large_effect = yes
 	}
 }
@@ -3530,7 +3600,7 @@ shared_focus = {
 
 
 shared_focus = { #March to Old Marches
-	id = BAC_COC_war_zaikiria #우월주의 아닌 기린 국가들한테는 이벤트로 괴뢰화하기
+	id = BAC_COC_war_zaikiria
 	icon = GFX_goal_chn_kirin
 	cost = 4.8
 	ai_will_do = { factor = 80 }
@@ -3868,7 +3938,6 @@ shared_focus = {
 				}
 			}
 		}
-		has_war = no
 	}
 	will_lead_to_war_with = GAZ
 	select_effect = {
@@ -3906,7 +3975,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_friend_zaikiria
 	icon = GFX_goal_golden_lotus
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_war_zaikiria
 	x = 1
@@ -3930,7 +3999,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_convert_zaikiria
 	icon = GFX_goal_rose_lotus
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_war_zaikiria
 	x = -1
@@ -3953,7 +4022,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_friend_taungpau
 	icon = GFX_goal_KIR_foals_breath
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_war_taungpau
 	x = 1
@@ -3977,7 +4046,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_convert_taungpau
 	icon = GFX_goal_solar_church
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_war_taungpau
 	x = -1
@@ -4000,7 +4069,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_friend_barbarian
 	icon = GFX_goal_KIR_zebra #GFX_goal_UESR_TNO_justice #GFX_goal_AF24_through_the_clearings
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_war_barbarian
 	x = 1
@@ -4024,7 +4093,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_convert_barbarian
 	icon = GFX_goal_solar_cult
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_war_barbarian
 	x = -1
@@ -4047,7 +4116,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_friend_deer
 	icon = GFX_goal_KIR_deer
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_war_deer
 	x = 1
@@ -4071,7 +4140,7 @@ shared_focus = {
 shared_focus = {
 	id = BAC_COC_convert_deer
 	icon = GFX_goal_CTL_A_deerm
-	cost = 4.8
+	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_war_deer
 	x = -1
@@ -4088,6 +4157,7 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_deer"
+		#if you have faction member, get joint research ig
 		set_country_flag = commonalty_solved_deer
 	}
 }

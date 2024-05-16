@@ -130,6 +130,23 @@ ideas = {
 				stability_weekly = -0.001
 			}
 		}
+		BAC_COC_eco_h1_upgraded_idea = {
+			name = BAC_COC_mil_m3h
+			picture = EQS_ponies_act
+			allowed = {
+				original_tag = KIC
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				local_building_slots_factor = 0.09
+				production_speed_buildings_factor = 0.09
+				production_speed_arms_factory_factor = 0.09
+			}
+		}
 		BAC_COC_eco_c3_idea = {
 			name = COC_finale
 			picture = KIR_nirik_state

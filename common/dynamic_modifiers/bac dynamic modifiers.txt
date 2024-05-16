@@ -46,7 +46,7 @@ BAC_PaPA = {
 	special_forces_attack_factor = BAC_PaPA_h1
 
 	max_planning = BAC_PaPA_m2
-
+	conscription = BAC_PaPA_m3c
 	army_morale_factor = BAC_PaPA_c4
 	army_core_attack_factor= BAC_PaPA_c4
 	army_core_defence_factor = BAC_PaPA_c4
