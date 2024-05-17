@@ -144,7 +144,7 @@ music = {
   chance = {
     base = 0
     modifier = { 
-      add = 3 
+      add = 2 
       has_country_flag = commonalty_ending_flag
     }
     modifier = { 

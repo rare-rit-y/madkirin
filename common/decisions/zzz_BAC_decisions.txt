@@ -718,6 +718,39 @@ commonalty_bop_category = {
             bac_WPU_small_effect = yes
         }
     }
+	comm_COT_NH = { #Empower Trinitarian Collective
+        icon = GFX_decision_kirin_corvee
+		allowed = { original_tag = KIC }
+		cost = 33
+        available = {
+			has_completed_focus = BAC_COC_eco_h1
+			num_of_civilian_factories_available_for_projects > 2
+        }
+        days_remove = 99
+		days_re_enable = 180
+		modifier = {
+			civilian_factory_use = 3
+			production_speed_buildings_factor = 0.09
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: take Decision comm_COT_NH"
+            bac_COT_small_effect = yes
+		}
+        remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_NH"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.33
+				uses = 1
+				category = industry
+			}
+			every_core_state = {
+				population_increase_0_1 = yes
+			}
+			custom_effect_tooltip = KIR_line_break
+            bac_COT_small_effect = yes
+        }
+    }
 	comm_WPU_NH = { #Support Local Collective
         icon = GFX_decision_kirin_corvee
 		allowed = { original_tag = KIC }
@@ -727,9 +760,10 @@ commonalty_bop_category = {
 			num_of_civilian_factories_available_for_projects > 2
         }
         days_remove = 99
-		days_re_enable = 365
+		days_re_enable = 180
 		modifier = {
 			civilian_factory_use = 3
+			production_speed_buildings_factor = 0.09
 		}
         complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: take Decision comm_WPU_NH"

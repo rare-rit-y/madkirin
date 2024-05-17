@@ -70,4 +70,11 @@ spriteTypes = {
 		name = "GFX_TNO_BAC_CountryClosing_picture_generic"
 		texturefile = "gfx/interface/country_closing_screen/picture/BACgeneric.png"
 	}
+	###############
+	# / BAC - COC / #
+	###############
+	spriteType = {
+		name = "BAC_CountryClosing_picture_KIR_commonalty"
+		texturefile = "gfx/interface/country_closing_screen/picture/BACcommonalty.png"
+	}
 }

@@ -3825,14 +3825,17 @@ shared_focus = { #March to Old Marches
 		}
 	}
 	bypass = {
-		all_other_country = {
-			OR = {
-				tag = KXN
-				tag = NVA
-				tag = KHM
-			}
-			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
-		}
+		# all_other_country = {
+		# 	OR = {
+		# 		tag = KXN
+		# 		tag = NVA
+		# 		tag = KHM
+		# 	}
+		# 	bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		# }
+		KXN = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		NVA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		KHM = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
 	}
 	will_lead_to_war_with = KXN
 	will_lead_to_war_with = NVA
@@ -3968,16 +3971,21 @@ shared_focus = { #Attack on barbarian lands
 		clr_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 	bypass = {
-		all_other_country = {
-			OR = {
-				tag = ROA
-				tag = TSV
-				tag = GFS
-				tag = ZLU
-				tag = ZOO
-			}
-			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
-		}
+		# all_other_country = {
+		# 	OR = {
+		# 		tag = ROA
+		# 		tag = TSV
+		# 		tag = GFS
+		# 		tag = ZLU
+		# 		tag = ZOO
+		# 	}
+		# 	bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		# }
+		ROA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		TSV = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		GFS = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		ZLU = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		ZOO = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_barbarian"
@@ -4046,15 +4054,19 @@ shared_focus = {
 		has_global_flag = HIN_wars_over
 	}
 	bypass = {
-		all_other_country = {
-			OR = {
-				tag = BRS
-				tag = SAM
-				tag = HIN
-				tag = CTL
-			}
-			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
-		}
+		# all_other_country = {
+		# 	OR = {
+		# 		tag = BRS
+		# 		tag = SAM
+		# 		tag = HIN
+		# 		tag = CTL
+		# 	}
+		# 	bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		# }
+		BRS = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		SAM = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		HIN = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		CTL = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
 	}
 	will_lead_to_war_with = BRS
 	will_lead_to_war_with = SAM
@@ -4293,7 +4305,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_zaikiria"
 		add_political_power = -99
 		set_country_flag = commonalty_solved_zaikiria
-		every_other_country = {
+		every_possible_country = {
 			limit = {
 				OR = {
 					tag = KXN
@@ -4420,7 +4432,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_barbarian"
 		set_country_flag = commonalty_solved_barbarian
 		add_political_power = -99
-		every_other_country = {
+		every_possible_country = {
 			limit = {
 				OR = {
 					tag = ROA
@@ -4493,7 +4505,7 @@ shared_focus = {
 		set_country_flag = commonalty_solved_barbarian
 		add_political_power = -300
 		add_stability = -0.49
-		every_other_country = {
+		every_possible_country = {
 			limit = {
 				OR = {
 					tag = ROA
@@ -4547,7 +4559,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_deer"
 		set_country_flag = commonalty_solved_deer
 		add_political_power = -99
-		every_other_country = {
+		every_possible_country = {
 			limit = {
 				OR = {
 					tag = BRS
@@ -4616,7 +4628,7 @@ shared_focus = {
 		set_country_flag = commonalty_solved_deer
 		add_political_power = -300
 		add_stability = -0.49
-		every_other_country = {
+		every_possible_country = {
 			limit = {
 				OR = {
 					tag = BRS

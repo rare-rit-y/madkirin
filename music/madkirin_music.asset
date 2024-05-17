@@ -35,7 +35,7 @@ music = {
 music = {
     name = "KandariaDomain"
     file = "KandariaDomain.ogg"
-    volume = 0.9
+    volume = 1
 }
 music = {
     name = "Redspark-The_Way_Of_Fire_BAC"

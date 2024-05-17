@@ -8,10 +8,13 @@ country_event = {
 	immediate = {log = "[GetDateText]: [Root.GetName]: event bacutility.1"}
 	hidden = yes
 	is_triggered_only = yes
+	trigger = { is_in_faction = no }
 	option = {
 		create_faction = BAC_commonalty_faction
 		if = {
-			limit = { has_country_flag = BAC_COC_alliance_member }
+			limit = {
+				has_country_flag = BAC_COC_alliance_member
+			}
 			every_other_country = {
 				limit = {
 					OR = {
@@ -186,7 +189,7 @@ unit_leader_event = { #A Militarykirin in the Committee
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.2"}
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #I cannot continue like this. #계속 이러고 있을 수는 없겠어.
+	option = { #I cannot continue like this.
 		name = baccocc.2.a
 		THIS = {
 			add_unit_leader_trait = trait_SOV_determined
@@ -275,7 +278,7 @@ country_event = { # baccocc.5 - Which Law Should We Use?
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.5"}
 	is_triggered_only = yes
 	fire_only_once = yes
-	option = { #이퀘스트리아 헌법을 이식하는 것이 최선의 방법이다. # 
+	option = {
 		name = baccocc.5.a
 		EAW_raise_trade_law = yes
 		bac_WPU_small_effect = yes
