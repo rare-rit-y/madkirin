@@ -16,72 +16,75 @@
 bac_all_original_cores_controlled_by_ROOT_or_ally = {
 	custom_trigger_tooltip = {
 		tooltip = bac_controlls_all_cores_original_ally_tt
-		hidden_trigger = {
-			all_of_scopes = {
-				array = original_cores
-				controller = {
-					OR = {
-						tag = ROOT
-						is_in_faction_with = ROOT
-					}
+		all_of_scopes = {
+			array = original_cores
+			controller = {
+				OR = {
+					tag = ROOT
+					is_in_faction_with = ROOT
 				}
 			}
 		}
 	}
 }
 
-# bac_has_researched_all_kirin_techs = {
-# 	has_tech = tech_kirin_vanguard6
-# 	has_tech = tech_kirin_brave6
-# 	has_tech = tech_kirin_military1a
-# 	has_tech = tech_kirin_military4c
-# 	has_tech = tech_kirin_military4
-# 	has_tech = tech_kirin_numerology5
-# 	has_tech = tech_kirin_geomancy3a
-# 	has_tech = tech_kirin_geomancy3b
-# 	has_tech = tech_kirin_astrology3
-# 	OR = {
-# 		has_tech = tech_kirin_military3a
-# 		has_tech = tech_kirin_military3b
-# 	}
-# 	OR = {
-# 		has_tech = tech_kirin_nirik1a
-# 		has_tech = tech_kirin_nirik1b
-# 	}
-# 	OR = {
-# 		has_tech = tech_kirin_nirik2a
-# 		has_tech = tech_kirin_nirik2b
-# 	}
-# }
-
-bac_hasnt_researched_all_kirin_techs = {
+bac_has_researched_all_kirin_techs = {
 	custom_trigger_tooltip = {
-		tooltip = bac_hasnt_researched_all_kirin_techs_tt
-		NOT = {
-			has_tech = tech_kirin_vanguard6
-			has_tech = tech_kirin_brave6
-			has_tech = tech_kirin_military1a
-			has_tech = tech_kirin_military4c
-			has_tech = tech_kirin_military4
-			has_tech = tech_kirin_numerology5
-			has_tech = tech_kirin_geomancy3a
-			has_tech = tech_kirin_geomancy3b
-			has_tech = tech_kirin_astrology3
-			OR = {
-				has_tech = tech_kirin_military3a
-				has_tech = tech_kirin_military3b
-			}
-			OR = {
-				has_tech = tech_kirin_nirik1a
-				has_tech = tech_kirin_nirik1b
-			}
-			OR = {
-				has_tech = tech_kirin_nirik2a
-				has_tech = tech_kirin_nirik2b
-			}
+		tooltip = bac_has_researched_all_kirin_techs_tt
+		has_tech = tech_kirin_vanguard6
+		has_tech = tech_kirin_brave6
+		has_tech = tech_kirin_military1a
+		has_tech = tech_kirin_military4c
+		has_tech = tech_kirin_military4
+		has_tech = tech_kirin_numerology5
+		has_tech = tech_kirin_geomancy3a
+		has_tech = tech_kirin_geomancy3b
+		has_tech = tech_kirin_astrology3
+		OR = {
+			has_tech = tech_kirin_military3a
+			has_tech = tech_kirin_military3b
+		}
+		OR = {
+			has_tech = tech_kirin_nirik1a
+			has_tech = tech_kirin_nirik2a
+		}
+		OR = {
+			has_tech = tech_kirin_nirik1b
+			has_tech = tech_kirin_nirik2b
 		}
 	}
 }
+
+# bac_hasnt_researched_all_kirin_techs = {
+# 	custom_trigger_tooltip = {
+# 		tooltip = bac_hasnt_researched_all_kirin_techs_tt
+# 		ROOT = {
+# 			NOT = {
+# 				has_tech = tech_kirin_vanguard6
+# 				has_tech = tech_kirin_brave6
+# 				has_tech = tech_kirin_military1a
+# 				has_tech = tech_kirin_military4c
+# 				has_tech = tech_kirin_military4
+# 				has_tech = tech_kirin_numerology5
+# 				has_tech = tech_kirin_geomancy3a
+# 				has_tech = tech_kirin_geomancy3b
+# 				has_tech = tech_kirin_astrology3
+# 				OR = {
+# 					has_tech = tech_kirin_military3a
+# 					has_tech = tech_kirin_military3b
+# 				}
+# 				OR = {
+# 					has_tech = tech_kirin_nirik1a
+# 					has_tech = tech_kirin_nirik2a
+# 				}
+# 				OR = {
+# 					has_tech = tech_kirin_nirik2b
+# 					has_tech = tech_kirin_nirik1b
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 is_in_coalition_with_dem = {
 	set_temp_variable = { coalition_target = token:democratic }

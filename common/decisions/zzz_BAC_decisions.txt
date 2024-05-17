@@ -163,8 +163,11 @@ economy_decisions = { #Economic Policy
 				has_country_flag = BAC_COC_eco_m4m_flag
 			}
 			FROM = {
-				any_neighbor_state = {
-					has_dynamic_modifier = { modifier = BAC_its_electric_state }
+				OR = {
+					any_neighbor_state = {
+						has_dynamic_modifier = { modifier = BAC_its_electric_state }
+					}
+					is_coastal = yes
 				}
 				NOT = { has_dynamic_modifier = { modifier = BAC_its_electric_state } }
 			}
@@ -205,8 +208,106 @@ economy_decisions = { #Economic Policy
 		}
 	}
 }
-political_actions = {
+# political_actions = {
 
+
+# 	BAC_military_aid_to_civil = {
+# 		icon = GFX_decision_generic_army_support
+# 		available = {
+# 			has_war = no
+# 			if = {
+# 				limit = { tag = EQC }
+# 				NOT = {
+# 					has_country_flag = is_maresoc
+#                 }
+#             }
+#             if = {
+# 			  limit = {
+# 				   original_tag = BAK
+# 				}
+# 				NOT = {
+# 				   has_idea = BAK_elections
+# 				}
+# 			}
+# 			if = {
+# 				limit = {
+# 					tag = WIN
+# 				}
+# 				NOT = {
+# 					has_idea = WIN_chaos_in_the_city
+# 				}
+# 			}
+# 		}
+
+# 		visible = {
+# 			always = yes
+# 			OR = {
+# 			    if = {
+# 			        limit = { original_tag = TRD }
+# 			        has_government = communism
+# 				}
+# 				if = {
+# 			        limit = { original_tag = TRD }
+# 			        has_government = fascism
+# 				}
+# 			    if = {
+# 			        limit = { original_tag = TRD }
+# 					AND = {
+# 			            has_government = democratic
+# 				        has_completed_focus = TRD_altesburg
+# 					}
+# 				}
+# 			}
+# 			if = {
+# 				limit = { original_tag = BAL }
+# 				NOT = { is_subject_of = CHN }
+# 			}
+# 		}
+
+# 		fire_only_once = no
+
+# 		modifier = {
+# 			stability_weekly = 0.001
+# 			command_power_gain = -0.1
+# 			training_time_army_factor = -0.1
+# 			planning_speed = -0.1
+# 			experience_gain_army_factor = -0.1
+# 		}
+
+# 		days_remove = 180
+# 		days_re_enable = 540
+
+# 		cost = 100
+
+# 		complete_effect = {
+# 			log = "[GetDateText]: [Root.GetName]: Decision BAC_military_aid_to_civil"
+
+# 		}
+
+# 		ai_will_do = {
+# 			base = 0
+# 			modifier = {
+# 				add = 1
+# 				has_stability < 0.8
+# 			}
+# 			modifier = {
+# 				add = 1
+# 				has_stability < 0.6
+# 			}
+# 			modifier = {
+# 				add = 5
+# 				has_stability < 0.5
+# 			}
+# 			modifier = {
+# 				add = 10
+# 				has_stability < 0.3
+# 			}
+# 		}
+# 	}
+# }
+
+
+operations = {
 	BAC_remove_autonomy_state = {
 		icon = kirin_scroll
 		allowed = {
@@ -218,15 +319,15 @@ political_actions = {
 				has_dynamic_modifier = { modifier = BAC_autonomy_state }
 				any_neighbor_state = {
 					NOT = { has_dynamic_modifier = { modifier = BAC_autonomy_state } }
+					is_core_of = ROOT
 				}
 				is_core_of = ROOT
 			}
 		}
 		available = {
-			num_of_civilian_factories_available_for_projects > 8
 		}
 
-		state_target = any_controlled_state
+		state_target = any_owned_state
 		target_array = owned_controlled_states
 		on_map_mode = map_only
 
@@ -238,10 +339,10 @@ political_actions = {
 		}
 
 		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAC_cocc_dance_magic_and_its_electric target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision BAC_remove_autonomy_state target: [From.GetName]"
 		}
 		remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision remove BAC_cocc_dance_magic_and_its_electric target: [From.GetName]"
+			log = "[GetDateText]: [Root.GetName]: Decision remove BAC_remove_autonomy_state target: [From.GetName]"
 			FROM = {
 				remove_dynamic_modifier = { modifier = BAC_autonomy_state }
 			}
@@ -257,581 +358,7 @@ political_actions = {
 			}
 		}
 	}
-
-	BAC_military_aid_to_civil = {
-		icon = GFX_decision_generic_army_support
-		available = {
-			has_war = no
-			if = {
-				limit = { tag = EQC }
-				NOT = {
-					has_country_flag = is_maresoc
-                }
-            }
-            if = {
-			  limit = {
-				   original_tag = BAK
-				}
-				NOT = {
-				   has_idea = BAK_elections
-				}
-			}
-			if = {
-				limit = {
-					tag = WIN
-				}
-				NOT = {
-					has_idea = WIN_chaos_in_the_city
-				}
-			}
-		}
-
-		visible = {
-			always = yes
-			OR = {
-			    if = {
-			        limit = { original_tag = TRD }
-			        has_government = communism
-				}
-				if = {
-			        limit = { original_tag = TRD }
-			        has_government = fascism
-				}
-			    if = {
-			        limit = { original_tag = TRD }
-					AND = {
-			            has_government = democratic
-				        has_completed_focus = TRD_altesburg
-					}
-				}
-			}
-			if = {
-				limit = { original_tag = BAL }
-				NOT = { is_subject_of = CHN }
-			}
-		}
-
-		fire_only_once = no
-
-		modifier = {
-			stability_weekly = 0.001
-			command_power_gain = -0.1
-			training_time_army_factor = -0.1
-			planning_speed = -0.1
-			experience_gain_army_factor = -0.1
-		}
-
-		days_remove = 180
-		days_re_enable = 540
-
-		cost = 100
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision BAC_military_aid_to_civil"
-
-		}
-
-		ai_will_do = {
-			base = 0
-			modifier = {
-				add = 1
-				has_stability < 0.8
-			}
-			modifier = {
-				add = 1
-				has_stability < 0.6
-			}
-			modifier = {
-				add = 5
-				has_stability < 0.5
-			}
-			modifier = {
-				add = 10
-				has_stability < 0.3
-			}
-		}
-	}
-}
-
-
-#operations = {
-	# BAC_kill_pirates = {
-	# 	icon = GFX_decision_generic_army_support
-	# 	available = {
-	# 		has_completed_focus = BAC_COC_mil_navy
-	# 		if = {
-	# 			limit = {
-	# 				is_ai = no
-	# 			}
-	# 			custom_trigger_tooltip = {
-	# 				tooltip = KIR_focus_10b_ship_tt
-	# 				ships_in_state_ports = {
-	# 					size > 0
-	# 					state = 833
-	# 				}
-	# 			}
-	# 		}
-	# 	}
-	# 	visible = {
-	# 		has_country_flag = BAC_get_commonalty_flag
-	# 	}
-	
-	# 	ai_will_do = {
-	# 		factor = 50
-	# 	}
-	# 	complete_effect = {
-	# 		log = "[GetDateText]: [Root.GetName]: decision BAC_kill_pirates"
-	# 		add_stability = 0.05
-	# 		add_war_support = 0.1
-	# 	}
-	# }
-#}
-#military_training_category = {
-#}
-
-commonalty_bop_category = {
-    comm_WPU_1 = {
-        icon = GFX_decision_category_viirats
-		allowed = { original_tag = KIC } 
-		cost = 33
-        visible = {
-        }
-        available = {
-        }
-        days_remove = 33
-		days_re_enable = 180
-		modifier = {
-            power_balance_weekly = -0.033
-			political_power_factor = -0.3
-		}
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision comm_WPU_1"
-            bac_WPU_small_effect = yes
-		}
-        remove_effect = {
-        }
-    }
-    comm_COT_1 = {
-        icon = GFX_decision_candle
-		allowed = { original_tag = KIC }
-		cost = 33
-        visible = {
-        }
-        available = {
-        }
-        days_remove = 33
-		days_re_enable = 180
-		modifier = {
-            power_balance_weekly = 0.033
-			political_power_factor = -0.3
-		}
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision comm_COT_1"
-            bac_COT_small_effect = yes
-		}
-        remove_effect = {
-        }
-    }
-	comm_COT_wuxia = {
-        icon = GFX_decision_kirin_vanguard
-		allowed = { original_tag = KIC }
-		cost = 33
-        available = {
-			has_completed_focus = BAC_COC_pol_head
-        }
-        days_remove = 99
-		days_re_enable = 180
-		modifier = {
-			stability_factor = 0.03
-		}
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: take Decision comm_COT_wuxia"
-		}
-        remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_wuxia"
-			add_stability = 0.03
-			if = {
-				limit = { bac_hasnt_researched_all_kirin_techs = yes }
-				add_tech_bonus = {
-					name = race_tech_bonus
-					bonus = 0.33
-					uses = 1
-					category = race_tech
-				}
-			}
-			else = { add_political_power = 33 }
-			every_core_state = {
-				population_increase_0_1 = yes
-			}
-			custom_effect_tooltip = KIR_line_break
-			bac_COT_small_effect = yes
-        }
-	}
-
-
-	comm_COT_pursuit = { #Pursuit The Heathen Remnant
-        icon = GFX_decision_fire
-		allowed = { original_tag = KIC }
-		cost = 100
-        visible = {
-			has_completed_focus = BAC_COC_pol_h1
-        }
-        available = {
-			any_controlled_state = {
-				has_resistance = yes
-			}
-        }
-        days_remove = 99
-		days_re_enable = 180
-		modifier = {
-			command_power_gain = -0.3
-		}
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: take Decision comm_COT_pursuit"
-		}
-        remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_pursuit"
-			add_popularity = {
-				ideology = democratic
-				popularity = -0.033
-			}
-			every_controlled_state = {
-				limit = { has_resistance = yes }
-				add_extra_state_shared_building_slots = 1
-				random_select_amount = 3
-				population_reduction_1 = yes
-				add_resistance = -9
-				add_compliance = 3
-			}
-			custom_effect_tooltip = comm_COT_pursuit_tt
-			#bac_WPU_small_effect = yes
-        }
-    }
-	
-	comm_WPU_WOF = { #Religious Interchange Programme
-        icon = kirin_scroll
-		allowed = { original_tag = KIC }
-		cost = 100
-        visible = {
-			NOT = { has_completed_focus = BAC_COC_pol_h1 }
-        }
-        available = {
-			has_completed_focus = BAC_COC_pol_c2
-        }
-        days_remove = 99
-		days_re_enable = 180
-		modifier = {
-			political_power_factor = -0.3
-		}
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: take Decision comm_WPU_WOF"
-		}
-        remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: remove Decision comm_WPU_WOF"
-			add_popularity = {
-				ideology = communism
-				popularity = 0.03
-			}
-			every_controlled_state = {
-				limit = { has_resistance = yes }
-				add_extra_state_shared_building_slots = 1
-				random_select_amount = 3
-				add_compliance = 3
-			}
-			custom_effect_tooltip = KIR_line_break
-            bac_WPU_small_effect = yes
-        }
-    }
-
-	comm_WPU_rural = { #Redistribution Programme
-        icon = GFX_decision_straw_hat
-		allowed = { original_tag = KIC }
-		cost = 33
-        visible = {
-        }
-        available = {
-			has_completed_focus = BAC_COC_eco_head
-        }
-        days_remove = 33
-		days_re_enable = 99
-		modifier = {
-			consumer_goods_factor = 0.3
-		}
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: take Decision comm_WPU_rural"
-		}
-        remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: remove Decision comm_WPU_rural"
-			add_stability = 0.03
-			add_popularity = {
-				ideology = communism
-				popularity = 0.03
-			}
-			every_core_state = {
-				population_increase_0_1 = yes
-			}
-			custom_effect_tooltip = KIR_line_break
-            bac_WPU_small_effect = yes
-        }
-    }
-	comm_WPU_NH = { #Support Local Collective
-        icon = GFX_decision_kirin_corvee
-		allowed = { original_tag = KIC }
-		cost = 33
-        available = {
-			has_idea = BAC_COC_eco_h1_idea
-			num_of_civilian_factories_available_for_projects > 2
-        }
-        days_remove = 99
-		days_re_enable = 365
-		modifier = {
-			civilian_factory_use = 3
-		}
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: take Decision comm_WPU_NH"
-		}
-        remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: remove Decision comm_WPU_NH"
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.33
-				uses = 1
-				category = industry
-			}
-			every_core_state = {
-				population_increase_0_1 = yes
-			}
-			custom_effect_tooltip = KIR_line_break
-			bac_eqs_popularity = yes
-            bac_COT_small_effect = yes
-        }
-    }
-
-
-	comm_WPU_commiebro = { #Seek Solidarity With International Socialists
-        icon = GFX_decision_hammer_and_horseshoe_decision
-		allowed = { original_tag = KIC }
-		cost = 100
-        visible = {
-        }
-        available = {
-			has_completed_focus = BAC_COC_diplo
-			any_other_country = {
-				exists = yes
-				has_government = communism
-				is_major = yes
-				is_subject = no
-				has_opinion_modifier = commonalty_embassy
-				NOT = {
-					has_war_with = ROOT
-				}
-				surrender_progress < 0.1
-				if = {
-					limit = {
-						ROOT = { is_ai = no }
-					}
-					has_opinion = { target = ROOT value > 99 }
-				}
-			}
-        }
-        days_remove = 99
-		days_re_enable = 365
-		modifier = {
-			political_power_factor = -0.3
-		}
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: take Decision comm_WPU_commiebro"
-		}
-        remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: remove Decision comm_WPU_commiebro"
-			add_offsite_building = {
-				type = industrial_complex
-				level = 1
-			}
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.33
-				uses = 1
-				category = industry
-			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.03
-			}
-			custom_effect_tooltip = KIR_line_break
-            bac_WPU_medium_effect = yes
-        }
-    }
-
-	comm_COT_CES = { #Welcome Missionaries From The Lodge
-        icon = GFX_decision_celestia
-		allowed = { original_tag = KIC }
-		cost = 33
-        available = {
-			if = {
-				limit = { country_exists = CES }
-				CES = {
-					NOT = {
-						has_war_with = ROOT
-					}
-					surrender_progress < 0.1
-					if = {
-						limit = {
-							ROOT = { is_ai = no }
-						}
-						has_opinion = { target = ROOT value > 99 }
-					}
-				}
-			}
-			else_if = {
-				limit = { country_exists = event_target:solar_empire }
-				event_target:solar_empire = {
-					NOT = {
-						has_war_with = ROOT
-					}
-					surrender_progress < 0.1
-					if = {
-						limit = {
-							ROOT = { is_ai = no }
-						}
-						has_opinion = { target = ROOT value > 99 }
-					}
-				}
-			}
-			else = {
-				event_target:equestria = {
-					exists = yes
-					NOT = {
-						has_war_with = ROOT
-					}
-					surrender_progress < 0.1
-					if = {
-						limit = {
-							ROOT = { is_ai = no }
-						}
-						has_opinion = { target = ROOT value > 99 }
-					}
-				}
-			}
-			num_of_civilian_factories_available_for_projects > 2
-        }
-        days_remove = 99
-		days_re_enable = 365
-		modifier = {
-			political_power_factor = -0.3
-			civilian_factory_use = 3
-		}
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: take Decision comm_COT_CES"
-		}
-        remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_CES"
-			if = {
-				limit = { bac_hasnt_researched_all_kirin_techs = yes }
-				add_tech_bonus = {
-					name = race_tech_bonus
-					bonus = 1.0
-					uses = 1
-					category = race_tech
-				}
-			}
-			else = { add_political_power = 100 }
-			custom_effect_tooltip = KIR_line_break
-			bac_eqs_popularity = yes
-            bac_COT_small_effect = yes
-        }
-    }
-
-
-
-
-
-
-    comm_COT_civ = { #Equestrian Economic Aid
-        icon = GFX_decision_generic_factory
-		allowed = { original_tag = KIC }
-		cost = 100
-        visible = {
-        }
-        available = {
-			event_target:equestria = {
-				exists = yes
-				is_subject = no
-				has_opinion_modifier = commonalty_embassy
-				NOT = {
-					has_war_with = ROOT
-				}
-				surrender_progress < 0.1
-				if = {
-					limit = {
-						ROOT = { is_ai = no }
-					}
-					has_opinion = { target = ROOT value > 99 }
-				}
-			}
-        }
-        days_remove = 99
-		days_re_enable = 365
-		modifier = {
-			political_power_factor = -0.3
-		}
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: take Decision comm_COT_civ"
-		}
-        remove_effect = {
-			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_civ"
-			add_offsite_building = {
-				type = industrial_complex
-				level = 1
-			}
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 0.33
-				uses = 1
-				category = industry
-			}
-			custom_effect_tooltip = KIR_line_break
-			bac_eqs_popularity = yes
-            bac_COT_medium_effect = yes
-        }
-    }
-
-}
-
-
-foreign_politics = {
-	bac_funni_red_button = {
-		icon = GFX_decision_fire
-		allowed = {
-			original_tag = KIC
-		}
-		ai_will_do = {
-			factor = 25
-		}
-
-		visible = {
-			has_country_flag = commonalty_ending_flag
-		}
-		cost = 303
-
-        complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision bac_funni_red_button"
-            every_other_country = {
-				limit = {
-					has_government = neutrality
-					has_government = fascism
-					NOT = { is_in_faction_with = ROOT }
-				}
-				ROOT = {
-					declare_war_on = {
-						target = PREV
-						type = annex_everything
-					}
-				}
-			}
-		}
-	}
-	BAC_COC_embassy = {
+ 	BAC_COC_embassy = {
 		icon = SOV_place_hq
 		allowed = {
 			original_tag = KIC
@@ -965,7 +492,493 @@ foreign_politics = {
 			}
 		}
 	}
+	# BAC_kill_pirates = {
+	# 	icon = GFX_decision_generic_army_support
+	# 	available = {
+	# 		has_completed_focus = BAC_COC_mil_navy
+	# 		if = {
+	# 			limit = {
+	# 				is_ai = no
+	# 			}
+	# 			custom_trigger_tooltip = {
+	# 				tooltip = KIR_focus_10b_ship_tt
+	# 				ships_in_state_ports = {
+	# 					size > 0
+	# 					state = 833
+	# 				}
+	# 			}
+	# 		}
+	# 	}
+	# 	visible = {
+	# 		has_country_flag = BAC_get_commonalty_flag
+	# 	}
+	
+	# 	ai_will_do = {
+	# 		factor = 50
+	# 	}
+	# 	complete_effect = {
+	# 		log = "[GetDateText]: [Root.GetName]: decision BAC_kill_pirates"
+	# 		add_stability = 0.05
+	# 		add_war_support = 0.1
+	# 	}
+	# }
+}
+#military_training_category = {
+#}
 
+commonalty_bop_category = {
+    comm_WPU_1 = {
+        icon = GFX_decision_category_viirats
+		allowed = { original_tag = KIC } 
+		cost = 33
+        visible = {
+        }
+        available = {
+        }
+        days_remove = 33
+		days_re_enable = 66
+		modifier = {
+            power_balance_weekly = -0.033
+			political_power_factor = -0.3
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision comm_WPU_1"
+            bac_WPU_small_effect = yes
+		}
+        remove_effect = {
+            bac_WPU_small_effect = yes
+        }
+    }
+    comm_COT_1 = {
+        icon = GFX_decision_candle
+		allowed = { original_tag = KIC }
+		cost = 33
+        visible = {
+        }
+        available = {
+        }
+        days_remove = 33
+		days_re_enable = 66
+		modifier = {
+            power_balance_weekly = 0.033
+			political_power_factor = -0.3
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision comm_COT_1"
+            bac_COT_small_effect = yes
+		}
+        remove_effect = {
+            bac_COT_small_effect = yes
+        }
+    }
+	comm_COT_wuxia = {
+        icon = GFX_decision_kirin_vanguard
+		allowed = { original_tag = KIC }
+		cost = 33
+        available = {
+			has_completed_focus = BAC_COC_pol_head
+        }
+        days_remove = 99
+		days_re_enable = 180
+		modifier = {
+			stability_factor = 0.03
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: take Decision comm_COT_wuxia"
+			bac_COT_small_effect = yes
+		}
+        remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_wuxia"
+			add_stability = 0.03
+			if = {
+				limit = { bac_has_researched_all_kirin_techs = no }
+				add_tech_bonus = {
+					name = race_tech_bonus
+					bonus = 0.33
+					uses = 1
+					category = race_tech
+				}
+			}
+			else = { add_political_power = 33 }
+			every_core_state = {
+				population_increase_0_1 = yes
+			}
+			custom_effect_tooltip = KIR_line_break
+			bac_COT_medium_effect = yes
+        }
+	}
+
+
+	comm_COT_pursuit = { #Pursuit The Heathen Remnant
+        icon = GFX_decision_fire
+		allowed = { original_tag = KIC }
+		cost = 100
+        visible = {
+			has_completed_focus = BAC_COC_pol_h1
+        }
+        available = {
+			any_controlled_state = {
+				has_resistance = yes
+			}
+        }
+        days_remove = 99
+		days_re_enable = 180
+		modifier = {
+			command_power_gain = -0.3
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: take Decision comm_COT_pursuit"
+		}
+        remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_pursuit"
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.033
+			}
+			every_controlled_state = {
+				limit = { has_resistance = yes }
+				add_extra_state_shared_building_slots = 1
+				random_select_amount = 3
+				population_reduction_1 = yes
+				add_resistance = -9
+				add_compliance = 3
+			}
+			custom_effect_tooltip = comm_COT_pursuit_tt
+			#bac_WPU_small_effect = yes
+        }
+    }
+	
+	comm_WPU_WOF = { #Religious Interchange Programme
+        icon = kirin_scroll
+		allowed = { original_tag = KIC }
+		cost = 100
+        visible = {
+			NOT = { has_completed_focus = BAC_COC_pol_h1 }
+        }
+        available = {
+			has_completed_focus = BAC_COC_pol_c2
+        }
+        days_remove = 99
+		days_re_enable = 180
+		modifier = {
+			political_power_factor = -0.3
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: take Decision comm_WPU_WOF"
+            bac_WPU_small_effect = yes
+		}
+        remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: remove Decision comm_WPU_WOF"
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			every_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				random_select_amount = 3
+				if = {
+					limit = { has_resistance = yes }
+					add_compliance = 3
+				}
+			}
+			custom_effect_tooltip = KIR_line_break
+            bac_WPU_small_effect = yes
+        }
+    }
+
+	comm_WPU_rural = { #Redistribution Programme
+        icon = GFX_decision_straw_hat
+		allowed = { original_tag = KIC }
+		cost = 33
+        visible = {
+        }
+        available = {
+			has_completed_focus = BAC_COC_eco_head
+        }
+        days_remove = 33
+		days_re_enable = 99
+		modifier = {
+			consumer_goods_factor = 0.3
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: take Decision comm_WPU_rural"
+            bac_WPU_small_effect = yes
+		}
+        remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: remove Decision comm_WPU_rural"
+			add_stability = 0.03
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			every_core_state = {
+				population_increase_0_1 = yes
+			}
+			custom_effect_tooltip = KIR_line_break
+            bac_WPU_small_effect = yes
+        }
+    }
+	comm_WPU_NH = { #Support Local Collective
+        icon = GFX_decision_kirin_corvee
+		allowed = { original_tag = KIC }
+		cost = 33
+        available = {
+			has_completed_focus = BAC_COC_eco_h1
+			num_of_civilian_factories_available_for_projects > 2
+        }
+        days_remove = 99
+		days_re_enable = 365
+		modifier = {
+			civilian_factory_use = 3
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: take Decision comm_WPU_NH"
+            bac_WPU_small_effect = yes
+		}
+        remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: remove Decision comm_WPU_NH"
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.33
+				uses = 1
+				category = industry
+			}
+			every_core_state = {
+				population_increase_0_1 = yes
+			}
+			custom_effect_tooltip = KIR_line_break
+            bac_WPU_small_effect = yes
+        }
+    }
+
+
+	comm_WPU_commiebro = { #Seek Solidarity With International Socialists
+        icon = GFX_decision_hammer_and_horseshoe_decision
+		allowed = { original_tag = KIC }
+		cost = 100
+        visible = {
+        }
+        available = {
+			has_completed_focus = BAC_COC_diplo
+			any_other_country = {
+				exists = yes
+				has_government = communism
+				is_major = yes
+				is_subject = no
+				has_opinion_modifier = commonalty_embassy
+				NOT = {
+					has_war_with = ROOT
+				}
+				surrender_progress < 0.1
+				if = {
+					limit = {
+						ROOT = { is_ai = no }
+					}
+					has_opinion = { target = ROOT value > 99 }
+				}
+			}
+        }
+        days_remove = 99
+		days_re_enable = 365
+		modifier = {
+			political_power_factor = -0.3
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: take Decision comm_WPU_commiebro"
+            bac_WPU_small_effect = yes
+		}
+        remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: remove Decision comm_WPU_commiebro"
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.33
+				uses = 1
+				category = industry
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			custom_effect_tooltip = KIR_line_break
+            bac_WPU_medium_effect = yes
+        }
+    }
+
+	comm_COT_CES = { #Welcome Missionaries From The Lodge
+        icon = GFX_decision_celestia
+		allowed = { original_tag = KIC }
+		cost = 33
+        available = {
+			if = {
+				limit = { country_exists = CES }
+				CES = {
+					NOT = {
+						has_war_with = ROOT
+					}
+					surrender_progress < 0.1
+					if = {
+						limit = {
+							ROOT = { is_ai = no }
+						}
+						has_opinion = { target = ROOT value > 99 }
+					}
+				}
+			}
+			else_if = {
+				limit = { country_exists = event_target:solar_empire }
+				event_target:solar_empire = {
+					NOT = {
+						has_war_with = ROOT
+					}
+					surrender_progress < 0.1
+					if = {
+						limit = {
+							ROOT = { is_ai = no }
+						}
+						has_opinion = { target = ROOT value > 99 }
+					}
+				}
+			}
+			else = {
+				event_target:equestria = {
+					exists = yes
+					NOT = {
+						has_war_with = ROOT
+					}
+					surrender_progress < 0.1
+					if = {
+						limit = {
+							ROOT = { is_ai = no }
+						}
+						has_opinion = { target = ROOT value > 99 }
+					}
+				}
+			}
+			num_of_civilian_factories_available_for_projects > 2
+        }
+        days_remove = 99
+		days_re_enable = 365
+		modifier = {
+			political_power_factor = -0.3
+			civilian_factory_use = 3
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: take Decision comm_COT_CES"
+            bac_COT_small_effect = yes
+		}
+        remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_CES"
+			if = {
+				limit = { bac_has_researched_all_kirin_techs = no }
+				add_tech_bonus = {
+					name = race_tech_bonus
+					bonus = 1.0
+					uses = 1
+					category = race_tech
+				}
+			}
+			else = { add_political_power = 100 }
+			custom_effect_tooltip = KIR_line_break
+			bac_eqs_popularity = yes
+            bac_COT_medium_effect = yes
+        }
+    }
+
+
+
+
+
+
+    comm_COT_civ = { #Equestrian Economic Aid
+        icon = GFX_decision_generic_factory
+		allowed = { original_tag = KIC }
+		cost = 100
+        visible = {
+        }
+        available = {
+			event_target:equestria = {
+				exists = yes
+				is_subject = no
+				has_opinion_modifier = commonalty_embassy
+				NOT = {
+					has_war_with = ROOT
+				}
+				surrender_progress < 0.1
+				if = {
+					limit = {
+						ROOT = { is_ai = no }
+					}
+					has_opinion = { target = ROOT value > 99 }
+				}
+			}
+        }
+        days_remove = 99
+		days_re_enable = 365
+		modifier = {
+			political_power_factor = -0.3
+		}
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: take Decision comm_COT_civ"
+            bac_COT_small_effect = yes
+		}
+        remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: remove Decision comm_COT_civ"
+			add_offsite_building = {
+				type = industrial_complex
+				level = 1
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.33
+				uses = 1
+				category = industry
+			}
+			custom_effect_tooltip = KIR_line_break
+			bac_eqs_popularity = yes
+            bac_COT_medium_effect = yes
+        }
+    }
+
+}
+
+
+foreign_politics = {
+	bac_funni_red_button = {
+		icon = GFX_decision_fire
+		allowed = {
+			original_tag = KIC
+		}
+		ai_will_do = {
+			factor = 25
+		}
+
+		visible = {
+			has_country_flag = commonalty_ending_flag
+		}
+		cost = 303
+
+        complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision bac_funni_red_button"
+            every_other_country = {
+				limit = {
+					has_government = neutrality
+					has_government = fascism
+					NOT = { is_in_faction_with = ROOT }
+				}
+				ROOT = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+	}
+	
 	commonalty_add_you_faction_decision = {
 		icon = generic_protection
 		allowed = {

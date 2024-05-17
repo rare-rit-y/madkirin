@@ -244,7 +244,7 @@ country_event = {
 		set_variable = { KIR_GGO_TIME_VAR_WEEKS = 183 }
 		### GGO SGUI Positions
 		set_variable = { ImageX = 0 }
-		set_variable = { ImageY = -348 } #12
+		set_variable = { ImageY = -393 } #12
 		set_variable = { TitleX = 200 }
 		set_variable = { TitleY = -378 } #-18
 		set_variable = { DescriptionX = 200 }

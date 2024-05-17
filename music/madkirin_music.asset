@@ -45,7 +45,7 @@ music = {
 music = {
     name = "Battle_Hesitant_Blade_Eclipse"
     file = "Battle_Hesitant_Blade_Eclipse.ogg"
-    volume = 0.75
+    volume = 0.8
 }
 music = {
     name = "Battle_Strange_Theme"

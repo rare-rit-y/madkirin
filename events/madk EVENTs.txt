@@ -341,11 +341,13 @@ unit_leader_event = { # baccocc.10 - Matter of Educational Model
 	fire_only_once = yes
 	option = {
 		name = baccocc.10.a # communion
+		set_country_flag = baccocc_10a_flag
 		bac_COT_small_effect = yes
 		custom_effect_tooltip = baccocc_10a_tt
 	}
 	option = {
 		name = baccocc.10.b # free
+		set_country_flag = baccocc_10b_flag
 		bac_WPU_small_effect = yes
 		custom_effect_tooltip = baccocc_10b_tt
 	}
@@ -360,8 +362,8 @@ country_event = { # baccocc.11 - The Trial of NAKP
 	fire_only_once = yes
 	option = {
 		name = baccocc.11.a
-		add_political_power = 33
-		add_stability = 0.033
+		add_political_power = 150
+		add_stability = 0.03
 		every_possible_country = {
 			limit = { original_tag = KIS }
 			effect_tooltip = { kill_country_leader = yes }
@@ -371,15 +373,7 @@ country_event = { # baccocc.11 - The Trial of NAKP
 			}
 			hidden_effect = { kill_country_leader = yes } #Without this, Fickle wouldn't fucking die
 		}
-		every_controlled_state = {
-			limit = {
-				OR = {
-					state = 1071 #Fragrance
-					state = 1088 #Sycee
-				}
-			}
-			population_reduction_1 = yes
-		}
+		effect_tooltip = { add_manpower = -68 }
 	}
 }
 unit_leader_event = { #baccocc.12 firethorn
@@ -391,7 +385,7 @@ unit_leader_event = { #baccocc.12 firethorn
 	fire_only_once = yes
 	option = {
 		name = baccocc.12.a # 
-		THIS = {
+		KIR_firethorn = {
 			promote_leader = yes
 			#add_unit_leader_trait = organisational_leader
 			set_portraits = {

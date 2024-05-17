@@ -123,10 +123,10 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 				}
 				else = {
 					set_politics = { ruling_party = democratic }
-					set_temp_variable = { coalition_partner_var = token:democratic }
-					remove_from_coalition = yes
-					set_temp_variable = { coalition_partner_var = token:communism }
-					add_to_coalition = yes
+					hidden_effect = {
+						set_temp_variable = { coalition_partner_var = token:democratic }
+						remove_from_coalition = yes
+					}
 				}
 				if = {
 					limit = { country_exists = event_target:solar_empire }
@@ -137,7 +137,7 @@ BAC_commonalty_bop = { #Two Factions of the Commonalty
 			on_deactivate = {
 				log = "FULL COT deactivated"
 				set_politics = { ruling_party = communism }
-				set_temp_variable = { coalition_partner_var = token:fascism }
+				set_temp_variable = { coalition_partner_var = token:democratic }
 				add_to_coalition = yes
 			}
 		}

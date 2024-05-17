@@ -1,8 +1,8 @@
 leader_traits = {
 	BAC_regional_self_centeredness = {
 		random = no
-		army_core_defence_factor = 0.33
-		army_core_attack_factor = 0.33
+		army_core_defence_factor = 0.09
+		army_core_attack_factor = 0.09
 		stability_weekly = -0.001
 	
 	}

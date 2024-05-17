@@ -1147,7 +1147,7 @@ shared_focus = { #BAC_COC_c1 - The Voice Must Be Spoken
 shared_focus = { #BAC_COC_m2 - Commonalty Constitutional Senate
 	id = BAC_COC_m2 #제헌만민회
 	icon = GFX_goal_KIR_verdigris_rotunda
-	cost = 2.9
+	cost = 4.8
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_m1
 	x = 0
@@ -1438,15 +1438,18 @@ shared_focus = { # Assertive Conversion
 	mutually_exclusive = {
 		focus = BAC_COC_pol_c1
 	}
+	available = {
+		has_country_flag = baccocc_10a_flag
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h1"
 		add_political_power = 33
 		add_stability = -0.033
-		every_core_state = {
+		every_controlled_state = {
 			limit = { is_claimed_by = KIS }
 			remove_claim_by = KIS
 		}
-		every_core_state = {
+		every_controlled_state = {
 			limit = { is_claimed_by = KIR }
 			remove_claim_by = KIR
 		}
@@ -1472,11 +1475,14 @@ shared_focus = { #Allow The Way of Fire
 	mutually_exclusive = {
 		focus = BAC_COC_pol_h1
 	}
+	available = {
+		has_country_flag = baccocc_10b_flag
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_c1"
 		add_political_power = -33
 		add_stability = 0.033
-		every_core_state = {
+		every_controlled_state = {
 			limit = { is_claimed_by = KIS }
 			remove_claim_by = KIS
 		}
@@ -2016,6 +2022,7 @@ shared_focus = { #Initiate Land Reform
 		KIR = { add_to_ROOT_potential_cores = yes }
 		KIS = { add_to_ROOT_potential_cores = yes }
 		custom_effect_tooltip = KIR_line_break
+		decrease_poverty = yes
 		bac_WPU_small_effect = yes
 	}
 }
@@ -2119,10 +2126,6 @@ shared_focus = { # #Equestrian Ties
 	}
 	available = {
 		NOT = { has_idea = closed_economy }
-		power_balance_value = {
-			id = BAC_commonalty_bop
-			value > 0.099
-		}
 		if = {
 			limit = { country_exists = event_target:solar_empire }
 			if = {
@@ -2277,6 +2280,7 @@ shared_focus = {
 				instant_build = yes
 			}
 		}
+		increase_society_development_gradual = yes
 	}
 }
 
@@ -2386,6 +2390,10 @@ shared_focus = { #Yet Another Accord
 		focus = BAC_COC_eco_h2
 	}
 	available = {
+		power_balance_value = {
+			id = BAC_commonalty_bop
+			value > 0.099
+		}
 		NOT = { has_idea = closed_economy }
 		if = {
 			limit = { country_exists = event_target:solar_empire }
@@ -2673,6 +2681,7 @@ shared_focus = {
 		focus = BAC_COC_eco_m3c
 	}
 	available = {
+		has_modern_society = yes
 		has_stability > 0.66
 		has_war = no
 	}
@@ -2838,7 +2847,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h1"
 		if = {
-			limit = { bac_hasnt_researched_all_kirin_techs = yes }
+			limit = { bac_has_researched_all_kirin_techs = no }
 			add_tech_bonus = {
 				name = race_tech_bonus
 				bonus = 0.33
@@ -3183,7 +3192,7 @@ shared_focus = { # Beyond The Riverine Navy
 			show_ideas_tooltip = KIC_navy_chief_1
 		}
 		set_country_flag = KIR_DM_maritime_systems_available
-		set_country_flag = BAC_KIC_deer_comrade_available
+		set_country_flag = KIC_deer_comrade_available
 		custom_effect_tooltip = KIR_line_break
 		if = {
 			limit = {
@@ -3590,7 +3599,7 @@ shared_focus = {
 		add_to_variable = { COC_1_var = 0.03 }
 		effect_tooltip = {
 			swap_ideas = {
-				remove_idea = BAC_COC_peasant_dummy
+				remove_idea = BAC_PaPA_dummy
 				add_idea = BAC_PaPA_dummy_COC_1_var
 			}
 		}
@@ -3671,7 +3680,7 @@ shared_focus = {
 		}
 		add_to_variable = { GuerillaOrgDmgVar = 60 }
 		add_to_variable = { GuerillaStrDmgVar = 100 }
-		add_war_support = 0.3
+		add_war_support = 0.09
 		effect_tooltip = {
 			swap_ideas = {
 				remove_idea = BAC_PaPA_dummy
@@ -3817,12 +3826,10 @@ shared_focus = { #March to Old Marches
 	}
 	bypass = {
 		all_other_country = {
-			limit = {
-				OR = {
-					tag = KXN
-					tag = NVA
-					tag = KHM
-				}
+			OR = {
+				tag = KXN
+				tag = NVA
+				tag = KHM
 			}
 			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
 		}
@@ -3861,7 +3868,7 @@ shared_focus = { #March to Old Marches
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_zaikiria"
-		custom_effect_tooltip = bac_national_focus_active
+		custom_effect_tooltip = bac_national_focus_active_tt
 		effect_tooltip = { 1058 = { add_claim_by = ROOT } }
 		custom_effect_tooltip = national_spirit_active2
 		1058 = {
@@ -3962,14 +3969,12 @@ shared_focus = { #Attack on barbarian lands
 	}
 	bypass = {
 		all_other_country = {
-			limit = {
-				OR = {
-					tag = ROA
-					tag = TSV
-					tag = GFS
-					tag = ZLU
-					tag = ZOO
-				}
+			OR = {
+				tag = ROA
+				tag = TSV
+				tag = GFS
+				tag = ZLU
+				tag = ZOO
 			}
 			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
 		}
@@ -4042,13 +4047,11 @@ shared_focus = {
 	}
 	bypass = {
 		all_other_country = {
-			limit = {
-				OR = {
-					tag = BRS
-					tag = SAM
-					tag = HIN
-					tag = CTL
-				}
+			OR = {
+				tag = BRS
+				tag = SAM
+				tag = HIN
+				tag = CTL
 			}
 			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
 		}
@@ -4219,16 +4222,17 @@ shared_focus = {
 		focus = BAC_COC_m1
 	}
 	available = {
-		all_other_country = {
-			limit = {
-				OR = {
-					tag = KXN
-					tag = NVA
-					tag = KHM
-				}
-			}
-			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
-		}
+		# all_other_country = {
+		# 	OR = {
+		# 		tag = KXN
+		# 		tag = NVA
+		# 		tag = KHM
+		# 	}
+		# 	bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		# }
+		KXN = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		NVA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		KHM = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_zaikiria"
@@ -4239,8 +4243,8 @@ shared_focus = {
 					is_in_array = { KXN.original_cores = THIS }
 					is_in_array = { NVA.original_cores = THIS }
 					is_in_array = { KHM.original_cores = THIS }
-					NOT = { is_core_of = ROOT }
 				}
+				NOT = { is_core_of = ROOT }
 			}
 			add_core_of = ROOT
 			add_dynamic_modifier = { modifier = BAC_autonomy_state }
@@ -4273,16 +4277,17 @@ shared_focus = {
 		focus = BAC_COC_m1
 	}
 	available = {
-		all_other_country = {
-			limit = {
-				OR = {
-					tag = KXN
-					tag = NVA
-					tag = KHM
-				}
-			}
-			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
-		}
+		# all_other_country = {
+		# 	OR = {
+		# 		tag = KXN
+		# 		tag = NVA
+		# 		tag = KHM
+		# 	}
+		# 	bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		# }
+		KXN = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		NVA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		KHM = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_zaikiria"
@@ -4395,18 +4400,21 @@ shared_focus = {
 		focus = BAC_COC_m1
 	}
 	available = {
-		all_other_country = {
-			limit = {
-				OR = {
-					tag = ROA
-					tag = TSV
-					tag = GFS
-					tag = ZLU
-					tag = ZOO
-				}
-			}
-			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
-		}
+		# all_other_country = {
+		# 	OR = {
+		# 		tag = ROA
+		# 		tag = TSV
+		# 		tag = GFS
+		# 		tag = ZLU
+		# 		tag = ZOO
+		# 	}
+		# 	bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		# }
+		ROA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		TSV = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		GFS = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		ZLU = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		ZOO = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_barbarian"
@@ -4464,18 +4472,21 @@ shared_focus = {
 		focus = BAC_COC_m1
 	}
 	available = {
-		all_other_country = {
-			limit = {
-				OR = {
-					tag = ROA
-					tag = TSV
-					tag = GFS
-					tag = ZLU
-					tag = ZOO
-				}
-			}
-			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
-		}
+		# all_other_country = {
+		# 	OR = {
+		# 		tag = ROA
+		# 		tag = TSV
+		# 		tag = GFS
+		# 		tag = ZLU
+		# 		tag = ZOO
+		# 	}
+		# 	bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		# }
+		ROA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		TSV = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		GFS = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		ZLU = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		ZOO = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_barbarian"
@@ -4518,17 +4529,19 @@ shared_focus = {
 		focus = BAC_COC_m1
 	}
 	available = {
-		all_other_country = {
-			limit = {
-				OR = {
-					tag = BRS
-					tag = SAM
-					tag = HIN
-					tag = CTL
-				}
-			}
-			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
-		}
+		# all_other_country = {
+		# 	OR = {
+		# 		tag = BRS
+		# 		tag = SAM
+		# 		tag = HIN
+		# 		tag = CTL
+		# 	}
+		# 	bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		# }
+		BRS = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		SAM = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		HIN = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		CTL = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_deer"
@@ -4584,17 +4597,19 @@ shared_focus = {
 		focus = BAC_COC_m1
 	}
 	available = {
-		all_other_country = {
-			limit = {
-				OR = {
-					tag = BRS
-					tag = SAM
-					tag = HIN
-					tag = CTL
-				}
-			}
-			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
-		}
+		# all_other_country = {
+		# 	OR = {
+		# 		tag = BRS
+		# 		tag = SAM
+		# 		tag = HIN
+		# 		tag = CTL
+		# 	}
+		# 	bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		# }
+		BRS = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		SAM = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		HIN = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		CTL = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_deer"

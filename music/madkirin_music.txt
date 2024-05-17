@@ -116,7 +116,7 @@ music = { #Fighting Spirit
 music = {
   song = "Flawless_Theory_Endless_Legend_Version"
   chance = {
-    base = 3
+    base = 1
     modifier = { factor = 0 has_war = yes }
   }
 }

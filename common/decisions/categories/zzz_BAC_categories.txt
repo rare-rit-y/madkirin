@@ -5,7 +5,7 @@ bac_coc_debug_cat = {
 	}
 
 	priority = {
-		base = 100
+		base = 99
 	}
 }
 commonalty_bop_category = {
@@ -14,8 +14,6 @@ commonalty_bop_category = {
 	allowed = {
 		original_tag = KIC
 	}
-	
-	priority = 90
 	
 	visible = { 
 		has_any_power_balance = yes
