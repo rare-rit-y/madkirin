@@ -163,7 +163,13 @@ music = {
       add = 2
       has_country_flag = BAC_get_commonalty_flag
     }
-    modifier = { factor = 0 has_war = no }
+    modifier = {
+      factor = 0
+      OR = {
+        has_war = no
+        surrender_progress > 0
+      }
+    }
   }
 }
 
@@ -190,7 +196,13 @@ music = {
       add = 2
       has_country_flag = BAC_get_commonalty_flag
     }
-    modifier = { factor = 0 has_war = no }
+    modifier = {
+      factor = 0
+      OR = {
+        has_war = no
+        surrender_progress > 0
+      }
+    }
   }
 }
 
@@ -234,7 +246,13 @@ music = {
       add = 1
       has_country_flag = BAC_get_commonalty_flag
     }
-    modifier = { factor = 0 has_war = no }
+    modifier = {
+      factor = 0
+      OR = {
+        has_war = no
+        surrender_progress > 0
+      }
+    }
   }
 }
 

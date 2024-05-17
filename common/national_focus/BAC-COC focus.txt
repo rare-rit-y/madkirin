@@ -994,6 +994,7 @@ shared_focus = {
 			news_event = { id = kirin_council.321 hours = 3 }
 		}
 		remove_dynamic_modifier = { modifier = COC_desperate_revolt }
+		clear_variable = COC_8_var
 		clear_variable = COC_10_var
 		clear_variable = COC_11_var #done
 		clear_variable = COC_12_var
@@ -1442,8 +1443,12 @@ shared_focus = { # Assertive Conversion
 		add_political_power = 33
 		add_stability = -0.033
 		every_core_state = {
-			remove_claim_by = KIC
-			remove_core_of = KIR
+			limit = { is_claimed_by = KIS }
+			remove_claim_by = KIS
+		}
+		every_core_state = {
+			limit = { is_claimed_by = KIR }
+			remove_claim_by = KIR
 		}
 		decrease_illiteracy = yes
 		bac_eqs_popularity = yes
@@ -1469,15 +1474,23 @@ shared_focus = { #Allow The Way of Fire
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_c1"
-		#정치력 깍는 대신 안정,순응도 버프
 		add_political_power = -33
 		add_stability = 0.033
+		every_core_state = {
+			limit = { is_claimed_by = KIS }
+			remove_claim_by = KIS
+		}
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
 		bac_WPU_small_effect = yes
 	}
 }
 
 
-shared_focus = { #Expand Foreign Affairs # 외교 업무 확장
+shared_focus = { #Expand Foreign Affairs
 	id = BAC_COC_diplo
 	icon = GFX_goal_KIR_goal_government_icon
 	cost = 7
@@ -1623,6 +1636,14 @@ shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_h2"
+		every_core_state = {
+			limit = { is_core_of = KIS }
+			remove_core_of = KIS
+		}
+		every_core_state = {
+			limit = { is_core_of = KIR }
+			remove_core_of = KIR
+		}
 		set_party_name = {
 			ideology = fascism
 			long_name = BAC_COC_fascism_party_long
@@ -1904,6 +1925,7 @@ shared_focus = { #Century for Commonalty
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_pol_m4"
+		set_cosmetic_tag = BAC_commonalty #todo check this if it sucks
 		country_event = {
 			id = baccocc.303
 			hours = 3
@@ -2825,9 +2847,7 @@ shared_focus = {
 			}
 		}
 		else = { add_war_support = 0.03 }
-		set_variable = {
-			BAC_PaPA_h1 = 0.09
-		}
+		add_to_variable = { BAC_PaPA_h1 = 0.09 }
 		effect_tooltip = {
 			swap_ideas = {
 				remove_idea = BAC_PaPA_dummy
@@ -2866,8 +2886,8 @@ shared_focus = {
 			category = infantry_weapons
 		}
 		add_to_variable = { COC_1_var = 0.03 }
-		add_to_variable = { COC_5_var = 0.03 }
-		add_to_variable = { COC_6_var = 0.03 }
+		add_to_variable = { COC_5_var = 0.05 }
+		add_to_variable = { COC_6_var = 0.05 }
 		effect_tooltip = {
 			swap_ideas = {
 				remove_idea = BAC_PaPA_dummy
@@ -2906,6 +2926,8 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m2"
 		army_experience = 33
 		add_to_variable = { BAC_PaPA_m2 = 0.09 }
+		add_to_variable = { COC_5_var = 0.05 }
+		add_to_variable = { COC_6_var = 0.05 }
 		effect_tooltip = {
 			swap_ideas = {
 				remove_idea = BAC_PaPA_dummy
@@ -2981,6 +3003,13 @@ shared_focus = { #BAC_COC_mil_h2
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h2"
+		add_to_variable = { COC_1_var = 0.03 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_COC_peasant_dummy
+				add_idea = BAC_PaPA_dummy_COC_1_var
+			}
+		}
 		set_country_flag = BAC_star_energy_zeb_available
 		set_country_flag = BAC_fillydelphia_arms_available
 		if = {
@@ -3040,13 +3069,18 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c2"
+		add_to_variable = { COC_1_var = 0.03 }
+		subtract_from_variable = { COC_4_var = 0.15 }
 		add_tech_bonus = {
 			name = BAC_COC_mil_c2
 			bonus = 0.33
 			uses = 1
 			category = hospital_tech
 		}
-
+		swap_ideas = {
+			remove_idea = BAC_PaPA_dummy
+			add_idea = BAC_PaPA_dummy_c2
+		}
 		custom_effect_tooltip = KIR_line_break
 		add_popularity = {
 			ideology = communism
@@ -3290,11 +3324,11 @@ shared_focus = { #spearhead thing
 				category = tp_tech
 			}
 		}
-		add_to_variable = { BAC_PaPA_h1 = 0.09 }
+		set_variable = { BAC_PaPA_h3 = 0.03 }
 		effect_tooltip = {
 			swap_ideas = {
 				remove_idea = BAC_PaPA_dummy
-				add_idea = BAC_PaPA_dummy_h1
+				add_idea = BAC_PaPA_dummy_h3
 			}
 		}
 		custom_effect_tooltip = KIR_line_break
@@ -3328,6 +3362,23 @@ shared_focus = { #heavy industry ig?
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m3h"
+		every_core_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			random_select_amount = 3
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
 		swap_ideas = {
 			remove_idea = BAC_COC_eco_h1_idea
 			add_idea = BAC_COC_eco_h1_upgraded_idea
@@ -3343,7 +3394,7 @@ shared_focus = { #heavy industry ig?
 
 shared_focus = {
 	id = BAC_COC_mil_m3c
-	icon = GFX_goal_KIR_KIC_military
+	icon = GFX_goal_KIR_pointing_hoof
 	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -3361,10 +3412,31 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m3c"
+		if = {
+			limit = { has_idea = extensive_conscription }
+			swap_ideas = {
+				remove_idea = extensive_conscription
+				add_idea = communal_militias
+			}
+		}
+		else_if = {
+			limit = { has_idea = service_by_requirement }
+			swap_ideas = {
+				remove_idea = service_by_requirement
+				add_idea = communal_militias
+			}
+		}
+		else = { add_ideas = communal_militias }
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = communism
+			popularity = -0.03
+		}
+		bac_COT_medium_effect = yes
 	}
 }
 
-shared_focus = { # cannon
+shared_focus = {
 	id = BAC_COC_mil_c3
 	icon = GFX_goal_KIR_rocketeer
 	cost = 7
@@ -3379,6 +3451,13 @@ shared_focus = { # cannon
 		focus = BAC_COC_mil_c2
 	}
 	available = {
+		OR = {
+			any_other_country = {
+				is_major = yes
+				has_opinion_modifier = commonalty_embassy
+			}
+			has_completed_focus = BAC_COC_applied_science
+		}
 		power_balance_value = {
 			id = BAC_commonalty_bop
 			value < -0.099
@@ -3386,6 +3465,54 @@ shared_focus = { # cannon
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c3"
+		if = {
+			limit = { has_completed_focus = BAC_COC_applied_science }
+			add_equipment_to_stockpile = {
+				type = rocket_artillery_equipment
+				amount = 300
+			}
+			add_equipment_to_stockpile = {
+				type = anti_air_equipment
+				amount = 300
+			}
+			add_equipment_to_stockpile = {
+				type = anti_tank_equipment
+				amount = 300
+			}
+		}
+		else = {
+			random_other_country = {
+				limit = {
+					is_major = yes
+					has_opinion_modifier = commonalty_embassy
+				}
+				ROOT = {
+					add_equipment_to_stockpile = {
+						type = rocket_artillery_equipment
+						amount = 300
+						producer = PREV
+					}
+					add_equipment_to_stockpile = {
+						type = anti_air_equipment
+						amount = 300
+						producer = PREV
+					}
+					add_equipment_to_stockpile = {
+						type = anti_tank_equipment
+						amount = 300
+						producer = PREV
+					}
+				}
+			}
+		}
+		add_tech_bonus = {
+			name = BAC_COC_mil_c3
+			bonus = 1.0
+			uses = 3
+			category = cat_anti_tank
+			category = cat_anti_air
+			category = rocketry
+		}
 		custom_effect_tooltip = KIR_line_break
 		add_popularity = {
 			ideology = communism
@@ -3394,7 +3521,7 @@ shared_focus = { # cannon
 		bac_COT_medium_effect = yes
 	}
 }
-shared_focus = { #BAC_COC_mil_h4
+shared_focus = {
 	id = BAC_COC_mil_h4
 	icon = {
 		trigger = { country_exists = event_target:solar_empire }
@@ -3420,6 +3547,15 @@ shared_focus = { #BAC_COC_mil_h4
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_h4"
+		subtract_from_variable = { COC_9_var = 0.04 }
+		add_to_variable = { BAC_PaPA_h3 = 0.06 }
+		add_war_support = 0.09
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_PaPA_dummy
+				add_idea = BAC_PaPA_dummy_h4
+			}
+		}
 		custom_effect_tooltip = KIR_line_break
 		add_popularity = {
 			ideology = democratic
@@ -3451,12 +3587,31 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m4h"
+		add_to_variable = { COC_1_var = 0.03 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_COC_peasant_dummy
+				add_idea = BAC_PaPA_dummy_COC_1_var
+			}
+		}
+		add_tech_bonus = {
+			name = BAC_COC_mil_m4h
+			bonus = 1
+			uses = 3
+			category = armor
+		}
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = democratic
+			popularity = -0.03
+		}
+		bac_WPU_small_effect = yes
 	}
 }
 
 shared_focus = {
 	id = BAC_COC_mil_m4m
-	icon = GFX_goal_KIR_pointing_hoof
+	icon = GFX_goal_KIR_KIC_military
 	cost = 7
 	ai_will_do = { factor = 80 }
 	relative_position_id = BAC_COC_mil_head
@@ -3474,6 +3629,15 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m4m"
+		add_to_variable = { COC_5_var = 0.09 }
+		add_to_variable = { COC_6_var = 0.09 }
+		set_variable = { BAC_PaPA_m4 = 0.09 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_PaPA_dummy
+				add_idea = BAC_PaPA_dummy_m4
+			}
+		}
 	}
 }
 
@@ -3505,15 +3669,16 @@ shared_focus = {
 		set_variable = {
 			BAC_PaPA_c4 = 0.3
 		}
-		custom_effect_tooltip = COC_event_318_a_tt
 		add_to_variable = { GuerillaOrgDmgVar = 60 }
 		add_to_variable = { GuerillaStrDmgVar = 100 }
+		add_war_support = 0.3
 		effect_tooltip = {
 			swap_ideas = {
 				remove_idea = BAC_PaPA_dummy
 				add_idea = BAC_PaPA_dummy_c4
 			}
 		}
+		custom_effect_tooltip = COC_event_318_a_tt
 		custom_effect_tooltip = KIR_line_break
 		add_popularity = {
 			ideology = communism
@@ -3538,6 +3703,7 @@ shared_focus = {
 		focus = BAC_COC_mil_c3
 	}
 	available = {
+		has_completed_focus = BAC_COC_applied_science
 		power_balance_value = {
 			id = BAC_commonalty_bop
 			value < -0.33
@@ -3545,6 +3711,19 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_c4"
+		add_to_variable = { COC_1_var = 0.03 }
+		effect_tooltip = {
+			swap_ideas = {
+				remove_idea = BAC_COC_peasant_dummy
+				add_idea = BAC_PaPA_dummy_COC_1_var
+			}
+		}
+		add_tech_bonus = {
+			name = BAC_COC_mil_c4
+			bonus = 3.0
+			uses = 3
+			category = nuclear
+		}
 		custom_effect_tooltip = KIR_line_break
 		add_popularity = {
 			ideology = communism
@@ -3637,9 +3816,16 @@ shared_focus = { #March to Old Marches
 		}
 	}
 	bypass = {
-		KXN = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
-		NVA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
-		KHM = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		all_other_country = {
+			limit = {
+				OR = {
+					tag = KXN
+					tag = NVS
+					tag = KHM
+				}
+			}
+			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		}
 	}
 	will_lead_to_war_with = KXN
 	will_lead_to_war_with = NVA
@@ -3666,12 +3852,14 @@ shared_focus = { #March to Old Marches
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_zaikiria"
+		1058 = { add_core_of = ROOT }
 		every_state = {
 			limit = {
 				OR = {
 					is_in_array = { KXN.original_cores = THIS }
 					is_in_array = { NVA.original_cores = THIS }
 					is_in_array = { KHM.original_cores = THIS }
+					NOT = { state = 1058 }
 				}
 			}
 			add_claim_by = ROOT
@@ -3680,10 +3868,13 @@ shared_focus = { #March to Old Marches
 			limit = {
 				any_controlled_state = {
 					OR = {
-						state = 1054 #Lotus Crown
-						state = 1058 #Blossom
-						state = 1083 #Cassia Reach
-						state = 1085 #Razorgrain Frontier
+						is_in_array = { KXN.original_cores = THIS }
+						is_in_array = { NVA.original_cores = THIS }
+						is_in_array = { KHM.original_cores = THIS }
+						# state = 1054 #Lotus Crown
+						# state = 1058 #Blossom
+						# state = 1083 #Cassia Reach
+						# state = 1085 #Razorgrain Frontier
 					}
 				}
 			}
@@ -3744,11 +3935,16 @@ shared_focus = { #Attack on barbarian lands
 			limit = {
 				any_controlled_state = {
 					OR = {
-						state = 909
-						state = 911
-						state = 922
-						state = 1132
-						state = 1135
+						is_in_array = { ROA.original_cores = THIS }
+						is_in_array = { TSV.original_cores = THIS }
+						is_in_array = { GFS.original_cores = THIS }
+						is_in_array = { ZLU.original_cores = THIS }
+						is_in_array = { ZOO.original_cores = THIS }
+						# state = 909
+						# state = 911
+						# state = 922
+						# state = 1132
+						# state = 1135
 					}
 				}
 			}
@@ -3761,11 +3957,18 @@ shared_focus = { #Attack on barbarian lands
 		clr_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 	bypass = {
-		ROA = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
-		TSV = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
-		GFS = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
-		ZLU = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
-		ZOO = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		all_other_country = {
+			limit = {
+				OR = {
+					tag = ROA
+					tag = TSV
+					tag = GFS
+					tag = ZLU
+					tag = ZOO
+				}
+			}
+			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		}
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_barbarian"
@@ -3773,11 +3976,16 @@ shared_focus = { #Attack on barbarian lands
 			limit = {
 				any_controlled_state = {
 					OR = {
-						state = 909
-						state = 911
-						state = 922
-						state = 1132
-						state = 1135
+						is_in_array = { ROA.original_cores = THIS }
+						is_in_array = { TSV.original_cores = THIS }
+						is_in_array = { GFS.original_cores = THIS }
+						is_in_array = { ZLU.original_cores = THIS }
+						is_in_array = { ZOO.original_cores = THIS }
+						# state = 909
+						# state = 911
+						# state = 922
+						# state = 1132
+						# state = 1135
 					}
 				}
 			}
@@ -3829,10 +4037,17 @@ shared_focus = {
 		has_global_flag = HIN_wars_over
 	}
 	bypass = {
-		BRS = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
-		SAM = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
-		HIN = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
-		CTL = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+		all_other_country = {
+			limit = {
+				OR = {
+					tag = BRS
+					tag = SAM
+					tag = HIN
+					tag = CTL
+				}
+			}
+			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		}
 	}
 	will_lead_to_war_with = BRS
 	will_lead_to_war_with = SAM
@@ -3843,10 +4058,14 @@ shared_focus = {
 			limit = {
 				any_controlled_state = {
 					OR = {
-						state = 1097 #BRS
-						state = 1163 #SAM
-						state = 1171 #HIN
-						state = 1176 #CTL
+						is_in_array = { BRS.original_cores = THIS }
+						is_in_array = { SAM.original_cores = THIS }
+						is_in_array = { HIN.original_cores = THIS }
+						is_in_array = { CTL.original_cores = THIS }
+						# state = 1097 #BRS
+						# state = 1163 #SAM
+						# state = 1171 #HIN
+						# state = 1176 #CTL
 					}
 				}
 			}
@@ -3864,10 +4083,14 @@ shared_focus = {
 			limit = {
 				any_controlled_state = {
 					OR = {
-						state = 1097 #BRS
-						state = 1163 #SAM
-						state = 1171 #HIN
-						state = 1176 #CTL
+						is_in_array = { BRS.original_cores = THIS }
+						is_in_array = { SAM.original_cores = THIS }
+						is_in_array = { HIN.original_cores = THIS }
+						is_in_array = { CTL.original_cores = THIS }
+						# state = 1097 #BRS
+						# state = 1163 #SAM
+						# state = 1171 #HIN
+						# state = 1176 #CTL
 					}
 				}
 				OR = {
@@ -3944,8 +4167,9 @@ shared_focus = {
 		every_other_country = {
 			limit = {
 				any_controlled_state = {
+					is_in_array = { GAZ.original_cores = THIS }
 					#OR = {
-						state = 924 #baganta
+						#state = 924 #baganta
 					#}
 				}
 			}
@@ -3990,9 +4214,39 @@ shared_focus = {
 		focus = BAC_COC_war_zaikiria
 		focus = BAC_COC_m1
 	}
+	available = {
+		all_other_country = {
+			limit = {
+				OR = {
+					tag = KXN
+					tag = NVS
+					tag = KHM
+				}
+			}
+			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		}
+	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_core_zaikiria"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_zaikiria"
 		set_country_flag = commonalty_solved_zaikiria
+		every_controlled_state = {
+			limit = {
+				OR = {
+					is_in_array = { KXN.original_cores = THIS }
+					is_in_array = { NVA.original_cores = THIS }
+					is_in_array = { KHM.original_cores = THIS }
+					NOT = { is_core_of = ROOT }
+				}
+			}
+			add_core_of = ROOT
+			add_dynamic_modifier = { modifier = BAC_autonomy_state }
+		}
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		bac_WPU_small_effect = yes
 	}
 }
 
@@ -4014,9 +4268,35 @@ shared_focus = {
 		focus = BAC_COC_war_zaikiria
 		focus = BAC_COC_m1
 	}
+	available = {
+		all_other_country = {
+			limit = {
+				OR = {
+					tag = KXN
+					tag = NVS
+					tag = KHM
+				}
+			}
+			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_zaikiria"
+		add_political_power = -99
 		set_country_flag = commonalty_solved_zaikiria
+		every_other_country = {
+			limit = {
+				OR = {
+					tag = KXN
+					tag = NVS
+					tag = KHM
+				}
+			}
+			add_to_ROOT_potential_cores = yes
+		}
+		custom_effect_tooltip = KIR_line_break
+		bac_eqs_popularity = yes
+		bac_COT_small_effect = yes
 	}
 }
 shared_focus = {
@@ -4037,9 +4317,27 @@ shared_focus = {
 		focus = BAC_COC_war_taungpau
 		focus = BAC_COC_m1
 	}
+	available = {
+		GAZ = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_core_taungpau"
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_taungpau"
 		set_country_flag = commonalty_solved_taungpau
+		every_controlled_state = {
+			limit = {
+				#OR = {
+					is_in_array = { GAZ.original_cores = THIS }
+				#}
+			}
+			add_core_of = ROOT
+			add_dynamic_modifier = { modifier = BAC_autonomy_state }
+		}
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		bac_WPU_small_effect = yes
 	}
 }
 
@@ -4061,9 +4359,17 @@ shared_focus = {
 		focus = BAC_COC_war_taungpau
 		focus = BAC_COC_m1
 	}
+	available = {
+		GAZ = { bac_all_original_cores_controlled_by_ROOT_or_ally = yes }
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_taungpau"
 		set_country_flag = commonalty_solved_taungpau
+		add_political_power = -99
+		GAZ = { add_to_ROOT_potential_cores = yes }
+		custom_effect_tooltip = KIR_line_break
+		bac_eqs_popularity = yes
+		bac_COT_small_effect = yes
 	}
 }
 shared_focus = {
@@ -4084,9 +4390,54 @@ shared_focus = {
 		focus = BAC_COC_war_barbarian
 		focus = BAC_COC_m1
 	}
+	available = {
+		all_other_country = {
+			limit = {
+				OR = {
+					tag = ROA
+					tag = TSV
+					tag = GFS
+					tag = ZLU
+					tag = ZOO
+				}
+			}
+			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_barbarian"
 		set_country_flag = commonalty_solved_barbarian
+		add_political_power = -99
+		every_other_country = {
+			limit = {
+				OR = {
+					tag = ROA
+					tag = TSV
+					tag = GFS
+					tag = ZLU
+					tag = ZOO
+				}
+			}
+			add_to_ROOT_potential_cores = yes
+		}
+		every_controlled_state = {
+			limit = {
+				OR = {
+					is_core_of = ROA
+					is_core_of = TSV
+					is_core_of = GFS
+					is_core_of = ZLU
+					is_core_of = ZOO
+				}
+			}
+			add_dynamic_modifier = { modifier = BAC_autonomy_state }
+		}
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		bac_WPU_medium_effect = yes
 	}
 }
 
@@ -4108,9 +4459,40 @@ shared_focus = {
 		focus = BAC_COC_war_barbarian
 		focus = BAC_COC_m1
 	}
+	available = {
+		all_other_country = {
+			limit = {
+				OR = {
+					tag = ROA
+					tag = TSV
+					tag = GFS
+					tag = ZLU
+					tag = ZOO
+				}
+			}
+			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_barbarian"
 		set_country_flag = commonalty_solved_barbarian
+		add_political_power = -300
+		add_stability = -0.49
+		every_other_country = {
+			limit = {
+				OR = {
+					tag = ROA
+					tag = TSV
+					tag = GFS
+					tag = ZLU
+					tag = ZOO
+				}
+			}
+			add_to_ROOT_potential_cores = yes
+		}
+		custom_effect_tooltip = KIR_line_break
+		bac_eqs_popularity = yes
+		bac_COT_medium_effect = yes
 	}
 }
 shared_focus = {
@@ -4131,9 +4513,51 @@ shared_focus = {
 		focus = BAC_COC_war_deer
 		focus = BAC_COC_m1
 	}
+	available = {
+		all_other_country = {
+			limit = {
+				OR = {
+					tag = BRS
+					tag = SAM
+					tag = HIN
+					tag = CTL
+				}
+			}
+			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_deer"
 		set_country_flag = commonalty_solved_deer
+		add_political_power = -99
+		every_other_country = {
+			limit = {
+				OR = {
+					tag = BRS
+					tag = SAM
+					tag = HIN
+					tag = CTL
+				}
+			}
+			add_to_ROOT_potential_cores = yes
+		}
+		every_controlled_state = {
+			limit = {
+				OR = {
+					is_core_of = BRS
+					is_core_of = SAM
+					is_core_of = HIN
+					is_core_of = CTL
+				}
+			}
+			add_dynamic_modifier = { modifier = BAC_autonomy_state }
+		}
+		custom_effect_tooltip = KIR_line_break
+		add_popularity = {
+			ideology = communism
+			popularity = 0.03
+		}
+		bac_WPU_medium_effect = yes
 	}
 }
 
@@ -4155,9 +4579,37 @@ shared_focus = {
 		focus = BAC_COC_war_deer
 		focus = BAC_COC_m1
 	}
+	available = {
+		all_other_country = {
+			limit = {
+				OR = {
+					tag = BRS
+					tag = SAM
+					tag = HIN
+					tag = CTL
+				}
+			}
+			bac_all_original_cores_controlled_by_ROOT_or_ally = yes
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_deer"
-		#if you have faction member, get joint research ig
 		set_country_flag = commonalty_solved_deer
+		add_political_power = -300
+		add_stability = -0.49
+		every_other_country = {
+			limit = {
+				OR = {
+					tag = BRS
+					tag = SAM
+					tag = HIN
+					tag = CTL
+				}
+			}
+			add_to_ROOT_potential_cores = yes
+		}
+		custom_effect_tooltip = KIR_line_break
+		bac_eqs_popularity = yes
+		bac_COT_medium_effect = yes
 	}
 }

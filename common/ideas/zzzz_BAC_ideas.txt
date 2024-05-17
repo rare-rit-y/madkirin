@@ -203,12 +203,8 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				industrial_factory_donations = 5
-				#custom_modifier_tooltip = bac_verdant_accord_3_offmap_civ_facs
 			}
 			on_remove = {
-				ROOT = {
-					add_offsite_building = { type = industrial_complex level = -3 }
-				}
 			}
 		}
 		bac_verdant_accord_eqs_idea = {
@@ -250,14 +246,11 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				custom_modifier_tooltip = bac_verdant_accord_3_offmap_civ_facs
+				industrial_factory_donations = 5
 				consumer_goods_factor = -0.3
 				trade_opinion_factor = 0.3
 			}
 			on_remove = {
-				ROOT = {
-					add_offsite_building = { type = industrial_complex level = -3 }
-				}
 			}
 		}
 
@@ -406,9 +399,21 @@ ideas = {
 		BAC_PaPA_dummy_h1 = {
 			name = BAC_PaPA
 			modifier = {
-				modifier_army_sub_unit_kirin_braves_attack_factor = 0.5
-				modifier_army_sub_unit_kirin_braves_defence_factor = 0.5
-				special_forces_attack_factor = 0.5
+				modifier_army_sub_unit_kirin_braves_attack_factor = 0.05
+				modifier_army_sub_unit_kirin_braves_defence_factor = 0.05
+			}
+		}
+		BAC_PaPA_dummy_h3 = {
+			name = BAC_PaPA
+			modifier = {
+				special_forces_attack_factor = 0.03
+			}
+		}
+		BAC_PaPA_dummy_h4 = {
+			name = BAC_PaPA
+			modifier = {
+				supply_consumption_factor = -0.04
+				special_forces_attack_factor = 0.6
 			}
 		}
 		BAC_PaPA_dummy_c1 = {
@@ -417,6 +422,13 @@ ideas = {
 				army_attack_factor = 0.03
 				army_defence_factor = 0.03
 				research_speed_factor = 0.03
+			}
+		}
+		BAC_PaPA_dummy_c2 = {
+			name = BAC_PaPA
+			modifier = {
+				research_speed_factor = 0.03
+				experience_loss_factor = -0.15
 			}
 		}
 		BAC_PaPA_dummy_c4 = {
@@ -430,7 +442,17 @@ ideas = {
 		BAC_PaPA_dummy_m2 = {
 			name = BAC_PaPA
 			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
 				max_planning = 0.09
+			}
+		}
+		BAC_PaPA_dummy_m4 = {
+			name = BAC_PaPA
+			modifier = {
+				army_attack_factor = 0.09
+				army_defence_factor = 0.09
+				breakthrough_factor = 0.09
 			}
 		}
 		BAC_PaPA_dummy_COC_1_var = {
