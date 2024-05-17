@@ -400,6 +400,7 @@
  
  BAC_COC_commonalty_war_enacted_flag: "Has passed a §RWar Initiative§!"
  BAC_COC_commonalty_war_days_tt: " Current days are: [?BAC_COC_commonalty_war_enacted_flag:days|Y0]"
+ bac_national_focus_active_tt: "§YEffect upon selection§!:"
  
 
 #traits

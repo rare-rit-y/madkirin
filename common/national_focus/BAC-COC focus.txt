@@ -3820,7 +3820,7 @@ shared_focus = { #March to Old Marches
 			limit = {
 				OR = {
 					tag = KXN
-					tag = NVS
+					tag = NVA
 					tag = KHM
 				}
 			}
@@ -3835,10 +3835,9 @@ shared_focus = { #March to Old Marches
 			limit = {
 				any_controlled_state = {
 					OR = {
-						state = 1054 #Lotus Crown
-						state = 1058 #Blossom
-						state = 1083 #Cassia Reach
-						state = 1085 #Razorgrain Frontier
+						is_in_array = { KXN.original_cores = THIS }
+						is_in_array = { NVA.original_cores = THIS }
+						is_in_array = { KHM.original_cores = THIS }
 					}
 				}
 			}
@@ -3848,21 +3847,26 @@ shared_focus = { #March to Old Marches
 				value = 1000
 			}
 		}
-		clr_country_flag = BAC_COC_commonalty_war_enacted_flag
-	}
-	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_zaikiria"
-		1058 = { add_core_of = ROOT }
 		every_state = {
 			limit = {
 				OR = {
 					is_in_array = { KXN.original_cores = THIS }
 					is_in_array = { NVA.original_cores = THIS }
 					is_in_array = { KHM.original_cores = THIS }
-					NOT = { state = 1058 }
 				}
 			}
 			add_claim_by = ROOT
+		}
+		clr_country_flag = BAC_COC_commonalty_war_enacted_flag
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_war_zaikiria"
+		custom_effect_tooltip = bac_national_focus_active
+		effect_tooltip = { 1058 = { add_claim_by = ROOT } }
+		custom_effect_tooltip = national_spirit_active2
+		1058 = {
+			hidden_effect = { remove_claim_by = ROOT }
+			add_core_of = ROOT
 		}
 		every_other_country = {
 			limit = {
@@ -4219,7 +4223,7 @@ shared_focus = {
 			limit = {
 				OR = {
 					tag = KXN
-					tag = NVS
+					tag = NVA
 					tag = KHM
 				}
 			}
@@ -4273,7 +4277,7 @@ shared_focus = {
 			limit = {
 				OR = {
 					tag = KXN
-					tag = NVS
+					tag = NVA
 					tag = KHM
 				}
 			}
@@ -4288,7 +4292,7 @@ shared_focus = {
 			limit = {
 				OR = {
 					tag = KXN
-					tag = NVS
+					tag = NVA
 					tag = KHM
 				}
 			}
@@ -4365,7 +4369,7 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_convert_taungpau"
 		set_country_flag = commonalty_solved_taungpau
-		add_political_power = -99
+		add_political_power = -49
 		GAZ = { add_to_ROOT_potential_cores = yes }
 		custom_effect_tooltip = KIR_line_break
 		bac_eqs_popularity = yes
