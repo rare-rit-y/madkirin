@@ -10,6 +10,8 @@ tags={
 }
 dependencies={
 	"Equestria at War"
+	"EaW – Ghosts of Yore"
 }
 name="[EaW] Beyond Auspicious Clouds"
 supported_version="1.14.*"
+remote_file_id="3248362524"

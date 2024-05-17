@@ -1,3 +1,183 @@
+ARA_EMP = {
+    color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
+ARA_HOLY = {
+    color = rgb { 124 7 25 }
+    color_ui = rgb { 150 21 53 }
+}
+ARA_CREP = {
+    color = rgb { 255 20 40 }
+	color_ui = rgb { 255 20 30 }
+}
+WNG_soter = {
+    color = rgb { 255 20 40 }
+	color_ui = rgb { 255 20 30 }
+}
+JER_soter = {
+    color = rgb { 255 20 40 }
+	color_ui = rgb { 255 20 30 }
+}
+FAT_soter = {
+    color = rgb { 255 20 40 }
+	color_ui = rgb { 255 20 30 }
+}
+LUS_soter = {
+    color = rgb { 255 20 40 }
+	color_ui = rgb { 255 20 30 }
+}
+MIT_soter = {
+    color = rgb { 255 20 40 }
+	color_ui = rgb { 255 20 30 }
+}
+RIV_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 184 17 47 }
+    #color_ui = rgb { 193 40 63 }
+}
+BRD_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 184 17 47 }
+    #color_ui = rgb { 193 40 63 }
+}
+FBK_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
+EQC_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 184 17 47 }
+    #color_ui = rgb { 193 40 63 }
+}
+MIT_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 20 86 144 }
+    #color_ui = rgb { 15 99 172 }
+}
+NTR_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 29 20 90 }
+    #color_ui = rgb { 32 17 131 }
+}
+NCH_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 2 91 68 }
+    #color_ui = rgb { 2 91 68 }
+}
+HLR_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+    #color = rgb { 210 194 53 }
+    #color_ui = rgb { 221 202 29 }
+}
+CTH_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
+MCW_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
+TBK_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
+HIP_arantiga = {
+	color = rgb { 184 17 47 }
+    color_ui = rgb { 193 40 63 }
+}
+BRZ_griffonstone = {
+	color = rgb { 105 66 112 }
+	color_ui = rgb { 105 66 112 }
+}
+NTR_TYRANNY = {
+	color = rgb { 20 86 144 }
+    color_ui = rgb { 15 99 172 }
+}
+NTR_UK = {
+	color = rgb { 85 50 225 }
+    color_ui = rgb { 85 50 219 }
+}
+BRZ_NTR_UK = {
+	color = rgb { 85 50 225 }
+    color_ui = rgb { 85 50 219 }
+}
+NTR_GRIFFEMP = {
+	color = rgb { 229 138 47 }
+	color_ui = rgb { 229 138 47 }
+}
+KAT_NTR_UK = {
+	color = rgb { 179 174 158 }
+	color_ui = rgb { 179 174 158 }
+}
+FEA_NTR_UK = {
+	color = rgb { 179 174 158 }
+	color_ui = rgb { 179 174 158 }
+}
+BRZ_NTR_SUBJ = {
+	color = rgb { 179 174 158 }
+	color_ui = rgb { 179 174 158 }
+}
+HRR_GOY = {
+	color = rgb { 255 158 47 }
+	color_ui = rgb { 220 158 47 }
+}
+HRR_GOY_republic = {
+	color = rgb { 255 158 47 }
+	color_ui = rgb { 220 158 47 }
+}
+HRR_GOY_kingdom = {
+	color = rgb { 255 158 47 }
+	color_ui = rgb { 220 158 47 }
+}
+POM_goy_aquileia = {
+	color = rgb { 145 25 45 }
+	color_ui = rgb { 145 25 45 }
+}
+POM_ONE_COMMUNE = {
+	color = rgb { 145 25 45 }
+	color_ui = rgb { 145 25 45 }
+}
+RCT_ALLARD = {
+	color = rgb { 145 25 45 }
+	color_ui = rgb { 150 50 70 }
+}
+FBK_ALLARD = {
+	color = rgb { 145 25 45 }
+	color_ui = rgb { 160 50 90 }
+}
+#
+POM_GOY_REP_JFT = {
+	color = rgb { 26 101 495 }
+	color_ui = rgb { 26 85 49 }
+}
+POM_GOY_REP_JER = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 26 101 34 }
+}
+POM_GOY_REP_JEB = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 11 101 49 }
+}
+GRI_GOY_POMOVARRAN = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 26 85 49 }
+}
+BRZ_GOY_POMOVARRAN = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 26 101 34 }
+}
+FEA_GOY_POMOVARRAN = {
+	color = rgb { 26 101 49 }
+	color_ui = rgb { 11 101 49 }
+}
+################################
 FAT_Monarchy = {
 	color = rgb { 104 107 156 }
 	color_ui = rgb { 104 107 156 }
