@@ -2661,7 +2661,7 @@ shared_focus = { #Plan Zebrica -build docks
 			}
 		}
 		custom_effect_tooltip = KIR_line_break
-		bac_WPU_small_effect = yes
+		bac_COT_small_effect = yes
 	}
 }
 
@@ -2815,6 +2815,7 @@ shared_focus = { #Military Affairs
 					hours = 10
 				}
 			}
+			remove_dynamic_modifier = { modifier = COC_peasant_army }
 			add_dynamic_modifier = { modifier = BAC_PaPA }
 			clear_variable = COC_2_var
 			add_to_variable = { COC_1_var = 0.03 }

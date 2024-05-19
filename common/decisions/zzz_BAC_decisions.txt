@@ -719,7 +719,7 @@ commonalty_bop_category = {
         }
     }
 	comm_COT_NH = { #Empower Trinitarian Collective
-        icon = GFX_decision_kirin_corvee
+        icon = GFX_decision_kirin_corvee_up
 		allowed = { original_tag = KIC }
 		cost = 33
         available = {
