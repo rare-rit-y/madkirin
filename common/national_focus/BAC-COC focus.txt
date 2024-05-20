@@ -2135,10 +2135,10 @@ shared_focus = { # #Equestrian Ties
 			else = { has_completed_focus = BAC_COC_pol_h2 }
 			event_target:solar_empire = {
 				is_subject = no
+				surrender_progress < 0.1
 				NOT = {
 					has_war_with = ROOT
 				}
-				surrender_progress < 0.1
 				if = {
 					limit = {
 						ROOT = { is_ai = no }
@@ -2151,10 +2151,10 @@ shared_focus = { # #Equestrian Ties
 			event_target:equestria = {
 				exists = yes
 				is_subject = no
+				surrender_progress < 0.1
 				NOT = {
 					has_war_with = ROOT
 				}
-				surrender_progress < 0.1
 				if = {
 					limit = {
 						ROOT = { is_ai = no }
@@ -2404,10 +2404,10 @@ shared_focus = { #Yet Another Accord
 			else = { has_completed_focus = BAC_COC_pol_h2 }
 			event_target:solar_empire = {
 				is_subject = no
+				surrender_progress < 0.1
 				NOT = {
 					has_war_with = ROOT
 				}
-				surrender_progress < 0.1
 				if = {
 					limit = {
 						ROOT = { is_ai = no }
@@ -2420,10 +2420,10 @@ shared_focus = { #Yet Another Accord
 			event_target:equestria = {
 				exists = yes
 				is_subject = no
+				surrender_progress < 0.1
 				NOT = {
 					has_war_with = ROOT
 				}
-				surrender_progress < 0.1
 				if = {
 					limit = {
 						ROOT = { is_ai = no }
@@ -2964,7 +2964,11 @@ shared_focus = { #BAC_COC_mil_h2
 		focus = BAC_COC_mil_h1
 	}
 	available = {
-		has_idea = bac_verdant_accord_idea
+		if = {
+			limit = { has_idea = bac_verdant_accord_2_idea }
+			has_idea = bac_verdant_accord_2_idea
+		}
+		else = { has_idea = bac_verdant_accord_idea }
 		power_balance_value = {
 			id = BAC_commonalty_bop
 			value > 0.099
@@ -2978,10 +2982,10 @@ shared_focus = { #BAC_COC_mil_h2
 			else = { has_completed_focus = BAC_COC_pol_h2 }
 			event_target:solar_empire = {
 				is_subject = no
+				surrender_progress < 0.1
 				NOT = {
 					has_war_with = ROOT
 				}
-				surrender_progress < 0.1
 				if = {
 					limit = {
 						ROOT = { is_ai = no }
@@ -2994,10 +2998,10 @@ shared_focus = { #BAC_COC_mil_h2
 			event_target:equestria = {
 				exists = yes
 				is_subject = no
+				surrender_progress < 0.1
 				NOT = {
 					has_war_with = ROOT
 				}
-				surrender_progress < 0.1
 				if = {
 					limit = {
 						ROOT = { is_ai = no }
