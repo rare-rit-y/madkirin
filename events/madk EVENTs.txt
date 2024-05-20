@@ -859,6 +859,14 @@ country_event = { #yes
 country_event = { #149 yesmaar - puppet
 	id = baccocc.149
 	immediate = {log = "[GetDateText]: [Root.GetName]: event baccocc.149"}
+	immediate = {
+		hidden_effect = {
+			save_event_target_as = alliance_inviter
+			FROM = {
+				save_event_target_as = alliance_applicant
+			}
+		}
+	}
 	title = baccocc.149.t
 	desc = baccocc.149.d
 	picture = GFX_event_KIR_stamp_B
