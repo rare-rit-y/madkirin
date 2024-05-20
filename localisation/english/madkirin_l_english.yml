@@ -419,6 +419,10 @@
  BAC_commonalty: "Commonalty of Zebrica"
  BAC_commonalty_DEF: "the Free and Democratic Commonalty of Zebrica"
  BAC_commonalty_ADJ: "Commonal"
+ BAC_SOL: "Radiant Mandate"
+ BAC_SOL_DEF: "Radiant Mandate of Concord, Celestia, Conflagration"
+ BAC_SOL_ADJ: "Radiant"
+ BAC_conflagration: "Radiant Trinity"
  #  GAZ_KIR_CoC_subject: "Commonal Mandate"
  #  GAZ_KIR_CoC_subject_DEF: "the Commonal Mandate of Taungpau for Extermination of the Way of Fire"
  #  GAZ_KIR_CoC_subject_ADJ: "Taungpauan"
@@ -436,6 +440,8 @@
 
  BAC_COC_fascism_party: "Communion - Extremist"
  BAC_COC_fascism_party_long: "Communion of Her Radiant Trinity - Extremist"
+ BAC_COC_fascism_party_1: "Communion - Solarist"
+ BAC_COC_fascism_party_1_long: "Communion of Her Radiant Trinity - Solarist"
  BAC_COC_na_party_0: "CPF - Moderates"
  BAC_COC_na_party_0_long: "Committee For Preparation of The Foundation - Moderates"
  BAC_COC_na_party_1: "Senate - Moderates"
@@ -447,6 +453,7 @@
  BAC_COC_firethorn_desc: "Heaps of praise could be had upon the head of the Banner of the Scented Moonflower. Its Matriarch-Commander, Firethorn was raised in a Banner that had both evolved into a complex clan and retained enough soldiers to fight alongside its equals (at least before the Silence).\n\nIn the Silence's last years, Firethorn had seen the folly of the Silence a century in the making. Her clan had propped themselves up thanks to their loyalty to the Realm, but outside the Banner's cosy home villages, the rest of Kiria had languished: just miles away, a small city had thrived; that seemed a lie when all she saw and walked through was a ghost town populated by farmers who lived hoof to mouth.\n\nThat memory returned when Rain Shine announced the Silence's end. No longer would her Banner and the soldiers she takes care of serve themselves and the decrepit pieces of a dying government. A reborn Realm she would serve: the Realm and all the kirin that are now suddenly free.\n\nBut the Second Cacophony did not leave any room for such a smooth destiny: she was forced to lose many of her bannerkirin - her kins - in the battle, and joined a hopeless peasant revolt to take revenge on the NAKP for causing the civil war. Only time would tell her final fate.\n\n§YPortrait by:§! Tek"
 
  BAC_commonalty_faction: "Mutual Assistance Bloc"
+ BAC_SOL_faction: "Radiance Accord"
 
  BAC_commonalty_bop: "Two Factions of the §8Commonalty§!"
   commonalty_harmonic_control: "§FCommunion§! - §7Harmonists§!"

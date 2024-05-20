@@ -2,6 +2,7 @@ add_namespace = madkirin
 add_namespace = bacdebug
 add_namespace = baccocc
 add_namespace = bacutility
+add_namespace = bacs
 #made by _unicornia. (github: rare-rit-y)
 country_event = {
 	id = bacutility.1
@@ -932,6 +933,60 @@ country_event = { # baccocc.303 - Tathya-Samvrti - ending event
 		custom_effect_tooltip = baccocc_303_tt
 		TNO_BAC_Country_Closing_Screen_Show = yes
 		set_country_flag = commonalty_ending_flag
+	}
+}
+country_event = { # exiles do some coup
+	id = bacs.1
+	title = bacs.1.t
+	desc = bacs.1.d
+	picture = GFX_event_KIR_evening
+	immediate = {log = "[GetDateText]: [Root.GetName]: event bacs.1"}
+	immediate = {
+		hidden_effect = {
+			if = { #debug purpose
+				limit = { NOT = { has_global_flag = daybreaker_spawned } }
+				EQS = { EQS_SOL_wartime_change = yes }
+			}
+		}
+	}
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = bacs.1.a
+		every_possible_country = {
+			limit = { has_character = EQS_princess_celestia }
+			EQS_princess_celestia = {
+				set_nationality = PREV.PREV
+				promote_character = {
+					ideology = nazism
+				}
+				set_character_name = BAC_conflagration
+			}
+			
+		}
+		set_politics = { ruling_party = fascism }
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.30
+		}
+		set_cosmetic_tag = BAC_SOL
+		if = {
+			limit = { is_faction_leader = yes }
+			set_faction_name = BAC_SOL_faction
+		}
+		else = { create_faction = BAC_SOL_faction }
+		remove_power_balance = {
+			id = BAC_commonalty_bop
+		}
+		end_coalition = yes
+		hidden_effect = {
+			set_party_name = {
+				ideology = fascism
+				long_name = BAC_COC_fascism_party_1_long
+				name = BAC_COC_fascism_party_1
+			}
+			
+		}
 	}
 }
 
