@@ -1537,7 +1537,7 @@ shared_focus = { #Expand Foreign Affairs
 		unlock_decision_tooltip = comm_WPU_commiebro
 	}
 }
-shared_focus = { #자연과학
+shared_focus = {
 	id = BAC_COC_modern_science
 	icon = GFX_goal_KIR_collegium_focus
 	cost = 7
@@ -1566,7 +1566,7 @@ shared_focus = { #자연과학
 		add_research_slot = 1
 	}
 }
-shared_focus = { # Research and Development Complex #복합연구개발단지
+shared_focus = { # Research and Development Complex
 	id = BAC_COC_applied_science
 	icon = GFX_goal_break_into_the_electronic_industry
 	cost = 7
@@ -1617,7 +1617,7 @@ shared_focus = { # Research and Development Complex #복합연구개발단지
 	}
 }
 
-shared_focus = { # Purge The Extremist Conservatives 수구 세력 숙청
+shared_focus = { # Purge The Extremist Conservatives
 	id = BAC_COC_pol_h2
 	icon = GFX_goal_solar_inquisition
 	cost = 4.8
@@ -3238,7 +3238,7 @@ shared_focus = { # Beyond The Riverine Navy
 		bac_WPU_medium_effect = yes
 	}
 }
-shared_focus = { #해군항공대
+shared_focus = {
 	id = BAC_COC_mil_navalair
 	icon = GFX_goal_KIR_air
 	cost = 7
