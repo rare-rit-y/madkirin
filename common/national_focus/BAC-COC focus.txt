@@ -2683,7 +2683,6 @@ shared_focus = {
 	available = {
 		has_modern_society = yes
 		has_stability > 0.66
-		has_war = no
 	}
 	completion_reward = { #maybe it would be some fancy gui mechanic? but not now
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_eco_m4m"
@@ -3809,7 +3808,6 @@ shared_focus = { #March to Old Marches
 	}
 
 	available = {
-		has_war = no
 		if = {
 			limit = { is_ai = no }
 			has_war_support > 0.5
@@ -3924,7 +3922,6 @@ shared_focus = { #Attack on barbarian lands
 		has_country_flag = COC_war_committee_flag
 	}
 	available = {
-		has_war = no
 		if = {
 			limit = { is_ai = no }
 			has_war_support > 0.66
@@ -4166,7 +4163,6 @@ shared_focus = {
 	}
 
 	available = {
-		has_war = no
 		if = {
 			limit = { is_ai = no }
 			has_war_support > 0.5
