@@ -6,7 +6,6 @@ bac_coc_debug_cat = {
             original_tag = KIC
         }
 		visible = {
-			is_debug = yes
             has_country_flag = KIC_children_of_concord_flag
 			check_variable = { baccocc_start_foci_completed < 10 }
 		}
@@ -36,7 +35,7 @@ bac_coc_debug_cat = {
             original_tag = KIC
         }
 		visible = {
-			is_debug = yes
+			
             has_country_flag = KIC_children_of_concord_flag
 			check_variable = { baccocc_start_foci_completed > 3 }
 		}
@@ -52,7 +51,7 @@ bac_coc_debug_cat = {
             original_tag = KIC
         }
 		visible = {
-			is_debug = yes
+			
             has_country_flag = KIC_children_of_concord_flag
 			NOT = { has_country_flag = COC_war_committee_flag }
 		}
@@ -66,7 +65,7 @@ bac_coc_debug_cat = {
             original_tag = KIC
         }
 		visible = {
-			is_debug = yes
+			
 			has_any_power_balance = yes
 		}
 		complete_effect = {
@@ -78,7 +77,7 @@ bac_coc_debug_cat = {
             original_tag = KIC
         }
 		visible = {
-			is_debug = yes
+			
 			has_any_power_balance = yes
 		}
 		complete_effect = {

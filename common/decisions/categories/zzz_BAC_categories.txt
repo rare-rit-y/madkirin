@@ -2,6 +2,8 @@
 bac_coc_debug_cat = {
 	allowed = {
 		original_tag = KIC
+		is_debug = yes
+		NOT = { tag = KIC }
 	}
 
 	priority = {
@@ -16,6 +18,8 @@ commonalty_bop_category = {
 	}
 	
 	visible = { 
-		has_any_power_balance = yes
+		has_power_balance = {
+			id = BAC_commonalty_bop
+		}
 	}
 }
