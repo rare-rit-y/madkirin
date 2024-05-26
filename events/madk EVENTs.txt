@@ -396,6 +396,7 @@ unit_leader_event = { #baccocc.12 firethorn
 					large = "GFX_portrait_KIR_firethorn_new_uniform"
 				}
 			}
+			set_leader_description = COC_Firethorn_idea_desc
 			add_unit_leader_trait = trait_SOV_determined
 			if = {
 				limit = { is_advisor = no }
