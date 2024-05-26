@@ -429,8 +429,8 @@
  BAC_star_energy_zeb_available: "Unlocked §Y$BAC_star_energy_zeb$§!"
  BAC_fillydelphia_arms: "Fillydelphia-Verdant Motors"
  BAC_fillydelphia_arms_available: "Unlocked §Y$BAC_fillydelphia_arms$§!"
- BAC_PaPA: "Peace-and-Plenty Army"
- #BAC_PaPA_tt: "\nGains Dynamic Modifier: §Y$BAC_PaPA$§!, which grants dynamic bonuses to §YLand Combat§!, §YAir§!, §YNaval§! and §YMilitary§! Modifiers."
+ BAC_PaPA: "§8Peace-and-Plenty Army§!"
+ #BAC_PaPA_tt: "\nGains Dynamic Modifier: $BAC_PaPA$, which grants dynamic bonuses to §YLand Combat§!, §YAir§!, §YNaval§! and §YMilitary§! Modifiers."
  BAC_autonomy_state: "Autonomous Region"
  BAC_autonomy_state_tt: "If the state is §Gcore§! of §Y[ROOT.GetName]§! and borders §Gnon-autonomous§! state, this modifier can be removed by £decision_icon_small §Ydecision§!."
 
