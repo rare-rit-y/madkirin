@@ -3642,6 +3642,10 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_m4m"
+		add_popularity = {
+			ideology = neutrality
+			value = 0.03
+		}
 		add_to_variable = { COC_5_var = 0.09 }
 		add_to_variable = { COC_6_var = 0.09 }
 		set_variable = { BAC_PaPA_m4 = 0.09 }
@@ -4018,7 +4022,7 @@ shared_focus = { #Attack on barbarian lands
 		set_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
 }
-shared_focus = {
+shared_focus = { #deer war
 	id = BAC_COC_war_deer
 	icon = GFX_goal_chn_kill_the_deer
 	cost = 4.8

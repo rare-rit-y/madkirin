@@ -84,7 +84,7 @@
  BAC_COC_true_commonalty_tt: "§g"Never to §Olead§!, always to §Phelp§!."§!"
 
  BAC_COC_pol_head: "Committee for Commonal Education"
- BAC_COC_pol_head_desc: "Due to the complexity inherent in Kirin letters, the literacy rate is significantly higher compared to advanced nations. The CCE has been ordered to focus on this illiteracy issue according to the consensus of the Commonal Senate, yet progress is reportedly slow. The highly esteemed §PDayspring Rose§! will be appointed as a special chief commissioner to find out what problems are."
+ BAC_COC_pol_head_desc: "Due to the complexity inherent in kirin letters, the literacy rate is significantly higher compared to advanced nations. The CCE has been ordered to focus on this illiteracy issue according to the consensus of the Commonal Senate, yet progress is reportedly slow. The highly esteemed §PDayspring Rose§! will be appointed as a special chief commissioner to find out what problems are."
  BAC_COC_pol_h1: "Assertive Conversion"
  BAC_COC_pol_h1_desc: "The Way of Fire bears the responsibility for not having been of any assistance as Kiria transformed into a horrific battlefield. Who was it that forced the Silence in the first place? No matter how secluded or harmless those who worship this monstrosity may be, it's unacceptable to have such a flawed values. These values eat away at their innocent hearts until they turn into monsters like those."
  BAC_COC_pol_c1: "Allow The Way of Fire"
@@ -142,7 +142,7 @@
  BAC_COC_modern_science: "Committee for Science and Technology"
  BAC_COC_modern_science_desc: "We're reaching the point where we can't simply look at superficial aspects and copy them. The time has come for another standing committee to devise a more systematic approach."
  BAC_COC_applied_science: "Research and Development Complex"
- BAC_COC_applied_science_desc: "Our Kirin scientific and technological capabilities now rival those of any other nation in the world! Now that we have achieved modernity, it is time to move forward to secure our future once again. A slight edge in technology will save hundreds of thousands of blood!"
+ BAC_COC_applied_science_desc: "Our kirin scientific and technological capabilities now rival those of any other nation in the world! Now that we have achieved modernity, it is time to move forward to secure our future once again. A slight edge in technology will save hundreds of thousands of blood!"
 
  BAC_COC_mil_head: "Committee for Military Affairs"
  BAC_COC_mil_head_desc: "There are many steeds that have been rumoured to be the chief of the Committee for Military Affairs, but it is widely believed that some of the most active generals currently on the Senate will be among them. Delegate Ember Glow will soon be presenting a new motion to the Senate, and this current affairs gossip will soon be forgotten."
@@ -184,11 +184,11 @@
  BAC_COC_mil_navalair_desc: "The idea of a platform that allows aircraft to launch from the sea is the latest doctrine to emerge, but battleships still rule the seas. But will it ever be? With air launched torpedoes already getting better and better, how many more layers of armor do we need to protect that biggy warships? Taking a page from Equestria's playbook, developing naval aviation is the future of our navy."
 
  BAC_COC_sekrit_war_committee: "Prepare For War"
- BAC_COC_sekrit_war_committee_desc: "Through divine sacrifice, heroic deeds, desperate resistance, and kirin blood - the NAKP has been defeated, but those who threaten the Kirin, those who threaten the children of Her Radiant Trinity are everywhere. If we want peace, let us prepare for war."
+ BAC_COC_sekrit_war_committee_desc: "Through divine sacrifice, heroic deeds, desperate resistance, and kirin blood - the NAKP has been defeated, but those who threaten the kirin, those who threaten the children of Her Radiant Trinity are everywhere. If we want peace, let us prepare for war."
  BAC_COC_sekrit_war_committee_tt: "Since we are already in a faction, whenever we §8leave their faction§!:"
 
  BAC_COC_war_zaikiria: "March To Old Marches"
- BAC_COC_war_zaikiria_desc: "Let the faithfuls save the poor kirin who have been alienated from Her Radiance by the great debacle of the Silence, emphasising that they are all children before Her Radiant Trinity. Kirin there are also already groaning under the mad Nirik warlords, reactionary despots, and decadent pagans. Let the common know that turning a blind eye to them will only lead to further disaster." #
+ BAC_COC_war_zaikiria_desc: "Let the faithfuls save the poor kirin who have been alienated from Her Radiance by the great debacle of the Silence, emphasising that they are all children before Her Radiant Trinity. Kirin there are also already groaning under the mad nirik warlords, reactionary despots, and decadent pagans. Let the common know that turning a blind eye to them will only lead to further disaster." #
  BAC_COC_convert_zaikiria: "All Children of Her Radiant Trinity"
  BAC_COC_convert_zaikiria_desc: "We have learned the hard way what a false faith can do when combined with other evils, though it is not powerful on its own. And if we are to be better beings, we must not allow our brothers and sisters, our equals as children under Her Radiant Trinity, to maintain their poor lives unenlightened."
  BAC_COC_friend_zaikiria: "Everykirin Can Glitter"
@@ -211,7 +211,7 @@
  BAC_COC_war_barbarian: "Attack on Barbarian Lands"
  BAC_COC_war_barbarian_desc: "The griffons and zebras beyond the Westren Territories have a history of raiding our lands. Does it make any difference even in the modern era? It wouldn't easy for our archaeologists, but let's highlight these old historical facts to justify our invasion and nip them in the bud before they grow in power from the outside."
  BAC_COC_convert_barbarian: "Edify Their Barbarism"
- BAC_COC_convert_barbarian_desc: "These barbaric species have constantly threatened the Kirinity, the children of Her Radiant Trinity, and we need to make sure they never even think of doing so again. What if we can bring them to accept the gospel of Her Radiant Trinity? It's worth a try."
+ BAC_COC_convert_barbarian_desc: "These barbaric species have constantly threatened the kirinity, the children of Her Radiant Trinity, and we need to make sure they never even think of doing so again. What if we can bring them to accept the gospel of Her Radiant Trinity? It's worth a try."
  BAC_COC_friend_barbarian: "Comrades, Not Barbarian"
  BAC_COC_friend_barbarian_desc: ""Barbarism" is delusion created by pre-modern fear and ignorance. They are sapient like us. They have feelings and emotions like us. They deserve the same justice, democracy, and dignity like we have earned."
 
@@ -230,7 +230,7 @@
   bacdebug.1.e: "fuck off"
  #commonalty
   baccocc.1.t: "To Prepare The Foundation"
-  baccocc.1.d: "The soon-to-be Commonalty, the Children of Concord, was initially a loose alliance between the Communion of Her Radiant Trinity led by Dayspring Rose and the All-Kiria Union of Workers and Peasants led by Kindling Flash. Even at the onset of the uprising, this bond was solidified by a mutual animosity against the existential threat posed by the National Association of Kirin Patriots. However, now that a complete victory over the NAKP has been achieved, this bond has become as insubstantial as a mirage.\n\nWhile there is a certain closeness between Kindling Flash and Dayspring Rose, yet the realities of politics demand attention to their respective supporters. The Committee for Preparation of the Foundation has invited as many kirin as possible to ensure no one is left behind Concord, resulting in a multitude of voices. However, the two most dominant voices are those represented by the Communion and the Union.\n\nUnfortunately, the current situation within the CPF is in deadlock, with members of the two factions in opposition, making consensus on key issues unattainable. Both sides are aware that pushing through decisions on the principle of majority rule, without it being an institutionally guaranteed decision-making mechanism, lacks a basis for enforcement and is unlikely to lead to proper progress. The possibility of Nirik transformation also cannot be ignored.\n\nFrom the start, the CPF has been mired in a stalemate."
+  baccocc.1.d: "The soon-to-be Commonalty, the Children of Concord, was initially a loose alliance between the Communion of Her Radiant Trinity led by Dayspring Rose and the All-Kiria Union of Workers and Peasants led by Kindling Flash. Even at the onset of the uprising, this bond was solidified by a mutual animosity against the existential threat posed by the National Association of Kirin Patriots. However, now that a complete victory over the NAKP has been achieved, this bond has become as insubstantial as a mirage.\n\nWhile there is a certain closeness between Kindling Flash and Dayspring Rose, yet the realities of politics demand attention to their respective supporters. The Committee for Preparation of the Foundation has invited as many kirin as possible to ensure no one is left behind Concord, resulting in a multitude of voices. However, the two most dominant voices are those represented by the Communion and the Union.\n\nUnfortunately, the current situation within the CPF is in deadlock, with members of the two factions in opposition, making consensus on key issues unattainable. Both sides are aware that pushing through decisions on the principle of majority rule, without it being an institutionally guaranteed decision-making mechanism, lacks a basis for enforcement and is unlikely to lead to proper progress. The possibility of nirik transformation also cannot be ignored.\n\nFrom the start, the CPF has been mired in a stalemate."
   baccocc.1.a: "It have never been thought that would be easy, after all."
   baccocc_1_tt: "\n§gThe §YCoalition§! will not be broken, but the §Pideological§! §Rdifferences§! will be too much to overcome...§!\n\n"
 
