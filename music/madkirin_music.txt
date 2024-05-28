@@ -68,9 +68,9 @@ music = {
 music = {
   song = "Colorful_Voice"
   chance = {
-    base = 1
+    base = 0
     modifier = {
-      add = 0.5
+      add = 1
       is_kirin_race = yes
     }
     modifier = {
@@ -92,10 +92,13 @@ music = {
 music = {
   song = "Duty_Calls"
   chance = {
-    base = 1
+    base = 0
     modifier = {
       add = 2
-      tag = KIS
+      OR = {
+        tag = KIS
+        original_tag = LCT
+      }
     }
     modifier = { factor = 0 has_war = no }
   }
@@ -106,7 +109,7 @@ music = { #Fighting Spirit
   chance = {
     base = 1
     modifier = {
-      add = 3
+      add = 2
       has_modern_society = yes
     }
     modifier = { factor = 0 has_war = no }
@@ -158,7 +161,7 @@ music = {
 music = {
   song = "Kokoro_Long_Version"
   chance = {
-    base = 2
+    base = 0
     modifier = {
       add = 2
       has_country_flag = BAC_get_commonalty_flag
@@ -176,22 +179,22 @@ music = {
 music = {
   song = "Lauriel_Phase_2"
   chance = {
-    base = 1
-    modifier = { factor = 3 has_war_with_major = yes }
+    base = 0
+    modifier = { add = 3 has_war_with_major = yes }
     modifier = { factor = 0 has_war = no } 
   }
 }
 music = {
    song = "Leonhart_LARK"
    chance = {
-     base = 3
+     base = 2
      modifier = { factor = 0 has_war = yes }
    }
 }
 music = {
   song = "Like_Asian_Spirit"
   chance = {
-    base = 1
+    base = 0
     modifier = {
       add = 2
       has_country_flag = BAC_get_commonalty_flag
@@ -224,7 +227,7 @@ music = {
 music = {
   song = "sdorica_aurora_ost_-_title_BGM"
   chance = {
-    base = 2
+    base = 1
     modifier = {
       add = 1
       any_character = {
@@ -241,7 +244,7 @@ music = {
 music = {
   song = "Shamisen_Drives_The_Wind"
   chance = {
-    base = 1
+    base = 0
     modifier = {
       add = 1
       has_country_flag = BAC_get_commonalty_flag
@@ -259,7 +262,7 @@ music = {
 music = {
   song = "Song_of_Lazernes"
   chance = {
-    base = 3
+    base = 1
     modifier = { 
       factor = 0 
       OR = { 

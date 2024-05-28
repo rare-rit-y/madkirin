@@ -76,7 +76,7 @@
  BAC_COC_m3_desc: "Now that the most important parts of the Constitution are in place, We can't put off founding any longer, so let's take care of the most urgent things first, and then declare Commonalty."
  BAC_COC_h3: "Committee for Foreign Affairs"
  BAC_COC_h3_desc: "The harms of the Silence are so many, but this time it's our relations with the international society need to be addressed. We're in a serious diplomatic crisis now that we've overthrown the successor to the Realm - the Empire, considered a legitimate one. Let's start with the list of foreign dignitaries to be invited."
- BAC_COC_c3: "Land Investigation Programme" #토지조사사업
+ BAC_COC_c3: "Land Investigation Programme"
  BAC_COC_c3_desc: "The loudest cry coming from all over the country is for to guarantee their lands that have been expunged by NAKP. It's also the most dangerous one. If all these allegations are true, surely there's no reason not to do so. First, we need to clear right and wrong. So that land reform can be implemented according to local conditions. At the very least, a plan should be announced."
  
  BAC_COC_true_commonalty: "The Declaration!"
@@ -115,7 +115,7 @@
  BAC_COC_eco_h4_desc: "At last, in the name of Her Radiant Trinity, we have achieved the feats of modernisation and globalisation simultaneously! Kirin are free, our streets are filled with friendship and love, and the Commonalty has become the land of harmony! Now, as equal economic player, we will ensure that this monumental success is forever remembered by signing the Free Trade Agreement with the Equestrian Economic Bloc."
  BAC_COC_eco_c1: "Initiate Land Reform" #gives timed idea i think
  BAC_COC_eco_c1_desc: "The Communalists don't really care about all this talk of modernisation, because the only thing that matters is making sure that the kirin in this Realm don't go hungry. If we can follow the principle of 'Land to the Tiller' and give each farmer just enough land to ensure optimal production for themselves, there will be no more starving kirin."
- BAC_COC_eco_m2: "New Campaign Town" #새마을운동
+ BAC_COC_eco_m2: "New Campaign Town"
  BAC_COC_eco_m2_desc: "When the NAKP brought modernization to this land for the first time in this century, they said that we, the ignorant kirin, could only compete by working for low wages, poor diets, and harsh conditions. The foolishest and most rebellious were the first to die. We must continue to prove the NAKP wrong, as our very existence proves. That is the only honor we can give to those who have gone before us."
  BAC_COC_eco_c2: "Grain Propagation Plan" #産米增殖計劃
  BAC_COC_eco_c2_desc: "Though reforming the land system and distributing land is the most important thing, but if there is no food in the stomachs of kirin, millions must starve. We need to put everything into farming this year. Because the fields - already devastated by the civil war - can't feed everykirin. Holding on for now, but it won't last long. The most urgent need is to improve irrigation, so let's get started."
@@ -133,7 +133,7 @@
  BAC_COC_eco_m4h_desc: "Now that we have modernised the Commonalty, we need to further increase our naval power to ensure that our people's freedom is most assuredly protected at sea. Plan Zebrica will be the start."
  BAC_COC_eco_m4c: "Light Industry For Everykirin"
  BAC_COC_eco_m4c_desc: "We can't do what usual developmentalist dictatorships do: force sacrifices on the promise of increasing the pie, and then not care about anything at all. The fruits of modernization and development must be shared by all."
- BAC_COC_eco_m4m: "Electrify The Common" #만민에게 전력을
+ BAC_COC_eco_m4m: "Electrify The Common"
  BAC_COC_eco_m4m_desc: "A vast network of power lines shall connect the bustling metropolises to the farthest rural hamlet, the tendrils of modernity criss-crossing Commonalty to weave a web of Her Radiance and progress. The fervent spirit of innovation ignited, churned into being by the gears of industry, will leap and spark from pylon to towering pylon, breathing fire and vigor into the veins of the Commonalty." #KIR_focus_9g_desc
  BAC_COC_eco_m4m_tt: "Unlocks £decision_icon_small  §YElectrify§! decisions for each core state, taking this decision will upgrade its §YState Category§! and gives §Y$BAC_its_electric_state$§! State Modifier."
  BAC_COC_diplo: "Expand Foreign Affairs"
