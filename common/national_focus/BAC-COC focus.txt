@@ -3439,7 +3439,40 @@ shared_focus = {
 				add_idea = communal_militias
 			}
 		}
-		else = { add_ideas = communal_militias }
+		else_if = {
+			limit = { has_idea = all_adults_serve }
+			swap_ideas = {
+				remove_idea = all_adults_serve
+				add_idea = communal_militias
+			}
+		}
+		else_if = {
+			limit = { has_idea = scraping_the_barrel }
+			swap_ideas = {
+				remove_idea = scraping_the_barrel
+				add_idea = communal_militias
+			}
+		}
+		else_if = {
+			limit = { has_idea = volunteer_only }
+			swap_ideas = {
+				remove_idea = volunteer_only
+				add_idea = communal_militias
+			}
+		}
+		else_if = {
+			limit = { has_idea = limited_conscription }
+			swap_ideas = {
+				remove_idea = limited_conscription
+				add_idea = communal_militias
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = disarmed_nation
+				add_idea = communal_militias
+			}
+		}
 		custom_effect_tooltip = KIR_line_break
 		add_popularity = {
 			ideology = communism
