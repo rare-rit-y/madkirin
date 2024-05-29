@@ -3900,10 +3900,13 @@ shared_focus = { #March to Old Marches
 				}
 			}
 			ROOT = {
-				create_wargoal = {
-					type = annex_everything
-					target = PREV
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
 				}
+				custom_effect_tooltip = KIR_republic_postwar_focus_XY_WG_tt
 			}
 		}
 		set_country_flag = BAC_COC_commonalty_war_enacted_flag
@@ -4013,10 +4016,13 @@ shared_focus = { #Attack on barbarian lands
 				}
 			}
 			ROOT = {
-				create_wargoal = {
-					type = annex_everything
-					target = PREV
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
 				}
+				custom_effect_tooltip = KIR_republic_postwar_focus_XY_WG_tt
 			}
 		}
 		set_country_flag = BAC_COC_commonalty_war_enacted_flag
@@ -4094,11 +4100,7 @@ shared_focus = { #deer war
 					}
 				}
 			}
-			add_ai_strategy = {
-				type = prepare_for_war
-				id = ROOT
-				value = 1000
-			}
+			country_event = kirin_utility.55
 		}
 		clr_country_flag = BAC_COC_commonalty_war_enacted_flag
 	}
@@ -4126,10 +4128,13 @@ shared_focus = { #deer war
 				}
 			}
 			ROOT = {
-				create_wargoal = {
-					type = annex_everything
-					target = PREV
+				hidden_effect = {
+					create_wargoal = {
+						type = annex_everything
+						target = PREV
+					}
 				}
+				custom_effect_tooltip = KIR_republic_postwar_focus_XY_WG_tt
 			}
 		}
 		every_other_country = {
@@ -4143,6 +4148,10 @@ shared_focus = { #deer war
 				OR = {
 					has_government = democratic
 					has_government = communism
+				}
+				NOT = {
+					has_country_flag = CTL_hira_in_power_smh
+					has_country_flag = CTL_ivar_in_power_smh
 				}
 			}
 			country_event = baccocc.146
