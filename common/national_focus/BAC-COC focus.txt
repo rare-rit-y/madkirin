@@ -4650,19 +4650,6 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_friend_deer"
 		set_country_flag = commonalty_solved_deer
-		add_political_power = -99
-		every_possible_country = {
-			limit = {
-				OR = {
-					tag = BRS
-					tag = SAM
-					tag = HIN
-					tag = CTL
-				}
-			}
-			add_to_ROOT_potential_cores = yes
-		}
-		custom_effect_tooltip = KIR_line_break
 		if = {
 			limit = {
 				country_exists = event_target:BAC_hindian_ally
@@ -4679,6 +4666,7 @@ shared_focus = {
 			else = {
 				random_list = {
 					3 = {
+						add_political_power = -99
 						remove_from_faction = event_target:BAC_hindian_ally
 						#ROOT = {
 							#hidden_effect = {
@@ -4723,6 +4711,7 @@ shared_focus = {
 			}
 		}
 		else = {
+			add_political_power = -99
 			effect_tooltip = {
 				every_other_country = {
 					limit = {
@@ -4767,6 +4756,18 @@ shared_focus = {
 				}
 			}
 			add_dynamic_modifier = { modifier = BAC_autonomy_state }
+		}
+		custom_effect_tooltip = KIR_line_break
+		every_possible_country = {
+			limit = {
+				OR = {
+					tag = BRS
+					tag = SAM
+					tag = HIN
+					tag = CTL
+				}
+			}
+			add_to_ROOT_potential_cores = yes
 		}
 		custom_effect_tooltip = KIR_line_break
 		add_popularity = {
@@ -4815,18 +4816,6 @@ shared_focus = { #convert deer
 		set_country_flag = commonalty_solved_deer
 		add_political_power = -300
 		add_stability = -0.49
-		every_possible_country = {
-			limit = {
-				OR = {
-					tag = BRS
-					tag = SAM
-					tag = HIN
-					tag = CTL
-				}
-			}
-			add_to_ROOT_potential_cores = yes
-		}
-		custom_effect_tooltip = KIR_line_break
 		if = {
 			limit = {
 				country_exists = event_target:BAC_hindian_ally
@@ -4887,6 +4876,18 @@ shared_focus = { #convert deer
 					}
 				}
 			}
+		}
+		custom_effect_tooltip = KIR_line_break
+		every_possible_country = {
+			limit = {
+				OR = {
+					tag = BRS
+					tag = SAM
+					tag = HIN
+					tag = CTL
+				}
+			}
+			add_to_ROOT_potential_cores = yes
 		}
 		custom_effect_tooltip = KIR_line_break
 		bac_eqs_popularity = yes
