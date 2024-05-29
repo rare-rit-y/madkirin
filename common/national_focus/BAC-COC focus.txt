@@ -4145,11 +4145,9 @@ shared_focus = { #deer war
 					original_tag = HIN
 					original_tag = CTL
 				}
-				OR = {
-					has_government = democratic
-					has_government = communism
-				}
 				NOT = {
+					has_government = fascism
+					has_government = neutrality
 					has_country_flag = CTL_hira_in_power_smh
 					has_country_flag = CTL_ivar_in_power_smh
 				}
