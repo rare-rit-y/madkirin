@@ -101,6 +101,12 @@ music = {
 }
 
 music = {
+    name = "Masquerade"
+    file = "Masquerade.ogg"
+    volume = 0.7
+}
+
+music = {
     name = "sdorica_aurora_ost_-_title_BGM"
     file = "sdorica_aurora_ost_-_title_BGM.ogg"
     volume = 0.8

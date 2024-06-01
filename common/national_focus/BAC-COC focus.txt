@@ -4683,29 +4683,12 @@ shared_focus = {
 							factor = 1.25
 							has_tech = tech_kirin_astrology
 						}
-						#ROOT = {
-							#hidden_effect = {
-							# if = {
-							# 	limit = {
-							# 		has_government = fascism
-							# 	}
-							# 	set_autonomy = {
-							# 		target = PREV
-							# 		autonomous_state = autonomy_satellite
-							# 		end_wars = no
-							# 		end_civil_wars = no
-							# 	}
-							# }
-							# else = {
-								set_autonomy = {
-									target = PREV
-									autonomous_state = autonomy_dominion
-									end_wars = no
-									end_civil_wars = no
-								}
-							#}
-							#custom_effect_tooltip = KIR_republic_postwar_focus_XY_WG_tt
-						#}
+						set_autonomy = {
+							target = PREV
+							autonomous_state = autonomy_dominion
+							end_wars = no
+							end_civil_wars = no
+						}
 					}
 				}
 			}

@@ -208,6 +208,20 @@ music = {
     }
   }
 }
+music = {
+  song = "Masquerade"
+  chance = {
+    base = 0.5
+    modifier = {
+      add = 0.5
+      original_tag = CHN
+    }
+    modifier = {
+      add = 2.5
+      has_country_flag = CHN_FRV_flag
+    }
+  }
+}
 
 music = {
 	song = "Redspark-The_Way_Of_Fire_BAC"
