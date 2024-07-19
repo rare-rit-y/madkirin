@@ -3,7 +3,6 @@ bac_coc_debug_cat = {
 	allowed = {
 		original_tag = KIC
 		is_debug = yes
-		NOT = { tag = KIC }
 	}
 
 	priority = {

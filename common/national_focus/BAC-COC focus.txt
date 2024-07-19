@@ -3186,14 +3186,24 @@ shared_focus = { # Beyond The Riverine Navy
 			category = naval_equipment
 		}
 		every_possible_country = {
-			limit = { has_character = KIC_navy_chief_1 }
-			#hidden_effect = {
-				KIC_navy_chief_1 = {
-					set_nationality = ROOT
+		limit = { has_character = KIR_navy_chief_1 }
+			KIR_navy_chief_1 = {
+				set_nationality = ROOT
+				add_naval_commander_role = {
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					maneuvering_skill = 1
+					coordination_skill = 1
+					traits = { naval_liason kirin_race_trait peasant_sympathiser }
 				}
-			#}
+				custom_effect_tooltip = BAC_river_song_stats_tp
+			}
+			hidden_effect = {
+				#remove_unit_leader_role = yes ## THIS LINE MOVED TO kirin_council.303 EVENT, to avoid error spam
+			}
 			custom_effect_tooltip = available_chief_of_navy_tt
-			show_ideas_tooltip = KIC_navy_chief_1
+			show_ideas_tooltip = KIR_navy_chief_1
 		}
 		set_country_flag = KIR_DM_maritime_systems_available
 		set_country_flag = KIC_deer_comrade_available
