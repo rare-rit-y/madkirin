@@ -3124,8 +3124,8 @@ shared_focus = { #Flying Commonkirin
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus BAC_COC_mil_air"
-		set_country_flag = BAC_KIR_DM_aerospace_engineering_available
-		set_country_flag = BAC_KIC_aerospace_engineer_available
+		set_country_flag = KIR_DM_aerospace_engineering_available
+		set_country_flag = KIC_aerospace_engineer_available
 		if = {
 			limit = {
 				has_dlc = "Arms Against Tyranny"
