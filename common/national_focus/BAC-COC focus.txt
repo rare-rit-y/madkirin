@@ -1,3 +1,5 @@
+
+#!gfx:interface\madk_pic.gfx
 focus_tree = {
 	id = BAC_COC_tree
 	country = {

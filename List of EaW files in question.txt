@@ -1,0 +1,13 @@
+### List of changed EaW files
+# 
+# common/countries/cosmetic.txt
+# common/ideologies/00_ideologies.txt
+# common/scripted_localisation/EAW_subideology_display_scripted_localisation.txt
+# events/Kirin Events.txt
+# interface/countrypoliticsview.gui
+# interface/eventwindow.gui
+# music/hoi4mainthemeallies.ogg
+
+## Other watchlist
+# common/ideas/ EQS ideas - star energy and filly motors (MIOs are in military_industrial_organization/organizations)
+# common/national_focus/KIR.txt - CoC focus only
